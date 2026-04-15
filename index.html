@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場レポート</title>
+<meta name="description" content="U.S. Market Morning Report - 2026年4月15日 8:30 JST">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ── CSS Variables ── */
+  :root {
+    --bg:       #f7f3ea;
+    --fg:       #1a2230;
+    --muted:    #efe8dc;
+    --muted-fg: #677285;
+    --border:   rgba(29,37,52,0.14);
+    --line:     rgba(29,37,52,0.12);
+    --primary:  #21344f;
+    --secondary:#ece5d8;
+    --positive: #1a6640;
+    --negative: #8b2020;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* ── Labels ── */
+  .eyebrow {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted-fg);
+  }
+
+  /* ── Header ── */
+  #site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(247,243,234,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  #site-header .inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  #site-header .brand { display: flex; flex-direction: column; gap: 0.3rem; }
+  #site-header .brand .title { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; }
+  #site-header .brand .meta { display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.82rem; color: var(--muted-fg); }
+  #site-header nav { display: flex; flex-wrap: wrap; gap: 1.2rem; font-size: 0.85rem; color: var(--muted-fg); }
+  #site-header nav a:hover { color: var(--fg); }
+
+  /* ── Hero ── */
+  #hero {
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  @media(min-width: 900px) {
+    .hero-grid { grid-template-columns: minmax(0,1fr) 22rem; }
+  }
+
+  /* Left: image + text overlay */
+  .hero-left {
+    position: relative;
+    min-height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .hero-left img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(247,243,234,0.94), rgba(247,243,234,0.92) 38%, rgba(247,243,234,0.6) 70%, transparent);
+  }
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem 2rem 3rem;
+    max-width: 580px;
+  }
+  .hero-copy .lead-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    font-weight: 600;
+    color: var(--muted-fg);
+    text-transform: uppercase;
+  }
+  .hero-copy .lead-label::before {
+    content: '';
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--muted-fg);
+  }
+  .hero-copy h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.2rem;
+    color: var(--primary);
+  }
+  .hero-copy .lead-body {
+    font-size: 0.95rem;
+    color: var(--muted-fg);
+    margin-bottom: 1.5rem;
+    max-width: 440px;
+    line-height: 1.8;
+  }
+  .hero-tag {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    background: rgba(247,243,234,0.8);
+    border-radius: 3px;
+    margin-bottom: 1.2rem;
+  }
+  .hero-tag .tag-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--muted-fg);
+    padding-top: 0.1rem;
+  }
+  .hero-tag .tag-text { font-size: 0.82rem; color: var(--muted-fg); }
+  .btn-primary {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    border-radius: 2px;
+    transition: opacity 0.15s;
+  }
+  .btn-primary:hover { opacity: 0.85; text-decoration: none; }
+
+  /* Right sidebar */
+  .hero-right {
+    background: var(--secondary);
+    border-left: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Market Snapshot */
+  .snapshot-block {
+    padding: 1.8rem 1.6rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .snapshot-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted-fg);
+  }
+  .snapshot-label::before {
+    content: '';
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--muted-fg);
+  }
+  .snapshot-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--line);
+    gap: 1rem;
+  }
+  .snapshot-item-left .si-name { font-size: 0.8rem; font-weight: 600; }
+  .snapshot-item-left .si-desc { font-size: 0.72rem; color: var(--muted-fg); margin-top: 0.15rem; }
+  .snapshot-value {
+    font-size: 1.45rem;
+    font-weight: 700;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .snapshot-value.pos { color: var(--positive); }
+  .snapshot-value.neg { color: var(--negative); }
+  .snapshot-value.neu { color: var(--primary); }
+
+  /* Editorial Note */
+  .editorial-block {
+    padding: 1.6rem;
+    flex: 1;
+  }
+  .editorial-block .ed-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.9rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted-fg);
+  }
+  .editorial-block .ed-label::before {
+    content: '';
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--muted-fg);
+  }
+  .editorial-block p { font-size: 0.87rem; line-height: 1.8; color: var(--fg); }
+
+  /* ── Wave Canvas ── */
+  .wave-canvas-wrap {
+    width: 100%;
+    background: var(--bg);
+    line-height: 0;
+    overflow: hidden;
+  }
+  .wave-canvas-wrap canvas {
+    display: block;
+    width: 100%;
+  }
+
+  /* ── Summary Section ── */
+  #summary {
+    padding: 3rem 0;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @media(min-width: 900px) {
+    .summary-grid { grid-template-columns: 17rem minmax(0,1fr); gap: 3.5rem; }
+  }
+
+  /* Quick Reading */
+  .quick-label {
+    margin-bottom: 1.5rem;
+  }
+  .quick-item {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 0.8rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .quick-num {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--muted);
+    line-height: 1;
+    padding-top: 0.2rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .quick-title { font-size: 0.8rem; font-weight: 700; margin-bottom: 0.35rem; }
+  .quick-body { font-size: 0.82rem; color: var(--muted-fg); line-height: 1.75; }
+
+  /* Lead Story */
+  .lead-story-label { margin-bottom: 1.2rem; }
+  .lead-story-body {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--fg);
+  }
+  .lead-story-body p { margin-bottom: 1rem; }
+
+  /* Asset Grid */
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+  @media(min-width: 600px) {
+    .asset-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .asset-cell {
+    padding: 1.1rem 1.2rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .asset-cell:last-child, .asset-cell:nth-last-child(-n+2):nth-child(2n+1) { border-right: none; }
+  @media(min-width: 600px) {
+    .asset-cell:nth-child(4n) { border-right: none; }
+    .asset-cell { border-bottom: none; }
+  }
+  .asset-name { font-size: 0.72rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .asset-status {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.15rem 0.45rem;
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+  }
+  .asset-status.up   { background: rgba(26,102,64,0.12);  color: var(--positive); }
+  .asset-status.down { background: rgba(139,32,32,0.10);  color: var(--negative); }
+  .asset-status.mix  { background: rgba(103,114,133,0.12); color: var(--muted-fg); }
+  .asset-desc { font-size: 0.78rem; color: var(--muted-fg); line-height: 1.7; }
+
+  /* ── Divider Wave ── */
+  .section-divider { border: none; }
+
+  /* ── Finance Section ── */
+  #finance {
+    padding: 3rem 0 4rem;
+  }
+  .finance-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @media(min-width: 900px) {
+    .finance-grid { grid-template-columns: minmax(0,1.08fr) 17rem; gap: 3rem; }
+  }
+
+  .finance-header { margin-bottom: 0.8rem; }
+  .finance-title {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0.5rem 0 1rem;
+    color: var(--primary);
+  }
+  .finance-subtitle {
+    font-size: 0.87rem;
+    font-weight: 600;
+    color: var(--muted-fg);
+    margin-bottom: 1rem;
+  }
+  .finance-lead {
+    font-size: 0.9rem;
+    color: var(--muted-fg);
+    line-height: 1.85;
+    margin-bottom: 2rem;
+  }
+
+  /* Bank cards */
+  .bank-cards { display: flex; flex-direction: column; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+  .bank-card { background: var(--bg); padding: 1.2rem 1.4rem; }
+  .bank-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; gap: 1rem; }
+  .bank-name { font-size: 0.8rem; font-weight: 700; }
+  .bank-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .bank-tag.strong { background: rgba(26,102,64,0.12); color: var(--positive); }
+  .bank-tag.weak   { background: rgba(139,32,32,0.10); color: var(--negative); }
+  .bank-tag.inflow { background: rgba(33,52,79,0.09);  color: var(--primary); }
+  .bank-body { font-size: 0.82rem; color: var(--muted-fg); line-height: 1.75; }
+
+  /* Editor's Summary */
+  .editors-summary {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.4rem;
+    background: var(--secondary);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+  }
+  .editors-summary .es-label { margin-bottom: 0.7rem; }
+  .editors-summary p { font-size: 0.87rem; line-height: 1.8; color: var(--fg); }
+
+  /* Finance sidebar — decoration */
+  .finance-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .aside-rule {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 0;
+  }
+  .aside-quote {
+    font-size: 0.87rem;
+    line-height: 1.85;
+    color: var(--muted-fg);
+    font-style: italic;
+  }
+
+  /* ── Short Version ── */
+  #short {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: rgba(247,243,234,0.96);
+    padding: 3rem 0;
+  }
+  .short-inner { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+  .short-inner .eyebrow { display: block; margin-bottom: 1.4rem; }
+  .short-inner .short-text {
+    font-size: 0.95rem;
+    line-height: 1.95;
+    color: var(--fg);
+    white-space: pre-line;
+  }
+  .short-inner .short-text p { margin-bottom: 1rem; }
+
+  /* YouTube note */
+  .youtube-note {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .youtube-note .yn-label { margin-bottom: 1rem; }
+  .yt-items { display: flex; flex-direction: column; gap: 0.6rem; }
+  .yt-item { display: flex; justify-content: space-between; align-items: center; font-size: 0.83rem; padding: 0.5rem 0; border-bottom: 1px solid var(--line); }
+  .yt-item .yt-name { font-weight: 600; }
+  .yt-item .yt-time { color: var(--muted-fg); font-variant-numeric: tabular-nums; }
+
+  /* ── References ── */
+  #references {
+    padding: 3rem 0 4rem;
+  }
+  .refs-header { margin-bottom: 0.6rem; }
+  .refs-title { font-size: 1.3rem; font-weight: 700; margin: 0.4rem 0 0.8rem; }
+  .refs-desc { font-size: 0.83rem; color: var(--muted-fg); margin-bottom: 2rem; }
+  .ref-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+  @media(min-width: 600px) { .ref-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media(min-width: 900px) { .ref-grid { grid-template-columns: repeat(3, 1fr); } }
+  .ref-item {
+    background: var(--bg);
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: background 0.12s;
+  }
+  .ref-item:hover { background: var(--secondary); text-decoration: none; }
+  .ref-num { font-size: 1.2rem; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .ref-title { font-size: 0.85rem; font-weight: 600; line-height: 1.5; }
+  .ref-arrow { font-size: 0.75rem; color: var(--muted-fg); margin-top: auto; }
+
+  /* ── Footer ── */
+  #footer {
+    border-top: 1px solid var(--line);
+    padding: 2.5rem 0;
+    background: rgba(247,243,234,0.6);
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .footer-brand { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; }
+  .footer-desc { font-size: 0.82rem; color: var(--muted-fg); max-width: 520px; line-height: 1.8; }
+  .footer-meta { font-size: 0.78rem; color: var(--muted-fg); margin-top: 0.5rem; }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header id="site-header">
+  <div class="inner">
+    <div class="brand">
+      <span class="title">U.S. MARKET MORNING REPORT</span>
+      <div class="meta">
+        <span>2026年4月15日</span>
+        <span>8:30 JST 時点</span>
+        <span>確認済みドラフトを掲載</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#summary">概況</a>
+      <a href="#finance">金融決算</a>
+      <a href="#references">参考ソース</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-grid">
+    <!-- Left: copy -->
+    <div class="hero-left">
+      <img
+        src="https://d2xsxph8kpxj0f.cloudfront.net/310519663147953511/2McNQwo9dtFVdGhNHY9hTG/us-market-hero-editorial-dawn-gNp78uR464CDEaYpwdeye4.webp"
+        alt="ニューヨークの朝景と相場チャートを重ねたヒーロービジュアル"
+      >
+      <div class="hero-overlay"></div>
+      <div class="hero-copy">
+        <div class="lead-label">Morning Lead</div>
+        <h1>米株続伸、ナスダック2％高。<br>再協議期待とPPI下振れで、朝の市場はリスクオン。</h1>
+        <p class="lead-body">中東情勢の緩和期待と物価指標の落ち着きが重なり、株高・金利低下・ドル安・原油安が同時進行しました。金融セクターでは、銀行と資産運用で収益モデルの差も意識されています。</p>
+        <div class="hero-tag">
+          <span class="tag-badge">掲載向け整理</span>
+          <span class="tag-text">主要報道をもとに再構成した、公開用の読みやすい一枚ページです。</span>
+        </div>
+        <a class="btn-primary" href="#summary">本文へ進む</a>
+      </div>
+    </div>
+
+    <!-- Right: sidebar -->
+    <div class="hero-right">
+      <div class="snapshot-block">
+        <div class="snapshot-label">Market Snapshot</div>
+
+        <div class="snapshot-item">
+          <div class="snapshot-item-left">
+            <div class="si-name">ナスダック総合</div>
+            <div class="si-desc">大型テック主導の上昇</div>
+          </div>
+          <div class="snapshot-value pos">+2.0%</div>
+        </div>
+
+        <div class="snapshot-item">
+          <div class="snapshot-item-left">
+            <div class="si-name">S&amp;P500</div>
+            <div class="si-desc">最高値圏に接近</div>
+          </div>
+          <div class="snapshot-value pos">+1.0%</div>
+        </div>
+
+        <div class="snapshot-item">
+          <div class="snapshot-item-left">
+            <div class="si-name">米10年債利回り</div>
+            <div class="si-desc">金利は低下</div>
+          </div>
+          <div class="snapshot-value neu">4.254%</div>
+        </div>
+
+        <div class="snapshot-item">
+          <div class="snapshot-item-left">
+            <div class="si-name">WTI原油</div>
+            <div class="si-desc">再協議期待で下落</div>
+          </div>
+          <div class="snapshot-value neg">$91.20</div>
+        </div>
+      </div>
+
+      <div class="editorial-block">
+        <div class="ed-label eyebrow">Editorial Note</div>
+        <p>今回は「金融株が強い」と一括りにせず、JPモルガン型の強さ、ウェルズ・ファーゴ型の弱さ、ブラックロック型の資金流入の強さを分けて読むのが要点です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WAVE ANIMATION (Section divider) ── -->
+<div class="wave-canvas-wrap" id="wave1-wrap">
+  <canvas id="wave1" height="80"></canvas>
+</div>
+
+<!-- ── SUMMARY ── -->
+<section id="summary" class="container">
+  <div class="summary-grid">
+
+    <!-- Quick Reading -->
+    <aside>
+      <div class="quick-label eyebrow">Quick Reading</div>
+
+      <div class="quick-item">
+        <div class="quick-num">01</div>
+        <div>
+          <div class="quick-title">相場の主因</div>
+          <div class="quick-body">米イラン再協議への期待と米PPIの下振れが、リスクオンを後押ししました。</div>
+        </div>
+      </div>
+
+      <div class="quick-item">
+        <div class="quick-num">02</div>
+        <div>
+          <div class="quick-title">資産価格の組み合わせ</div>
+          <div class="quick-body">株高・ドル安・金利低下・原油安が同時進行し、典型的な安心感主導の地合いとなりました。</div>
+        </div>
+      </div>
+
+      <div class="quick-item">
+        <div class="quick-num">03</div>
+        <div>
+          <div class="quick-title">金融セクターの見方</div>
+          <div class="quick-body">金融株は一枚岩ではなく、市場部門の強い銀行と金利依存度の高い銀行で明暗が分かれました。</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Lead Story -->
+    <div>
+      <div class="lead-story-label eyebrow">Lead Story</div>
+      <div class="lead-story-body">
+        <p>4月14日の米国市場は続伸しました。米国とイランの再協議観測が投資家心理を支えたうえ、3月の米卸売物価指数（PPI）が市場予想を下回り、インフレ再加速への懸念がやや和らぎました。その結果、ナスダック総合は2％上昇し、S&amp;P500は1％上昇して終値ベースで最高値に迫っています。</p>
+        <p>市場全体では、株高だけでなく、ドル安と金利低下も同時に進みました。米10年債利回りは4.254％、30年債利回りは4.867％、2年債利回りは3.747％へ低下。原油は米イラン協議再開への期待からWTIが91.20ドル、北海ブレントが94.79ドルへ下落した一方、金先物は4,850.10ドルへ上昇しています。</p>
+      </div>
+
+      <!-- Asset grid -->
+      <div class="asset-grid">
+        <div class="asset-cell">
+          <div class="asset-name">株式</div>
+          <span class="asset-status up">上昇</span>
+          <div class="asset-desc">ナスダック総合は2％高、S&amp;P500は1％高で引けました。</div>
+        </div>
+        <div class="asset-cell">
+          <div class="asset-name">金利</div>
+          <span class="asset-status down">低下</span>
+          <div class="asset-desc">米10年債利回りは4.254％まで低下しました。</div>
+        </div>
+        <div class="asset-cell">
+          <div class="asset-name">ドル</div>
+          <span class="asset-status down">下落</span>
+          <div class="asset-desc">インフレ警戒の緩和とリスク選好がドル安につながりました。</div>
+        </div>
+        <div class="asset-cell">
+          <div class="asset-name">原油・金</div>
+          <span class="asset-status mix">原油安 / 金高</span>
+          <div class="asset-desc">WTIは91.20ドルへ下落し、金先物は4,850.10ドルへ上昇しました。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WAVE ANIMATION 2 ── -->
+<div class="wave-canvas-wrap" id="wave2-wrap">
+  <canvas id="wave2" height="60"></canvas>
+</div>
+
+<!-- ── FINANCE ── -->
+<section id="finance" class="container">
+  <div class="finance-grid">
+
+    <!-- Main column -->
+    <div>
+      <div class="finance-header eyebrow">Financial Divergence</div>
+      <h2 class="finance-title">金融株は一枚岩ではなく、<br>「市場部門」「NII」「資金流入」で明暗が分かれました。</h2>
+      <p class="finance-lead">JPモルガンは市場変動の高まりをトレーディング収入へつなげ、ウェルズ・ファーゴは純金利収入の弱さが意識されました。一方でブラックロックはETFへの資金流入と運用報酬の伸びが評価され、銀行と資産運用の収益構造の違いが鮮明になっています。</p>
+
+      <div class="bank-cards">
+        <div class="bank-card">
+          <div class="bank-card-header">
+            <div class="bank-name">JPモルガン</div>
+            <span class="bank-tag strong">市場部門が追い風</span>
+          </div>
+          <div class="bank-body">第1四半期純利益は165億ドル。市場部門収入は20％増の116億ドルで、変動相場をうまく収益化しました。</div>
+        </div>
+
+        <div class="bank-card">
+          <div class="bank-card-header">
+            <div class="bank-name">ウェルズ・ファーゴ</div>
+            <span class="bank-tag weak">NIIが逆風</span>
+          </div>
+          <div class="bank-body">純金利収入は121億ドルと市場予想の123億ドルを下回り、株価は発表後に5％超下落しました。</div>
+        </div>
+
+        <div class="bank-card">
+          <div class="bank-card-header">
+            <div class="bank-name">ブラックロック</div>
+            <span class="bank-tag inflow">ETF流入が主導</span>
+          </div>
+          <div class="bank-body">純流入額は1300億ドル。iShares ETFがけん引し、資産運用モデルの強さが際立ちました。</div>
+        </div>
+      </div>
+
+      <div class="editors-summary">
+        <div class="es-label eyebrow">Editor's Summary</div>
+        <p>朝レポートとしては、「金融決算は良好」ではなく、変動相場に強い銀行と金利収入の弱さが見えた銀行、さらに資金流入で伸びる資産運用会社を切り分けると読みやすくなります。</p>
+      </div>
+    </div>
+
+    <!-- Aside -->
+    <aside class="finance-aside">
+      <hr class="aside-rule">
+      <p class="aside-quote">今回は「金融株が強い」と一括りにせず、JPモルガン型の強さ、ウェルズ・ファーゴ型の弱さ、ブラックロック型の資金流入の強さを分けて読むのが要点です。</p>
+      <hr class="aside-rule">
+    </aside>
+  </div>
+</section>
+
+<!-- ── WAVE ANIMATION 3 ── -->
+<div class="wave-canvas-wrap" id="wave3-wrap">
+  <canvas id="wave3" height="60"></canvas>
+</div>
+
+<!-- ── SHORT VERSION ── -->
+<section id="short">
+  <div class="short-inner">
+    <span class="eyebrow">Short Version</span>
+    <div class="short-text">
+      <p>米国市場は、中東情勢の緩和期待と米PPIの下振れを背景にリスクオンが優勢となりました。ナスダック総合は2％上昇し、S&amp;P500も1％高で最高値圏に接近。ドルと米長期金利は低下し、原油は下落しました。</p>
+      <p>金融株は一様高ではなく、JPモルガンは市場部門の強さで好決算となった一方、ウェルズ・ファーゴは純金利収入が予想未達で株価が下落しました。ブラックロックはETF流入を追い風に増益となっており、金融セクター内でも収益モデルの違いが明暗を分けています。</p>
+      <p style="font-size:0.82rem;color:var(--muted-fg)">本文の数値・固有事実は主要報道で確認した内容に限定しています。</p>
+    </div>
+
+    <div class="youtube-note">
+      <div class="yn-label eyebrow">補助確認</div>
+      <p style="font-size:0.83rem;color:var(--muted-fg);margin-bottom:1rem">指定のYouTubeチャンネル2件は、いずれも4月15日8:30 JST時点で当日更新を確認しました。</p>
+      <div class="yt-items">
+        <div class="yt-item">
+          <span class="yt-name">とも米国株投資チャンネル</span>
+          <span class="yt-time">06:26:07 JST</span>
+        </div>
+        <div class="yt-item">
+          <span class="yt-name">株リアルライブ</span>
+          <span class="yt-time">08:00:35 JST</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WAVE ANIMATION 4 (before references) ── -->
+<div class="wave-canvas-wrap" id="wave4-wrap">
+  <canvas id="wave4" height="60"></canvas>
+</div>
+
+<!-- ── REFERENCES ── -->
+<section id="references" class="container">
+  <div class="refs-header eyebrow">References</div>
+  <h2 class="refs-title">参考ソース</h2>
+  <p class="refs-desc">主要報道をそのまま並べるのではなく、朝の確認用として読み順を再設計しています。</p>
+
+  <div class="ref-grid">
+    <a class="ref-item" href="https://jp.reuters.com/markets/japan/T6VPUEF2GJPZXKYXDYDJ5BDQEQ-2026-04-14/" target="_blank" rel="noopener noreferrer">
+      <div class="ref-num">01</div>
+      <div class="ref-title">Reuters: NY市場サマリー（14日）</div>
+      <div class="ref-arrow">外部ソース ↗</div>
+    </a>
+    <a class="ref-item" href="https://www.nikkei.com/" target="_blank" rel="noopener noreferrer">
+      <div class="ref-num">02</div>
+      <div class="ref-title">日本経済新聞: NYダウ続伸で開始</div>
+      <div class="ref-arrow">外部ソース ↗</div>
+    </a>
+    <a class="ref-item" href="https://jp.reuters.com/markets/japan/N3C5FW4M2BLY7NPSWCD2Q3HLWY-2026-04-14/" target="_blank" rel="noopener noreferrer">
+      <div class="ref-num">03</div>
+      <div class="ref-title">Reuters: JPモルガン決算</div>
+      <div class="ref-arrow">外部ソース ↗</div>
+    </a>
+    <a class="ref-item" href="https://jp.reuters.com/markets/japan/V2WJAXOS6JKGFOKLOTP5XTVT2U-2026-04-14/" target="_blank" rel="noopener noreferrer">
+      <div class="ref-num">04</div>
+      <div class="ref-title">Reuters: ウェルズ・ファーゴ決算</div>
+      <div class="ref-arrow">外部ソース ↗</div>
+    </a>
+    <a class="ref-item" href="https://news.infoseek.co.jp/article/14reutersJAPAN_KBN3QR25K/" target="_blank" rel="noopener noreferrer">
+      <div class="ref-num">05</div>
+      <div class="ref-title">Reuters転載: ブラックロック決算</div>
+      <div class="ref-arrow">外部ソース ↗</div>
+    </a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">U.S. Market Morning Report</div>
+    <p class="footer-desc">朝の相場確認のために、主要報道をもとに再構成したウェブ掲載版です。過度な断定を避け、相場の方向感と金融セクター内の差がひと目で伝わるように設計しました。</p>
+    <div class="footer-meta">Published draft &nbsp;·&nbsp; 2026-04-15 / 08:30 JST</div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════
+     Wave.js — canvas wave animations
+     ══════════════════════════════ -->
+<script>
+(function() {
+  'use strict';
+
+  /* Colour palette matching the paper theme */
+  const WAVES = [
+    { color: 'rgba(33, 52, 79, 0.08)',  speed: 0.012, amp: 12, freq: 0.018, phase: 0.0 },
+    { color: 'rgba(33, 52, 79, 0.06)',  speed: 0.018, amp: 8,  freq: 0.025, phase: 1.5 },
+    { color: 'rgba(103,114,133, 0.06)', speed: 0.010, amp: 16, freq: 0.012, phase: 3.0 },
+  ];
+
+  function WaveCanvas(canvas) {
+    this.canvas = canvas;
+    this.ctx    = canvas.getContext('2d');
+    this.offset = Math.random() * 100;
+    this.raf    = null;
+    this._draw  = this._draw.bind(this);
+    this._resize();
+    window.addEventListener('resize', () => this._resize());
+  }
+
+  WaveCanvas.prototype._resize = function() {
+    const rect = this.canvas.parentElement.getBoundingClientRect();
+    this.canvas.width  = rect.width  || window.innerWidth;
+    this.canvas.height = this.canvas.getAttribute('height') | 0 || 80;
+  };
+
+  WaveCanvas.prototype._draw = function() {
+    const c = this.canvas;
+    const ctx = this.ctx;
+    const W = c.width, H = c.height;
+
+    ctx.clearRect(0, 0, W, H);
+
+    WAVES.forEach((wave) => {
+      ctx.beginPath();
+      ctx.moveTo(0, H / 2);
+      for (let x = 0; x <= W; x += 2) {
+        const y = H / 2
+          + Math.sin(x * wave.freq + this.offset * wave.speed * 100 + wave.phase) * wave.amp
+          + Math.sin(x * wave.freq * 0.5 + this.offset * wave.speed * 60 + wave.phase + 1) * (wave.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = wave.color;
+      ctx.lineWidth   = 1.5;
+      ctx.stroke();
+    });
+
+    this.offset++;
+    this.raf = requestAnimationFrame(this._draw);
+  };
+
+  WaveCanvas.prototype.start = function() {
+    if (!this.raf) this._draw();
+  };
+
+  WaveCanvas.prototype.stop = function() {
+    cancelAnimationFrame(this.raf);
+    this.raf = null;
+  };
+
+  /* Intersection Observer — only animate when visible */
+  const canvasIds = ['wave1', 'wave2', 'wave3', 'wave4'];
+  const instances = {};
+
+  document.addEventListener('DOMContentLoaded', function() {
+    canvasIds.forEach(function(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const instance = new WaveCanvas(el);
+      instances[id] = instance;
+
+      if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) instance.start();
+            else instance.stop();
+          });
+        }, { threshold: 0 });
+        obs.observe(el);
+      } else {
+        instance.start();
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
