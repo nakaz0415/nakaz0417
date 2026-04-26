@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場モーニングレポート | アーカイブ</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;}
+  header{background:#161b22;border-bottom:1px solid #30363d;padding:20px 40px;display:flex;align-items:center;gap:16px;}
+  header a{color:#e6edf3;text-decoration:none;font-size:13px;opacity:0.7;}
+  header a:hover{opacity:1;}
+  header .sep{opacity:0.3;margin:0 4px;}
+  h1{font-size:22px;font-weight:700;color:#fff;}
+  .sub{font-size:13px;color:#8b949e;margin-top:2px;}
+  .container{max-width:700px;margin:40px auto;padding:0 24px;}
+  .latest-btn{display:block;background:linear-gradient(135deg,#1f6feb,#388bfd);color:#fff;text-decoration:none;border-radius:10px;padding:20px 24px;margin-bottom:32px;transition:opacity .2s;}
+  .latest-btn:hover{opacity:.9;}
+  .latest-btn .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;opacity:.8;margin-bottom:4px;}
+  .latest-btn .title{font-size:18px;font-weight:700;}
+  .latest-btn .arrow{float:right;font-size:22px;margin-top:2px;}
+  .section-title{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#8b949e;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #21262d;}
+  #report-list{list-style:none;}
+  #report-list li{border-bottom:1px solid #21262d;}
+  #report-list a{display:flex;align-items:center;justify-content:space-between;padding:16px 4px;color:#e6edf3;text-decoration:none;transition:background .15s;border-radius:6px;}
+  #report-list a:hover{background:#161b22;padding-left:12px;}
+  .date-badge{font-size:15px;font-weight:600;}
+  .date-sub{font-size:12px;color:#8b949e;margin-top:2px;}
+  .arrow-icon{color:#8b949e;font-size:16px;}
+  #loading{color:#8b949e;font-size:14px;padding:20px 0;}
+  #error{color:#f85149;font-size:14px;padding:20px 0;}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div style="font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:.08em;">US MARKET MORNING REPORT</div>
+    <div style="font-size:18px;font-weight:700;margin-top:2px;">米国市場モーニングレポート</div>
+  </div>
+</header>
+<div class="container">
+  <a class="latest-btn" href="https://nakaz0415.github.io/nakaz0417/">
+    <div class="label">LATEST REPORT</div>
+    <div class="title">最新レポートを見る <span class="arrow">→</span></div>
+  </a>
+  <div class="section-title">ARCHIVE — 過去のレポート</div>
+  <div id="loading">レポート一覧を読み込み中...</div>
+  <ul id="report-list"></ul>
+  <div id="error" style="display:none"></div>
+</div>
+<script>
+var BASE = 'https://nakaz0415.github.io/nakaz0417/';
+var API = 'https://api.github.com/repos/nakaz0415/nakaz0417/contents/';
+var days = ['日','月','火','水','木','金','土'];
+fetch(API).then(function(r){return r.json();})
+.then(function(files){
+  var reports = files.filter(function(f){
+    return f.name.match(/^report-\d{4}-\d{2}-\d{2}\.html$/);
+  }).sort(function(a,b){return b.name.localeCompare(a.name);});
+  document.getElementById('loading').style.display='none';
+  if(reports.length===0){
+    document.getElementById('report-list').innerHTML='<li style="padding:20px 0;color:#8b949e;font-size:14px;">アーカイブはまだありません</li>';
+    return;
+  }
+  var ul = document.getElementById('report-list');
+  reports.forEach(function(f){
+    var m = f.name.match(/report-(\d{4})-(\d{2})-(\d{2})\.html/);
+    if(!m) return;
+    var y=m[1],mo=m[2],d=m[3];
+    var dt = new Date(parseInt(y),parseInt(mo)-1,parseInt(d));
+    var dow = days[dt.getDay()];
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = BASE+f.name;
+    a.innerHTML = '<div><div class="date-badge">'+y+'年'+mo+'月'+d+'日（'+dow+'）</div><div class="date-sub">米国市場モーニングレポート</div></div><span class="arrow-icon">›</span>';
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+}).catch(function(e){
+  document.getElementById('loading').style.display='none';
+  var err=document.getElementById('error');
+  err.style.display='block';
+  err.textContent='読み込みエラー: '+e.message;
+});
+</script>
+</body>
+</html>
