@@ -1,4 +1,4 @@
-<\!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -21,7 +21,7 @@ body { background: var(--bg); color: var(--fg); font-family: 'Noto Sans JP', san
 .header-inner { max-width: 1100px; margin: 0 auto; padding: 28px 24px 18px; display: flex; flex-direction: column; gap: 6px; }
 .header-top { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
 .header-tag { font-size: 11px; letter-spacing: 0.15em; color: rgba(255,255,255,0.5); text-transform: uppercase; }
-.header-title { font-size: clamp(20px,2vw,30px); font-weight: 900; letter-spacing: -0.02em; }
+.header-title { font-size: clamp(20px,3vw,30px); font-weight: 900; letter-spacing: -0.02em; }
 .header-date { font-size: 13px; color: rgba(255,255,255,0.55); }
 
 /* ── TICKER BAR ── */
@@ -90,7 +90,7 @@ canvas.wave { display: block; width: 100%; height: 80px; }
 .ff-ticker { font-size: 11px; letter-spacing: 0.15em; color: var(--accent); font-weight: 700; text-transform: uppercase; }
 .ff-name { font-size: 16px; font-weight: 700; color: var(--primary); margin: 6px 0; }
 .ff-chg { font-size: 28px; font-weight: 900; margin-bottom: 12px; }
-.ff-body { font-size: 13px; color: #555; line-height: 1.6; }
+.ff-body { font-size: 13px; color: #555; line-he)ght: 1.6; }
 
 /* ── SHORT VERSION ── */
 .sv-bg { background: var(--primary); color: #fff; }
@@ -112,7 +112,7 @@ footer p + p { margin-top: 8px; }
 </head>
 <body>
 
-<\!-- HEADER -->
+<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
     <div class="header-top">
@@ -125,7 +125,7 @@ footer p + p { margin-top: 8px; }
     <div class="ticker-inner">
       <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,165.80 +0.80%</span></span>
       <span><span class="tick-label">NASDAQ</span><span class="tick-up">24,837 +1.60%</span></span>
-      <span><span class="tick-label">DOW</span><span class="tick-down">49,231 -0.20%</span></span>
+      <span><span class="tick-label">DOW</sp!n><span class="tick-down">49,231 -0.20%</span></span>
       <span><span class="tick-label">US10Y</span>4.31%</span>
       <span><span class="tick-label">WTI</span><span class="tick-down">$94.88</span></span>
       <span><span class="tick-label">VIX</span>18.71</span>
@@ -143,7 +143,7 @@ footer p + p { margin-top: 8px; }
   </div>
 </header>
 
-<\!-- HERO -->
+<!-- HERO -->
 <div class="hero">
   <div class="hero-content">
     <div class="hero-eyebrow">April 25, 2026 — Markets Close</div>
@@ -152,10 +152,10 @@ footer p + p { margin-top: 8px; }
   </div>
 </div>
 
-<\!-- WAVE 1 -->
+<!-- WAVE 1 -->
 <canvas id="wave1" class="wave" style="background:#21344f;"></canvas>
 
-<\!-- QUICK READING -->
+<!-- QUICK READING -->
 <div class="section">
   <div class="section-label">Quick Reading</div>
   <div class="section-title">今日の3大ポイント</div>
@@ -163,7 +163,7 @@ footer p + p { margin-top: 8px; }
     <div class="qr-card">
       <div class="qr-num">01</div>
       <div class="qr-head">Intel+25%で半導体株に波及</div>
-      <div class="qr-body">Intelが市場予想を大幅に上回る決算を発表。ファウンドリ売上が前年比+16%。AMDも+12%と連動す、AI関連銘柄が軒並み急伸した。</div>
+      <div class="qr-body">Intelが市場予想を大幅に上回る決算を発表。ファウンドリ売上が前年比+16%。AMDも+12%と連動し、AI関連銘柄が軒並み急伸した。</div>
     </div>
     <div class="qr-card">
       <div class="qr-num">02</div>
@@ -178,7 +178,7 @@ footer p + p { margin-top: 8px; }
   </div>
 </div>
 
-<\!-- LEAD STORY -->
+<!-- LEAD STORY -->
 <div class="section lead-bg">
   <div class="lead-layout">
     <div>
@@ -209,7 +209,7 @@ footer p + p { margin-top: 8px; }
           <div class="watch-chg tick-up">+3.5%</div>
         </div>
         <div class="watch-item">
-          <div class="watch-ticker">MRVL — Marvell Tech</div>
+          <div class="wath-ticker">MRVL — Marvell Tech</div>
           <div class="watch-name">マーベル・テクノロジー</div>
           <div class="watch-chg tick-up">+3.7%</div>
         </div>
@@ -218,7 +218,7 @@ footer p + p { margin-top: 8px; }
   </div>
 </div>
 
-<\!-- ASSET GRID -->
+<!-- ASSET GRID -->
 <div class="section">
   <div class="section-label">Market Snapshot</div>
   <div class="section-title">主要マーケット指標</div>
@@ -250,10 +250,10 @@ footer p + p { margin-top: 8px; }
   </div>
 </div>
 
-<\!-- WAVE 2 -->
-<canvas id="wave2" class="wave" style="background:#f7f3ea;"></canvas>
+<!-- WAVE 2 -->
+<canvas id="wave2" class="wave" style="backgr/und:#f7f3ea;"></canvas>
 
-<\!-- FINANCE FOCUS -->
+<!-- FINANCE FOCUS -->
 <div class="section ff-bg">
   <div class="section-label">Finance Focus</div>
   <div class="section-title">注目銘柄ピックアップ</div>
@@ -279,10 +279,10 @@ footer p + p { margin-top: 8px; }
   </div>
 </div>
 
-<\!-- WAVE 3 -->
+<!-- WAVE 3 -->
 <canvas id="wave3" class="wave" style="background:#f0ebe0;"></canvas>
 
-<\!-- SHORT VERSION -->
+<!-- SHORT VERSION -->
 <div class="section sv-bg">
   <div class="section-label" style="color:rgba(255,255,255,0.4);">Short Version</div>
   <div class="sv-title">5分で読む本日の市場まとめ</div>
@@ -295,10 +295,10 @@ footer p + p { margin-top: 8px; }
   </ul>
 </div>
 
-<\!-- WAVE 4 -->
+<!-- WAVE 4 -->
 <canvas id="wave4" class="wave" style="background:#21344f;"></canvas>
 
-<\!-- REFERENCES -->
+<!-- REFERENCES -->
 <div class="section">
   <div class="section-label">References</div>
   <div class="section-title">情報ソース</div>
@@ -312,16 +312,16 @@ footer p + p { margin-top: 8px; }
   </ul>
 </div>
 
-<\!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
   <p>© 2026 米国市場モーニングレポート — Powered by Claude / Cowork</p>
-  <p>本レポートはAIによる自動生成です。投資判断の参考情報としてご利用ください。</p>
+  <p>本レポートはAIによる自動生成です。投資判断の参考情報としてご利用く　さい。</p>
   <p style="margin-top:10px;">
     <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
   </p>
 </footer>
 
-<\!-- WAVE.JS -->
+<!-- WAVE.JS -->
 <script>
 (function() {
   const configs = [
@@ -332,7 +332,7 @@ footer p + p { margin-top: 8px; }
   ];
   configs.forEach(function(cfg) {
     var canvas = document.getElementById(cfg.id);
-    if (\!canvas) return;
+    if (!canvas) return;
     var ctx = canvas.getContext('2d');
     var t = 0, rafId = null, active = false;
     function resize() {
@@ -340,7 +340,7 @@ footer p + p { margin-top: 8px; }
       canvas.height = canvas.offsetHeight || 80;
     }
     function draw() {
-      if (\!active) return;
+      if (!active) return;
       resize();
       var w = canvas.width, h = canvas.height;
       ctx.clearRect(0, 0, w, h);
@@ -361,8 +361,8 @@ footer p + p { margin-top: 8px; }
     }
     var obs = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) {
-        if (e.isIntersecting && \!active) { active = true; draw(); }
-        else if (\!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
       });
     }, { threshold: 0.01 });
     obs.observe(canvas);
