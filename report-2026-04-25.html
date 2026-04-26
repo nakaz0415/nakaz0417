@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ã§Â±Â³Ã¥âºÂ½Ã¥Â¸âÃ¥Â Â´Ã£ÆÂ¢Ã£ÆÂ¼Ã£Æâ¹Ã£ÆÂ³Ã£âÂ°Ã£ÆÂ¬Ã£ÆÂÃ£ÆÂ¼Ã£ÆË | 2026/04/26</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f3ea;
+  --fg: #1a2230;
+  --primary: #21344f;
+  --accent: #b5472a;
+  --border: #d6cfc4;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: 'Noto Sans JP', sans-serif; line-height: 1.7; }
+
+/* Ã¢ââ¬Ã¢ââ¬ HEADER Ã¢ââ¬Ã¢ââ¬ */
+.site-header { background: var(--primary); color: #fff; }
+.header-inner { max-width: 1100px; margin: 0 auto; padding: 28px 24px 18px; display: flex; flex-direction: column; gap: 6px; }
+.header-top { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.header-tag { font-size: 11px; letter-spacing: 0.15em; color: rgba(255,255,255,0.5); text-transform: uppercase; }
+.header-title { font-size: clamp(20px,3vw,30px); font-weight: 900; letter-spacing: -0.02em; }
+.header-date { font-size: 13px; color: rgba(255,255,255,0.55); }
+
+/* Ã¢ââ¬Ã¢ââ¬ TICKER BAR Ã¢ââ¬Ã¢ââ¬ */
+.ticker-bar { overflow: hidden; white-space: nowrap; background: rgba(0,0,0,0.25); padding: 9px 0; }
+.ticker-inner { display: inline-block; animation: ticker 32s linear infinite; }
+.ticker-inner span { display: inline-block; margin: 0 38px; font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.88); }
+.ticker-inner span .tick-label { color: rgba(255,255,255,0.5); margin-right: 6px; }
+.tick-up { color: #5cd47b; font-weight: 700; }
+.tick-down { color: #f27a6c; font-weight: 700; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Ã¢ââ¬Ã¢ââ¬ HERO Ã¢ââ¬Ã¢ââ¬ */
+.hero { height: 340px; background: linear-gradient(135deg, #1a2e50 0%, #2d4a7a 40%, #b5472a 100%); display: flex; align-items: flex-end; padding: 36px 24px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 40%, rgba(255,200,100,0.12) 0%, transparent 60%); }
+.hero-content { max-width: 700px; position: relative; z-index: 1; }
+.hero-eyebrow { font-size: 11px; letter-spacing: 0.2em; color: rgba(255,255,255,0.6); text-transform: uppercase; margin-bottom: 10px; }
+.hero-headline { font-size: clamp(22px,3.5vw,38px); font-weight: 900; color: #fff; line-height: 1.25; margin-bottom: 12px; }
+.hero-sub { font-size: 14px; color: rgba(255,255,255,0.75); max-width: 560px; }
+
+/* Ã¢ââ¬Ã¢ââ¬ WAVE CANVAS Ã¢ââ¬Ã¢ââ¬ */
+canvas.wave { display: block; width: 100%; height: 80px; }
+
+/* Ã¢ââ¬Ã¢ââ¬ SECTION WRAPPER Ã¢ââ¬Ã¢ââ¬ */
+.section { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+
+/* Ã¢ââ¬Ã¢ââ¬ QUICK READING Ã¢ââ¬Ã¢ââ¬ */
+.section-label { font-size: 10px; letter-spacing: 0.2em; color: var(--accent); text-transform: uppercase; margin-bottom: 20px; font-weight: 700; }
+.section-title { font-size: clamp(18px,2.5vw,26px); font-weight: 900; margin-bottom: 32px; color: var(--primary); }
+.qr-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 700px) { .qr-grid { grid-template-columns: 1fr; } }
+.qr-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 24px; border-top: 3px solid var(--accent); }
+.qr-num { font-size: 36px; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 10px; }
+.qr-head { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+.qr-body { font-size: 13px; color: #555; line-height: 1.6; }
+
+/* Ã¢ââ¬Ã¢ââ¬ LEAD STORY Ã¢ââ¬Ã¢ââ¬ */
+.lead-layout { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; }
+@media (max-width: 800px) { .lead-layout { grid-template-columns: 1fr; } }
+.lead-bg { background: #fff8ee; }
+.lead-tag { display: inline-block; background: var(--accent); color: #fff; font-size: 10px; letter-spacing: 0.15em; padding: 4px 10px; border-radius: 3px; text-transform: uppercase; margin-bottom: 16px; }
+.lead-title { font-size: clamp(18px,2.5vw,28px); font-weight: 900; color: var(--primary); margin-bottom: 16px; line-height: 1.3; }
+.lead-body { font-size: 14px; color: #444; line-height: 1.9; }
+.lead-body p + p { margin-top: 14px; }
+.sidebar { background: var(--primary); color: #fff; border-radius: 10px; padding: 24px; }
+.sidebar-title { font-size: 12px; letter-spacing: 0.18em; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.15); }
+.watch-item { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.watch-item:last-child { border-bottom: none; }
+.watch-ticker { font-size: 12px; color: rgba(255,255,255,0.5); }
+.watch-name { font-size: 14px; font-weight: 700; margin: 4px 0; }
+.watch-chg { font-size: 22px; font-weight: 900; }
+
+/* Ã¢ââ¬Ã¢ââ¬ ASSET GRID Ã¢ââ¬Ã¢ââ¬ */
+.asset-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 800px) { .asset-grid { grid-template-columns: repeat(2, 1fr); } }
+.asset-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; }
+.asset-label { font-size: 11px; letter-spacing: 0.12em; color: #888; text-transform: uppercase; margin-bottom: 8px; }
+.asset-val { font-size: 26px; font-weight: 900; color: var(--primary); }
+.asset-chg { font-size: 13px; font-weight: 700; margin-top: 4px; }
+.asset-sub { font-size: 11px; color: #aaa; margin-top: 6px; }
+
+/* Ã¢ââ¬Ã¢ââ¬ FINANCE FOCUS Ã¢ââ¬Ã¢ââ¬ */
+.ff-bg { background: #f0ebe0; }
+.ff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 700px) { .ff-grid { grid-template-columns: 1fr; } }
+.ff-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 24px; }
+.ff-ticker { font-size: 11px; letter-spacing: 0.15em; color: var(--accent); font-weight: 700; text-transform: uppercase; }
+.ff-name { font-size: 16px; font-weight: 700; color: var(--primary); margin: 6px 0; }
+.ff-chg { font-size: 28px; font-weight: 900; margin-bottom: 12px; }
+.ff-body { font-size: 13px; color: #555; line-height: 1.6; }
+
+/* Ã¢ââ¬Ã¢ââ¬ SHORT VERSION Ã¢ââ¬Ã¢ââ¬ */
+.sv-bg { background: var(--primary); color: #fff; }
+.sv-title { font-size: clamp(18px,2.5vw,26px); font-weight: 900; color: #fff; margin-bottom: 28px; }
+.sv-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.sv-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 14px; line-height: 1.6; }
+.sv-num { min-width: 28px; height: 28px; background: var(--accent); color: #fff; font-weight: 900; font-size: 12px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+
+/* Ã¢ââ¬Ã¢ââ¬ REFERENCES Ã¢ââ¬Ã¢ââ¬ */
+.ref-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.ref-list li a { color: var(--accent); text-decoration: none; font-size: 13px; }
+.ref-list li a:hover { text-decoration: underline; }
+.ref-list li .ref-src { color: #aaa; font-size: 11px; margin-left: 8px; }
+
+/* Ã¢ââ¬Ã¢ââ¬ FOOTER Ã¢ââ¬Ã¢ââ¬ */
+footer { background: var(--primary); color: rgba(255,255,255,0.55); text-align: center; padding: 32px 24px; font-size: 12px; }
+footer p + p { margin-top: 8px; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-top">
+      <span class="header-tag">US Market Morning Report</span>
+      <h1 class="header-title">Ã§Â±Â³Ã¥âºÂ½Ã¥Â¸âÃ¥Â Â´Ã£ÆÂ¢Ã£ÆÂ¼Ã£Æâ¹Ã£ÆÂ³Ã£âÂ°Ã£ÆÂ¬Ã£ÆÂÃ£ÆÂ¼Ã£ÆË</h1>
+    </div>
+    <div class="header-date">2026Ã¥Â¹Â´4Ã¦ÅË26Ã¦âÂ¥Ã¯Â¼ËÃ¦âÂ¥Ã¯Â¼â°Ã¯Â½ÅÃ¥â°ÂÃ¥âÂ¶Ã¦Â¥Â­Ã¦âÂ¥Ã¯Â¼Ë4/25Ã¯Â¼â°Ã§ÂµâÃ¥â¬Â¤Ã£Æâ¢Ã£ÆÂ¼Ã£âÂ¹</div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,165.80 +0.80%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">24,837 +1.60%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">49,231 -0.20%</span></span>
+      <span><span class="tick-label">US10Y</span>4.31%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$94.88</span></span>
+      <span><span class="tick-label">VIX</span>18.71</span>
+      <span><span class="tick-label">INTC</span><span class="tick-up">+25.0%</span></span>
+      <span><span class="tick-label">AMD</span><span class="tick-up">+12.0%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,165.80 +0.80%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">24,837 +1.60%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">49,231 -0.20%</span></span>
+      <span><span class="tick-label">US10Y</span>4.31%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$94.88</span></span>
+      <span><span class="tick-label">VIX</span>18.71</span>
+      <span><span class="tick-label">INTC</span><span class="tick-up">+25.0%</span></span>
+      <span><span class="tick-label">AMD</span><span class="tick-up">+12.0%</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">April 25, 2026 Ã¢â¬â Markets Close</div>
+    <h2 class="hero-headline">S&amp;P500Ã£ÆÂ»NASDAQÃ£ÂÅÃ¥ÂÂ²Ã¤Â¸Å Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã¦âºÂ´Ã¦âÂ°<br>IntelÃ¦â¬Â¥Ã©Â¨Â°25%Ã£ÂÂ§Ã¥ÂÅ Ã¥Â°Å½Ã¤Â½âÃ¦Â ÂªÃ¥â¦Â¨Ã©ÂÂ¢Ã©Â«Ë</h2>
+    <p class="hero-sub">Ã§Â±Â³Ã¥âºÂ½Ã¤Â¸Â»Ã¨Â¦ÂÃ¦Åâ¡Ã¦â¢Â°Ã£ÂÂ¯Ã¥Â â¦Ã¨ÂªÂ¿Ã£ÂÂªÃ¤Â¼ÂÃ¦Â¥Â­Ã¦Â±ÂºÃ§Â®âÃ£ÂÂ¨Ã§Â±Â³Ã£âÂ¤Ã£ÆÂ©Ã£ÆÂ³Ã¥ÂÅÃ¦ËÂ¦Ã¥Â»Â¶Ã©â¢Â·Ã£ÂÂ¸Ã£ÂÂ®Ã¦ÅÅ¸Ã¥Â¾â¦Ã£ââÃ¨Â¿Â½Ã£ÂâÃ©Â¢Â¨Ã£ÂÂ«Ã¤Â¸Å Ã¦Ëâ¡Ã£â¬âS&amp;P500Ã£ÂÂ¨NASDAQÃ£ÂÂ¯Ã¦ÂÆÃ£ÂÂ£Ã£ÂÂ¦Ã§ÂµâÃ¥â¬Â¤Ã£Æâ¢Ã£ÆÂ¼Ã£âÂ¹Ã£ÂÂ§Ã£ÂÂ®Ã¥ÂÂ²Ã¤Â¸Å Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã£ââÃ¦âºÂ´Ã¦âÂ°Ã£ÂâÃ£ÂÅ¸Ã£â¬â</p>
+  </div>
+</div>
+
+<!-- WAVE 1 -->
+<canvas id="wave1" class="wave" style="background:#21344f;"></canvas>
+
+<!-- QUICK READING -->
+<div class="section">
+  <div class="section-label">Quick Reading</div>
+  <div class="section-title">Ã¤Â»Å Ã¦âÂ¥Ã£ÂÂ®3Ã¥Â¤Â§Ã£ÆÂÃ£âÂ¤Ã£ÆÂ³Ã£ÆË</div>
+  <div class="qr-grid">
+    <div class="qr-card">
+      <div class="qr-num">01</div>
+      <div class="qr-head">Intel+25%Ã£ÂÂ§Ã¥ÂÅ Ã¥Â°Å½Ã¤Â½âÃ¦Â ÂªÃ£ÂÂ«Ã¦Â³Â¢Ã¥ÂÅ </div>
+      <div class="qr-body">IntelÃ£ÂÅÃ¥Â¸âÃ¥Â Â´Ã¤ÂºËÃ¦ÆÂ³Ã£ââÃ¥Â¤Â§Ã¥Â¹â¦Ã£ÂÂ«Ã¤Â¸Å Ã¥âºÅ¾Ã£ââ¹Ã¦Â±ÂºÃ§Â®âÃ£ââÃ§â¢ÂºÃ¨Â¡Â¨Ã£â¬âÃ£Æâ¢Ã£âÂ¡Ã£âÂ¦Ã£ÆÂ³Ã£Æâ°Ã£ÆÂªÃ¥Â£Â²Ã¤Â¸Å Ã£ÂÅÃ¥â°ÂÃ¥Â¹Â´Ã¦Â¯â+16%Ã£â¬âAMDÃ£ââ+12%Ã£ÂÂ¨Ã©â¬Â£Ã¥â¹â¢Ã£ÂâÃ£â¬ÂAIÃ©âÂ¢Ã©â¬Â£Ã©Å ËÃ¦Å¸âÃ£ÂÅÃ¨Â»âÃ¤Â¸Â¦Ã£ÂÂ¿Ã¦â¬Â¥Ã¤Â¼Â¸Ã£ÂâÃ£ÂÅ¸Ã£â¬â</div>
+    </div>
+    <div class="qr-card">
+      <div class="qr-num">02</div>
+      <div class="qr-head">S&amp;P500Ã£ÆÂ»NASDAQ Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã¦âºÂ´Ã¦âÂ°</div>
+      <div class="qr-body">S&amp;P500Ã£ÂÂ¯7,165.80Ã¯Â¼Ë+0.80%Ã¯Â¼â°Ã£â¬ÂNASDAQÃ£ÂÂ¯24,837Ã¯Â¼Ë+1.60%Ã¯Â¼â°Ã£ÂÂ§Ã§ÂµâÃ¥â¬Â¤Ã£Æâ¢Ã£ÆÂ¼Ã£âÂ¹Ã£ÂÂ®Ã¥ÂÂ²Ã¤Â¸Å Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã£ââÃ¦âºÂ´Ã¦âÂ°Ã£â¬âQ1Ã¦Â±ÂºÃ§Â®âÃ£ÂÂ®EPSÃ¦ËÂÃ©â¢Â·Ã§Å½â¡Ã£ÂÂ¯+25.32%Ã£ÂÂ¨Ã¥Â¥Â½Ã¨ÂªÂ¿Ã£â¬â</div>
+    </div>
+    <div class="qr-card">
+      <div class="qr-num">03</div>
+      <div class="qr-head">Ã¦ÂÂ¥Ã©â¬Â±Ã£ÂÂ¯FOMCÃ£ÂÂ¨Ã£ÆÅ¾Ã£âÂ°Ã£Æâ¹Ã£Æâ¢Ã£âÂ£Ã£âÂ»Ã£ÆÂ³Ã£ÆË7Ã¦Â±ÂºÃ§Â®â</div>
+      <div class="qr-body">4Ã¦ÅË29Ã¦âÂ¥Ã¯Â¼ËÃ¦Â°Â´Ã¯Â¼â°Ã£ÂÂ«FOMCÃ¤Â¼Å¡Ã¥ÂËÃ£ÂÂ®Ã§ÂµÂÃ¦Å¾ÅÃ£ÂÅÃ§â¢ÂºÃ¨Â¡Â¨Ã¤ÂºËÃ¥Â®Å¡Ã£â¬âÃ§Â¿ÅÃ©â¬Â±Ã£ÂÂ«Ã£ÂÂ¯Ã£â¬ÅÃ£ÆÅ¾Ã£âÂ°Ã£Æâ¹Ã£Æâ¢Ã£âÂ£Ã£âÂ»Ã£ÆÂ³Ã£ÆË7Ã£â¬ÂÃ£ÂÂ®5Ã§Â¤Â¾Ã£ÂÅÃ¦Â±ÂºÃ§Â®âÃ£ââÃ¦Å½Â§Ã£ÂËÃ£â¬ÂÃ¥Â¸âÃ¥Â Â´Ã£ÂÂ®Ã£Ââ¢Ã£ââ°Ã£ÂÂªÃ£ââ¹Ã¨Â©Â¦Ã§Â·Â´Ã£ÂÅÃ¥Â¾â¦Ã£ÂÂ¡Ã¥ÂâÃ£ÂâÃ£ââ¹Ã£â¬â</div>
+    </div>
+  </div>
+</div>
+
+<!-- LEAD STORY -->
+<div class="section lead-bg">
+  <div class="lead-layout">
+    <div>
+      <span class="lead-tag">Lead Story</span>
+      <h2 class="lead-title">IntelÃ£ÂÅÃ¦Â­Â´Ã¥ÂÂ²Ã§Å¡âÃ¦â¬Â¥Ã©Â¨Â°Ã¢â¬âÃ£Æâ°Ã£ÆÆÃ£ÆËÃ£âÂ³Ã£ÆÂ Ã£ÆÂÃ£ÆâÃ£ÆÂ«Ã¨Â¶â¦Ã£ÂË<br>Ã¥ÂÅ Ã¥Â°Å½Ã¤Â½âÃ£ÆÂ»AIÃ¦Â ÂªÃ£ÂÂ«Ã¥Â¼Â·Ã§ÆËÃ£ÂÂªÃ¨Â¿Â½Ã£ÂâÃ©Â¢Â¨</h2>
+      <div class="lead-body">
+        <p>IntelÃ£ÂÅ2026Ã¥Â¹Â´4Ã¦ÅË25Ã¦âÂ¥Ã£â¬ÂÃ¥âºâºÃ¥ÂÅ Ã¦ÅÅ¸Ã¦Â±ÂºÃ§Â®âÃ£ââÃ§â¢ÂºÃ¨Â¡Â¨Ã£â¬âEPSÃ£ÆÂ»Ã¥Â£Â²Ã¤Â¸Å Ã£ÂÂ¨Ã£ââÃ£ÂÂ«Ã£âÂ¦Ã£âÂ©Ã£ÆÂ¼Ã£ÆÂ«Ã¨Â¡âÃ£ÂÂ®Ã£âÂ³Ã£ÆÂ³Ã£âÂ»Ã£ÆÂ³Ã£âÂµÃ£âÂ¹Ã£ââÃ¥Â¤Â§Ã£ÂÂÃ£ÂÂÃ¤Â¸Å Ã¥âºÅ¾Ã£âÅ Ã£â¬ÂÃ¦Â ÂªÃ¤Â¾Â¡Ã£ÂÂ¯Ã©ÂÅ½Ã¥Å½Â»Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã¯Â¼ËÃ£Æâ°Ã£ÆÆÃ£ÆËÃ£âÂ³Ã£ÆÂ Ã¦â¢âÃ¤Â»Â£Ã£ÂÂ®Ã¨Â¨ËÃ©ÅÂ²Ã¯Â¼â°Ã£ââÃ¦âºÂ´Ã¦âÂ°Ã£Ââ¢Ã£ââ¹25%Ã¦â¬Â¥Ã©Â¨Â°Ã£ââÃ¨Â¨ËÃ©ÅÂ²Ã£ÂâÃ£ÂÅ¸Ã£â¬âÃ§â°Â¹Ã£ÂÂ«Ã£Æâ¢Ã£âÂ¡Ã£âÂ¦Ã£ÆÂ³Ã£Æâ°Ã£ÆÂªÃ©ÆÂ¨Ã©ââ¬Ã£ÂÂ®Ã¥Â£Â²Ã¤Â¸Å Ã£ÂÅÃ¥â°ÂÃ¥Â¹Â´Ã¥ÂÅÃ¦ÅÅ¸Ã¦Â¯â+16%Ã£ÂÂ¨Ã¥Å âºÃ¥Â¼Â·Ã£ÂâÃ¥âºÅ¾Ã¥Â¾Â©Ã£ââÃ§Â¤ÂºÃ£ÂâÃ£ÂÅ¸Ã£ÂâÃ£ÂÂ¨Ã£ÂÅÃ¨Â©â¢Ã¤Â¾Â¡Ã£Ââ¢Ã£âÅÃ£â¬ÂÃ§Â±Â³Ã¥âºÂ½Ã¥ÂÅ Ã¥Â°Å½Ã¤Â½âÃ§âÂ£Ã¦Â¥Â­Ã£ÂÂ®Ã¥â ÂÃ¨ËËÃ£ââÃ¥ÂÂ°Ã¨Â±Â¡Ã£ÂÂ¥Ã£ÂâÃ£ÂÅ¸Ã£â¬â</p>
+        <p>Ã£ÂâÃ£ÂÂ®Ã¥â¹â¢Ã£ÂÂÃ£ÂÂ¯AIÃ©âÂ¢Ã©â¬Â£Ã£âÂµÃ£ÆâÃ£ÆÂ©Ã£âÂ¤Ã£ÆÂÃ£âÂ§Ã£ÆÂ¼Ã£ÆÂ³Ã¥â¦Â¨Ã¤Â½âÃ£ÂÂ«Ã¦Â³Â¢Ã¥ÂÅ Ã£â¬âAMDÃ£ÂÅ+12%Ã£ÂÂ¨Ã§Â¶Å¡Ã¤Â¼Â¸Ã£ÂâÃ£ÂÅ¸Ã£ÂÂ»Ã£Ââ¹Ã£â¬ÂArm HoldingsÃ£â¬ÂMarvell TechnologyÃ£â¬ÂSuper Micro ComputerÃ£ââ3.5%Ã¨Â¶â¦Ã£ÂÂ®Ã¤Â¸Å Ã¦Ëâ¡Ã£ââÃ¨Â¨ËÃ©ÅÂ²Ã£ÂâÃ£ÂÅ¸Ã£â¬âS&amp;P500Ã©Å ËÃ¦Å¸âÃ£ÂÂ®Ã£Ââ Ã£ÂÂ¡Ã§Â¬Â¬1Ã¥âºâºÃ¥ÂÅ Ã¦ÅÅ¸Ã¦Â±ÂºÃ§Â®âÃ£ââÃ¥Â Â±Ã¥âÅ Ã£ÂâÃ£ÂÅ¸137Ã§Â¤Â¾Ã£ÂÂ®Ã£Ââ Ã£ÂÂ¡Ã£â¬Â78%Ã£ÂÅEPSÃ¤ÂºËÃ¦ÆÂ³Ã£ââÃ¤Â¸Å Ã¥âºÅ¾Ã£ââ¹Ã£ÂÂ¨Ã£ÂâÃ£ÂÂºjÃ¦8Ã a8Ã #8Ã Ã¤Ã¸Ã Ã¯8Ã Ã¢9Ã£Â¡Ã¸Ã #xÃ Â¤Âº*&:c,Â¸Ã eÃ¸Ã iÂ¸Ã a8Ã Â¢Ã¸Ã  ÂÃâËÂ¹. 9Â¥Â®xÃ  LL9nm9Ã¬lÃ¹fÃ¯y`Â­yb*yfÃ§Â¸Ã Â¢Â¸Ã kÃÅÃIxÃ j9l#Ã¹naykÂ¢ykÂ¦Â¸Ã  Â9Â§"Å½yÂ¥Ã©xÃ kââÃPÃ¹/&Â¹d"8Ã iÃ¸Ã kÃ¹Â¥/Ã¹Ã«eÂºaÃ¤yb*xÃ c9Ã£Ã¯Â¹Ã¢Â­Â¹Ã­Â«yÂ£ xÃ exÃ Â£8Ã Â¢Ãº)Â¢Ãº`&Â¸Ã eÃ¸Ã h8Ã c8Ã  MyÂ§"9.Ã©zfcxÃ kÂ¹b*y."Ã¸Ã dÂº)Â¬Ã¹Â®+8Ã c9aÂ£xÃ lÃ¹Â­kÂ¹."Â¸Ã eÃ¸Ã i8Ã i8Ã `Â¸Ã Â¢Â¸Ã  y`Â­yb.8Ã Ã®Ã¹Â¨*Â¹o#Ã¹n Â¹h-9cÃ£9Â¥Â®xÃ kÂº(c9Â¥Â®xÃ Â¤Â¹mÃ©Â¹cÃ¬Ã¸Ã fxÃ Â¢Ã¹cÃ«Ãº Ã¯yÂ )Ã¸Ã c8Ã `Â¸Ã Â¢Ã¸Ã  Â¹Â§iz`,xÃ kÃ\xÃ  SZXÃâºÃÃÃÂ8Ã  SY]xÃ  P[X^âºÃÂ¸Ã  P[Xâ¢]8Ã j8Ã #8Ã Ã§Â¸Ã Â¬8Ã Ã¢Ã¸Ã Ã¥xÃ Â¨Ã¸Ã Â®Ã¸Ã Ã¬Ã¸Ã Ã¢Ã¸Ã #xÃ kÂ¹..Ãº)Â MyÃ©/Â¸Ã c9Â¬nÂ¹Ã«Â¥Ã¸Ã Â¤Â¹Ã¦nÂº(j9.Â¢9kÂ¦Â¸Ã iÃ¸Ã  yÃ£Ã¯Â¹g*8Ã kÂ¹o-Ã¹Â¬%Ã¹Ã¦Ã®9h-8Ã kÂ¹Ã­Â¦yÃ­Â¦Â¹Â )Ã¸Ã c9ecÃ¸Ã Â£Ã¸Ã Â£8Ã Â¢Ã¹l`:ghÂ¸Ã Â¤Âº/Ã£Â¸Ã b8Ã Â¢Ã¸Ã  ÂÃâËÃ]ÂâËÃ]ÂâË]ÂâË]ËÃ\ÃÃHÅÃYXË\ËÂâË]ËÃ\ÃÃHÅÃYXË\â¹]]HÂâ¢Ã^IÃÃÃ]Ã8Â %9Â¬Ãª9Ã¦Ã«ÂºbÂ¦9Â§Ã¡Ã]ÂâË]ËÃ\ÃÃHÂÃ]ÃZ][HÂâË]ËÃ\ÃÃHÂÃ]Ã]XÃÃ\ËÂâSâ¢Ã8Â %[Â[Ã]ÂâË]ËÃ\ÃÃHÂÃ]Ã[Ë[YHÂÂ¸Ã Â©8Ã Ã¬Ã¸Ã Ã¡Â¸Ã ÃªÃÃ]ÂâË]ËÃ\ÃÃHÂÃ]ÃXÃÃXÃÃ]\ÂÅ ÃÂKÅ	OÃ]ÂâËÃ]ÂâË]ËÃ\ÃÃHÂÃ]ÃZ][HÂâË]ËÃ\ÃÃHÂÃ]Ã]XÃÃ\ËÂÂSQ8Â %Yâ¹ËZXÃâºÃ]Å¡XÃ\ÃÃ]ÂâË]ËÃ\ÃÃHÂÃ]Ã[Ë[YHÂÂ¸Ã Â¨Â¸Ã Ã¢xÃ Ã¤8Ã Ã¬Ã¸Ã Â®xÃ Ã¢8Ã Ã®Ã¸Ã Ã§Â¸Ã Â©8Ã Â«Ã¸Ã Ã«xÃ Ã®Ã¸Ã Ã¡Ã¸Ã Ã¤8Ã Â©8Ã Â­Ã¸Ã Â®ÂÃ]Â¶>
+          <div class="watch-chg tick-up">+12.0%</div>
+        </div>
+        <div class="watch-item">
+          <div class="watch-ticker">ARM Ã¢â¬â Arm Holdings</div>
+          <div class="watch-name">Ã£âÂ¢Ã£ÆÂ¼Ã£ÆÂ Ã£ÆÂ»Ã£ÆâºÃ£ÆÂ¼Ã£ÆÂ«Ã£Æâ¡Ã£âÂ£Ã£ÆÂ³Ã£âÂ°Ã£âÂ¹</div>
+          <div class="watch-chg tick-up">+3.5%</div>
+        </div>
+        <div class="watch-item">
+          <div class="watch-ticker">MRVL Ã¢â¬â Marvell Tech</div>
+          <div class="watch-name">Ã£ÆÅ¾Ã£ÆÂ¼Ã£Æâ¢Ã£ÆÂ«Ã£ÆÂ»Ã£Æâ Ã£âÂ¯Ã£ÆÅ½Ã£ÆÂ­Ã£âÂ¸Ã£ÆÂ¼</div>
+          <div class="watch-chg tick-up">+3.7%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ASSET GRID -->
+<div class="section">
+  <div class="section-label">Market Snapshot</div>
+  <div class="section-title">Ã¤Â¸Â»Ã¨Â¦ÂÃ£ÆÅ¾Ã£ÆÂ¼Ã£âÂ±Ã£ÆÆÃ£ÆËÃ¦Åâ¡Ã¦Â¨â¢</div>
+  <div class="asset-grid">
+    <div class="asset-card">
+      <div class="asset-label">S&amp;P 500</div>
+      <div class="asset-val">7,165.80</div>
+      <div class="asset-chg tick-up">+0.80%</div>
+      <div class="asset-sub">Ã¥ÂÂ²Ã¤Â¸Å Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã¦âºÂ´Ã¦âÂ°</div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-label">NASDAQ</div>
+      <div class="asset-val">24,837</div>
+      <div class="asset-chg tick-up">+1.60%</div>
+      <div class="asset-sub">Ã¥ÂÂ²Ã¤Â¸Å Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã¦âºÂ´Ã¦âÂ°</div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-label">WTIÃ¥Å½Å¸Ã¦Â²Â¹</div>
+      <div class="asset-val">$94.88</div>
+      <div class="asset-chg tick-down">-1.01%</div>
+      <div class="asset-sub">Ã¤Â¸Â­Ã¦ÂÂ±Ã¦Æâ¦Ã¥â¹Â¢Ã£ÂÂ§Ã©Â«ËÃ¦Â­Â¢Ã£ÂÂ¾Ã£âÅ </div>
+    </div>
+    <div class="asset-card">
+      <div class="asset-label">Ã§Â±Â³10Ã¥Â¹Â´Ã¥âÂµÃ¥ËÂ©Ã¥âºÅ¾Ã£âÅ </div>
+      <div class="asset-val">4.31%</div>
+      <div class="asset-chg" style="color:#888;">ÃÂ±0.00</div>
+      <div class="asset-sub">FOMCÃ¥â°ÂÃ£ÂÂ«Ã¥Â®â°Ã¥Â®Å¡Ã¦Å½Â¨Ã§Â§Â»</div>
+    </div>
+  </div>
+</div>
+
+<!-- WAVE 2 -->
+<canvas id="wave2" class="wave" style="background:#f7f3ea;"></canvas>
+
+<!-- FINANCE FOCUS -->
+<div class="section ff-bg">
+  <div class="section-label">Finance Focus</div>
+  <div class="section-title">Ã¦Â³Â¨Ã§âºÂ®Ã©Å ËÃ¦Å¸âÃ£ÆâÃ£ÆÆÃ£âÂ¯Ã£âÂ¢Ã£ÆÆÃ£Æâ</div>
+  <div class="ff-grid">
+    <div class="ff-card">
+      <div class="ff-ticker">INTC</div>
+      <div class="ff-name">Intel Corporation</div>
+      <div class="ff-chg tick-up">+25.0%</div>
+      <div class="ff-body">Q1Ã¦Â±ÂºÃ§Â®âÃ£ÂÂ¯EPSÃ£ÆÂ»Ã¥Â£Â²Ã¤Â¸Å Ã£ÂÂ¨Ã£ââÃ£ÂÂ«Ã¥Â¤Â§Ã¥Â¹â¦Ã¨Â¶â¦Ã©ÂÅ½Ã£â¬âÃ£Æâ¢Ã£âÂ¡Ã£âÂ¦Ã£ÆÂ³Ã£Æâ°Ã£ÆÂªÃ©ÆÂ¨Ã©ââ¬Ã£ÂÅÃ¥â°ÂÃ¥Â¹Â´Ã¦Â¯â+16%Ã¦ËÂÃ©â¢Â·Ã£â¬âÃ¦Â ÂªÃ¤Â¾Â¡Ã£ÂÂ¯Ã£Æâ°Ã£ÆÆÃ£ÆËÃ£âÂ³Ã£ÆÂ Ã£ÆÂÃ£ÆâÃ£ÆÂ«Ã¦ÅÅ¸Ã£ÂÂ®Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã£ââÃ¦âºÂ´Ã¦âÂ°Ã£ÂâÃ£â¬ÂÃ§Â±Â³Ã¥âºÂ½Ã¥ÂÅ Ã¥Â°Å½Ã¤Â½âÃ¨Â£Â½Ã©â¬Â Ã¥âºÅ¾Ã¥Â¸Â°Ã£ÂÂ®Ã¨Â±Â¡Ã¥Â¾Â´Ã§Å¡âÃ¥Â­ËÃ¥ÅÂ¨Ã£ÂÂ¸Ã£â¬â</div>
+    </div>
+    <div class="ff-card">
+      <div class="ff-ticker">AMD</div>
+      <div class="ff-name">Advanced Micro Devices</div>
+      <div class="ff-chg tick-up">+12.0%</div>
+      <div class="ff-body">IntelÃ¥Â¥Â½Ã¦Â±ÂºÃ§Â®âÃ£ÂÂ«Ã©â¬Â£Ã¥â¹â¢Ã£ÂâÃ¦â¬Â¥Ã¤Â¼Â¸Ã£â¬âÃ£Æâ¡Ã£ÆÂ¼Ã£âÂ¿Ã£âÂ»Ã£ÆÂ³Ã£âÂ¿Ã£ÆÂ¼Ã¥ÂâÃ£ÂâGPUÃ©Åâ¬Ã¨Â¦ÂÃ£ÂÅÃ§Â¶â¢Ã§Â¶Å¡Ã§Å¡âÃ£ÂÂ«Ã¦â¹Â¡Ã¥Â¤Â§Ã£ÂâÃ£ÂÂ¦Ã£ÂÅ Ã£âÅ Ã£â¬ÂAIÃ¥ÂÅ Ã¥Â°Å½Ã¤Â½âÃ¥Â¸âÃ¥Â Â´Ã£ÂÂ§Ã£ÂÂ®Ã§Â«Â¶Ã¤Âºâ°Ã¥Å âºÃ¥ÂâÃ¤Â¸Å Ã£ÂÅÃ¨Â©â¢Ã¤Â¾Â¡Ã£Ââ¢Ã£âÅÃ£ÂÂ¦Ã£ÂâÃ£ââ¹Ã£â¬â</div>
+    </div>
+    <div class="ff-card">
+      <div class="ff-ticker">ARM</div>
+      <div class="ff-name">Arm Holdings</div>
+      <div class="ff-chg tick-up">+3.5%</div>
+      <div class="ff-body">Ã¥ÂÅ Ã¥Â°Å½Ã¤Â½âÃ¦Â ÂªÃ¥â¦Â¨Ã¤Â½âÃ£ÂÂ®Ã¤Â¸Å Ã¦Ëâ¡Ã£ÆËÃ£ÆÂ¬Ã£ÆÂ³Ã£Æâ°Ã£ÂÂ«Ã¤Â¹âÃ£âÅ Ã¤Â¸Å Ã¦Ëâ¡Ã£â¬âÃ£âÂ¹Ã£ÆÅ¾Ã£ÆÂ¼Ã£ÆËÃ£Æâ¢Ã£âÂ©Ã£ÆÂ³Ã£ÆÂ»AIÃ§Â«Â¯Ã¦ÅÂ«Ã¥ÂâÃ£ÂâÃ£ÆÂÃ£ÆÆÃ£ÆâÃ¨Â¨Â­Ã¨Â¨ËÃ£ÂÂ®Ã£ÆÂ­Ã£âÂ¤Ã£ÆÂ¤Ã£ÆÂ«Ã£Æâ Ã£âÂ£Ã¥ÂÅ½Ã¥â¦Â¥Ã£ÂÅÃ¥Â®â°Ã¥Â®Å¡Ã§Å¡âÃ£ÂÂ«Ã¥Â¢âÃ¥Å Â Ã£ÂâÃ£ÂÂ¦Ã£ÂÅ Ã£âÅ Ã£â¬ÂÃ¤Â¸Â­Ã©â¢Â·Ã¦ÅÅ¸Ã§Å¡âÃ£ÂÂªÃ¦ËÂÃ©â¢Â·Ã¦ÅÅ¸Ã¥Â¾â¦Ã£ÂÅÃ§Â¶Å¡Ã£ÂÂÃ£â¬â</div>
+    </div>
+  </div>
+</div>
+
+<!-- WAVE 3 -->
+<canvas id="wave3" class="wave" style="background:#f0ebe0;"></canvas>
+
+<!-- SHORT VERSION -->
+<div class="section sv-bg">
+  <div class="section-label" style="color:rgba(255,255,255,0.4);">Short Version</div>
+  <div class="sv-title">5Ã¥Ëâ Ã£ÂÂ§Ã¨ÂªÂ­Ã£ââ¬Ã¦ÅÂ¬Ã¦âÂ¥Ã£ÂÂ®Ã¥Â¸âÃ¥Â Â´Ã£ÂÂ¾Ã£ÂÂ¨Ã£âÂ</div>
+  <ul class="sv-list">
+    <li><span class="sv-num">1</span><span>S&amp;P500Ã¯Â¼Ë+0.80%Ã¯Â¼â°Ã£ÂÂ¨NASDAQÃ¯Â¼Ë+1.60%Ã¯Â¼â°Ã£ÂÅÃ¦ÂÆÃ£ÂÂ£Ã£ÂÂ¦Ã§ÂµâÃ¥â¬Â¤Ã£Æâ¢Ã£ÆÂ¼Ã£âÂ¹Ã£ÂÂ®Ã¥ÂÂ²Ã¤Â¸Å Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã£ââÃ¦âºÂ´Ã¦âÂ°Ã£â¬âÃ£Æâ¬Ã£âÂ¦Ã£ÂÂ¯Ã¥ÂÅ Ã¥Â°Å½Ã¤Â½âÃ¤Â»Â¥Ã¥Â¤âÃ£ÂÂ®Ã©Å ËÃ¦Å¸âÃ£ÂÂ«Ã¥Â£Â²Ã£âÅ Ã£ÂÅÃ¥â¡ÂºÃ£ÂÂ¦Ã¥Â°ÂÃ¥Â¹â¦Ã£ÆÅ¾Ã£âÂ¤Ã£ÆÅ Ã£âÂ¹Ã¯Â¼Ë-0.20%Ã¯Â¼â°Ã£â¬â</span></li>
+    <li><span class="sv-num">2</span><span>IntelÃ£ÂÅ25%Ã¦â¬Â¥Ã©Â¨Â°Ã£ÂâÃ£â¬ÂÃ£Æâ°Ã£ÆÆÃ£ÆËÃ£âÂ³Ã£ÆÂ Ã¦â¢âÃ¤Â»Â£Ã£ââÃ¨Â¶â¦Ã£ÂËÃ£ââ¹Ã¦Â ÂªÃ¤Â¾Â¡Ã¦Åâ¬Ã©Â«ËÃ¥â¬Â¤Ã£ââÃ¨Â¨ËÃ©ÅÂ²Ã£â¬âÃ£Æâ¢Ã£âÂ¡Ã£âÂ¦Ã£ÆÂ³Ã£Æâ°Ã£ÆÂªÃ¥Â£Â²Ã¤Â¸Å +16%Ã£ÂÅÃ¨Â©â¢Ã¤Â¾Â¡Ã£Ââ¢Ã£âÅAMDÃ£ÆÂ»ARMÃ£ÆÂ»MarvellÃ£ÂÂªÃ£ÂÂ©Ã¥ÂÅ Ã¥Â°Å½Ã¤Â½âÃ¦Â ÂªÃ¥â¦Â¨Ã¤Â½âÃ£ÂÂ«Ã¦Â³Â¢Ã¥ÂÅ Ã£ÂâÃ£ÂÅ¸Ã£â¬â</span></li>
+    <li><span class="sv-num">3</span><span>Q1Ã¦Â±ÂºÃ§Â®âÃ£âÂ·Ã£ÆÂ¼Ã£âÂºÃ£ÆÂ³Ã¯Â¼Å¡S&amp;P500Ã¦Â§â¹Ã¦ËÂÃ¤Â¼ÂÃ¦Â¥Â­137Ã§Â¤Â¾Ã¤Â¸Â­78%Ã£ÂÅEPSÃ¤ÂºËÃ¦ÆÂ³Ã¨Â¶â¦Ã©ÂÅ½Ã£â¬âEPSÃ¦ËÂÃ©â¢Â·Ã§Å½â¡Ã£ÂÂ¯Ã¥â°ÂÃ¥Â¹Â´Ã¥ÂÅÃ¦ÅÅ¸Ã¦Â¯â+25.32%Ã£ÂÂªÂ©ÂÅ¾Ã¥Â¸Â¸Ã£ÂÂ«Ã©Â«ËÃ£ÂâÃ¦Â°Â´Ã¦ÂºâÃ£ÂÂ§Ã£â¬ÂÃ¤Â¼ÂÃ¦Â¥Â­Ã¦Â¥Â­Ã§Â¸Â¾Ã£ÂÂ®Ã¥Â¼Â·Ã£ÂâÃ£ÂÅÃ§Â¤ÂºÃ£Ââ¢Ã£âÅÃ£ÂÅ¸Ã£â¬â</span></li>
+    <li><span class="sv-num">4</span><span>WTIÃ¥Å½Å¸Ã¦Â²Â¹Ã£ÂÂ¯$94.88Ã¯Â¼Ë-1.01%Ã¯Â¼â°Ã£ÂÂ«Ã¥Â°ÂÃ¥ÂÂÃ¨ÂÂ½Ã£â¬âÃ§Â±Â³Ã£âÂ¤Ã£ÆÂ©Ã£ÆÂ³Ã£ÂÂ®Ã¥ÂÅÃ¦ËÂ¦Ã¥Â»Â¶Ã©â¢Â·Ã¦ÅÅ¸Ã¥Â¾â¦Ã£ÂÅÃ¥ÅÂ°Ã¦âÂ¿Ã¥Â­Â¦Ã£ÆâÃ£ÆÂ¬Ã£ÆÅ¸Ã£âÂ¢Ã£ÆÂ Ã£ââÃ¦Å âÃ¥ËÂ¶Ã£Ââ¢Ã£ââ¹Ã¤Â¸â¬Ã¦âÂ¹Ã£â¬ÂÃ£ÆâºÃ£ÆÂ«Ã£ÆÂ Ã£âÂºÃ¦ÂµÂ·Ã¥Â³Â¡Ã£ÂÂ§Ã£ÂÂ®Ã§Â·Å Ã¥Â¼ÂµÃ£ÂÅÃ¤Â¸â¹Ã¥â¬Â¤Ã£ââÃ¦âÂ¯Ã£ÂËÃ£ÂÂ¦Ã£ÂâÃ£ââ¹Ã£â¬â</span></li>
+    <li><span class="sv-num">5</span><span>Ã¦ÂÂ¥Ã©â¬Â±Ã£ÂÂ®Ã¦Åâ¬Ã©â¡ÂÃ¨Â¦ÂÃ£âÂ¤Ã£Æâ¢Ã£ÆÂ³Ã£ÆËÃ£ÂÂ¯FOMCÃ¯Â¼Ë4/29Ã¯Â¼â°Ã£ÂÂ¨AppleÃ£ÆÂ»MicrosoftÃ£ÆÂ»MetaÃ£ÆÂ»AmazonÃ£ÆÂ»AlphabetÃ£ÂÂ®Ã¦Â±ÂºÃ§Â®âÃ£ÆÂ©Ã£ÆÆÃ£âÂ·Ã£ÆÂ¥Ã£â¬âÃ§ÂÂ¾Ã¥ÅÂ¨Ã£ÂÂ®Ã¥Â¼Â·Ã¦Â°âÃ§âºÂ¸Ã¥Â Â´Ã£ÂÅÃ£Ââ¢Ã£ââ°Ã£ÂÂ«Ã¥Å Â Ã©â¬Å¸Ã£Ââ¢Ã£ââ¹Ã£Ââ¹Ã£â¬ÂÃ¥ËÂ©Ã§Â¢ÂºÃ¥Â£Â²Ã£âÅ Ã£ÂÅÃ¥â¡ÂºÃ£ââ¹Ã£Ââ¹Ã£ÂÂ®Ã¥Ëâ Ã¥Â²ÂÃ§âÂ¹Ã£ÂÂ¨Ã£ÂÂªÃ£ââ¹Ã£â¬â</span></li>
+  </ul>
+</div>
+
+<!-- WAVE 4 -->
+<canvas id="wave4" class="wave" style="background:#21344f;"></canvas>
+
+<!-- REFERENCES -->
+<div class="section">
+  <div class="section-label">References</div>
+  <div class="section-title">Ã¦Æâ¦Ã¥Â Â±Ã£âÂ½Ã£ÆÂ¼Ã£âÂ¹</div>
+  <ul class="ref-list">
+    <li><a href="https://www.cnbc.com/2026/04/24/stock-market-next-week-outlook-for-april-27-may-1-2026.html" target="_blank">'Mag 7' earnings, Fed meeting will test a stock market near all-time highs<span class="ref-src">CNBC</span></a></li>
+    <li><a href="https://www.cnbc.com/2026/04/23/stock-market-today-live-updates.html" target="_blank">S&amp;P 500, Nasdaq close at records, boosted by Intel<span class="ref-src">CNBC</span></a></li>
+    <li><a href="https://www.cnbc.com/2026/04/21/stock-market-today-live-updates.html" target="_blank">S&amp;P 500, Nasdaq close at records after U.S. extends Iran ceasefire<span class="ref-src">CNBC</span></a></li>
+    <li><a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">United States Stock Market Index<span class="ref-src">Trading Economics</span></a></li>
+    <li><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">US 10 Year Treasury Note Yield<span class="ref-src">Trading Economics</span></a></li>
+    <li><a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Crude Oil Price Ã¢â¬â WTI<span class="ref-src">Trading Economics</span></a></li>
+  </ul>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>ÃÂ© 2026 Ã§Â±Â³Ã¥âºÂ½Ã¥Â¸âÃ¥Â Â´Ã£ÆÂ¢Ã£ÆÂ¼Ã£Æâ¹Ã£ÆÂ³Ã£âÂ°Ã£ÆÂ¬Ã£ÆÂÃ£ÆÂ¼Ã£ÆË Ã¢â¬â Powered by Claude / Cowork</p>
+  <p>Ã¦ÅÂ¬Ã£ÆÂ¬Ã£ÆÂÃ£ÆÂ¼Ã£ÆËÃ£ÂÂ¯AIÃ£ÂÂ«Ã£âËÃ£ââ¹Ã¨â¡ÂªÃ¥â¹â¢Ã§âÅ¸Ã¦ËÂÃ£ÂÂ§Ã£Ââ¢Ã£â¬âÃ¦Å â¢Ã¨Â³â¡Ã¥ËÂ¤Ã¦âÂ­Ã£ÂÂ®Ã¥ÂâÃ¨â¬ÆÃ¦Æâ¦Ã¥Â Â±Ã£ÂÂ¨Ã£ÂâÃ£ÂÂ¦Ã£ÂâÃ¥ËÂ©Ã§âÂ¨Ã£ÂÂÃ£ÂÂ Ã£Ââ¢Ã£ÂâÃ£â¬â</p>
+  <p style="margin-top:10px;">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+  </p>
+</footer>
+
+<!-- WAVE.JS -->
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(function(cfg) {
+    var canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var t = 0, rafId = null, active = false;
+    function resize() {
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || 80;
+    }
+    function draw() {
+      if (!active) return;
+      resize();
+      var w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1;
+      ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath();
+      ctx.moveTo(0, h / 2);
+      for (var x = 0; x <= w; x++) {
+        var y = h / 2
+          + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp
+          + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed;
+      rafId = requestAnimationFrame(draw);
+    }
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+
+</body>
+</html>
