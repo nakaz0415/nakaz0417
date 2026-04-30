@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>米国市場モーニングレポート | 2026年4月30日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f3ea;
+    --fg: #1a2230;
+    --primary: #21344f;
+    --accent: #b5472a;
+    --border: #d6cfc4;
+    --muted: #6b6358;
+    --soft: #efe9dc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+
+  /* HEADER */
+  header.site-header {
+    background: var(--primary);
+    color: #fff;
+    border-bottom: 4px double rgba(255,255,255,0.25);
+  }
+  .head-top {
+    padding: 22px 28px 16px;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .masthead-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: #fff;
+  }
+  .masthead-jp {
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    color: rgba(255,255,255,0.75);
+  }
+  .head-meta {
+    text-align: right;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.08em;
+  }
+  .head-meta .date {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.16em;
+    font-weight: 700;
+  }
+
+  /* TICKER */
+  .ticker-bar { overflow: hidden; white-space: nowrap; background: rgba(0,0,0,0.25); padding: 9px 0; }
+  .ticker-inner { display: inline-block; animation: ticker 32s linear infinite; }
+  .ticker-inner span { display: inline-block; margin: 0 38px; font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.88); }
+  .ticker-inner span .tick-label { color: rgba(255,255,255,0.5); margin-right: 6px; }
+  .tick-up { color: #5cd47b; font-weight: 700; }
+  .tick-down { color: #f27a6c; font-weight: 700; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* HERO */
+  .hero {
+    height: 340px;
+    background:
+      linear-gradient(180deg, rgba(33,52,79,0.55) 0%, rgba(33,52,79,0.25) 50%, rgba(33,52,79,0.7) 100%),
+      url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-inner { max-width: 1180px; margin: 0 auto; padding: 0 28px; width: 100%; }
+  .hero-eyebrow {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    line-height: 1.1;
+    max-width: 820px;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.4);
+  }
+  .hero-sub {
+    margin-top: 14px;
+    font-size: 16px;
+    color: rgba(255,255,255,0.9);
+    max-width: 720px;
+  }
+
+  /* WAVE */
+  .wave-band { display: block; width: 100%; height: 80px; }
+
+  /* SECTION TITLES */
+  .sec-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--primary);
+    border-left: 5px solid var(--accent);
+    padding-left: 14px;
+    margin-bottom: 24px;
+    letter-spacing: 0.04em;
+  }
+  .sec-sub {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  /* QUICK READING */
+  .quick { padding: 56px 0 40px; }
+  .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .quick-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 24px 22px;
+    position: relative;
+  }
+  .quick-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--accent);
+    opacity: 0.85;
+  }
+  .quick-card h3 {
+    font-size: 18px;
+    margin: 8px 0 10px;
+    color: var(--primary);
+    font-weight: 700;
+  }
+  .quick-card p { font-size: 14px; color: var(--fg); }
+
+  /* LEAD STORY */
+  .lead { padding: 40px 0 56px; }
+  .lead-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+  }
+  .lead-body p {
+    font-size: 15px;
+    margin-bottom: 16px;
+    text-align: justify;
+  }
+  .lead-body p::first-letter {
+    /* subtle drop cap */
+  }
+  .lead-body h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+    font-size: 22px;
+    margin: 22px 0 10px;
+  }
+  .lead-side {
+    background: var(--soft);
+    padding: 22px 22px;
+    border-top: 4px solid var(--accent);
+    height: fit-content;
+  }
+  .lead-side h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .lead-side ul { list-style: none; }
+  .lead-side li {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+  }
+  .lead-side li:last-child { border-bottom: none; }
+  .lead-side .li-time {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 12px;
+    min-width: 56px;
+  }
+
+  /* ASSET GRID */
+  .assets { padding: 16px 0 56px; }
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .asset-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 18px 18px 16px;
+  }
+  .asset-card .label {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .asset-card .value {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--primary);
+    margin: 6px 0 4px;
+  }
+  .asset-card .delta { font-size: 13px; font-weight: 700; }
+  .delta-up { color: #2c8a4a; }
+  .delta-down { color: var(--accent); }
+  .asset-card .note {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px dotted var(--border);
+    padding-top: 8px;
+  }
+
+  /* FINANCE FOCUS */
+  .focus { padding: 40px 0 56px; }
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .focus-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 22px;
+  }
+  .focus-ticker {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+  }
+  .focus-name {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .focus-card h4 {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 8px;
+  }
+  .focus-card p { font-size: 13px; }
+  .focus-stat {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .focus-stat strong { color: var(--primary); font-size: 14px; }
+
+  /* SHORT VERSION */
+  .shortv {
+    background: var(--primary);
+    color: #fff;
+    padding: 64px 0;
+  }
+  .shortv .sec-title { color: #fff; border-color: #fff; }
+  .shortv-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-top: 8px;
+  }
+  .shortv-item {
+    background: rgba(255,255,255,0.06);
+    padding: 18px 16px;
+    border-left: 3px solid var(--accent);
+  }
+  .shortv-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 6px;
+  }
+  .shortv-item p { font-size: 13px; color: rgba(255,255,255,0.92); }
+
+  /* REFERENCES */
+  .refs { padding: 56px 0; }
+  .refs ul { list-style: none; }
+  .refs li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .refs a { color: var(--primary); text-decoration: none; border-bottom: 1px dotted var(--primary); }
+  .refs a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* FOOTER */
+  footer.site-footer {
+    background: #14202f;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 36px 20px 28px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+  footer .foot-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  /* ARCHIVE LINK */
+  .archive-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 6px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+  }
+  .archive-link:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  @media (max-width: 900px) {
+    .quick-grid, .focus-grid { grid-template-columns: 1fr 1fr; }
+    .asset-grid { grid-template-columns: 1fr 1fr; }
+    .shortv-grid { grid-template-columns: 1fr 1fr; }
+    .lead-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 34px; }
+    .masthead-title { font-size: 32px; }
+  }
+  @media (max-width: 560px) {
+    .quick-grid, .focus-grid, .asset-grid, .shortv-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="head-top">
+    <div>
+      <div class="masthead-title">The Morning Tape</div>
+      <div class="masthead-jp">米 国 市 場 モ ー ニ ン グ レ ポ ー ト</div>
+    </div>
+    <div class="head-meta">
+      <div>VOL. 026 / NO. 030</div>
+      <div class="date">2026.04.30 THU</div>
+      <div>JST 07:30 EDITION</div>
+    </div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,135.95 (-0.04%)</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">24,673.24 (+0.04%)</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">48,861.81 (-0.57%)</span></span>
+      <span><span class="tick-label">US10Y</span>4.35%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$103.40</span></span>
+      <span><span class="tick-label">BRENT</span><span class="tick-up">$112.10</span></span>
+      <span><span class="tick-label">VIX</span>17.83</span>
+      <span><span class="tick-label">FED FUNDS</span>3.50-3.75%</span>
+      <span><span class="tick-label">GOOGL AH</span><span class="tick-up">+5.0%</span></span>
+      <span><span class="tick-label">META AH</span><span class="tick-down">-4.4%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,135.95 (-0.04%)</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">24,673.24 (+0.04%)</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">48,861.81 (-0.57%)</span></span>
+      <span><span class="tick-label">US10Y</span>4.35%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$103.40</span></span>
+      <span><span class="tick-label">BRENT</span><span class="tick-up">$112.10</span></span>
+      <span><span class="tick-label">VIX</span>17.83</span>
+      <span><span class="tick-label">FED FUNDS</span>3.50-3.75%</span>
+      <span><span class="tick-label">GOOGL AH</span><span class="tick-up">+5.0%</span></span>
+      <span><span class="tick-label">META AH</span><span class="tick-down">-4.4%</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">Top Story / 4月29日終値</span>
+    <h1 class="hero-title">FOMC据え置き、Mag7決算で4月の総決算 — 原油$103・10年債4.35%が試金石</h1>
+    <p class="hero-sub">FRBは政策金利を3.50–3.75%に据え置き、ホルムズ海峡封鎖で原油は3日続伸。Alphabet・Microsoft・Amazon・Metaの決算が時間外で交錯し、AI投資の規模感が改めて市場の主役となった。</p>
+  </div>
+</section>
+
+<canvas id="wave1" class="wave-band"></canvas>
+
+<!-- QUICK READING -->
+<section class="quick">
+  <div class="container">
+    <div class="sec-sub">QUICK READING — 3つの要点</div>
+    <h2 class="sec-title">本日抑えるべき3つのポイント</h2>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="quick-num">01</div>
+        <h3>FRB据え置き、4名異例の反対票</h3>
+        <p>FOMCは政策金利を3.50–3.75%に据え置き。8対4の票割れで反対票4名は1992年10月以来の多さ。利下げ姿勢の維持か削除かで委員会内に明確な亀裂。</p>
+      </div>
+      <div class="quick-card">
+        <div class="quick-num">02</div>
+        <h3>Mag7決算が時間外で乱舞</h3>
+        <p>Alphabetは売上1099億ドル・クラウド+63%でAH+5%。一方Metaはキャペックス見通しを最大1450億ドルに引き上げAH-4.4%。AI投資の質と量が問われる局面に。</p>
+      </div>
+      <div class="quick-card">
+        <div class="quick-num">03</div>
+        <h3>原油3日続伸、$103台の領域</h3>
+        <p>ホルムズ海峡の事実上閉鎖が継続し、米国はイラン主要港を封鎖。WTIは$103超、Brentは$112台。インフレ警戒と利下げ余地縮小が連動した一日。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD STORY -->
+<section class="lead">
+  <div class="container">
+    <div class="sec-sub">LEAD STORY — 本日の主役</div>
+    <h2 class="sec-title">「政策・原油・AI」三方向の綱引き、4月最終取引日が示した相場の輪郭</h2>
+    <div class="lead-grid">
+      <div class="lead-body">
+        <p>4月29日の米国市場は、表面上はわずかな下落に見えたものの、その裏で複数のマクロ要因が同時に進行する一日となった。S&amp;P500は前日比0.04%安の7,135.95と、ほぼフラットで取引を終えたが、ダウ平均は5営業日続落となる280.12ポイント安(-0.57%)で48,861.81。一方ナスダック総合は0.04%高の24,673.24と、Mag7決算前の様子見ムードが終始相場を支配した。</p>
+        <p>取引時間中の最大の論点はFOMCだった。FRBは政策金利の誘導目標を3.50–3.75%で据え置いたが、注目を集めたのは8対4の票割れだ。FOMCで4人の反対票が出るのは1992年10月以来。3名は声明文の利下げバイアス削除を主張しており、利下げ路線の継続性そのものが揺らいだ形となった。Powell議長は会見で、トランプ政権による法的圧力を背景に「中央銀行の独立性を守るため」5月15日の議長任期終了後も理事として残留する意向を明らかにした。</p>
+        <h3>Mag7決算 — 物量と質、両面の戦い</h3>
+        <p>引け後にはAlphabet、Microsoft、Amazon、Metaがほぼ同時に決算を発表。中でもAlphabetは1,099億ドル(+22% YoY)、Google Cloud +63%という強烈な数字で時間外+5%。Pichai CEOが「需要に対して計算リソースが不足している」と語ったことが象徴的で、Cloudの受注残は4,600億ドル超に達した。Amazonは売上1,815.2億ドル・EPS $2.78でいずれも市場予想を上回り堅調。</p>
+        <p>一方でMetaは2026年通期キャペックス見通しを最大1,450億ドルに引き上げ、市場の許容範囲を超えるAI投資へのシフトに対しAH-4.4%と反応。「AI投資は容認されるが、自由なキャペックス拡大には制約がある」という株主目線の温度感が浮かび上がった。Mag7全体では2026年に約6,000億ドル規模のAI関連投資が進行する計算だ。</p>
+        <h3>原油・地政学 — 利下げ期待を蝕む第二の動因</h3>
+        <p>WTIは$103台と3日続伸。ホルムズ海峡は2月末以降、事実上の通航停止が続き、IEAは「歴史上最大級の供給ショック」と表現する。米国による対イラン主要港封鎖が継続するなか、両国は港湾解除と核交渉の切り離しを巡る協議に入っているが、合意は依然不透明。エネルギーインフレの再点火懸念がFRBの利下げ余地を一段と狭めており、10年債利回りは4.35%近辺で底堅く推移している。</p>
+      </div>
+      <aside class="lead-side">
+        <h4>Today's Watch</h4>
+        <ul>
+          <li><span class="li-time">8:30</span><span>米Q1 GDP(速報)、コアPCEを市場は精査。</span></li>
+          <li><span class="li-time">10:00</span><span>4月ミシガン大消費者信頼感確報値 — インフレ期待要注意。</span></li>
+          <li><span class="li-time">16:05</span><span>Apple決算(引け後)、サービス売上とiPhone販売単価。</span></li>
+          <li><span class="li-time">16:20</span><span>Mastercard、決済取扱高の地域別開示が焦点。</span></li>
+          <li><span class="li-time">All Day</span><span>ホルムズ海峡 / 米イラン交渉のヘッドライン。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ASSET GRID -->
+<section class="assets">
+  <div class="container">
+    <div class="sec-sub">MARKETS AT A GLANCE</div>
+    <h2 class="sec-title">主要アセット一覧 — 4月29日終値</h2>
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="label">S&amp;P 500</div>
+        <div class="value">7,135.95</div>
+        <div class="delta delta-down">-3.06 (-0.04%)</div>
+        <div class="note">Mag7決算待ちで終始膠着。半導体は前日売りの反動で堅調。</div>
+      </div>
+      <div class="asset-card">
+        <div class="label">NASDAQ COMPOSITE</div>
+        <div class="value">24,673.24</div>
+        <div class="delta delta-up">+10.27 (+0.04%)</div>
+        <div class="note">テック主導の小幅高、AH取引でAlphabet主導に振れる構図。</div>
+      </div>
+      <div class="asset-card">
+        <div class="label">WTI CRUDE</div>
+        <div class="value">$103.40</div>
+        <div class="delta delta-up">+1.85 (+1.82%)</div>
+        <div class="note">ホルムズ封鎖継続が支援。Brentは$112台で3日続伸。</div>
+      </div>
+      <div class="asset-card">
+        <div class="label">US 10Y YIELD</div>
+        <div class="value">4.35%</div>
+        <div class="delta delta-up">+2bp</div>
+        <div class="note">FOMCのタカ派色強まりとエネルギーインフレ警戒で堅調。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave2" class="wave-band"></canvas>
+
+<!-- FINANCE FOCUS -->
+<section class="focus">
+  <div class="container">
+    <div class="sec-sub">FINANCE FOCUS — 注目銘柄</div>
+    <h2 class="sec-title">本日のスポット3銘柄</h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="focus-ticker">GOOGL</div>
+        <div class="focus-name">Alphabet Inc. — Class A</div>
+        <h4>クラウド+63%、計算リソース不足が"ボトルネック"</h4>
+        <p>1099億ドルの売上は予想107億ドル超。EPS $5.11は持株評価益$369億で押し上げられた面はあるが、Cloud受注残は4,600億ドル超。年間キャペックスは$180–$190B枠に上方修正。</p>
+        <div class="focus-stat"><span>Q1売上</span><strong>$109.9B (+22%)</strong></div>
+        <div class="focus-stat"><span>AH株価</span><strong>+5.0%</strong></div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-ticker">META</div>
+        <div class="focus-name">Meta Platforms, Inc.</div>
+        <h4>キャペックス上限1,450億ドル、AI投資の"度"が問われる</h4>
+        <p>純利益$26.8B(EPS $10.44)と業績は好調だが、2026通期キャペックスを$125–$145Bへ引き上げ。市場予想を大きく上回る投資ペースは、AI収益化のタイムラインに対する懸念を呼び込んだ。</p>
+        <div class="focus-stat"><span>Q1純利益</span><strong>$26.8B</strong></div>
+        <div class="focus-stat"><span>AH株価</span><strong>-4.4%</strong></div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-ticker">AMZN</div>
+        <div class="focus-name">Amazon.com, Inc.</div>
+        <h4>EPS $2.78・売上$181.5B、AWSが市場の評価軸に</h4>
+        <p>EPS・売上ともに市場予想を大幅上回り。AWSの成長率(コンセンサス18%前後)が依然として企業AI需要のクリーンな指標。広告・物流の収益性改善も継続テーマ。</p>
+        <div class="focus-stat"><span>Q1売上</span><strong>$181.52B</strong></div>
+        <div class="focus-stat"><span>EPS</span><strong>$2.78</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave3" class="wave-band"></canvas>
+
+<!-- SHORT VERSION -->
+<section class="shortv">
+  <div class="container">
+    <div class="sec-sub" style="color:rgba(255,255,255,0.6);">SHORT VERSION — 5行要約</div>
+    <h2 class="sec-title">3分で押さえるサマリー</h2>
+    <div class="shortv-grid">
+      <div class="shortv-item">
+        <div class="shortv-num">01</div>
+        <p>FRBは政策金利3.50–3.75%を据え置き。4名反対票は1992年以来の多さで、利下げバイアスを巡り委員会が分裂。</p>
+      </div>
+      <div class="shortv-item">
+        <div class="shortv-num">02</div>
+        <p>S&amp;P500ほぼ横ばい・ダウ5日続落。ナスダックは小幅高でMag7決算待ちの典型的な様子見相場。</p>
+      </div>
+      <div class="shortv-item">
+        <div class="shortv-num">03</div>
+        <p>Alphabet時間外+5%、Cloud+63%。Metaはキャペックス引き上げで-4.4%。Amazonは予想超えで底堅い。</p>
+      </div>
+      <div class="shortv-item">
+        <div class="shortv-num">04</div>
+        <p>WTIは$103超で3日続伸、ホルムズ封鎖継続。米国の対イラン港湾封鎖が両建てで供給リスクを温存。</p>
+      </div>
+      <div class="shortv-item">
+        <div class="shortv-num">05</div>
+        <p>10年債利回り4.35%、VIX17.83。インフレ警戒と利下げ余地縮小で金利は底堅さ維持、ボラ自体は穏やか。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave4" class="wave-band"></canvas>
+
+<!-- REFERENCES -->
+<section class="refs">
+  <div class="container">
+    <div class="sec-sub">REFERENCES — 参照ソース</div>
+    <h2 class="sec-title">情報元</h2>
+    <ul>
+      <li><a href="https://finance.yahoo.com/markets/stocks/live/stock-market-today-wednesday-april-29-dow-nasdaq-sp-futures-powell-mag7-231405065.html" target="_blank" rel="noopener">Yahoo Finance — Stock market today: Dow, S&amp;P 500 slip as oil surges, with Big Tech earnings on deck</a></li>
+      <li><a href="https://www.cnbc.com/2026/04/29/stocks-making-the-biggest-moves-after-hours-googl-msft-amzn-meta.html" target="_blank" rel="noopener">CNBC — Stocks making the biggest moves after hours: Alphabet, Microsoft, Amazon, Meta &amp; more</a></li>
+      <li><a href="https://www.cnbc.com/2026/04/29/fed-interest-rate-decision-april-2026.html" target="_blank" rel="noopener">CNBC — Fed interest rate decision April 2026: Fed holds rates steady amid dissent</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-04-29/fed-holds-rates-three-officials-dissent-against-easing-bias" target="_blank" rel="noopener">Bloomberg — Fed Interest Rate Decision: Keeps Rates Steady as Powell Leadership Nears End</a></li>
+      <li><a href="https://9to5google.com/2026/04/29/alphabet-q1-2026-earnings/" target="_blank" rel="noopener">9to5Google — Alphabet reports Q1 2026 revenue of $109.9 billion</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener">Wikipedia — 2026 Strait of Hormuz crisis</a></li>
+      <li><a href="https://www.iea.org/reports/oil-market-report-april-2026" target="_blank" rel="noopener">IEA — Oil Market Report (April 2026)</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="foot-title">The Morning Tape</div>
+  <div>米国市場モーニングレポート / Daily edition</div>
+  <div>© 2026 nakaz0415. AIリサーチ自動生成。投資判断は自己責任でお願いします。</div>
+  <div style="margin-top:10px;">
+    <a class="archive-link" href="archive.html">▶ 過去レポートのアーカイブ</a>
+  </div>
+  <div style="margin-top:14px;">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+  </div>
+</footer>
+
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() {
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || 80;
+    }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1;
+      ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath();
+      ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp
+                         + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed;
+      rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+
+</body>
+</html>
