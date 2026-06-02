@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場 モーニングレポート | 2026.06.03</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f3ea;
+    --fg: #1a2230;
+    --primary: #21344f;
+    --accent: #b5472a;
+    --border: #d6cfc4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--fg); font-family: 'Noto Sans JP', sans-serif; line-height: 1.7; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* HEADER */
+  .site-header { background: var(--primary); color: #fff; }
+  .header-top { padding: 28px 0 20px; }
+  .header-flex { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+  .brand { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 34px; letter-spacing: 0.04em; line-height: 1.1; }
+  .brand .accent { color: #d9a17a; font-weight: 700; }
+  .brand-sub { font-size: 11px; letter-spacing: 0.35em; margin-top: 8px; color: rgba(255,255,255,0.65); text-transform: uppercase; }
+  .dateline { text-align: right; font-size: 12px; letter-spacing: 0.18em; color: rgba(255,255,255,0.85); }
+  .dateline .big { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 700; display: block; letter-spacing: 0.04em; margin-bottom: 4px; }
+
+  /* TICKER BAR */
+  .ticker-bar { overflow: hidden; white-space: nowrap; background: rgba(0,0,0,0.25); padding: 9px 0; }
+  .ticker-inner { display: inline-block; animation: ticker 32s linear infinite; }
+  .ticker-inner span { display: inline-block; margin: 0 38px; font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.88); }
+  .ticker-inner span .tick-label { color: rgba(255,255,255,0.5); margin-right: 6px; }
+  .tick-up { color: #5cd47b; font-weight: 700; }
+  .tick-down { color: #f27a6c; font-weight: 700; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* HERO */
+  .hero { background: linear-gradient(135deg, #1a2a40 0%, #2d4a6e 60%, #b5472a 100%); height: 340px; display: flex; align-items: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  .hero-inner { position: relative; z-index: 1; color: #fff; padding: 40px 0; }
+  .hero-tag { font-size: 11px; letter-spacing: 0.4em; color: #d9a17a; text-transform: uppercase; margin-bottom: 14px; }
+  .hero-title { font-size: 36px; font-weight: 900; line-height: 1.25; margin-bottom: 18px; }
+  .hero-sub { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 600px; }
+  .record-badge { display: inline-block; background: #b5472a; color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.1em; margin-bottom: 10px; }
+
+  /* WAVE CANVAS */
+  canvas.wave { display: block; width: 100%; height: 80px; }
+
+  /* QUICK READING */
+  .section { padding: 56px 0; }
+  .section-label { font-size: 10px; letter-spacing: 0.5em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; font-weight: 700; }
+  .section-title { font-size: 26px; font-weight: 900; color: var(--primary); margin-bottom: 32px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 28px 24px; }
+  .card-num { font-size: 36px; font-weight: 900; color: var(--primary); line-height: 1; margin-bottom: 10px; }
+  .card-num.up { color: #2a7d4f; }
+  .card-num.down { color: var(--accent); }
+  .card-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--primary); }
+  .card-body { font-size: 13px; color: #555; line-height: 1.6; }
+
+  /* LEAD STORY */
+  .lead-section { background: #fff; }
+  .lead-inner { display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: start; }
+  .lead-body h2 { font-size: 28px; font-weight: 900; color: var(--primary); line-height: 1.3; margin-bottom: 20px; }
+  .lead-body p { font-size: 15px; color: #444; margin-bottom: 16px; }
+  .sidebar { border: 1px solid var(--border); border-radius: 10px; padding: 24px; }
+  .sidebar h3 { font-size: 12px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; font-weight: 700; }
+  .watch-item { border-bottom: 1px solid var(--border); padding: 12px 0; }
+  .watch-item:last-child { border-bottom: none; }
+  .watch-ticker { font-size: 13px; font-weight: 700; color: var(--primary); }
+  .watch-price { font-size: 20px; font-weight: 900; }
+  .watch-change { font-size: 12px; font-weight: 700; }
+  .watch-change.up { color: #2a7d4f; }
+  .watch-change.down { color: var(--accent); }
+  .watch-desc { font-size: 12px; color: #777; margin-top: 3px; }
+
+  /* ASSET GRID */
+  .asset-section { background: var(--primary); color: #fff; }
+  .asset-section .section-label { color: #d9a17a; }
+  .asset-section .section-title { color: #fff; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .asset-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 24px 20px; }
+  .asset-name { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 8px; }
+  .asset-val { font-size: 30px; font-weight: 900; line-height: 1; margin-bottom: 6px; }
+  .asset-chg { font-size: 13px; font-weight: 700; }
+  .asset-chg.up { color: #5cd47b; }
+  .asset-chg.dn { color: #f27a6c; }
+  .asset-sub { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 6px; }
+
+  /* FINANCE FOCUS */
+  .stock-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 28px 24px; }
+  .stock-ticker { font-size: 13px; font-weight: 700; color: #888; letter-spacing: 0.15em; margin-bottom: 4px; }
+  .stock-name { font-size: 17px; font-weight: 900; color: var(--primary); margin-bottom: 12px; }
+  .stock-price { font-size: 32px; font-weight: 900; color: var(--primary); }
+  .stock-chg { font-size: 14px; font-weight: 700; margin-left: 8px; }
+  .stock-chg.up { color: #2a7d4f; }
+  .stock-chg.dn { color: var(--accent); }
+  .stock-desc { font-size: 13px; color: #555; margin-top: 12px; line-height: 1.6; }
+
+  /* SHORT VERSION */
+  .short-section { background: var(--primary); color: #fff; }
+  .short-section .section-label { color: #d9a17a; }
+  .short-section .section-title { color: #fff; }
+  .bullet-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .bullet-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 14px; color: rgba(255,255,255,0.88); line-height: 1.6; }
+  .bullet-list li::before { content: '▶'; color: #d9a17a; font-size: 11px; margin-top: 4px; flex-shrink: 0; }
+
+  /* REFERENCES */
+  .ref-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .ref-list li { font-size: 13px; }
+  .ref-list a { color: var(--accent); text-decoration: none; }
+  .ref-list a:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  .site-footer { background: var(--primary); color: rgba(255,255,255,0.7); padding: 36px 0; text-align: center; font-size: 13px; }
+  .foot-brand { font-size: 18px; font-weight: 900; color: #fff; margin-bottom: 10px; letter-spacing: 0.06em; }
+  .site-footer a { color: #d9a17a; text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .grid3, .grid4 { grid-template-columns: 1fr; }
+    .lead-inner { grid-template-columns: 1fr; }
+    .hero-title { font-size: 24px; }
+    .brand { font-size: 24px; }
+    .dateline .big { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-flex">
+      <div>
+        <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+        <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
+      </div>
+      <div class="dateline">
+        <span class="big">2026年6月3日(水)</span>
+        前営業日 6月2日(火) 終値ベース
+      </div>
+    </div>
+  </div>
+
+  <!-- TICKER BAR -->
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,609.78 +0.13%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">27,093 +0.03%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">51,307.79 +0.45%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.04%</span>
+      <span><span class="tick-label">US 10Y</span>4.46%</span>
+      <span><span class="tick-label">US 30Y</span>4.98%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.57%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$91.70</span></span>
+      <span><span class="tick-label">VIX</span>16.05</span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">$225.61</span></span>
+      <span><span class="tick-label">MRVL</span><span class="tick-up">$290.79 +32.5%</span></span>
+      <!-- 2セット目（継ぎ目なしループ） -->
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,609.78 +0.13%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">27,093 +0.03%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">51,307.79 +0.45%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.04%</span>
+      <span><span class="tick-label">US 10Y</span>4.46%</span>
+      <span><span class="tick-label">US 30Y</span>4.98%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.57%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$91.70</span></span>
+      <span><span class="tick-label">VIX</span>16.05</span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">$225.61</span></span>
+      <span><span class="tick-label">MRVL</span><span class="tick-up">$290.79 +32.5%</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="record-badge">🏆 史上初 S&amp;P500 が 7,600 突破</div>
+    <div class="hero-tag">June 2, 2026 · U.S. Market Closing Summary</div>
+    <h1 class="hero-title">チップブームで全主要指数が過去最高値<br>MRVLが32%急騰、雇用統計週に突入</h1>
+    <p class="hero-sub">NvidiaのCEOジェンスン・ファンによるMarvell Technology（MRVL）への絶賛コメントがテック株を牽引。S&amp;P500が史上初めて7,600の大台を超える歴史的な節目を達成した。</p>
+  </div>
+</section>
+
+<!-- WAVE 1 -->
+<canvas id="wave1" class="wave"></canvas>
+
+<!-- QUICK READING -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Quick Reading</div>
+    <div class="section-title">今日の3大ポイント</div>
+    <div class="grid3">
+      <div class="card">
+        <div class="card-num up">7,610</div>
+        <div class="card-title">S&amp;P500 史上初の7,600超え</div>
+        <div class="card-body">6月2日、S&amp;P500が7,609.78で引け、史上初めて7,600の大台を突破。年初来の力強い上昇トレンドが継続し、テック・エネルギーが主導役。</div>
+      </div>
+      <div class="card">
+        <div class="card-num up">+32.5%</div>
+        <div class="card-title">MRVL急騰：Nvidia効果</div>
+        <div class="card-body">NvidiaのCEOジェンスン・ファンがMarvell TechnologyをComputex上で「次の1兆ドル企業」と宣言。MRVLは$290.79に急騰し、AI半導体サプライチェーン全体への期待が高まった。</div>
+      </div>
+      <div class="card">
+        <div class="card-num">4.46%</div>
+        <div class="card-title">10年債利回りが上昇、雇用統計注視</div>
+        <div class="card-body">米10年債利回りが4.46%に上昇。今週金曜日の5月雇用統計発表を前にFRBの政策方針への関心が高まり、インフレと雇用データの綱引きが続く。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD STORY -->
+<section class="section lead-section">
+  <div class="container">
+    <div class="section-label">Lead Story</div>
+    <div class="lead-inner">
+      <div class="lead-body">
+        <h2>チップブームが相場を牽引、全主要指数が揃って最高値更新</h2>
+        <p>6月2日（火）の米国株式市場は、半導体関連株の急騰を原動力に3主要指数すべてが過去最高値を更新した。S&amp;P500は7,609.78（+0.13%）、NASDAQは27,093（+0.03%）、ダウ平均は51,307.79（+0.45%）で引けた。</p>
+        <p>最大の材料はMarvell Technology（MRVL）の急騰だ。Computex台湾で講演したNvidiaのジェンスン・ファンCEOがMRVLを「次の1兆ドル企業になりうる」と絶賛し、株価は32%超の大幅高となった。この発言はAI半導体分野への旺盛な需要を再確認させ、周辺の半導体銘柄にも買いが広がった。</p>
+        <p>一方でリスク要因も並存する。WTI原油は$91.70付近と高止まりし、中東情勢と米国・イラン交渉の先行き不透明感が意識されている。VIX指数は16.05と落ち着いているが、今週末の雇用統計（5月分）の結果次第でFRBの利下げ期待が大きく変動する可能性がある。</p>
+        <p>日本の国債市場では、10年JGB利回りが2.57%へ11bp低下。5月の国債入札が良好な需要を示したことが安心感につながり、円債市場は一時的に安定した。しかし日銀の段階的な政策正常化観測は続いており、金利の方向性には引き続き注意が必要だ。</p>
+        <p>今後の注目点は、金曜日に発表される5月の米雇用統計だ。労働市場の強弱がFRBの次の一手を左右し、秋口の利下げ観測の修正につながる可能性がある。また今週は複数のFRB高官の発言予定もあり、インフレ目標達成への見解が注目される。</p>
+      </div>
+      <div>
+        <div class="sidebar">
+          <h3>Today's Watch</h3>
+          <div class="watch-item">
+            <div class="watch-ticker">MRVL</div>
+            <div class="watch-price">$290.79 <span class="watch-change up">+32.5%</span></div>
+            <div class="watch-desc">Nvidia CEO発言で急騰。AI半導体需要の象徴に。</div>
+          </div>
+          <div class="watch-item">
+            <div class="watch-ticker">NVDA</div>
+            <div class="watch-price">$225.61 <span class="watch-change dn">-0.3%</span></div>
+            <div class="watch-desc">新AI PCチップ発表後は小幅調整。中長期期待は健在。</div>
+          </div>
+          <div class="watch-item">
+            <div class="watch-ticker">HPE</div>
+            <div class="watch-price"><span class="watch-change up">↑ 急騰</span></div>
+            <div class="watch-desc">Q2決算がウォール街予想を上回り、通年ガイダンゲも上方修正。</div>
+          </div>
+          <div class="watch-item">
+            <div class="watch-ticker">US 10Y</div>
+            <div class="watch-price">4.46%</div>
+            <div class="watch-desc">雇用統計前に上昇。FRBの政策への罱響に注目。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSET GRID -->
+<section class="section asset-section">
+  <div class="container">
+    <div class="section-label">Market Snapshot</div>
+    <div class="section-title">主要アセット</div>
+    <div class="grid4">
+      <div class="asset-card">
+        <div class="asset-name">S&amp;P 500</div>
+        <div class="asset-val">7,609.78</div>
+        <div class="asset-chg up">+0.13% ▲</div>
+        <div class="asset-sub">史上初7,600超え</div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-name">NASDAQ</div>
+        <div class="asset-val">27,093</div>
+        <div class="asset-chg up">+0.03% ▲</div>
+        <div class="asset-sub">過去最高値更新</div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-name">WTI燪油</div>
+        <div class="asset-val">$91.70</div>
+        <div class="asset-chg dn">-1.0% ▼</div>
+        <div class="asset-sub">丝�lxリスク継続</div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-name">US 10年債</div>
+        <div class="asset-val">4.46%</div>
+        <div class="asset-chg dn">利回り上昇</div>
+        <div class="asset-sub">雇用統計前に警戒</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE 2 -->
+<canvas id="wave2" class="wave"></canvas>
+
+<!-- FINANCE FOCUS -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Finance Focus</div>
+    <div class="section-title">注目銘柄</div>
+    <div class="grid3">
+      <div class="stock-card">
+        <div class="stock-ticker">NASDAQ: MRVL</div>
+        <div class="stock-name">Marvell Technology</div>
+        <div><span class="stock-price">$290.79</span><span class="stock-chg up">+32.5%</span></div>
+        <div class="stock-desc">Nvidia CEO発言で急騰。AI半導体のサプライチェーンとして「次の1兆ドル企業」候補に。Computex台湾でのサプライズ発言が引き金となり、取引時間外でも高値を維持した。</div>
+      </div>
+      <div class="stock-card">
+        <div class="stock-ticker">NASDAQ: NVDA</div>
+        <div class="stock-name">Nvidia Corporation</div>
+        <div><span class="stock-price">$225.61</span><span class="stock-chg dn">-0.3%</span></div>
+        <div class="stock-desc">AI PC向け新チップ発表で注目を集めたものの、直近の大幅上昇後に小幅調整。Computexでの存在感は圧倒的で、AI半導体産業の中核企業としての地位は揺るぎない。</div>
+      </div>
+      <div class="stock-card">
+        <div class="stock-ticker">NYSE: HPE</div>
+        <div class="stock-name">Hewlett Packard Enterprise</div>
+        <div><span class="stock-price stock-chg up">↑ 急騰</span></div>
+        <div class="stock-desc">第2四半期決算がウォール街の予想を上回り、通年ガイダンスを上方修正。AIインフラ需要の強さが売上に反映。企業向けAIサーバー需要が引き続き好調。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE 3 -->
+<canvas id="wave3" class="wave"></canvas>
+
+<!-- SHORT VERSION -->
+<section class="section short-section">
+  <div class="container">
+    <div class="section-label">Short Version</div>
+    <div class="section-title">5つのポイントで振り返る</div>
+    <ul class="bullet-list">
+      <li>S&amp;P500が史上初めて7,600を突破（7,609.78）、NASDAQ・ダウも揃って最高値を更新し、米国株は依然として強気相場を継続している。</li>
+      <li>Marvell Technology（MRVL）がNvidiaのCEO発言を受けて32.5%急騰。AI半導体サプライチェーン企業への期待が改めて高まり、テック株全体を牽引した。</li>
+      <li>米10年債利回りは4.46%に上昇し、金曜日の5月雇用統計を前にFRBの利下げ期待の行方が焦点となっている。インフレ指標との綱引きが続く。</li>
+      <li>WTI原油は$91.70と高止まり。米・イラン交渉の不確実性と中東地政学リスクが下支え要因となり、エネルギーコストの高止まりが続く見通し。</li>
+      <li>日本10年国債利回りは2.57%に低下（-11bp）。国債入札が好調で需給が引き締まったが、日銀の政策正常化へな緩やかな転換観測は継続している。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WAVE 4 -->
+<canvas id="wave4" class="wave"></canvas>
+
+<!-- REFERENCES -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Sources</div>
+    <div class="section-title">参考情報</div>
+    <ul class="ref-list">
+      <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-02-2026" target="_blank">TheStreet - Stock Market Today (June 2, 2026): S&amp;P 500 finishes above 7,600 for the first time</a></li>
+      <li><a href="https://finance.yahoo.com/markets/stocks/articles/mrvl-stock-ripping-overnight-nvidia-053735500.html" target="_blank">Yahoo Finance - MRVL Stock Is Ripping After Nvidia CEO Crowns It 'Next Trillion-Dollar Company'</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-06-02/japan-10-year-bond-sale-sees-firmer-demand-than-12-month-average-mpw39feb" target="_blank">Bloomberg - Japan's 10-Year Bond Yield Drops as Smooth Auction Brings Relief</a></li>
+      <li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026" target="_blank">U.S. Department of the Treasury - Daily Treasury Rates</a></li>
+      <li><a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Charles Schwab - Stock Market Update: Nvidia's New Chip Boosts Tech</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-brand">米国市場 モーニングレポート</div>
+    <p>本ルポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
+    <p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+  </div>
+</footer>
+
+<!-- WAVE.JS -->
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() {
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || 80;
+    }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1;
+      ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath();
+      ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp
+                         + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed;
+      rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+</body>
+</html>
