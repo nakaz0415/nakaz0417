@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場 モーニングレポート | 2026.06.04</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f3ea;
+  --fg: #1a2230;
+  --primary: #21344f;
+  --accent: #b5472a;
+  --border: #d6cfc4;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--fg); line-height: 1.7; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* HEADER */
+.site-header { background: var(--primary); color: #fff; }
+.header-top { padding: 28px 0 20px; }
+.header-flex { display: flex; justify-content: space-between; align-items: flex-end; }
+.brand { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 34px; letter-spacing: 0.04em; line-height: 1.1; }
+.brand .accent { color: #d9a17a; font-weight: 700; }
+.brand-sub { font-size: 11px; letter-spacing: 0.35em; margin-top: 8px; color: rgba(255,255,255,0.65); text-transform: uppercase; }
+.dateline { text-align: right; font-size: 12px; letter-spacing: 0.18em; color: rgba(255,255,255,0.85); }
+.dateline .big { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 700; display: block; letter-spacing: 0.04em; margin-bottom: 4px; }
+
+/* TICKER BAR */
+.ticker-bar { overflow: hidden; white-space: nowrap; background: rgba(0,0,0,0.25); padding: 9px 0; }
+.ticker-inner { display: inline-block; animation: ticker 32s linear infinite; }
+.ticker-inner span { display: inline-block; margin: 0 38px; font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.88); }
+.ticker-inner span .tick-label { color: rgba(255,255,255,0.5); margin-right: 6px; }
+.tick-up { color: #5cd47b; font-weight: 700; }
+.tick-down { color: #f27a6c; font-weight: 700; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, #1a2c42 0%, #2d4a6b 50%, #1a2230 100%); color: #fff; min-height: 340px; display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+.hero-content { position: relative; z-index: 1; padding: 60px 0; }
+.hero-tag { display: inline-block; background: var(--accent); color: #fff; font-size: 11px; letter-spacing: 0.2em; padding: 4px 12px; margin-bottom: 16px; text-transform: uppercase; }
+.hero h1 { font-size: 36px; font-weight: 900; line-height: 1.3; margin-bottom: 16px; max-width: 700px; }
+.hero-sub { font-size: 15px; color: rgba(255,255,255,0.75); max-width: 600px; }
+
+/* WAVE CANVAS */
+canvas.wave { display: block; width: 100%; height: 80px; }
+
+/* QUICK READING */
+.quick-reading { padding: 60px 0; background: var(--bg); }
+.section-title { font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.section-heading { font-size: 28px; font-weight: 900; margin-bottom: 36px; color: var(--primary); }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.card { background: #fff; border: 1px solid var(--border); padding: 28px; border-radius: 2px; }
+.card-num { font-size: 40px; font-weight: 900; color: var(--primary); opacity: 0.15; line-height: 1; margin-bottom: 8px; }
+.card h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; color: var(--primary); }
+.card p { font-size: 14px; color: #4a5568; }
+
+/* LEAD STORY */
+.lead-story { padding: 60px 0; background: #fff; }
+.lead-inner { display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: start; }
+.lead-body h2 { font-size: 26px; font-weight: 900; color: var(--primary); margin-bottom: 20px; line-height: 1.4; }
+.lead-body p { font-size: 15px; color: #374151; margin-bottom: 16px; }
+.sidebar { background: var(--bg); border: 1px solid var(--border); padding: 24px; }
+.sidebar h4 { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.watch-item { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.watch-item:last-child { border-bottom: none; }
+.watch-name { font-weight: 700; }
+.watch-val { color: var(--primary); font-weight: 700; }
+.watch-chg.up { color: #16a34a; }
+.watch-chg.down { color: #dc2626; }
+
+/* ASSET GRID */
+.asset-section { padding: 60px 0; background: var(--bg); }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.asset-card { background: var(--primary); color: #fff; padding: 24px; border-radius: 2px; }
+.asset-card .a-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 8px; }
+.asset-card .a-val { font-size: 28px; font-weight: 900; margin-bottom: 6px; }
+.asset-card .a-chg { font-size: 14px; }
+.asset-card .a-chg.up { color: #5cd47b; }
+.asset-card .a-chg.down { color: #f27a6c; }
+
+/* FINANCE FOCUS */
+.finance-section { padding: 60px 0; background: #fff; }
+.focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.focus-card { border: 1px solid var(--border); padding: 28px; }
+.focus-card .f-ticker { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.focus-card .f-name { font-size: 18px; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
+.focus-card .f-price { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+.focus-card .f-chg { font-size: 14px; margin-bottom: 12px; }
+.focus-card .f-chg.up { color: #16a34a; }
+.focus-card .f-chg.down { color: #dc2626; }
+.focus-card p { font-size: 13px; color: #4a5568; }
+
+/* SHORT VERSION */
+.short-section { background: var(--primary); color: #fff; padding: 60px 0; }
+.short-section .section-title { color: #d9a17a; }
+.short-section .section-heading { color: #fff; }
+.short-list { list-style: none; }
+.short-list li { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12); font-size: 15px; display: flex; gap: 16px; }
+.short-list li:last-child { border-bottom: none; }
+.short-list li .num { color: var(--accent); font-weight: 900; font-size: 20px; line-height: 1.3; min-width: 28px; }
+
+/* REFERENCES */
+.ref-section { padding: 48px 0; background: var(--bg); }
+.ref-section h3 { font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+.ref-list { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; }
+.ref-list li a { font-size: 13px; color: var(--primary); text-decoration: underline; }
+
+/* FOOTER */
+.site-footer { background: var(--primary); color: rgba(255,255,255,0.7); text-align: center; padding: 36px 0; font-size: 13px; }
+.foot-brand { font-family: 'Noto Sans JP', sans-serif; font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 12px; }
+.site-footer a { color: rgba(255,255,255,0.7); }
+.site-footer p { margin-top: 6px; }
+
+@media (max-width: 768px) {
+  .header-flex { flex-direction: column; gap: 12px; }
+  .dateline { text-align: left; }
+  .grid3, .grid4, .focus-grid, .lead-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-flex">
+      <div>
+        <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+        <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
+      </div>
+      <div class="dateline">
+        <span class="big">2026年6月4日(木)</span>
+        前営業日 6月3日(水) 終値ベース
+      </div>
+    </div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,566.40 (-0.57%)</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">26,866.56 (-0.84%)</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">50,873.86 (-0.85%)</span></span>
+      <span><span class="tick-label">US 2Y</span>4.09%</span>
+      <span><span class="tick-label">US 10Y</span>4.45%</span>
+      <span><span class="tick-label">US 30Y</span>4.97%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.65%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$95.68 (+2.5%)</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-up">16.07 (+1.9%)</span></span>
+      <span><span class="tick-label">MRVL</span><span class="tick-up">+7.0%</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-3.16%</span></span>
+      <span><span class="tick-label">CRWD</span><span class="tick-up">決算発表</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,566.40 (-0.57%)</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">26,866.56 (-0.84%)</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">50,873.86 (-0.85%)</span></span>
+      <span><span class="tick-label">US 2Y</span>4.09%</span>
+      <span><span class="tick-label">US 10Y</span>4.45%</span>
+      <span><span class="tick-label">US 30Y</span>4.97%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.65%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$95.68 (+2.5%)</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-up">16.07 (+1.9%)</span></span>
+      <span><span class="tick-label">MRVL</span><span class="tick-up">+7.0%</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-3.16%</span></span>
+      <span><span class="tick-label">CRWD</span><span class="tick-up">決算発表</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-tag">June 3, 2026 · Markets Close</div>
+    <h1>中東情勢悪化と原油高騰が重石<br>主要3指数がそろって反落</h1>
+    <p class="hero-sub">前日に史上最高値を更新し�S&P 500は0.57%下落し7,566へ。中東の地政学リスク再燃でWTIが急騰、FRBの追加利上げ観測も重なり投資家心理が悪化。一方、AI相場はブロードコムとCrowdStrikeの好決算が支え、マーベル・テクノロジーは続伸。</p>
+  </div>
+</section>
+
+<canvas id="wave1" class="wave"></canvas>
+
+<!-- QUICK READING -->
+<section class="quick-reading">
+  <div class="container">
+    <div class="section-title">Quick Reading</div>
+    <div class="section-heading">今日の3大ポイント</div>
+    <div class="grid3">
+      <div class="card">
+        <div class="card-num">01</div>
+        <h3>地政学リスクで原油急騰</h3>
+        <p>米国とイランの和平交渉をめぐる三透明感が再び高まむ、WTI原油は2.5%高の$95.68に上昇。インフレ再燃懸念からFRBの追加利上げ観測が強まり、株式市場全体を圧迫した。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <h3>AI半導体株は二極化</h3>
+        <p>マーベル・テクノロジーはNvidiaのジェンスン・フアンCEOが「次の1兆ドル企業」と称賛した余韻が続き続伸。一方でNvidiaは利益確定売りに押され3.16%安。ブロードコムは好決算を引け後に発表。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <h3>CrowdStrike：1株4分割発表</h3>
+        <p>サイバーセキュリティ大手CrowdStrikeがQ1 FY2027決算で売上高26%増の13.9億ドルを報告。さらに1株につき4株の株式分割（7月2日から分割後取引開始）を発表し、個人投資家層への拡大を図る。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD STORY -->
+<section class="lead-story">
+  <div class="container">
+    <div class="section-title">Lead Story</div>
+    <div class="lead-inner">
+      <div class="lead-body">
+        <h2>インフレ再燃と利上げ観測が市場の重石に<br>地政学リスクが複合的に圧力</h2>
+        <p>6月3日（水）の米国株式市場は、前日のS&P 500史上最高値更新（7,609.78）から一転して3指数が反落した。最大の要因は中東情勢の悪化で、米国・イラン間の外交進展に不透明感が生じたことから原油先物が急騰。WTIは3日連続の上昇となり1バレル$95.68まで買われた。</p>
+        <p>原油高はエネルギーコスト上昇を通じてインフレ再燃への懸念を呼び起こした。4月のCPIは前年比3.8%と依然高止まりしており、今週の雇用統計が堅調な数字を示したことで「FRBは年内に追加利上げに踏み切る可能性がある」との見方が市場参加者の間で広がった。米国2年債利回りは4.09%に上昇し、10年債は4.45%、30年債は4.97%まで上昇した。</p>
+        <p>AI・テクノロジーセクターでは明暗が分かれた。引け後にブロードコム（AVGO）とCrowdStrikeが決算を発表。ブロードコムはAI半導体収益の加速成長により第2四半期（Q2 FY26、5月3日終了）に過去最高の売上・利益・フリーキャッシュフローを達成。CrowdStrikeも売上高26%増と記録的な受注残（ARR）を達成し、株式4分割を発表した。マーベル・テクノロジーは前日のNvidia CEO発言を受けた流れで当日も7%続伸した。</p>
+        <p>日本の10年国債（JGB）利回りは2.65%まで上昇。米国長期金利の上昇基調との連動が鮮明になっており、世界的な金利高環境が続いている。VIX（恐怖指数）は16.07と依然として低水準にあるものの、前日比で1.9%上昇し、短期的な警戒感が増している。</p>
+      </div>
+      <div class="sidebar">
+        <h4>Today's Watch</h4>
+        <div class="watch-item"><span class="watch-name">S&P 500</span><span><span class="watch-val">7,566.40</span> <span class="watch-chg down">▼0.57%</span></span></div>
+        <div class="watch-item"><span class="watch-name">NASDAQ</span><span><span class="watch-val">26,866.56</span> <span class="watch-chg down">▼0.84%</span></span></div>
+        <div class="watch-item"><span class="watch-name">DOW</span><span><span class="watch-val">50,873.86</span> <span class="watch-chg down">▼0.85%</span></span></div>
+        <div class="watch-item"><span class="watch-name">WTI原油</span><span><span class="watch-val">$95.68</span> <span class="watch-chg up">▲2.50%</span></span></div>
+        <div class="watch-item"><span class="watch-name">VIX</span><span><span class="watch-val">16.07</span> <span class="watch-chg up">▲1.90%</span></span></div>
+        <div class="watch-item"><span class="watch-name">US 10Y</span><span><span class="watch-val">4.45%</span> <span class="watch-chg up">▲</span></span></div>
+        <div class="watch-item"><span class="watch-name">JGB 10Y</span><span><span class="watch-val">2.65%</span> <span class="watch-chg up">▲0.08%</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSET GRID -->
+<section class="asset-section">
+  <div class="container">
+    <div class="section-title">Asset Summary</div>
+    <div class="section-heading">主要アセット一覧</div>
+    <div class="grid4">
+      <div class="asset-card">
+        <div class="a-label">S&P 500</div>
+        <div class="a-val">7,566.40</div>
+        <div class="a-chg down">▼ -0.57% | -43.38pt</div>
+      </div>
+      <div class="asset-card">
+        <div class="a-label">NASDAQ</div>
+        <div class="a-val">26,866.56</div>
+        <div class="a-chg down">▼ -0.84% | -227.34pt</div>
+      </div>
+      <div class="asset-card">
+        <div class="a-label">WTI 原油</div>
+        <div class="a-val">$95.68</div>
+        <div class="a-chg up">▲ +2.50% 3日続伸</div>
+      </div>
+      <div class="asset-card">
+        <div class="a-label">US 10年債</div>
+        <div class="a-val">4.45%</div>
+        <div class="a-chg up">▲ 上昇 (2Y:4.09% 30Y:4.97%)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave2" class="wave"></canvas>
+
+<!-- FINANCE FOCUS -->
+<section class="finance-section">
+  <div class="container">
+    <div class="section-title">Finance Focus</div>
+    <div class="section-heading">注目個別株</div>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="f-ticker">MRVL · NASDAQ</div>
+        <div class="f-name">マーベル・テクノロジー</div>
+        <div class="f-price">続伸</div>
+        <div class="f-chg up">▲ +7.0%（前日+32.5%から続伸）</div>
+        <p>NvidiaのジェンスンCEOが「次の1兆ドル企業」と絶賛。AI向けカスタムチップ売上は2029年度に100億ドル超へ。引け後に上昇幅が縮小する可能性も。</p>
+      </div>
+      <div class="focus-card">
+        <div class="f-ticker">CRWD · NASDAQ</div>
+        <div class="f-name">CrowdStrike</div>
+        <div class="f-price">決算発表</div>
+        <div class="f-chg up">▲ Q1 FY27 売上高 $13.9億（+26% YoY）</div>
+        <p>純新規ARR $2.56億（+32% YoY）。フリーキャッシュフローも過去最高。1株4分割（7月2日から）を取締役会が承認し個人投資家への門戸を拡大。</p>
+      </div>
+      <div class="focus-card">
+        <div class="f-ticker">NVDA · NASDAQ</div>
+        <div class="f-name">エヌビディア</div>
+        <div class="f-price">下落</div>
+        <div class="f-chg down">▼ -3.16%（利益確定売り）</div>
+        <p>年間売上高$820億（前年比+85%）と驚異的な成長が継続。ただし当日は利益確定売りが先行。マーベルへの資金シフトも一因とみられる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave3" class="wave"></canvas>
+
+<!-- SHORT VERSION -->
+<section class="short-section">
+  <div class="container">
+    <div class="section-title">Short Version</div>
+    <div class="section-heading">5つの要点まとめ</div>
+    <ul class="short-list">
+      <li><span class="num">01</span><span>S&P 500は-0.57%の7,566.40、NASDAQ-0.84%、DOW-0.85%と3指数そろって反落。前日の史上最高値更新後の利益確定売りに地政学リスクが重なった。</span></li>
+      <li><span class="num">02</span><span>WTI原油が+2.5%の$95.68まで上昇。米・イラン交渉の不透明感が背景。原油高→インフレ懸念→FRB利上げ観測という悪連鎖が株式市場を圧迫。</span></li>
+      <li><span class="num">03</span><span>米国債利回りが上昇。2年債4.09%・10年債4.45%・30年債4.97%。日本の10年JGBも2.65%へ上昇し、グローバルな金利高環境が継続。</span></li>
+      <li><span class="num">04</span><span>CrowdStrikeが売上高26%増の好決算＋4分割を発表。ブロードコムも過去最高売上を記録。AI需要の底堅さが改めて確認された。</span></li>
+      <li><span class="num">05</span><span>マーベル・テクノロジーはNvidia CEO発言効果が続き7%続伸。一方でNvidiaは-3.16%と利益確定。AI株内での資金循環が鮮明になっている。</span></li>
+    </ul>
+  </div>
+</section>
+
+<canvas id="wave4" class="wave"></canvas>
+
+<!-- REFERENCES -->
+<section class="ref-section">
+  <div class="container">
+    <h3>References</h3>
+    <ul class="ref-list">
+      <li><a href="https://www.fool.com/coverage/stock-market-today/2026/06/03/stock-market-today-june-3-stocks-slip-in-morning-trading-on-fresh-geopolitical-tensions/" target="_blank">Motley Fool: Stock Market Today June 3</a></li>
+      <li><a href="https://www.cnbc.com/2026/06/02/jensen-huang-nvidia-marvell-technology-trillion-dollar-ai.html" target="_blank">CNBC: Jensen Huang on Marvell Technology</a></li>
+      <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-03-2026" target="_blank">TheStreet: Market Today June 3</a></li>
+      <li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/" target="_blank">U.S. Treasury: Daily Yield Curve</a></li>
+      <-- SHORT VERSION -->
+<section class="short-section">
+  <div class="container">
+    <div class="section-title">Short Version</div>
+    <div class="section-heading">5つの要点まとめ</div>
+    <ul class="short-list">
+      <li><span class="num">01</span><span>S&P 500は-0.57%の7,566.40、NASDAQ-0.84%、DOW-0.85%と3指数そろって反落。前日の史上最高値更新後の利益確定売りに地政学リスクが重なった。</span></li>
+      <li><span class="num">02</span><span>WTI原油が+2.5%の$95.68まで上昇。米・イラン交渉の不透明感が背景。原油高→インフレ懸念→FRB利上げ観測という悪連鎖が株式市場を圧迫。</span></li>
+      <li><span class="num">03</span><span>米国債利回りが上昇。2年債4.09%・10年債4.45%・30年債4.97%。日本の10年JGBも2.65%へ上昇し、グローバルな金利高環境が継続。</span></li>
+      <li><span class="num">04</span><span>CrowdStrikeが売上高26%増の好決算＋4分割を発表。ブロードコムも過去最高売上を記録。AI需要の底堅さが改めて確認された。</span></li>
+      <li><span class="num">05</span><span>マーベル・テクノロジーはNvidia CEO発言効果が続き7%続伸。一方そNvidiaは-3.16%と利益確定。AI株内での資金循環が鮮明になってかる。</span></li>
+    </ul>
+  </div>
+</section>
+
+<canvas id="wave4" class="wave"></canvas>
+
+<!-- REFERENCES -->
+<section class="ref-section">
+  <div class="container">
+    <h3>References</h3>
+    <ul class="ref-list">
+      <li><a href="https://www.fool.com/coverage/stock-market-today/2026/06/03/stock-market-today-june-3-stocks-slip-in-morning-trading-on-fresh-geopolitical-tensions/" target="_blank">Motley Fool: Stock Market Today June 3</a></li>
+      <li><a href="https://www.cnbc.com/2026/06/02/jensen-huang-nvidia-marvell-technology-trillion-dollar-ai.html" target="_blank">CNBC: Jensen Huang on Marvell Technology</a></li>
+      <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-03-2026" target="_blank">TheStreet: Market Today June 3</a></li>
+      <li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/" target="_blank">U.S. Treasury: Daily Yield Curve</a></li>
+      <yle = cfg.color2; ctx.fill();
+      t += cfg.speed;
+      rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+</body>
+</html>
