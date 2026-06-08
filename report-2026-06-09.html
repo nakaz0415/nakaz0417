@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ç±³å›½å¸‚å ´ ãƒ¢ãƒ¼ãƒ‹ãƒ³ã‚°ãƒ¬ãƒãƒ¼ãƒˆ | 2026.06.09</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f3ea;
+  --fg: #1a2230;
+  --primary: #21344f;
+  --accent: #b5472a;
+  --border: #d6cfc4;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: 'Noto Sans JP', sans-serif; line-height: 1.7; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* HEADER */
+.site-header { background: var(--primary); color: #fff; }
+.header-top { padding: 28px 0 18px; }
+.header-flex { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+.brand { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 34px; letter-spacing: 0.04em; line-height: 1.1; }
+.brand .accent { color: #d9a17a; font-weight: 700; }
+.brand-sub { font-size: 11px; letter-spacing: 0.35em; margin-top: 8px; color: rgba(255,255,255,0.65); text-transform: uppercase; }
+.dateline { text-align: right; font-size: 12px; letter-spacing: 0.18em; color: rgba(255,255,255,0.85); }
+.dateline .big { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 700; display: block; letter-spacing: 0.04em; margin-bottom: 4px; }
+
+/* TICKER BAR */
+.ticker-bar { overflow: hidden; white-space: nowrap; background: rgba(0,0,0,0.25); padding: 9px 0; }
+.ticker-inner { display: inline-block; animation: ticker 32s linear infinite; }
+.ticker-inner span { display: inline-block; margin: 0 38px; font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.88); }
+.ticker-inner span .tick-label { color: rgba(255,255,255,0.5); margin-right: 6px; }
+.tick-up { color: #5cd47b; font-weight: 700; }
+.tick-down { color: #f27a6c; font-weight: 700; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, #1a2230 0%, #21344f 50%, #2e4a72 100%); min-height: 340px; display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 340"><patx fill="rgba(255,255,255,0.03)" d="M0,160L60,149.3C120,139,240,117,360,128C480,139,600,181,720,181.3C840,181,960,139,1080,112C1200,85,1320,75,1380,69.3L1440,64L1440,340L0,340Z"/></svg>') no-repeat bottom / cover; }
+.hero-content { position: relative; z-index: 1; padding: 50px 0; }
+.hero-tag { display: inline-block; background: var(--accent); color: #fff; font-size: 11px; letter-spacing: 0.2em; padding: 4px 14px; margin-bottom: 18px; text-transform: uppercase; font-weight: 700; }
+.hero-title { font-size: 42px; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 16px; letter-spacing: 0.02em; }
+.hero-title span { color: #d9a17a; }
+.hero-lead { font-size: 15px; color: rgba(255,255,255,0.8); max-width: 680px; line-height: 1.8; }
+
+/* WAVE CANVAS */
+canvas.wave { display: block; width: 100%; height: 80px; }
+
+/* QUICK READING */
+.quick-reading { padding: 60px 0; background: var(--bg); }
+.section-label { font-size: 11px; letter-spacing: 0.35em; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
+.section-title { font-size: 28px; font-weight: 900; color: var(--primary); margin-bottom: 36px; border-bottom: 2px solid var(--border); padding-bottom: 12px; }
+.quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+@media (max-width: 768px) { .quick-grid { grid-template-columns: 1fr; } }
+.quick-card { background: #fff; border: 1px solid var(--border); padding: 28px; border-left: 4px solid var(--accent); }
+.quick-num { font-size: 48px; font-weight: 900; color: var(--border); line-height: 1; margin-bottom: 12px; }
+.quick-card h3 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+.quick-card p { font-size: 14px; color: #555; line-height: 1.7; }
+
+/* LEAD STORY */
+.lead-story { padding: 60px 0; background: #fff; }
+.lead-layout { display: grid; grid-template-columns: 1fr 320px; gap: 48px; }
+@media (max-width: 900px) { .lead-layout { grid-template-columns: 1fr; } }
+.lead-body h2 { font-size: 28px; font-weight: 900; color: var(--primary); margin-bottom: 20px; line-height: 1.4; }
+.lead-body p { font-size: 15px; margin-bottom: 16px; color: #333; line-height: 1.9; }
+.watch-sidebar { background: var(--primary); color: #fff; padding: 28px; }
+.watch-sidebar h4 { font-size: 11px; letter-spacing: 0.3em; color: #d9a17a; margin-bottom: 18px; text-transform: uppercase; font-weight: 700; }
+.watch-item { border-top: 1px solid rgba(255,255,255,0.15); padding: 12px 0; }
+.watch-item:first-of-type { border-top: none; }
+.watch-item .wi-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.15em; text-transform: uppercase; }
+.watch-item .wi-val { font-size: 22px; font-weight: 700; margin: 4px 0; }
+.watch-item .wi-chg { font-size: 13px; }
+.wi-up { color: #5cd47b; }
+.wi-down { color: #f27a6c; }
+
+/* ASSET GRID */
+.asset-grid-section { padding: 60px 0; background: var(--bg); }
+.asset-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 768px) { .asset-grid { grid-template-columns: repeat(2, 1fr); } }
+.asset-card { background: #fff; border: 1px solid var(--border); padding: 24px; text-align: center; }
+.asset-card .ac-label { font-size: 11px; letter-spacing: 0.2em; color: #888; text-transform: uppercase; margin-bottom: 8px; }
+.asset-card .ac-val { font-size: 32px; font-weight: 900; color: var(--primary); line-height: 1; margin-bottom: 8px; }
+.asset-card .ac-chg { font-size: 16px; font-weight: 700; }
+
+/* FINANCE FOCUS */
+.finance-focus { padding: 60px 0; background: #fff; }
+.ff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 768px) { .ff-grid { grid-template-columns: 1fr; } }
+.ff-card { border: 1px solid var(--border); padding: 24px; }
+.ff-ticker { font-size: 11px; letter-spacing: 0.25em; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-bottom: 8px; }
+.ff-name { font-size: 17px; font-weight: 900; color: var(--primary); margin-bottom: 6px; }
+.ff-price { font-size: 28px; font-weight: 700; color: var(--fg); margin-bottom: 4px; }
+.ff-chg { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+.ff-card p { font-size: 13px; color: #555; line-height: 1.7; }
+
+/* SHORT VERSION */
+.short-version { background: var(--primary); color: #fff; padding: 60px 0; }
+.short-version .section-label { color: #d9a17a; }
+.short-version .section-title { color: #fff; border-color: rgba(255,255,255,0.2); }
+.sv-list { list-style: none; }
+.sv-list li { padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.12); font-size: 15px; color: rgba(255,255,255,0.9); display: flex; gap: 14px; line-height: 1.7; }
+.sv-list li::before { content: attr(data-n); font-size: 32px; font-weight: 900; color: rgba(255,255,255,0.15); line-height: 1; flex-shrink: 0; }
+
+/* REFERENCES */
+.references { padding: 40px 0; background: var(--bg); }
+.references h3 { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 14px; letter-spacing: 0.1em; }
+.ref-list { list-style: none; }
+.ref-list li { font-size: 13px; color: #666; padding: 4px 0; }
+.ref-list a { color: var(--accent); text-decoration: none; }
+.ref-list a:hover { text-decoration: underline; }
+
+/* FOOTER */
+.site-footer { background: var(--primary); color: rgba(255,255,255,0.7); padding: 36px 0; text-align: center; }
+.foot-brand { font-size: 18px; font-weight: 900; color: #fff; margin-bottom: 10px; letter-spacing: 0.04em; }
+.site-footer p { font-size: 12px; line-height: 1.8; }
+.site-footer a { color: #d9a17a; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-flex">
+      <div>
+        <div class="brand">ç±³å›½å¸‚å ´ <span class="accent">ãƒ¢ãƒ¼ãƒ‹ãƒ³ã‚°ãƒ¬ãƒãƒ¼ãƒˆ</span></div>
+        <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
+      </div>
+      <div class="dateline">
+        <span class="big">2026å¹´6æœˆ9æ—¥(ç«)</span>
+        å‰å–¶æ¥­æ—¥ 6æœˆ8æ—¥(æœˆ) çµ‚å€¤ãƒ™ãƒ¼ã‚¹
+      </div>
+    </div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,405.87 +0.30%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">26,079.83 +1.44%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">50,785.37 -0.16%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.17%</span>
+      <span><span class="tick-label">US 10Y</span>4.55%</span>
+      <span><span class="tick-label">US 30Y</span>5.01%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.72%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$94.10</span></span>
+      <span><span class="tick-label">VIX</span>21.50</span>
+      <span><span class="tick-label">NVDA</span><span class="tick-up">$208.14 +1.2%</span></span>
+      <span><span class="tick-label">AMD</span><span class="tick-up">$471.52 +1.1%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,405.87 +0.30%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">26,079.83 +1.44%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">50,785.37 -0.16%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.17%</span>
+      <span><span class="tick-label">US 10Y</span>4.55%</span>
+      <span><span class="tick-label">US 30Y</span>5.01%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.72%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$94.10</span></span>
+      <span><span class="tick-label">VIX</span>21.50</span>
+      <span><span class="tick-label">NVDA</span><span class="tick-up">$208.14 +1.2%</span></span>
+      <span><span class="tick-label">AMD</span><span class="tick-up">$471.52 +1.1%</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-tag">Today's Lead</div>
+    <h1 class="hero-title">ãƒãƒƒãƒ—æ ªãŒåº•æ‰“ã¡åç™º<br><span>å…ˆé€±ã®$1.3å…†æš´è½ã‹ã‚‰åè»¢ã€NASDAQãŒ+1.44%</span></h1>
+    <p class="hero-lead">
+      å…ˆé€±é‡‘æ›œæ—¥ï¼ˆ6æœˆ6æ—¥ï¼‰ã«Broadcomã®AIè¦‹é€šã—æ®ãˆç½®ãã¨å¼·ã„5æœˆé›‡ç”¨çµ±è¨ˆï¼ˆ172,000ä»¶ï¼‰ã‚’å—ã‘ã¦æ€¥è½ã—ãŸåŠå°ä½“æ ªãŒã€6æœˆ8æ—¥ï¼ˆæœˆï¼‰ã«å¤§å¹…åç™ºã€‚Micronã¯Fridayæ¯”+9%ã¨æ€¥é¨°ã—ã€NVIDIAã‚‚+1.2%å›å¾©ã€‚ãŸã ã—WTIåŸæ²¹ãŒ$94è¶…ã«ä¸Šæ˜‡ã—ã€ã‚¤ãƒ³ãƒ•ãƒ¬æ‡¸å¿µã¨6æœˆ17æ—¥ã®FOMCï¼ˆæ–°è­°é•·Warshå°±ä»»å¾Œåˆï¼‰ã¸ã­ç·Šå¼µæ„Ÿã¯ç¶™ç¶šã—ã¦ã„ã‚‹ã€‚
+    </p>
+  </div>
+</section>
+
+<!-- WAVE 1 -->
+<canvas id="wave1" class="wave"></canvas>
+
+<!-- QUICK READING -->
+<section class="quick-reading">
+  <div class="container">
+    <div class="section-label">Quick Reading</div>
+    <div class="section-title">ä»Šæ—¥ã®3å¤§ãƒã‚¤ãƒ³ãƒˆ</div>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="quick-num">01</div>
+        <h3>ãƒãƒƒãƒ—æ ªãŒå…ˆé€±ã®å´©è½ã‹ã‚‰åç™º</h3>
+        <p>Broadcomã®å¤±æœ›çš„ã‚¬ã‚¤ãƒ€ãƒ³ã‚¹ã¨å¼·é›‡ç”¨çµ±è¨ˆã§å…ˆé€±é‡‘æ›œã«$1.3å…†ãŒè’¸ç™ºã€‚6/8ã¯åŠå°ä½“ETFï¼ˆSOXï¼‰ãŒ+5%è¶…ã§åç™ºã€‚MicronãŒ+9%ä¸»å°ã€‚AIéœ€è¦ã¸ã®é•·æœŸå¼·æ°—å§¿å‹¢ã¯å¤‰ã‚ã‚‰ãšã€‚</p>
+      </div>
+      <div class="quick-card">
+        <div class="quick-num">02</div>
+        <h3>FOMCã¾ã§2é€±é–“ã€Warshæ–°è­°é•·ã¸ã®æ³¨ç›®</h3>
+        <p>6æœˆ17æ—¥ã«Warshâˆ´è­°é•·å°±ä»»å¾Œåˆã®FOMCè¨˜è€…ä¼šè¦‹ã€‚5æœˆé›‡ç”¨çµ±è¨ˆ172,000ä»¶ãƒ»10å¹´å‚µ4.55%ã§åˆ©ä¸‹ã’è¦³æ¸¬ã¯å¤§å¹…å¾Œé€€ã€‚6/10ï¼ˆæ°´ï¼‰ã®CPIãƒ‡ãƒ¼ã‚¿ãŒç„¦ç‚¹ç€‚</p>
+      </div>
+      <div class="quick-card">
+        <div class="quick-num">03</div>
+        <h3>ä¸­æ±ç·Šå¼µã¨åŸæ²¹$94è¶…ï¼šã‚¤ãƒ³ãƒ•ãƒ¬å†ç‡ƒãƒªã‚¹ã‚¯</h3>
+        <p>ã‚¤ãƒ©ãƒ³ãƒ»ã‚¤ã‚¹ãƒ©ã‚¨ãƒ«ã®æ”»æ’ƒäº¤æ›ãŒç¶šãã€ã€Œåœæˆ¦ã®åã°ã‹ã‚Šã€çŠ¶æ…‹ã«ã€‚WTIãŒ$94è¶…ã«æ€¥é¨°ã€€ã‚¨ãƒãƒ«ã‚®ãƒ¼ã‚³ã‚¹ãƒˆä¸Šæ˜‡ãŒ6/10 CPIã«åæ˜ ã•ã‚Œã‚‹ã‹ã€Fedåˆ¤æ–­ã‚’å·¦å³ã™ã‚‹ã€‚</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD STORY -->
+<section class="lead-story">
+  <div class="container">
+    <div class="section-label">Lead Story</div>
+    <div class="section-title">è©³ç´°åˆ†æ</div>
+    <div class="lead-layout">
+      <div class="lead-body">
+        <h2>åŠå°ä½“ã‚»ã‚¯ã‚¿ãƒ¼ï¼š$1.3å…†ã®æ¶ˆå¤±ã‹ã‚‰1æ—¥ã§åº•æ‰“ã¡åç™º</h2>
+        <p>
+          6æœˆ5æ—¥ï¼ˆæœ¨ï¼‰ã«BroadcomãŒç™ºè¡¨ã—ãŸ2025å¹´åº¦ç¬¬2å››åŠæœŸæ±ºç®—ã§ã¯ã€AIå‘ã‘ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚­ãƒ³ã‚°åå…¥ãŒ$4.1å„„ï¼ˆäºˆæƒ³$4.8å„„æ¯”-14%ï¼‰ã«ç•™ã¾ã‚Šã€2027å¹´ã®AIåŠå°ä½“è¦‹é€šã—ã‚‚æ®ãˆç½®ã‰ã¨ãªã£ãŸã€‚ã€Œç¶™ç¶šçš„ãªä¸Šæ–¹ä¿®æ­£ã€ã‚’æœŸå¾…ã—ã¦ã„ãŸå¸‚å ´ã¯ã“ã‚Œã‚’å«Œæ°—ã—ã€Broadcomã®CEO Hock Tanã£ã‚ˆã‚‹ã€ŒAIã¯å¥å…¨ã«æ‹¡å¤§ã—ã¦ã„ã‚‹ã€ã¨ã®ç™ºè¨€ã‚Œä¸‹è½ã‚æ­¢ã‚ã‚ˆã‚Œãªã‹ã£ãŸã€‚
+        </p>
+        <p>
+          ç¿Œ6æœˆ6æ—¥ï¼ˆé‡‘ï¼‰ã«ã¯NVIDIAãŒ-6%ã€AMDãŒ-10.86%ã€IntelãŒ-11.28%ã¨åŠå°ä½“å…¨é¢å®‰ã¨ãªã‚Šã€NASDAQã¯-4.18%ã¨2025å¹´4æœˆä»¥æ¥æœ€å¤§ã®ä¸‹è½ã‚’è¨˜éŒ²ã€‚S&amp;P500ã¯-2.64%ã§7,383ãƒ‰ãƒ«å°ã«æ²ˆã‚“ã ã€‚ãƒ¡ãƒ¢ãƒªå¸‚æ³ã®æ‚ªåŒ–ï¼ˆã‚¹ãƒãƒ¼ãƒˆãƒ•ã‚©ãƒ³éœ€è¦ä½è¿·ã«ã‚ˆã‚‹ã‚°ãƒ©ãƒƒãƒˆç¶™ç¶šï¼‰ã¨10å¹´å‚µåˆ©å›ã‚Šã¯4.55%è¶…ãˆãŒé«˜ãƒãƒªãƒ¥ã‚¨ãƒ¼ã‚·ãƒ§ãƒ³ã¸ã®è¿½åŠ åœ§åŠ›ã¨ãªã£ãŸã€‚
+        </p>
+        <p>
+          ã—ã‹ã—6æœˆ8æ—¥ï¼ˆæœˆï¼‰ã®é–‹å¹•ã¨åŒæ™‚ã«è²·ã„æˆ»ã—ãŒåŠ é€Ÿã€‚MicronãŒFridayæ¯”+9%ã§åç™ºã‚’ä¸»å°ã—ã€NVIDIAã®Jensen Huang CEOãŒã€Œç›´è¿‘ã®èª¿æ•´ã¯é•·æœŸçš„ãªAIã‚¤ãƒ³ãƒ•ãƒ©éœ€è¦ã«å¯¾ã™ã‚‹è²·ã„å ´ã€ã¨ã‚³ãƒ¡ãƒ³ãƒˆã—ãŸã“ã¨ãŒæŠ•è³‡å®¶å¿ƒç†ã‚’æ”¹å–„ã€‚åŠå°ä½“ETFã¯+5%è¶…ã®åç™ºã‚’è¨˜éŒ²ã—ãŸã€‚ãŸã ã—ãƒ€ã‚¦ã¯-0.16%ã¨ã¼ó†’'
+?
+'k’â·švÇš–.‹»’â7¦?šb;š
+
+£7¯
+»ó
+ï
+¿
+ÿóã»šã–ş×/
+'–£¦v‹¦®c£¿«
+'«/(€€€€€€€€ğ½Àø(€€€€€€€€ñÀø(€€€€€€€€€ƒ’î+¦Çšr–’Ÿ»šÎ£n»
+ç¼Ûšr ÄÃš^—¾ò#šÂÓ¾ò'¸×šr!A'fë¢†£	]Q'–:šÊç0äÓ
+K¢Ú#O£Ÿ
+£7¯
+»ó’ú‡š‚ó3
+Ï
+‹
+“ÏW³
+Cš*ó_’â+K–‚Ó–B#]…ÉÍ£¢¶Ã¦Vß¹=5
+ç
+ÿÏ
+ç3’âšº×£
+ÿ
+¯šÒû¯–
+û?«
+ç
+¿3
+/Ûšr Äßš^—»–"u=5’òk¢š/ûŸ–â–‚Ó»s§
+«
+¾ò!Y%`€ÈÄ¸×¾ò'¿¦®cš¶‹û
++3’ê#šÏW
+3
+/(€€€€€€€€ğ½Àø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µÍ¥‘•‰…Èˆø(€€€€€€€€€€ñ ĞùQ½‘…äÌ]…Ñ ğ½ Ğø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆùL™…µÀí@€ÔÀÀğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøÜ°ĞÀÔ¸àÜğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œİ¤µÕÀˆûŠZÈ€¬À¸ÌÀ”ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆù9MDğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøÈØ°ÀÜä¸àÌğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œİ¤µÕÀˆûŠZÈ€¬Ä¸ĞĞ”ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆù=\ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøÔÀ°ÜàÔ¸ÌÜğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œİ¤µ‘½İ¸ˆûŠZğ€´À¸ÄØ”ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆù]Q$ÉÕ‘”ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøäĞ¸ÄÀğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œİ¤µÕÀˆûŠZÈ€¬Ğ¸È”ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆùY%`ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøÈÄ¸ÔÀğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œˆÍÑå±”ô‰½±½ÈéÉ‰„ ÈÔÔ°ÈÔÔ°ÈÔÔ°À¸Ü¤ìˆû«
+ç
+¿¢¶›š"K–~|ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆùUL€ÄÁde¥•±ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøĞ¸ÔÔ”ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œˆÍÑå±”ô‰½±½ÈéÉ‰„ ÈÔÔ°ÈÔÔ°ÈÔÔ°À¸Ü¤ìˆû–"§’â/K¢šÏšâ³–ú3¦ ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€ğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€ğ½‘¥Øø(€€ğ½‘¥Øø(ğ½Í•Ñ¥½¸ø((ğ„´´MMPI%€´´ø(ñÍ•Ñ¥½¸±…ÍÌô‰…ÍÍ•ĞµÉ¥µÍ•Ñ¥½¸ˆø(€€ñ‘¥Ø±…ÍÌô‰½¹Ñ…¥¹•Èˆø(€€€€ñ‘¥Ø±…ÍÌô‰Í•Ñ¥½¸µ±…‰•°ˆù5…É­•ĞM¹…ÁÍ¡½Ğğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰Í•Ñ¥½¸µÑ¥Ñ±”ˆû’âï¢š
+‹
+ï#¾ò Ø¼àß––“¾ò$ğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•ĞµÉ¥ˆø(€€€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•Ğµ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ±…‰•°ˆùL™…µÀí@€ÔÀÀğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…ŒµÙ…°ˆøÜ°ĞÀÔğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ¡œÑ¥¬µÕÀˆûŠZÈ€¬À¸ÌÀ”ğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•Ğµ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ±…‰•°ˆù9MDğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…ŒµÙ…°ˆøÈØ°ÀÜäğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ¡œÑ¥¬µÕÀˆûŠZÈ€¬Ä¸ĞĞ”ğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•Ğµ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ±…‰•°ˆù]Q$ÉÕ‘”ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…ŒµÙ…°ˆøäĞ¸ÄÀğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ¡œÑ¥¬µÕÀˆûŠZÈ€¬Ğ¸È”ğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•Ğµ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ±…‰•°ˆùUL€ÄÁd	½¹ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…ŒµÙ…°ˆøĞ¸ÔÔ”ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ¡œˆÍÑå±”ô‰½±½ÈèŒàààìˆø¬€À¸ÀÅÁĞğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€ğ½‘¥Øø(€€ğ½‘¥Øø(ğ½Í•Ñ¥½¸ø((ğ„´´]Y€È€´´ø(ñ…¹Ù…Ì¥ô‰İ…Ù”Èˆ±…ÍÌô‰İ…Ù”ˆøğ½…¹Ù…Ìø((ğ„´´%99=UL€´´ø(ñÍ•Ñ¥½¸±…ÍÌô‰™¥¹…¹”µ™½ÕÌˆø(€€ñ‘¥Ø±…ÍÌô‰½¹Ñ…¥¹•Èˆø(€€€€ñ‘¥Ø±…ÍÌô‰Í•Ñ¥½¸µ±…‰•°ˆù¥¹…¹”½ÕÌğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰Í•Ñ¥½¸µÑ¥Ñ±”ˆûšÎ£n»¦*cš~ğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰™˜µÉ¥ˆø(€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÑ¥­•Èˆù9Yğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¹…µ”ˆù9Y%%ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÁÉ¥”ˆøÈÀà¸ÄĞğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¡œÑ¥¬µÕÀˆûŠZÈ€¬Ä¸ÈÀ”ğ½‘¥Øø(€€€€€€€€ñÀû–#¦Ç¸´Ø—šjÓ¢B÷/
+'–>7fë	)•¹Í•¸!Õ…¹Ÿ1'¦r¢šã»–òßšÂ_–ÿ–.‹
+K–7Šë¢ª7×–šf’ú‡Ş?¦†7
+K’âšf¢¢c¦2Ë_–ú3»š*ó_n»¿¦Vßšrš*W¢Î–ºÛ»šÎ£n»w
+“Ï#	š²‡¯
+Ï
+Ïÿ«
+ç#½	±…­İ•±³_»–ë¢6ß*ÛšÎğ½Àø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÑ¥­•Èˆù5Tğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¹…µ”ˆù5¥É½¸Q•¡¹½±½äğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÁÉ¥”ˆøÄ°ÀĞÀ¬ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¡œÑ¥¬µÕÀˆûŠZÈ€¬ä¸À”ğ½‘¥Øø(€€€€€€€€ñÀøØ¼Û¸´Ü—/
+$¬ä—ãš—–>7fë	!	7¾ò#¦®c–â¿–~–æ‡‹«¾ò'¹'ó
+ÿ
+ïÏ
+ÿó–BGG¦r¢š¿–êW–‚?
+ç{ó#W
+§Ï–BGG–r£–ê¯¢ªÿšVÓ»–öÇ¦~ÿ
+K’â+–n{
+/£–"šzC–#¦Ç»–Ë
++¿¦;–&Ã–>7–şs£»¢š/šZç3–òßûğ½Àø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÑ¥­•ÈˆùY<ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¹…µ”ˆù	É½…‘½´ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÁÉ¥”ˆû–n{–ú§’â´ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¡œÑ¥¬µÕÀˆûŠZÈƒ–>7fèğ½‘¥Øø(€€€€€€€€ñÀøØ¼Ó¬´ÄÌ´ÄĞ—»š—¢B÷
+K–òW7¢ÖßO_–ò×šr³’êëƒ3Ø¼ã¯ä¸€éƒ¨ãŒè²·ã„æˆ»ã—ã€‚Q2 AIãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚­ãƒ³ã‚°$4.1BãŒäºˆæƒ³$4.8Bã‚’ä¸‹å›ã£ãŸã“ã¨ã¸ã®ã‚·ãƒ§ãƒƒã‚¯ã¯åã¾ã‚Šã¤ã¤ã‚ã‚‹ãŒã€2027å¹´ã‚¬ã‚¤ãƒ€ãƒ³ã‚¹ç¶­æŒã¸ã®å¤±æœ›ã¯æ ¹å¼·ã„ã€‚</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE 3 -->
+<canvas id="wave3" class="wave"></canvas>
+
+<!-- SHORT VERSION -->
+<section class="short-version">
+  <div class="container">
+    <div class="section-label">Short Version</div>
+    <div class="section-title">5è¡Œã¾ã¨ã‚</div>
+    <ul class="sv-list">
+      <li data-n="1">ãƒãƒƒãƒ—æ ªãŒMondayå¤§å¹…åç™ºï¼šMicronãŒFridayæ¯”+9%ã€NASDAQ+1.44%ã¨å…ˆé€±ã®æš´è½ï¼ˆNASDAQ -4.18%ã€$1.3å…†æ¶ˆå¤±ï¼‰ã‹ã‚‰æ¯ã‚’å¹ãè¿”ã—ãŸã€‚</li>
+      <li data-n="2">å¼·é›‡ç”¨çµ±è¨ˆï¼ˆ5æœˆ172,000ä»¶ï¼‰Ã—10å¹´å‚µ4.55%ã§åˆ©ä¸‹ã’è¦³æ¸¬ã¯å¤§å¹…å¾Œé€€ã€‚6æœˆ17æ—¥ã®FOMCï¼ˆWarshæ–°è­°é•·åˆï¼‰ã¯æ®ãˆç½®ãæ¿ƒåšã€‚</li>
+      <li data-n="3">WTIåŸæ²¹ãŒ$94è¶…ã«æ€¥é¨°ï¼šã‚¤ãƒ©ãƒ³ãƒ»ã‚¤ã‚¹ãƒ©ã‚¨ãƒ«ã®æ”»æ’ƒäº¤æ›ç¶™ç¶šã§åœ°æ”¿å­¦ãƒªã‚¹ã‚¯ç¶™ç¶šã€‚6/10ï¼ˆæ°´ï¼‰ã®5æœˆCPIã§ã‚¨ãƒãƒ«ã‚®ãƒ¼ä¾¡æ ¼æ³¢åŠã‚’ç¢ºèªã¸ã€‚</li>
+      <li data-n="4">ç±³å›½å‚µã¯2å¹´4.17%ãƒ»10å¹´4.55%ãƒ»30å¹´5.01%ã€æ—¥æœ¬å›½å‚µ10å¹´ã¯2.72%ã§ãã‚Œãã‚Œé«˜æ°´æº–ç¶­æŒã€‚VIX 21.5ã¨ãƒªã‚¹ã‚¯è­¦æˆ’åŸŸç¶™ç¶šã€‚</li>
+      <li data-n="5">ä»Šé€±ã®æ³¨ç›®ï¼š6/10 CPIï¼ˆã‚¨ãƒãƒ«ã‚®ãƒ¼å½±éŸ¿ï¼‰ã€SailPointãƒ»J.M.Smuckerãƒ»Casey'sæ±ºç®—ã€SpaceX IPOå‹•å‘ã€‚</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WAVE 4 -->
+<canvas id="wave4" class="wave"></canvas>
+
+<!-- REFERENCES -->
+<section class="references">
+  <div class="container">
+    <h3>SOURCES &amp; REFERENCES</h3>
+    <ul class="ref-list">
+      <li><a href="https://www.cnbc.com/2026/06/07/stock-market-today-live-updates.html" target="_blank">CNBC: S&P 500 closes higher as chips stage a comeback, Iran stops strikes on Israel (June 8, 2026)</a></li>
+      <li><a href="https://finance.yahoo.com/markets/live/stock-market-today-monday-june-8-dow-sp-500-nasdaq-jump-085310403.html" target="_blank">Yahoo Finance: Stock market today â€” S&P 500, Nasdaq rise on chip stock rebound, Dow slips (June 8, 2026)</a></li>
+      <li><a href="https://www.cnbc.com/2026/06/04/stock-market-today-live-updates.html" target="_blank">CNBC: Nasdaq falls 4% and suffers worst day since April 2025 as traders flee chip stocks (June 6, 2026)</a></li>
+      <li><a href="https://intellectia.ai/blog/semiconductor-stocks-selloff-june-2026" target="_blank">Intellectia AI: Semiconductor Stocks Selloff June 2026: $1.3T Wiped Out in AI Chip Crash</a></li>
+      <li><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank">FRED St. Louis Fed: US 10-Year Treasury Constant Maturity</a></li>
+      <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank">Trading Economics: Japan 10-Year Government Bond Yield</a></li>
+      <li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank">Federal Reserve: FOMC Meeting Calendar 2026</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-brand">ç±³å›½å¸‚å ´ ãƒ¢ãƒ¼ãƒ‹ãƒ³ã‚°ãƒ¬ãƒãƒ¼ãƒˆ</div>
+    <p>æœ¬ãƒ¬ãƒãƒ¼ãƒˆã¯å…¬é–‹æƒ…å ±ã‚’ã‚‚ã¨ã«ã—ãŸAIç”Ÿæˆãƒ¬ãƒãƒ¼ãƒˆã§ã‚ã‚Šã€æŠ•è³‡åŠ©è¨€ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚</p>
+    <p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+  </div>
+</footer>
+
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() {
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || 80;
+    }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1;
+      ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath();
+      ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp
+                         + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed;
+      rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+
+</body>
+</html>
