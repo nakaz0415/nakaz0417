@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ç±³å›½å¸‚å ´ ãƒ¢ãƒ¼ãƒ‹ãƒ³ã‚°ãƒ¬ãƒãƒ¼ãƒˆ | 2026.06.08</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>ç±³å›½å¸‚å ´ ãƒ¢ãƒ¼ãƒ‹ãƒ³ã‚°ãƒ¬ãƒãƒ¼ãƒˆ | 2026.06.09</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -15,41 +13,21 @@
   --accent: #b5472a;
   --border: #d6cfc4;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: var(--bg); color: var(--fg); font-family: 'Noto Sans JP', sans-serif; line-height: 1.7; }
-a { color: var(--accent); }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* Header */
+/* HEADER */
 .site-header { background: var(--primary); color: #fff; }
-.header-top { padding: 28px 0 20px; }
+.header-top { padding: 28px 0 18px; }
 .header-flex { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
-.brand {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 900;
-  font-size: 34px;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-}
+.brand { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 34px; letter-spacing: 0.04em; line-height: 1.1; }
 .brand .accent { color: #d9a17a; font-weight: 700; }
-.brand-sub {
-  font-size: 11px;
-  letter-spacing: 0.35em;
-  margin-top: 8px;
-  color: rgba(255,255,255,0.65);
-  text-transform: uppercase;
-}
+.brand-sub { font-size: 11px; letter-spacing: 0.35em; margin-top: 8px; color: rgba(255,255,255,0.65); text-transform: uppercase; }
 .dateline { text-align: right; font-size: 12px; letter-spacing: 0.18em; color: rgba(255,255,255,0.85); }
-.dateline .big {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  display: block;
-  letter-spacing: 0.04em;
-  margin-bottom: 4px;
-}
+.dateline .big { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 700; display: block; letter-spacing: 0.04em; margin-bottom: 4px; }
 
-/* Ticker */
+/* TICKER BAR */
 .ticker-bar { overflow: hidden; white-space: nowrap; background: rgba(0,0,0,0.25); padding: 9px 0; }
 .ticker-inner { display: inline-block; animation: ticker 32s linear infinite; }
 .ticker-inner span { display: inline-block; margin: 0 38px; font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.88); }
@@ -58,93 +36,86 @@ a { color: var(--accent); }
 .tick-down { color: #f27a6c; font-weight: 700; }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* Hero */
-.hero {
-  height: 340px;
-  background: linear-gradient(135deg, #1a2a42 0%, #2d4a6b 50%, #b5472a 100%);
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; color: #fff; position: relative; overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);
-}
-.hero-inner { position: relative; z-index: 1; padding: 0 24px; }
-.hero-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 11px; letter-spacing: 0.3em; padding: 4px 14px; border-radius: 2px; margin-bottom: 18px; text-transform: uppercase; }
-.hero-title { font-size: 32px; font-weight: 900; line-height: 1.3; margin-bottom: 12px; }
-.hero-sub { font-size: 15px; color: rgba(255,255,255,0.8); max-width: 560px; margin: 0 auto; }
+/* HERO */
+.hero { background: linear-gradient(135deg, #1a2230 0%, #21344f 50%, #2e4a72 100%); min-height: 340px; display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 340"><patx fill="rgba(255,255,255,0.03)" d="M0,160L60,149.3C120,139,240,117,360,128C480,139,600,181,720,181.3C840,181,960,139,1080,112C1200,85,1320,75,1380,69.3L1440,64L1440,340L0,340Z"/></svg>') no-repeat bottom / cover; }
+.hero-content { position: relative; z-index: 1; padding: 50px 0; }
+.hero-tag { display: inline-block; background: var(--accent); color: #fff; font-size: 11px; letter-spacing: 0.2em; padding: 4px 14px; margin-bottom: 18px; text-transform: uppercase; font-weight: 700; }
+.hero-title { font-size: 42px; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 16px; letter-spacing: 0.02em; }
+.hero-title span { color: #d9a17a; }
+.hero-lead { font-size: 15px; color: rgba(255,255,255,0.8); max-width: 680px; line-height: 1.8; }
 
-/* Wave canvas */
+/* WAVE CANVAS */
 canvas.wave { display: block; width: 100%; height: 80px; }
 
-/* Quick Reading */
-.section { padding: 56px 0; }
-.section-label { font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; font-weight: 700; }
-.section-title { font-size: 26px; font-weight: 900; margin-bottom: 32px; color: var(--primary); }
-.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-@media(max-width:700px){ .grid3 { grid-template-columns: 1fr; } }
-.card { background: #fff; border: 1px solid var(--border); border-radius: 4px; padding: 24px; }
-.card-num { font-size: 36px; font-weight: 900; color: var(--primary); line-height: 1; margin-bottom: 10px; }
-.card-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--accent); letter-spacing: 0.05em; }
-.card-body { font-size: 14px; color: #445; line-height: 1.6; }
+/* QUICK READING */
+.quick-reading { padding: 60px 0; background: var(--bg); }
+.section-label { font-size: 11px; letter-spacing: 0.35em; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
+.section-title { font-size: 28px; font-weight: 900; color: var(--primary); margin-bottom: 36px; border-bottom: 2px solid var(--border); padding-bottom: 12px; }
+.quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+@media (max-width: 768px) { .quick-grid { grid-template-columns: 1fr; } }
+.quick-card { background: #fff; border: 1px solid var(--border); padding: 28px; border-left: 4px solid var(--accent); }
+.quick-num { font-size: 48px; font-weight: 900; color: var(--border); line-height: 1; margin-bottom: 12px; }
+.quick-card h3 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+.quick-card p { font-size: 14px; color: #555; line-height: 1.7; }
 
-/* Lead Story */
-.lead-grid { display: grid; grid-template-columns: 1fr 300px; gap: 40px; }
-@media(max-width:800px){ .lead-grid { grid-template-columns: 1fr; } }
-.lead-body { font-size: 15px; line-height: 1.85; color: #2a3348; }
-.lead-body p { margin-bottom: 18px; }
-.lead-body h3 { font-size: 22px; font-weight: 900; color: var(--primary); margin-bottom: 16px; }
-.sidebar { background: var(--primary); color: #fff; border-radius: 4px; padding: 24px; }
-.sidebar-title { font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 16px; }
-.watch-item { border-bottom: 1px solid rgba(255,255,255,0.12); padding: 12px 0; }
-.watch-item:last-child { border-bottom: none; }
-.watch-name { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
-.watch-val { font-size: 22px; font-weight: 900; }
-.watch-chg { font-size: 12px; margin-top: 2px; }
-.red { color: #f27a6c; }
-.green { color: #5cd47b; }
-.neutral { color: rgba(255,255,255,0.7); }
+/* LEAD STORY */
+.lead-story { padding: 60px 0; background: #fff; }
+.lead-layout { display: grid; grid-template-columns: 1fr 320px; gap: 48px; }
+@media (max-width: 900px) { .lead-layout { grid-template-columns: 1fr; } }
+.lead-body h2 { font-size: 28px; font-weight: 900; color: var(--primary); margin-bottom: 20px; line-height: 1.4; }
+.lead-body p { font-size: 15px; margin-bottom: 16px; color: #333; line-height: 1.9; }
+.watch-sidebar { background: var(--primary); color: #fff; padding: 28px; }
+.watch-sidebar h4 { font-size: 11px; letter-spacing: 0.3em; color: #d9a17a; margin-bottom: 18px; text-transform: uppercase; font-weight: 700; }
+.watch-item { border-top: 1px solid rgba(255,255,255,0.15); padding: 12px 0; }
+.watch-item:first-of-type { border-top: none; }
+.watch-item .wi-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.15em; text-transform: uppercase; }
+.watch-item .wi-val { font-size: 22px; font-weight: 700; margin: 4px 0; }
+.watch-item .wi-chg { font-size: 13px; }
+.wi-up { color: #5cd47b; }
+.wi-down { color: #f27a6c; }
 
-/* Asset grid */
-.asset-section { background: var(--primary); color: #fff; padding: 48px 0; }
-.asset-section .section-title { color: #fff; }
-.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-@media(max-width:800px){ .grid4 { grid-template-columns: repeat(2, 1fr); } }
-@media(max-width:480px){ .grid4 { grid-template-columns: 1fr; } }
-.asset-card { border: 1px solid rgba(255,255,255,0.18); border-radius: 4px; padding: 20px; }
-.asset-label { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
-.asset-val { font-size: 28px; font-weight: 900; line-height: 1; margin-bottom: 6px; }
-.asset-chg { font-size: 14px; font-weight: 700; }
+/* ASSET GRID */
+.asset-grid-section { padding: 60px 0; background: var(--bg); }
+.asset-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 768px) { .asset-grid { grid-template-columns: repeat(2, 1fr); } }
+.asset-card { background: #fff; border: 1px solid var(--border); padding: 24px; text-align: center; }
+.asset-card .ac-label { font-size: 11px; letter-spacing: 0.2em; color: #888; text-transform: uppercase; margin-bottom: 8px; }
+.asset-card .ac-val { font-size: 32px; font-weight: 900; color: var(--primary); line-height: 1; margin-bottom: 8px; }
+.asset-card .ac-chg { font-size: 16px; font-weight: 700; }
 
-/* Finance Focus */
-.fin-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-@media(max-width:700px){ .fin-grid { grid-template-columns: 1fr; } }
-.fin-card { background: #fff; border: 1px solid var(--border); border-radius: 4px; padding: 24px; }
-.fin-ticker { font-size: 11px; letter-spacing: 0.3em; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
-.fin-name { font-size: 16px; font-weight: 900; color: var(--primary); margin-bottom: 12px; }
-.fin-price { font-size: 30px; font-weight: 900; line-height: 1; margin-bottom: 4px; }
-.fin-body { font-size: 13px; color: #556; line-height: 1.65; margin-top: 12px; }
+/* FINANCE FOCUS */
+.finance-focus { padding: 60px 0; background: #fff; }
+.ff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 768px) { .ff-grid { grid-template-columns: 1fr; } }
+.ff-card { border: 1px solid var(--border); padding: 24px; }
+.ff-ticker { font-size: 11px; letter-spacing: 0.25em; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-bottom: 8px; }
+.ff-name { font-size: 17px; font-weight: 900; color: var(--primary); margin-bottom: 6px; }
+.ff-price { font-size: 28px; font-weight: 700; color: var(--fg); margin-bottom: 4px; }
+.ff-chg { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+.ff-card p { font-size: 13px; color: #555; line-height: 1.7; }
 
-/* Short Version */
-.short-section { background: var(--primary); color: #fff; padding: 56px 0; }
-.short-section .section-title { color: #fff; }
-.short-list { list-style: none; }
-.short-list li { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12); font-size: 15px; padding-left: 28px; position: relative; }
-.short-list li::before { content: 'â†’'; position: absolute; left: 0; color: #d9a17a; font-weight: 700; }
-.short-list li:last-child { border-bottom: none; }
+/* SHORT VERSION */
+.short-version { background: var(--primary); color: #fff; padding: 60px 0; }
+.short-version .section-label { color: #d9a17a; }
+.short-version .section-title { color: #fff; border-color: rgba(255,255,255,0.2); }
+.sv-list { list-style: none; }
+.sv-list li { padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.12); font-size: 15px; color: rgba(255,255,255,0.9); display: flex; gap: 14px; line-height: 1.7; }
+.sv-list li::before { content: attr(data-n); font-size: 32px; font-weight: 900; color: rgba(255,255,255,0.15); line-height: 1; flex-shrink: 0; }
 
-/* References */
-.ref-section { padding: 40px 0; }
-.ref-title { font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 12px; letter-spacing: 0.1em; }
+/* REFERENCES */
+.references { padding: 40px 0; background: var(--bg); }
+.references h3 { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 14px; letter-spacing: 0.1em; }
 .ref-list { list-style: none; }
-.ref-list li { font-size: 12px; margin-bottom: 6px; color: #778; }
-.ref-list a { color: var(--accent); }
+.ref-list li { font-size: 13px; color: #666; padding: 4px 0; }
+.ref-list a { color: var(--accent); text-decoration: none; }
+.ref-list a:hover { text-decoration: underline; }
 
-/* Footer */
-.site-footer { background: var(--primary); color: rgba(255,255,255,0.7); text-align: center; padding: 32px 0; font-size: 13px; }
-.foot-brand { font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 10px; font-family: 'Noto Sans JP', sans-serif; }
-.site-footer a { color: #d9a17a; }
+/* FOOTER */
+.site-footer { background: var(--primary); color: rgba(255,255,255,0.7); padding: 36px 0; text-align: center; }
+.foot-brand { font-size: 18px; font-weight: 900; color: #fff; margin-bottom: 10px; letter-spacing: 0.04em; }
+.site-footer p { font-size: 12px; line-height: 1.8; }
+.site-footer a { color: #d9a17a; text-decoration: none; }
 </style>
 </head>
 <body>
@@ -158,202 +129,147 @@ canvas.wave { display: block; width: 100%; height: 80px; }
         <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
       </div>
       <div class="dateline">
-        <span class="big">2026å¹´6æœˆ8æ—¥(æœˆ)</span>
-        å‰å–¶æ¥­æ—¥ 6æœˆ6æ—¥(é‡‘) çµ‚å€¤ãƒ™ãƒ¼ã‚¹
+        <span class="big">2026å¹´6æœˆ9æ—¥(ç«)</span>
+        å‰å–¶æ¥­æ—¥ 6æœˆ8æ—¥(æœˆ) çµ‚å€¤ãƒ™ãƒ¼ã‚¹
       </div>
     </div>
   </div>
-  <!-- TICKER BAR -->
   <div class="ticker-bar">
     <div class="ticker-inner">
-      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,383.74 &nbsp;-2.64%</span></span>
-      <span><span class="tick-label">NASDAQ</span><span class="tick-down">25,709.43 &nbsp;-4.18%</span></span>
-      <span><span class="tick-label">DOW</span><span class="tick-down">50,866.78 &nbsp;-1.35%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,405.87 +0.30%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">26,079.83 +1.44%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">50,785.37 -0.16%</span></span>
       <span><span class="tick-label">US 2Y</span>4.17%</span>
       <span><span class="tick-label">US 10Y</span>4.55%</span>
       <span><span class="tick-label">US 30Y</span>5.01%</span>
-      <span><span class="tick-label">JGB 10Y</span>2.66%</span>
-      <span><span class="tick-label">WTI</span><span class="tick-down">$90.54 &nbsp;-2.69%</span></span>
-      <span><span class="tick-label">VIX</span><span class="tick-down">21.51 &nbsp;+39.7%</span></span>
-      <span><span class="tick-label">NVDA</span><span class="tick-down">$205.10 &nbsp;-6%</span></span>
-      <span><span class="tick-label">AAPL</span><span class="tick-down">$307.34 &nbsp;-1.25%</span></span>
-      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,383.74 &nbsp;-2.64%</span></span>
-      <span><span class="tick-label">NASDAQ</span><span class="tick-down">25,709.43 &nbsp;-4.18%</span></span>
-      <span><span class="tick-label">DOW</span><span class="tick-down">50,866.78 &nbsp;-1.35%</span></span>
+      <span><span class="tick-label">JGB 10Y</span>2.72%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$94.10</span></span>
+      <span><span class="tick-label">VIX</span>21.50</span>
+      <span><span class="tick-label">NVDA</span><span class="tick-up">$208.14 +1.2%</span></span>
+      <span><span class="tick-label">AMD</span><span class="tick-up">$471.52 +1.1%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,405.87 +0.30%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">26,079.83 +1.44%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">50,785.37 -0.16%</span></span>
       <span><span class="tick-label">US 2Y</span>4.17%</span>
       <span><span class="tick-label">US 10Y</span>4.55%</span>
       <span><span class="tick-label">US 30Y</span>5.01%</span>
-      <span><span class="tick-label">JGB 10Y</span>2.66%</span>
-      <span><span class="tick-label">WTI</span><span class="tick-down">$90.54 &nbsp;-2.69%</span></span>
-      <span><span class="tick-label">VIX</span><span class="tick-down">21.51 &nbsp;+39.7%</span></span>
-      <span><span class="tick-label">NVDA</span><span class="tick-down">$205.10 &nbsp;-6%</span></span>
-      <span><span class="tick-label">AAPL</span><span class="tick-down">$307.34 &nbsp;-1.25%</span></span>
+      <span><span class="tick-label">JGB 10Y</span>2.72%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$94.10</span></span>
+      <span><span class="tick-label">VIX</span>21.50</span>
+      <span><span class="tick-label">NVDA</span><span class="tick-up">$208.14 +1.2%</span></span>
+      <span><span class="tick-label">AMD</span><span class="tick-up">$471.52 +1.1%</span></span>
     </div>
   </div>
 </header>
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">Breaking â€” 6 June 2026</div>
-    <div class="hero-title">åŠå°ä½“æ ªãŒå´©è½<br>NASDAQãŒ2025å¹´4æœˆä»¥æ¥æœ€å¤§ã®ä¸‹è½</div>
-    <div class="hero-sub">Broadcomã®ä½èª¿ãªAIãƒãƒƒãƒ—è¦‹é€šã—ï¼‹å¼·ã„é›‡ç”¨çµ±è¨ˆãŒå¼•ãé‡‘ã¨ãªã‚Šã€ãƒãƒƒãƒ—æ ªãŒæ™‚ä¾¡ç·é¡1å…†ãƒ‰ãƒ«ã‚’æ¶ˆå¤±ã€‚VIXã¯40%æ€¥é¨°ã—ææ€–æŒ‡æ•°ãŒç¤ºã™å¸‚å ´ã®ãƒ‘ãƒ‹ãƒƒã‚¯çŠ¶æ…‹ã€‚</div>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-tag">Today's Lead</div>
+    <h1 class="hero-title">ãƒãƒƒãƒ—æ ªãŒåº•æ‰“ã¡åç™º<br><span>å…ˆé€±ã®$1.3å…†æš´è½ã‹ã‚‰åè»¢ã€NASDAQãŒ+1.44%</span></h1>
+    <p class="hero-lead">
+      å…ˆé€±é‡‘æ›œæ—¥ï¼ˆ6æœˆ6æ—¥ï¼‰ã«Broadcomã®AIè¦‹é€šã—æ®ãˆç½®ãã¨å¼·ã„5æœˆé›‡ç”¨çµ±è¨ˆï¼ˆ172,000ä»¶ï¼‰ã‚’å—ã‘ã¦æ€¥è½ã—ãŸåŠå°ä½“æ ªãŒã€6æœˆ8æ—¥ï¼ˆæœˆï¼‰ã«å¤§å¹…åç™ºã€‚Micronã¯Fridayæ¯”+9%ã¨æ€¥é¨°ã—ã€NVIDIAã‚‚+1.2%å›å¾©ã€‚ãŸã ã—WTIåŸæ²¹ãŒ$94è¶…ã«ä¸Šæ˜‡ã—ã€ã‚¤ãƒ³ãƒ•ãƒ¬æ‡¸å¿µã¨6æœˆ17æ—¥ã®FOMCï¼ˆæ–°è­°é•·Warshå°±ä»»å¾Œåˆï¼‰ã¸ã­ç·Šå¼µæ„Ÿã¯ç¶™ç¶šã—ã¦ã„ã‚‹ã€‚
+    </p>
   </div>
-</div>
+</section>
 
 <!-- WAVE 1 -->
 <canvas id="wave1" class="wave"></canvas>
 
 <!-- QUICK READING -->
-<section class="section">
+<section class="quick-reading">
   <div class="container">
     <div class="section-label">Quick Reading</div>
     <div class="section-title">ä»Šæ—¥ã®3å¤§ãƒã‚¤ãƒ³ãƒˆ</div>
-    <div class="grid3">
-      <div class="card">
-        <div class="card-num">01</div>
-        <div class="card-title">åŠå°ä½“æ ªãŒå…¨é¢å®‰ â€” $1å…†è’¸ç™º</div>
-        <div class="card-body">BroadcomãŒæ°´æ›œå¤œã«AIãƒãƒƒãƒ—è¦‹é€šã—ã‚’æ®ãˆç½®ãã€å¤±æœ›å£²ã‚ŠãŒé€£é–ã€‚NVDAã¯6%ã€MUã¯17%ã€AMDã¯12.6%æ€¥è½ã€‚NASDAQã¯4.18%ä¸‹è½ã—2025å¹´4æœˆã®ã‚¿ãƒªãƒ•ã‚·ãƒ§ãƒƒã‚¯ä»¥æ¥ã®æœ€æ‚ªæ—¥ã¨ãªã£ãŸã€‚</div>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="quick-num">01</div>
+        <h3>ãƒãƒƒãƒ—æ ªãŒå…ˆé€±ã®å´©è½ã‹ã‚‰åç™º</h3>
+        <p>Broadcomã®å¤±æœ›çš„ã‚¬ã‚¤ãƒ€ãƒ³ã‚¹ã¨å¼·é›‡ç”¨çµ±è¨ˆã§å…ˆé€±é‡‘æ›œã«$1.3å…†ãŒè’¸ç™ºã€‚6/8ã¯åŠå°ä½“ETFï¼ˆSOXï¼‰ãŒ+5%è¶…ã§åç™ºã€‚MicronãŒ+9%ä¸»å°ã€‚AIéœ€è¦ã¸ã®é•·æœŸå¼·æ°—å§¿å‹¢ã¯å¤‰ã‚ã‚‰ãšã€‚</p>
       </div>
-      <div class="card">
-        <div class="card-num">02</div>
-        <div class="card-title">é›‡ç”¨çµ±è¨ˆã‚µãƒ—ãƒ©ã‚¤ã‚º â€” åˆ©ä¸‹ã’æœŸå¾…ã¯é ã®ã</div>
-        <div class="card-body">5æœˆéè¾²æ¥­éƒ¨é–€é›‡ç”¨è€…æ•°ã¯+17.2ä¸‡äººï¼ˆäºˆæƒ³+8ä¸‡äººã®2å€è¶…ï¼‰ã€‚å¤±æ¥­ç‡4.3%ã§å®‰å®šã€‚Fedã®ã‚¤ãƒ³ãƒ•ãƒ¬è­¦æˆ’å§¿å‹¢ãŒå¼·ã¾ã‚Šã€å¹´å†…åˆ©ä¸‹ã’ã‚·ãƒŠãƒªã‚ªãŒå¾Œé€€ã€‚ã‚¿ã‚«æ´¾ã®è«–æ‹ ãŒå¼·åŒ–ã•ã‚ŒãŸã€‚</div>
+      <div class="quick-card">
+        <div class="quick-num">02</div>
+        <h3>FOMCã¾ã§2é€±é–“ã€Warshæ–°è­°é•·ã¸ã®æ³¨ç›®</h3>
+        <p>6æœˆ17æ—¥ã«Warshâˆ´è­°é•·å°±ä»»å¾Œåˆã®FOMCè¨˜è€…ä¼šè¦‹ã€‚5æœˆé›‡ç”¨çµ±è¨ˆ172,000ä»¶ãƒ»10å¹´å‚µ4.55%ã§åˆ©ä¸‹ã’è¦³æ¸¬ã¯å¤§å¹…å¾Œé€€ã€‚6/10ï¼ˆæ°´ï¼‰ã®CPIãƒ‡ãƒ¼ã‚¿ãŒç„¦ç‚¹ç€‚</p>
       </div>
-      <div class="card">
-        <div class="card-num">03</div>
-        <div class="card-title">åŸæ²¹ã‚‚ç¶šè½ â€” ã‚¤ãƒ©ãƒ³äº¤æ¸‰é€²å±•è¦³æ¸¬</div>
-        <div class="card-body">WTIã¯$90.54ã¾ã§ä¸‹è½ï¼ˆ-2.69%ï¼‰ã€‚å‰æ—¥ã®3.1%ä¸‹è½ã«ç¶šãé€£ç¶šå®‰ã€‚ç±³ãƒ»ã‚¤ãƒ©ãƒ³é–“ã§ã®æ ¸å”è­°é€²å±•è¦³æ¸¬ãŒéœ€çµ¦ç·©å’ŒæœŸå¾…ã‚’é«˜ã‚ãŸã€‚OPEC+ã®å¢—ç”£ç¶™ç¶šã‚‚å¼•ãç¶šãä¸Šå€¤ã‚’æŠ‘åˆ¶ã€‚</div>
+      <div class="quick-card">
+        <div class="quick-num">03</div>
+        <h3>ä¸­æ±ç·Šå¼µã¨åŸæ²¹$94è¶…ï¼šã‚¤ãƒ³ãƒ•ãƒ¬å†ç‡ƒãƒªã‚¹ã‚¯</h3>
+        <p>ã‚¤ãƒ©ãƒ³ãƒ»ã‚¤ã‚¹ãƒ©ã‚¨ãƒ«ã®æ”»æ’ƒäº¤æ›ãŒç¶šãã€ã€Œåœæˆ¦ã®åã°ã‹ã‚Šã€çŠ¶æ…‹ã«ã€‚WTIãŒ$94è¶…ã«æ€¥é¨°ã€€ã‚¨ãƒãƒ«ã‚®ãƒ¼ã‚³ã‚¹ãƒˆä¸Šæ˜‡ãŒ6/10 CPIã«åæ˜ ã•ã‚Œã‚‹ã‹ã€Fedåˆ¤æ–­ã‚’å·¦å³ã™ã‚‹ã€‚</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- LEAD STORY -->
-<section class="section" style="padding-top:0;">
+<section class="lead-story">
   <div class="container">
     <div class="section-label">Lead Story</div>
-    <div class="lead-grid">
+    <div class="section-title">è©³ç´°åˆ†æ</div>
+    <div class="lead-layout">
       <div class="lead-body">
-        <h3>ãƒãƒƒãƒ—æ ªãƒãƒ–ãƒ«ã®äº€è£‚ â€” Broadcomã‚·ãƒ§ãƒƒã‚¯ãŒå¼•ã„ãŸå¼•ãé‡‘</h3>
-        <p>6æœˆ6æ—¥ï¼ˆé‡‘ï¼‰ã®ç±³å›½å¸‚å ´ã¯ã€åŠå°ä½“ã‚»ã‚¯ã‚¿ãƒ¼ã¸ã®å¤§è¦æ¨¡ãªè³‡é‡‘é€ƒé¿ã«ã‚ˆã‚Šè’ã‚Œæ¨¡æ§˜ã®å±•é–‹ã¨ãªã£ãŸã€‚NASDAQã¯4.18%ä¸‹è½ã—25,709ãƒã‚¤ãƒ³ãƒˆã§å¼•ã‘ã€ã“ã‚Œã¯2025å¹´4æœˆã®é–¢ç¨ã‚·ãƒ§ãƒƒã‚¯ä»¥æ¥æœ€å¤§ã®æ—¥ä¸­ä¸‹è½å¹…ã¨ãªã£ãŸã€‚S&P500ã‚‚2.64%å®‰ã¯7,383ãƒã‚¤ãƒ³ãƒˆã¨ã€ç¯€ç›®ã®7,400ã‚’å‰²ã‚Šè¾¼ã‚“ã ã€‚</p>
-        <p>ç›´æ¥ã®å¼•ãé‡‘ã¨ãªã£ãŸã®ã¯Broadcomï¼ˆAVGOï¼‰ã®æ±ºç®—ç™ºè¡¨ã ã£ãŸã€‚åŒç¤¾ã¯æ°´æ›œå¤œã«AIãƒãƒƒãƒ—å‘ã‘å—æ³¨è¦‹é€šã—ã‚’æ®ãˆç½®ã„ãŸã€‚å¸‚å ´ã¯å¼·æ°—ãªä¸Šæ–¹ä¿®æ­£ã‚’æœŸå¾…ã—ã¦ãŠã‚Šã€ãã®å¤±æœ›ãŒãƒŸã‚¯ãƒ­ãƒ³ã‚’17%ã€ARMã‚’å¤§å¹…ä¸‹è½ã•ã›ã‚‹ãªã©ã€ãƒãƒƒãƒ—æ ªå…¨ä½“ã‚’å·»ãè¾¼ã‚“ã é€£é–å£²ã‚Šã¸ã¨ç™ºå±•ã—ãŸã€‚éå»2å–¶æ¥­æ—¥ã§ã“ã®ã‚»ã‚¯ã‚¿ãƒ¼å˜ä½“ã§1å…†ãƒ‰ãƒ«è¶…ã®æ™‚ä¾¡ç·é¡ãŒå¤±ã‚ã‚ŒãŸã€‚</p>
-        <p>ã•ã‚‰ã«ã‚¿ã‚¤ãƒŸãƒ³ã‚°æ‚ªãã€åŒæ—¥æœã«ç™ºè¡¨ã•ã‚ŒãŸ5æœˆé›‡ç”¨çµ±è¨ˆãŒå¸‚å ´äºˆæƒ³ã®2å€ä»¥ä¸Šã¨ãªã‚‹17.2ä¸‡äººå¢—ã®ã‚µãƒ—ãƒ©ã‚¤ã‚ºã‚’è¨˜éŒ²ã€‚å‚µåˆ¸å¸‚å ´ã§ã¯ç±³10å¹´å‚µåˆ©å›ã‚ŠãŒ4.55%ã¸ã¨ä¸Šæ˜‡ã—ã€ãƒãƒªãƒ¥ã‚¨ãƒ¼ã‚·ãƒ§ãƒ³ã®é«˜ã„æˆé•·æ ªã«ã¯é€†é¢¨ã¨ãªã£ãŸã€‚VIXã¯21.51ã¨å‰æ—¥æ¯”40%è¿‘ãè·³ã­ä¸ŠãŒã‚Šã€æŠ•è³‡å®¶å¿ƒç†ã®æ€¥é€Ÿãªæ‚ªåŒ–ã‚’ç¤ºã—ãŸã€‚</p>
-        <p>æ—¥æœ¬å›½å‚µã¯ç‹¬è‡ªã®ä¸Šæ˜‡åœ§åŠ›ã«æ™’ã•ã‚Œã¦ãŠã‚Šã€BOJã®è¿½åŠ åˆ©ä¸Šã’è¦³æ¸¬ã‚’èƒŒæ™¯ã«10å¹´JGBåˆ©å›ã‚Šã¯2.66%ä»˜è¿‘ã§æ¨ç§»ã€‚å›½å†…å¤–ã®é‡‘åˆ©ç’°å¢ƒã¯ã¨ã‚‚ã«ãƒªã‚¹ã‚¯è³‡ç”£ã«ã¨ã£ã¦å³ã—ã„å±€é¢ã¨ãªã£ã¦ã„ã‚‹ã€‚é€±æ˜ã‘ã®å¸‚å ´ã¯ã€ã“ã®ãƒãƒƒãƒ—æ ªæ€¥è½ãŒä¸€æ™‚çš„ãªèª¿æ•´ãªã®ã‹ã€ã‚ˆã‚Šæ·±ã„æ§‹é€ çš„ãªè»¢æ›ã®å§‹ã¾ã‚Šãªã®ã‹ã‚’è¦‹æ¥µã‚ã‚‹ã“ã¨ã«ãªã‚‹ã€‚</p>
-      </div>
-      <div>
-        <div class="sidebar">
-          <div class="sidebar-title">Today's Watch</div>
-          <div class="watch-item">
-            <div class="watch-name">S&amp;P 500</div>
-            <div class="watch-val">7,383.74</div>
-            <div class="watch-chg red">â–¼ -2.64%</div>
-          </div>
-          <div class="watch-item">
-            <div class="watch-name">NASDAQ</div>
-            <div class="watch-val">25,709.43</div>
-            <div class="watch-chg red">â–¼ -4.18%</div>
-          </div>
-          <div class="watch-item">
-            <div class="watch-name">DOW</div>
-            <div class="watch-val">50,866.78</div>
-            <div class="watch-chg red">â–¼ -1.35%</div>
-          </div>
-          <div class="watch-item">
-            <div class="watch-name">US 10Y</div>
-            <div class="watch-val">4.55%</div>
-            <div class="watch-chg red">â–² åˆ©å›ã‚Šä¸Šæ˜‡</div>
-          </div>
-          <div class="watch-item">
-            <div class="watch-name">VIX</div>
-            <div class="watch-val">21.51</div>
-            <div class="watch-chg red">â–² +39.7%</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ASSET GRID -->
-<div class="asset-section">
-  <div class="container">
-    <div class="section-label" style="color:#d9a17a;">Market Data</div>
-    <div class="section-title">ä¸»è¦ã‚¢ã‚»ãƒƒãƒˆçµ‚å€¤</div>
-    <div class="grid4">
-      <div class="asset-card">
-        <div class="asset-label">S&amp;P 500</div>
-        <div class="asset-val">7,383.74</div>
-        <div class="asset-chg red">â–¼ -2.64%</div>
-      </div>
-      <div class="asset-card">
-        <div class="asset-label">NASDAQ</div>
-        <div class="asset-val">25,709.43</div>
-        <div class="asset-chg red">â–¼ -4.18%</div>
-      </div>
-      <div class="asset-card">
-        <div class="asset-label">WTI Crude Oil</div>
-        <div class="asset-val">$90.54</div>
-        <div class="asset-chg red">â–¼ -2.69%</div>
-      </div>
-      <div class="asset-card">
-        <div class="asset-label">US 10Y Treasury</div>
-        <div class="asset-val">4.55%</div>
-        <div class="asset-chg" style="color:#d9a17a;">â–² åˆ©å›ã‚Šä¸Šæ˜‡</div>
-      </div>
-      <div class="asset-card">
-        <div class="asset-label">US 2Y Treasury</div>
-        <div class="asset-val">4.17%</div>
-        <div class="asset-chg" style="color:#d9a17a;">â–² åˆ©å›ã‚Šä¸Šæ˜‡</div>
-      </div>
-      <div class="asset-card">
-        <div class="asset-label">US 30Y Treasury</div>
-        <div class="asset-val">5.01%</div>
-        <div class="asset-chg" style="color:#d9a17a;">â–² åˆ©å›ã‚Šä¸Šæ˜‡</div>
-      </div>
-      <div class="asset-card">
-        <div class="asset-label">JGB 10Y (æ—¥æœ¬å›½å‚µ)</div>
-        <div class="asset-val">2.66%</div>
-        <div class="asset-chg" style="color:#d9a17a;">BOJåˆ©ä¸Šã’è¦³æ¸¬</div>
-      </div>
-      <div class="asset-card">
-        <div class="asset-label">VIX ææ€–æŒ‡æ•°</div>
-        <div class="asset-val">21.51</div>
-        <div class="asset-chg red">â–² +39.7%</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- WAVE 2 -->
-<canvas id="wave2" class="wave"></canvas>
-
-<!-- FINANCE FOCUS -->
-<section class="section">
-  <div class="container">
-    <div class="section-label">Finance Focus</div>
-    <div class="section-title">æ³¨ç›®å€‹åˆ¥æ ª</div>
-    <div class="fin-grid">
-      <div class="fin-card">
-        <div class="fin-ticker">NVDA</div>
-        <div class="fin-name">NVIDIA Corporation</div>
-        <div class="fin-price red">$205.10</div>
-        <div class="fin-body red" style="font-weight:700;">â–¼ -6.0%</div>
-        <div class="fin-body">Broadcomã®è¦‹é€šã—æ®ãˆç½®ãã§åŠå°ä½“ã‚»ã‚¯ã‚¿ãƒ¼å…¨ä½“ãŒæ€¥è½ã€‚AIãƒãƒƒãƒ—éœ€è¦ã¸ã®éåº¦ãªæœŸå¾…ã«ä¿®æ­£åœ§åŠ›ã€‚NVDAã¯ç›´è¿‘é«˜å€¤ã‹ã‚‰20%è¶…ã®èª¿æ•´å±€é¢ã«å…¥ã‚Šã€é•·æœŸä¿æœ‰è€…ãŒè©¦ã•ã‚Œã‚‹å±€é¢ã€‚</div>
-      </div>
-      <div class="fin-card">
-        <div class="fin-ticker">AAPL</div>
-        <div class="fin-name">Apple Inc.</div>
-        <div class="fin-price red">$307.34</div>
-        <div class="fin-body red" style="font-weight:700;">â–¼ -1.25%</div>
-        <div class="fin-body">ãƒã‚¤ãƒ†ã‚¯å£²ã‚Šã®ä½™æ³¢ã‚’å—ã‘å°å¹…å®‰ã€‚ç›¸å¯¾çš„ã«ä»–ãƒãƒƒãƒ—æ ªã‚ˆã‚Šã‚‚åº•å …ãã€ãƒ‡ã‚£ãƒ•ã‚§ãƒ³ã‚·ãƒ–çš„ãªä½ç½®ã¥ã‘ã€‚Bank of AmericaãŒ6æœˆã®æ³¨ç›®æ ªã«æŒ™ã’ã¦ãŠã‚Šã€ç§‹ã®iPhoneç™ºè¡¨ã‚·ãƒ¼ã‚ºãƒ³ã¸ã®æœŸå¾…ãŒä¸‹æ”¯ãˆã€‚</div>
-      </div>
-      <div class="fin-card">
-        <div class="fin-ticker">AVGO</div>
-        <div class="fin-name">Broadcom Inc.</div>
-        <div class="fin-price red">ä¸‹è½</div>
-        <div class="fin-body red" style="font-weight:700;">ä»Šå›ã®ä¸‹è½ãƒˆãƒªã‚¬ãƒ¼</div>
-        <div class="fin-body">æ°´æ›œå¤œã®æ±ºç®—ã§AIãƒãƒƒãƒ—å‘ã‘å£²ä¸Šè¦‹é€šã—ã‚’æ®ãˆç½®ãã€å¸‚å ´ã®å¼·æ°—æœŸå¾…ã«å¿œãˆã‚‰ã‚Œãšæ€¥è½ã€‚Micronã‚„ARMç­‰ã®ãƒãƒƒãƒ—é–¢é€£æ ªã«é€£é–å£²ã‚Šã‚’å¼•ãèµ·ã“ã—ã€æ¥­ç•Œå…¨ä½“ã§ç´„$1å…†ã®æ™‚ä¾¡ç·é¡è’¸ç™ºã‚’æ‹›ã„ãŸã€‚</div>
+        <h2>åŠå°ä½“ã‚»ã‚¯ã‚¿ãƒ¼ï¼š$1.3å…†ã®æ¶ˆå¤±ã‹ã‚‰1æ—¥ã§åº•æ‰“ã¡åç™º</h2>
+        <p>
+          6æœˆ5æ—¥ï¼ˆæœ¨ï¼‰ã«BroadcomãŒç™ºè¡¨ã—ãŸ2025å¹´åº¦ç¬¬2å››åŠæœŸæ±ºç®—ã§ã¯ã€AIå‘ã‘ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚­ãƒ³ã‚°åå…¥ãŒ$4.1å„„ï¼ˆäºˆæƒ³$4.8å„„æ¯”-14%ï¼‰ã«ç•™ã¾ã‚Šã€2027å¹´ã®AIåŠå°ä½“è¦‹é€šã—ã‚‚æ®ãˆç½®ã‰ã¨ãªã£ãŸã€‚ã€Œç¶™ç¶šçš„ãªä¸Šæ–¹ä¿®æ­£ã€ã‚’æœŸå¾…ã—ã¦ã„ãŸå¸‚å ´ã¯ã“ã‚Œã‚’å«Œæ°—ã—ã€Broadcomã®CEO Hock Tanã£ã‚ˆã‚‹ã€ŒAIã¯å¥å…¨ã«æ‹¡å¤§ã—ã¦ã„ã‚‹ã€ã¨ã®ç™ºè¨€ã‚Œä¸‹è½ã‚æ­¢ã‚ã‚ˆã‚Œãªã‹ã£ãŸã€‚
+        </p>
+        <p>
+          ç¿Œ6æœˆ6æ—¥ï¼ˆé‡‘ï¼‰ã«ã¯NVIDIAãŒ-6%ã€AMDãŒ-10.86%ã€IntelãŒ-11.28%ã¨åŠå°ä½“å…¨é¢å®‰ã¨ãªã‚Šã€NASDAQã¯-4.18%ã¨2025å¹´4æœˆä»¥æ¥æœ€å¤§ã®ä¸‹è½ã‚’è¨˜éŒ²ã€‚S&amp;P500ã¯-2.64%ã§7,383ãƒ‰ãƒ«å°ã«æ²ˆã‚“ã ã€‚ãƒ¡ãƒ¢ãƒªå¸‚æ³ã®æ‚ªåŒ–ï¼ˆã‚¹ãƒãƒ¼ãƒˆãƒ•ã‚©ãƒ³éœ€è¦ä½è¿·ã«ã‚ˆã‚‹ã‚°ãƒ©ãƒƒãƒˆç¶™ç¶šï¼‰ã¨10å¹´å‚µåˆ©å›ã‚Šã¯4.55%è¶…ãˆãŒé«˜ãƒãƒªãƒ¥ã‚¨ãƒ¼ã‚·ãƒ§ãƒ³ã¸ã®è¿½åŠ åœ§åŠ›ã¨ãªã£ãŸã€‚
+        </p>
+        <p>
+          ã—ã‹ã—6æœˆ8æ—¥ï¼ˆæœˆï¼‰ã®é–‹å¹•ã¨åŒæ™‚ã«è²·ã„æˆ»ã—ãŒåŠ é€Ÿã€‚MicronãŒFridayæ¯”+9%ã§åç™ºã‚’ä¸»å°ã—ã€NVIDIAã®Jensen Huang CEOãŒã€Œç›´è¿‘ã®èª¿æ•´ã¯é•·æœŸçš„ãªAIã‚¤ãƒ³ãƒ•ãƒ©éœ€è¦ã«å¯¾ã™ã‚‹è²·ã„å ´ã€ã¨ã‚³ãƒ¡ãƒ³ãƒˆã—ãŸã“ã¨ãŒæŠ•è³‡å®¶å¿ƒç†ã‚’æ”¹å–„ã€‚åŠå°ä½“ETFã¯+5%è¶…ã®åç™ºã‚’è¨˜éŒ²ã—ãŸã€‚ãŸã ã—ãƒ€ã‚¦ã¯-0.16%ã¨ã¼ó†’'
+?
+'k’â·švÇš–.‹»’â7¦?šb;š
+
+£7¯
+»ó
+ï
+¿
+ÿóã»šã–ş×/
+'–£¦v‹¦®c£¿«
+'«/(€€€€€€€€ğ½Àø(€€€€€€€€ñÀø(€€€€€€€€€ƒ’î+¦Çšr–’Ÿ»šÎ£n»
+ç¼Ûšr ÄÃš^—¾ò#šÂÓ¾ò'¸×šr!A'fë¢†£	]Q'–:šÊç0äÓ
+K¢Ú#O£Ÿ
+£7¯
+»ó’ú‡š‚ó3
+Ï
+‹
+“ÏW³
+Cš*ó_’â+K–‚Ó–B#]…ÉÍ£¢¶Ã¦Vß¹=5
+ç
+ÿÏ
+ç3’âšº×£
+ÿ
+¯šÒû¯–
+û?«
+ç
+¿3
+/Ûšr Äßš^—»–"u=5’òk¢š/ûŸ–â–‚Ó»s§
+«
+¾ò!Y%`€ÈÄ¸×¾ò'¿¦®cš¶‹û
++3’ê#šÏW
+3
+/(€€€€€€€€ğ½Àø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µÍ¥‘•‰…Èˆø(€€€€€€€€€€ñ ĞùQ½‘…äÌ]…Ñ ğ½ Ğø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆùL™…µÀí@€ÔÀÀğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøÜ°ĞÀÔ¸àÜğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œİ¤µÕÀˆûŠZÈ€¬À¸ÌÀ”ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆù9MDğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøÈØ°ÀÜä¸àÌğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œİ¤µÕÀˆûŠZÈ€¬Ä¸ĞĞ”ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆù=\ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøÔÀ°ÜàÔ¸ÌÜğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œİ¤µ‘½İ¸ˆûŠZğ€´À¸ÄØ”ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆù]Q$ÉÕ‘”ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøäĞ¸ÄÀğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œİ¤µÕÀˆûŠZÈ€¬Ğ¸È”ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆùY%`ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøÈÄ¸ÔÀğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œˆÍÑå±”ô‰½±½ÈéÉ‰„ ÈÔÔ°ÈÔÔ°ÈÔÔ°À¸Ü¤ìˆû«
+ç
+¿¢¶›š"K–~|ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ…Ñ µ¥Ñ•´ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ±…‰•°ˆùUL€ÄÁde¥•±ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µÙ…°ˆøĞ¸ÔÔ”ğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÌô‰İ¤µ¡œˆÍÑå±”ô‰½±½ÈéÉ‰„ ÈÔÔ°ÈÔÔ°ÈÔÔ°À¸Ü¤ìˆû–"§’â/K¢šÏšâ³–ú3¦ ğ½‘¥Øø(€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€ğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€ğ½‘¥Øø(€€ğ½‘¥Øø(ğ½Í•Ñ¥½¸ø((ğ„´´MMPI%€´´ø(ñÍ•Ñ¥½¸±…ÍÌô‰…ÍÍ•ĞµÉ¥µÍ•Ñ¥½¸ˆø(€€ñ‘¥Ø±…ÍÌô‰½¹Ñ…¥¹•Èˆø(€€€€ñ‘¥Ø±…ÍÌô‰Í•Ñ¥½¸µ±…‰•°ˆù5…É­•ĞM¹…ÁÍ¡½Ğğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰Í•Ñ¥½¸µÑ¥Ñ±”ˆû’âï¢š
+‹
+ï#¾ò Ø¼àß––“¾ò$ğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•ĞµÉ¥ˆø(€€€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•Ğµ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ±…‰•°ˆùL™…µÀí@€ÔÀÀğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…ŒµÙ…°ˆøÜ°ĞÀÔğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ¡œÑ¥¬µÕÀˆûŠZÈ€¬À¸ÌÀ”ğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•Ğµ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ±…‰•°ˆù9MDğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…ŒµÙ…°ˆøÈØ°ÀÜäğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ¡œÑ¥¬µÕÀˆûŠZÈ€¬Ä¸ĞĞ”ğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•Ğµ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ±…‰•°ˆù]Q$ÉÕ‘”ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…ŒµÙ…°ˆøäĞ¸ÄÀğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ¡œÑ¥¬µÕÀˆûŠZÈ€¬Ğ¸È”ğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰…ÍÍ•Ğµ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ±…‰•°ˆùUL€ÄÁd	½¹ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…ŒµÙ…°ˆøĞ¸ÔÔ”ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰…Œµ¡œˆÍÑå±”ô‰½±½ÈèŒàààìˆø¬€À¸ÀÅÁĞğ½‘¥Øø(€€€€€€ğ½‘¥Øø(€€€€ğ½‘¥Øø(€€ğ½‘¥Øø(ğ½Í•Ñ¥½¸ø((ğ„´´]Y€È€´´ø(ñ…¹Ù…Ì¥ô‰İ…Ù”Èˆ±…ÍÌô‰İ…Ù”ˆøğ½…¹Ù…Ìø((ğ„´´%99=UL€´´ø(ñÍ•Ñ¥½¸±…ÍÌô‰™¥¹…¹”µ™½ÕÌˆø(€€ñ‘¥Ø±…ÍÌô‰½¹Ñ…¥¹•Èˆø(€€€€ñ‘¥Ø±…ÍÌô‰Í•Ñ¥½¸µ±…‰•°ˆù¥¹…¹”½ÕÌğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰Í•Ñ¥½¸µÑ¥Ñ±”ˆûšÎ£n»¦*cš~ğ½‘¥Øø(€€€€ñ‘¥Ø±…ÍÌô‰™˜µÉ¥ˆø(€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÑ¥­•Èˆù9Yğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¹…µ”ˆù9Y%%ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÁÉ¥”ˆøÈÀà¸ÄĞğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¡œÑ¥¬µÕÀˆûŠZÈ€¬Ä¸ÈÀ”ğ½‘¥Øø(€€€€€€€€ñÀû–#¦Ç¸´Ø—šjÓ¢B÷/
+'–>7fë	)•¹Í•¸!Õ…¹Ÿ1'¦r¢šã»–òßšÂ_–ÿ–.‹
+K–7Šë¢ª7×–šf’ú‡Ş?¦†7
+K’âšf¢¢c¦2Ë_–ú3»š*ó_n»¿¦Vßšrš*W¢Î–ºÛ»šÎ£n»w
+“Ï#	š²‡¯
+Ï
+Ïÿ«
+ç#½	±…­İ•±³_»–ë¢6ß*ÛšÎğ½Àø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÑ¥­•Èˆù5Tğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¹…µ”ˆù5¥É½¸Q•¡¹½±½äğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÁÉ¥”ˆøÄ°ÀĞÀ¬ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¡œÑ¥¬µÕÀˆûŠZÈ€¬ä¸À”ğ½‘¥Øø(€€€€€€€€ñÀøØ¼Û¸´Ü—/
+$¬ä—ãš—–>7fë	!	7¾ò#¦®c–â¿–~–æ‡‹«¾ò'¹'ó
+ÿ
+ïÏ
+ÿó–BGG¦r¢š¿–êW–‚?
+ç{ó#W
+§Ï–BGG–r£–ê¯¢ªÿšVÓ»–öÇ¦~ÿ
+K’â+–n{
+/£–"šzC–#¦Ç»–Ë
++¿¦;–&Ã–>7–şs£»¢š/šZç3–òßûğ½Àø(€€€€€€ğ½‘¥Øø(€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ…Éˆø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÑ¥­•ÈˆùY<ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¹…µ”ˆù	É½…‘½´ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µÁÉ¥”ˆû–n{–ú§’â´ğ½‘¥Øø(€€€€€€€€ñ‘¥Ø±…ÍÌô‰™˜µ¡œÑ¥¬µÕÀˆûŠZÈƒ–>7fèğ½‘¥Øø(€€€€€€€€ñÀøØ¼Ó¬´ÄÌ´ÄĞ—»š—¢B÷
+K–òW7¢ÖßO_–ò×šr³’êëƒ3Ø¼ã¯ä¸€éƒ¨ãŒè²·ã„æˆ»ã—ã€‚Q2 AIãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚­ãƒ³ã‚°$4.1BãŒäºˆæƒ³$4.8Bã‚’ä¸‹å›ã£ãŸã“ã¨ã¸ã®ã‚·ãƒ§ãƒƒã‚¯ã¯åã¾ã‚Šã¤ã¤ã‚ã‚‹ãŒã€2027å¹´ã‚¬ã‚¤ãƒ€ãƒ³ã‚¹ç¶­æŒã¸ã®å¤±æœ›ã¯æ ¹å¼·ã„ã€‚</p>
       </div>
     </div>
   </div>
@@ -363,34 +279,35 @@ canvas.wave { display: block; width: 100%; height: 80px; }
 <canvas id="wave3" class="wave"></canvas>
 
 <!-- SHORT VERSION -->
-<div class="short-section">
+<section class="short-version">
   <div class="container">
-    <div class="section-label" style="color:#d9a17a;">Summary</div>
-    <div class="section-title">5è¡Œã§èª­ã‚€ ä»Šæ—¥ã®å¸‚å ´</div>
-    <ul class="short-list">
-      <li>NASDAQãŒ4.18%æ€¥è½ã—25,709ãƒã‚¤ãƒ³ãƒˆã§å¼•ã‘ã€2025å¹´4æœˆã®ã‚¿ãƒªãƒ•ã‚·ãƒ§ãƒƒã‚¯ä»¥æ¥ã®æœ€å¤§ä¸‹è½ã‚’è¨˜éŒ²ã€‚S&P500ã‚‚7,400å‰²ã‚Œï¼ˆ-2.64%ï¼‰ã€‚</li>
-      <li>Broadcomã®ä½èª¿ãªAIãƒãƒƒãƒ—è¦‹é€šã—ãŒå¼•ãé‡‘ã¨ãªã‚ŠNVDAãŒ-6%ã€MUãŒ-17%ã¨åŠå°ä½“ã‚»ã‚¯ã‚¿ãƒ¼ã§1å…†ãƒ‰ãƒ«è¶…ãŒæ¶ˆå¤±ã€‚</li>
-      <li>5æœˆé›‡ç”¨çµ±è¨ˆãŒ+17.2ä¸‡äººï¼ˆäºˆæƒ³+8ä¸‡äººã®å€è¶…ï¼‰ã®ã‚µãƒ—ãƒ©ã‚¤ã‚ºã€‚FRBã®ã‚¿ã‚«æ´¾å§¿å‹¢ãŒå¼·ã¾ã‚Šå¹´å†…åˆ©ä¸‹ã’æœŸå¾…ãŒã•ã‚‰ã«å¾Œé€€ã€‚</li>
-      <li>ç±³å›½å‚µåˆ©å›ã‚ŠãŒä¸Šæ˜‡ï¼ˆ2å¹´4.17%ã€10å¹´4.55%ã€30å¹´5.01%ï¼‰ã€‚VIXã¯21.51ã¨å‰æ—¥æ¯”40%æ€¥é¨°ã—ææ€–å¿ƒç†ãŒå°é ­ã€‚</li>
-      <li>WTIã¯$90.54ï¼ˆ-2.69%ï¼‰ã¨ç¶šè½ã€‚ç±³ãƒ»ã‚¤ãƒ©ãƒ³å”è­°é€²å±•è¦³æ¸¬ã¨åŸæ²¹éœ€çµ¦ç·©å’ŒæœŸå¾…ãŒä¸‹æŠ¼ã—ã€‚é€±æ˜ã‘ã¯åº•å›ºã‚å±€é¢ã‹æ³¨è¦–ã€‚</li>
+    <div class="section-label">Short Version</div>
+    <div class="section-title">5è¡Œã¾ã¨ã‚</div>
+    <ul class="sv-list">
+      <li data-n="1">ãƒãƒƒãƒ—æ ªãŒMondayå¤§å¹…åç™ºï¼šMicronãŒFridayæ¯”+9%ã€NASDAQ+1.44%ã¨å…ˆé€±ã®æš´è½ï¼ˆNASDAQ -4.18%ã€$1.3å…†æ¶ˆå¤±ï¼‰ã‹ã‚‰æ¯ã‚’å¹ãè¿”ã—ãŸã€‚</li>
+      <li data-n="2">å¼·é›‡ç”¨çµ±è¨ˆï¼ˆ5æœˆ172,000ä»¶ï¼‰Ã—10å¹´å‚µ4.55%ã§åˆ©ä¸‹ã’è¦³æ¸¬ã¯å¤§å¹…å¾Œé€€ã€‚6æœˆ17æ—¥ã®FOMCï¼ˆWarshæ–°è­°é•·åˆï¼‰ã¯æ®ãˆç½®ãæ¿ƒåšã€‚</li>
+      <li data-n="3">WTIåŸæ²¹ãŒ$94è¶…ã«æ€¥é¨°ï¼šã‚¤ãƒ©ãƒ³ãƒ»ã‚¤ã‚¹ãƒ©ã‚¨ãƒ«ã®æ”»æ’ƒäº¤æ›ç¶™ç¶šã§åœ°æ”¿å­¦ãƒªã‚¹ã‚¯ç¶™ç¶šã€‚6/10ï¼ˆæ°´ï¼‰ã®5æœˆCPIã§ã‚¨ãƒãƒ«ã‚®ãƒ¼ä¾¡æ ¼æ³¢åŠã‚’ç¢ºèªã¸ã€‚</li>
+      <li data-n="4">ç±³å›½å‚µã¯2å¹´4.17%ãƒ»10å¹´4.55%ãƒ»30å¹´5.01%ã€æ—¥æœ¬å›½å‚µ10å¹´ã¯2.72%ã§ãã‚Œãã‚Œé«˜æ°´æº–ç¶­æŒã€‚VIX 21.5ã¨ãƒªã‚¹ã‚¯è­¦æˆ’åŸŸç¶™ç¶šã€‚</li>
+      <li data-n="5">ä»Šé€±ã®æ³¨ç›®ï¼š6/10 CPIï¼ˆã‚¨ãƒãƒ«ã‚®ãƒ¼å½±éŸ¿ï¼‰ã€SailPointãƒ»J.M.Smuckerãƒ»Casey'sæ±ºç®—ã€SpaceX IPOå‹•å‘ã€‚</li>
     </ul>
   </div>
-</div>
+</section>
 
 <!-- WAVE 4 -->
 <canvas id="wave4" class="wave"></canvas>
 
 <!-- REFERENCES -->
-<section class="ref-section">
+<section class="references">
   <div class="container">
-    <div class="ref-title">REFERENCES</div>
+    <h3>SOURCES &amp; REFERENCES</h3>
     <ul class="ref-list">
-      <li><a href="https://www.cnbc.com/2026/06/04/stock-market-today-live-updates.html">CNBC â€” Nasdaq falls 4% and suffers worst day since April 2025 as traders flee chip stocks</a></li>
-      <li><a href="https://www.cnbc.com/2026/06/04/chipmaker-equities-micron-marvell-broadcom-intel.html">CNBC â€” Broadcom, Micron and ARM sink, leading chip stocks lower</a></li>
-      <li><a href="https://www.bloomberg.com/news/articles/2026-06-05/us-adds-172-000-jobs-in-may-beating-all-economists-estimates">Bloomberg â€” US Jobs Report May 2026: 172,000 Added, Unemployment Rate Holds at 4.3%</a></li>
-      <li><a href="https://www.cnbc.com/2026/06/05/jobs-report-may-2026.html">CNBC â€” Jobs Report May 2026</a></li>
-      <li><a href="https://tradingeconomics.com/united-states/stock-market">Trading Economics â€” US Stock Market Data</a></li>
-      <li><a href="https://tradingeconomics.com/japan/government-bond-yield">Trading Economics â€” Japan 10 Year Government Bond Yield</a></li>
+      <li><a href="https://www.cnbc.com/2026/06/07/stock-market-today-live-updates.html" target="_blank">CNBC: S&P 500 closes higher as chips stage a comeback, Iran stops strikes on Israel (June 8, 2026)</a></li>
+      <li><a href="https://finance.yahoo.com/markets/live/stock-market-today-monday-june-8-dow-sp-500-nasdaq-jump-085310403.html" target="_blank">Yahoo Finance: Stock market today â€” S&P 500, Nasdaq rise on chip stock rebound, Dow slips (June 8, 2026)</a></li>
+      <li><a href="https://www.cnbc.com/2026/06/04/stock-market-today-live-updates.html" target="_blank">CNBC: Nasdaq falls 4% and suffers worst day since April 2025 as traders flee chip stocks (June 6, 2026)</a></li>
+      <li><a href="https://intellectia.ai/blog/semiconductor-stocks-selloff-june-2026" target="_blank">Intellectia AI: Semiconductor Stocks Selloff June 2026: $1.3T Wiped Out in AI Chip Crash</a></li>
+      <li><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank">FRED St. Louis Fed: US 10-Year Treasury Constant Maturity</a></li>
+      <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank">Trading Economics: Japan 10-Year Government Bond Yield</a></li>
+      <li><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank">Federal Reserve: FOMC Meeting Calendar 2026</a></li>
     </ul>
   </div>
 </section>
@@ -453,5 +370,6 @@ canvas.wave { display: block; width: 100%; height: 80px; }
   });
 })();
 </script>
+
 </body>
 </html>
