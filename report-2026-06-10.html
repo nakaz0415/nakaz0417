@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場 モーニングレポート | 2026.06.10</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f3ea;
+  --fg: #1a2230;
+  --primary: #21344f;
+  --accent: #b5472a;
+  --border: #d6cfc4;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--fg); font-family: 'Noto Sans JP', sans-serif; line-height: 1.7; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+/* ========== HEADER ========== */
+.site-header { background: var(--primary); color: #fff; }
+.header-top { padding: 22px 0 18px; }
+.header-flex { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
+.brand { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 34px; letter-spacing: 0.04em; line-height: 1.1; }
+.brand .accent { color: #d9a17a; font-weight: 700; }
+.brand-sub { font-size: 11px; letter-spacing: 0.35em; margin-top: 8px; color: rgba(255,255,255,0.65); text-transform: uppercase; }
+.dateline { text-align: right; font-size: 12px; letter-spacing: 0.18em; color: rgba(255,255,255,0.85); }
+.dateline .big { font-family: 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 700; display: block; letter-spacing: 0.04em; margin-bottom: 4px; }
+
+/* ========== TICKER BAR ========== */
+.ticker-bar { overflow: hidden; white-space: nowrap; background: rgba(0,0,0,0.25); padding: 9px 0; }
+.ticker-inner { display: inline-block; animation: ticker 32s linear infinite; }
+.ticker-inner span { display: inline-block; margin: 0 38px; font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.88); }
+.ticker-inner span .tick-label { color: rgba(255,255,255,0.5); margin-right: 6px; }
+.tick-up { color: #5cd47b; font-weight: 700; }
+.tick-down { color: #f27a6c; font-weight: 700; }
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ========== HERO ========== */
+.hero { height: 340px; background: linear-gradient(135deg, #0f1e33 0%, #21344f 45%, #3a1a10 100%); display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(181,71,42,0.25) 0%, transparent 60%); }
+.hero-content { position: relative; z-index: 1; padding: 0 40px; }
+.hero-tag { font-size: 11px; letter-spacing: 0.4em; color: #d9a17a; text-transform: uppercase; margin-bottom: 14px; }
+.hero-title { font-size: 32px; font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 16px; max-width: 700px; }
+.hero-sub { font-size: 14px; color: rgba(255,255,255,0.7); max-width: 600px; line-height: 1.6; }
+
+/* ========== WAVE CANVAS ========== */
+canvas.wave { width: 100%; height: 80px; display: block; }
+
+/* ========== QUICK READING ========== */
+.quick-reading { padding: 52px 0; }
+.section-label { font-size: 10px; letter-spacing: 0.5em; color: var(--accent); text-transform: uppercase; margin-bottom: 20px; }
+.quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.quick-card { background: #fff; border: 1px solid var(--border); border-top: 3px solid var(--accent); padding: 24px; border-radius: 2px; }
+.quick-num { font-size: 28px; font-weight: 900; color: var(--accent); margin-bottom: 8px; }
+.quick-title { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 8px; line-height: 1.4; }
+.quick-text { font-size: 13px; color: #555; line-height: 1.6; }
+
+/* ========== LEAD STORY ========== */
+.lead-story { padding: 52px 0; background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.lead-inner { display: grid; grid-template-columns: 1fr 320px; gap: 48px; }
+.lead-main h2 { font-size: 26px; font-weight: 900; color: var(--primary); margin-bottom: 16px; line-height: 1.4; }
+.lead-main p { font-size: 14px; color: #444; line-height: 1.8; margin-bottom: 14px; }
+.lead-sidebar { border-left: 1px solid var(--border); padding-left: 32px; }
+.sidebar-title { font-size: 11px; letter-spacing: 0.4em; color: var(--accent); text-transform: uppercase; margin-bottom: 16px; }
+.watch-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+.watch-item:last-child { border-bottom: none; }
+.watch-ticker { font-size: 13px; font-weight: 700; color: var(--primary); }
+.watch-price { font-size: 18px; font-weight: 900; color: var(--fg); }
+.watch-change { font-size: 12px; font-weight: 700; margin-left: 6px; }
+.watch-change.up { color: #27a854; }
+.watch-change.down { color: #e03e2d; }
+.watch-desc { font-size: 12px; color: #888; margin-top: 2px; }
+
+/* ========== ASSET GRID ========== */
+.asset-grid-section { padding: 52px 0; }
+.asset-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.asset-card { background: var(--primary); color: #fff; padding: 22px; border-radius: 4px; position: relative; overflow: hidden; }
+.asset-card::after { content: ''; position: absolute; right: -20px; bottom: -20px; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.04); }
+.asset-name { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 10px; }
+.asset-value { font-size: 26px; font-weight: 900; color: #fff; margin-bottom: 6px; }
+.asset-change { font-size: 13px; font-weight: 700; }
+.asset-change.up { color: #5cd47b; }
+.asset-change.down { color: #f27a6c; }
+.asset-note { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 8px; }
+
+/* ========== FINANCE FOCUS ========== */
+.finance-focus { padding: 52px 0; background: #fff; border-top: 1px solid var(--border); }
+.focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+.focus-card { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.focus-head { background: var(--primary); color: #fff; padding: 16px 20px; }
+.focus-ticker { font-size: 11px; letter-spacing: 0.3em; color: rgba(255,255,255,0.5); }
+.focus-name { font-size: 16px; font-weight: 700; }
+.focus-body { padding: 16px 20px; }
+.focus-price { font-size: 24px; font-weight: 900; color: var(--primary); }
+.focus-chg { font-size: 13px; font-weight: 700; }
+.focus-chg.up { color: #27a854; }
+.focus-chg.down { color: #e03e2d; }
+.focus-text { font-size: 13px; color: #555; margin-top: 8px; line-height: 1.6; }
+
+/* ========== SHORT VERSION ========== */
+.short-version { background: var(--primary); color: #fff; padding: 52px 0; }
+.short-version .section-label { color: #d9a17a; }
+.short-version h2 { font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #fff; }
+.short-list { list-style: none; }
+.short-list li { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 14px; color: rgba(255,255,255,0.85); display: flex; gap: 16px; line-height: 1.6; }
+.short-list li:last-child { border-bottom: none; }
+.short-list li .bullet { color: #d9a17a; font-weight: 900; flex-shrink: 0; }
+
+/* ========== REFERENCES ========== */
+.references { padding: 40px 0; border-top: 1px solid var(--border); }
+.references h3 { font-size: 11px; letter-spacing: 0.4em; color: var(--accent); text-transform: uppercase; margin-bottom: 16px; }
+.ref-list { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; }
+.ref-list li a { font-size: 12px; color: var(--primary); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 1px; }
+.ref-list li a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ========== FOOTER ========== */
+.site-footer { background: var(--primary); color: rgba(255,255,255,0.65); padding: 32px 0; text-align: center; font-size: 13px; }
+.foot-brand { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 18px; color: #fff; margin-bottom: 8px; }
+.site-footer p { margin: 4px 0; }
+.site-footer a { color: #d9a17a; text-decoration: none; }
+
+@media (max-width: 768px) {
+  .quick-grid, .asset-grid, .focus-grid { grid-template-columns: 1fr 1fr; }
+  .lead-inner { grid-template-columns: 1fr; }
+  .lead-sidebar { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 24px; }
+  .brand { font-size: 24px; }
+}
+@media (max-width: 480px) {
+  .quick-grid, .asset-grid, .focus-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-flex">
+      <div>
+        <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+        <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
+      </div>
+      <div class="dateline">
+        <span class="big">2026年6月10日(水)</span>
+        前営業日 6月9日(火) 終値ベース
+      </div>
+    </div>
+  </div>
+  <!-- TICKER BAR (marquee animation) -->
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,386.65 ▼-0.26%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">25,678.82 ▼-0.97%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">50,872.11 ▲+0.17%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.15%</span>
+      <span><span class="tick-label">US 10Y</span>4.57%</span>
+      <span><span class="tick-label">US 30Y</span>5.03%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.67%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$89.38 ▼-3.75%</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">20.15 ▲+6.50%</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">$207.77 ▼-1.5%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,386.65 ▼-0.26%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">25,678.82 ▼-0.97%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">50,872.11 ▲+0.17%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.15%</span>
+      <span><span class="tick-label">US 10Y</span>4.57%</span>
+      <span><span class="tick-label">US 30Y</span>5.03%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.67%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$89.38 ▼-3.75%</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">20.15 ▲+6.50%</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">$207.77 ▼-1.5%</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Lead Story · June 9, 2026</div>
+    <h1 class="hero-title">トランプ大統領がイラン追加攻撃を示唆<br>テック株急落・原油は急反落</h1>
+    <p class="hero-sub">中東情勢の緊張再燃でS&amp;P 500とNASDAQが下落。一方、ダウは小幅上昇しセクター間のローテーションが続く。FRB利上げ確率は72%まで上昇、SpaceX・OpenAI IPO期待が市場の焦点に。</p>
+  </div>
+</section>
+
+<!-- WAVE 1 -->
+<canvas id="wave1" class="wave"></canvas>
+
+<!-- QUICK READING -->
+<section class="quick-reading">
+  <div class="container">
+    <div class="section-label">Quick Reading</div>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="quick-num">01</div>
+        <div class="quick-title">イラン情勢再燃でテック株が急落</div>
+        <div class="quick-text">トランプ大統領が新たなイランへの軍事攻撃を示唆する発言を行い、NASDAQが約1%下落。NVDAやAAPLなどd��要テック䊘柄が売られた。一方でホルムズ海峡封鎖の緩和観測から原油は急落した。</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-num">02</div>
+        <div class="quick-title">FRB利上げ確率72%まで上昇</div>
+        <div class="quick-text">CMEフェドウォッチによると、2026年中に少なくとも1回の利上げが実施される確率が72%に達した。強い雇用統計を受けインフレ再燃懸念が台頭し、米国債利回りは全年限で高止まりしている。</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-num">03</div>
+        <div class="quick-title">SpaceX・OpenAI IPO期待が高まる</div>
+        <div class="quick-text">SpaceXが今週末にも史上最大規模のIPOを実施する可能性があると報道。OpenAIも極秘でIPO書類を提出、Anthropicも同様の動きを見せる。AIエコシステムの資本市場参入が本格化。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD STORY -->
+<section class="lead-story">
+  <div class="container">
+    <div class="lead-inner">
+      <div class="lead-main">
+        <div class="section-label">Lead Story</div>
+        <h2>中東地政学リスクとFRB利上げ懸念が<br>市場に二重圧力</h2>
+        <p>6月9日（火）の米国株式市場は、トランプ大統領がイランへの追加軍事攻撃の可能性を示唆したことで、テクノロジー株を中心に売りが強まった。S&amp;P 500は0.26%下落の7,386.65、NASDAQは0.97%安の25,678.82で引けた。ダウ平均は小幅高で辛うじてプラスを維持したが、セクター間の格差が鮮明となった。</p>
+        <p>原油市場では、脆弱ながらも維持されているイスラエル・イランの停戦合意が崩れるリスクから、前日3%超上昇したWTI原油が一転して3.75%急落し、89.38ドルで取引を終えた。ホルムズ海峡は依然として事実上の封鎖状態が続いており、供給不安は根強い。</p>
+        <p>金融政策面では、5月の雇用統計が強い結果となったことを受け、インフレ再燃への警戒感が高まった。CMEフェドウォッチが示すFRB利上げ確率は72%に上昇し、10年米国債利回りは4.57%で高止まりしている。AIブームへの楽観論と金融引き締め懸念のせめぎ合いが続いている。</p>
+        <p>一方、個別株では週末に予定されるSpaceX（SPCX）のIPOへの期待感が高まっている。史上最大規模のIPOとなる可能性があり、また月曜引け後にはOpenAIが極秘でIPO申請書類を提出したと報じられた。競合するAnthropicも同様の動きを取っており、AI企業の株式公開ラッシュが始まりつつある。</p>
+      </div>
+      <div class="lead-sidebar">
+        <div class="sidebar-title">Today's Watch</div>
+        <div class="watch-item">
+          <div class="watch-ticker">NVDA · NVIDIA</div>
+          <div>
+            <span class="watch-price">$207.77</span>
+            <span class="watch-change down">▼-1.5%</span>
+          </div>
+          <div class="watch-desc">イラン緊張再燃でテック株全般に売り。前日からの反発局面が一服。</div>
+        </div>
+        <div class="watch-item">
+          <div class="watch-ticker">AAPL · Apple</div>
+          <div>
+            <span class="watch-price">— </span>
+            <span class="watch-change down">▼-3.0%</span>
+          </div>
+          <div class="watch-desc">地政学リスクの高まりで3%下落。サプライチェーンリスクも懸念材料。</div>
+        </div>
+        <div class="watch-item">
+          <div class="watch-ticker">MU · Micron</div>
+          <div>
+            <span class="watch-price">—</span>
+            <span class="watch-change down">▼-1.0%</span>
+          </div>
+          <div class="watch-desc">前日10%反発後に一服。AI半導体需要への期待は継続中。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSET GRID -->
+<section class="asset-grid-section">
+  <div class="container">
+    <div class="section-label">Market Snapshot · 6月9日(火) 終値</div>
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="asset-name">S&amp;P 500</div>
+        <div class="asset-value">7,386.65</div>
+        <div class="asset-change down">▼ −0.26%</div>
+        <div class="asset-note">地政学リスクとFRB利上げ懸念で続落</div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-name">NASDAQ Composite</div>
+        <div class="asset-value">25,678.82</div>
+        <div class="asset-change down">▼ −0.97%</div>
+        <div class="asset-note">テック株が主導する下げ。AI銘柄を中心に売り</div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-name">WTI Crude Oil</div>
+        <div class="asset-value">$89.38</div>
+        <div class="asset-change down">▼ −3.75%</div>
+        <div class="asset-note">停戦合意の緩和期待で急落。$90台を割り込む</div>
+      </div>
+      <div class="asset-card">
+        <div class="asset-name">US 10Y Treasury</div>
+        <div class="asset-value">4.57%</div>
+        <div class="asset-change down">高止まり</div>
+        <div class="asset-note">FRB利上げ観測が利回りを上昇圧力に</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE 2 -->
+<canvas id="wave2" class="wave"></canvas>
+
+<!-- FINANCE FOCUS -->
+<section class="finance-focus">
+  <div class="container">
+    <div class="section-label">Finance Focus · 注目銘柄</div>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="focus-head">
+          <div class="focus-ticker">NVDA</div>
+          <div class="focus-name">NVIDIA Corporation</div>
+        </div>
+        <div class="focus-body">
+          <span class="focus-price">$207.77</span>
+          <span class="focus-chg down">▼ -1.5%</span>
+          <div class="focus-text">イランリスク再燃でAI半導体株全般が軟調。ただし年初来では依然大幅高。今週末のSpaceX IPOへのデータセンター投資期待で中長期のセンチメントは強い。</div>
+        </div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-head">
+          <div class="focus-ticker">AAPL</div>
+          <div class="focus-name">Apple Inc.</div>
+        </div>
+        <div class="focus-body">
+          <span class="focus-price">—</span>
+          <span class="focus-chg down">▼ -3.0%</span>
+          <div class="focus-text">中東緊張によるサプライチェーンリスクとFRB利上げ懸念の二重圧力。消費者向けデバイス需要への影響も注視される。</div>
+        </div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-head">
+          <div class="focus-ticker">SPCX</div>
+          <div class="focus-name">SpaceX (IPO待機中)</div>
+        </div>
+        <div class="focus-body">
+          <span class="focus-price">IPO今週</span>
+          <span class="focus-chg up">注目</span>
+          <div class="focus-text">今週末にも米国史上最大規模のIPOを実施する可能性。OpenAIとAnthropicもIPO申請済みでAI企業の上場ラッシュが本格化している。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE 3 -->
+<canvas id="wave3" class="wave"></canvas>
+
+<!-- SHORT VERSION -->
+<section class="short-version">
+  <div class="container">
+    <div class="section-label">Short Version · 5つのポイント</div>
+    <h2>今日のまとめ</h2>
+    <ul class="short-list">
+      <li><span class="bullet">01</span>トランプ大統領がイランへの追加軍事攻撃を示唆。S&amp;P 500が0.26%下落、NASDAQは0.97%安。ダウのみ小幅プラスでセクターローテーションが続く。</li>
+      <li><span class="bullet">02</span>原油はホルムズ海峡の封鎖緩和期待からWTIが3.75%急落し89.38ドル。前日の急騰から一転し、エネルギー株にも売り圧力。</li>
+      <li><span class="bullet">03</span>FRBの利上げ確率が72%に上昇。米国10年債利回りは4.57%で高止まり。インフレ再燃懸念とAI楽観論の綱引きが続く。</li>
+      <li><span class="bullet">04</span>SpaceXが今週末に史上最大規模のIPOを実施する可能性。OpenAI・Anthropicも秘密裏にIPO申請を行い、AI企業の上場ラッシュが始まる。</li>
+      <li><span class="bullet">05</span>日本10年国債利回りは2.67%に低下。日米金利差の縮小が意識される中、円相場の動向が引お続お注目される。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WAVE 4 -->
+<canvas id="wave4" class="wave"></canvas>
+
+<!-- REFERENCES -->
+<section class="references">
+  <div class="container">
+    <h3>References</h3>
+    <ul class="ref-list">
+      <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-09-2026" target="_blank">TheStreet: Stock Market Today June 9, 2026</a></li>
+      <li><a href="https://finance.yahoo.com/markets/live/stock-market-today-tuesday-june-9-dow-sp-500-nasdaq-rise-ai-225640870.html" target="_blank">Yahoo Finance: Market Live June 9</a></li>
+      <li><a href="https://fxdailyreport.com/wti-crude-oil-price-analysis-for-june-9-2026/" target="_blank">FX Daily Report: WTI Crude Oil Analysis</a></li>
+      <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank">Trading Economics: Japan 10Y Bond Yield</a></li>
+      <li><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026" target="_blank">U.S. Treasury: Daily Yield Curve</a></li>
+      <li><a href="https://www.cnbc.com/2026/06/08/stock-market-today-live-updates.html" target="_blank">CNBC: Stock Market News June 9</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-brand">米国市場 モーニングレポート</div>
+    <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
+    <p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+  </div>
+</footer>
+
+<!-- WAVE.JS ANIMATION -->
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: 'f#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() {
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || 80;
+    }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1;
+      ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath();
+      ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        cost y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp
+                         + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed;
+      rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+
+</body>
+</html>
