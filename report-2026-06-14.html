@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場 モーニングレポート | 2026.06.14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f7f3ea;
+    --fg:#1a2230;
+    --primary:#21344f;
+    --accent:#b5472a;
+    --border:#d6cfc4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.8;
+  }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  .site-header { background: var(--primary); color: #fff; }
+  .header-top { padding: 36px 0 22px; }
+  .header-flex { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; }
+  .brand {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    font-size: 34px;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+  }
+  .brand .accent { color: #d9a17a; font-weight: 700; }
+  .brand-sub {
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    margin-top: 8px;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+  }
+  .dateline { text-align: right; font-size: 12px; letter-spacing: 0.18em; color: rgba(255,255,255,0.85); }
+  .dateline .big {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+
+  /* Ticker */
+  .ticker-bar { overflow: hidden; white-space: nowrap; background: rgba(0,0,0,0.25); padding: 9px 0; }
+  .ticker-inner { display: inline-block; animation: ticker 32s linear infinite; }
+  .ticker-inner span { display: inline-block; margin: 0 38px; font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.88); }
+  .ticker-inner span .tick-label { color: rgba(255,255,255,0.5); margin-right: 6px; }
+  .tick-up { color: #5cd47b; font-weight: 700; }
+  .tick-down { color: #f27a6c; font-weight: 700; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* Hero */
+  .hero {
+    height: 340px;
+    background: linear-gradient(135deg, #21344f 0%, #3a5276 55%, #b5472a 130%);
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 75% 25%, rgba(217,161,122,0.35), transparent 55%);
+  }
+  .hero-content { position: relative; padding: 40px 0 36px; color: #fff; }
+  .hero-tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .hero h1 { font-size: 32px; font-weight: 900; line-height: 1.4; max-width: 760px; }
+  .hero p { margin-top: 12px; font-size: 14px; color: rgba(255,255,255,0.8); max-width: 640px; }
+
+  /* Waves */
+  .wave-wrap { width: 100%; height: 90px; display: block; background: var(--bg); }
+  .wave-wrap canvas { width: 100%; height: 100%; display: block; }
+
+  /* Section heading */
+  .section { padding: 48px 0; }
+  .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 28px; }
+  .section-head .num {
+    font-size: 13px; font-weight: 900; color: var(--accent); letter-spacing: 0.1em;
+  }
+  .section-head h2 {
+    font-size: 22px; font-weight: 900; letter-spacing: 0.04em; color: var(--primary);
+  }
+  .section-head .line { flex: 1; height: 1px; background: var(--border); }
+
+  /* Quick reading grid */
+  .quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .quick-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 4px;
+    padding: 22px; border-top: 4px solid var(--accent);
+  }
+  .quick-card .qnum { font-size: 28px; font-weight: 900; color: var(--primary); opacity: 0.18; }
+  .quick-card h3 { font-size: 15px; font-weight: 700; margin: 8px 0 10px; color: var(--primary); }
+  .quick-card p { font-size: 13px; color: #4a5468; }
+
+  /* Lead story */
+  .lead-wrap { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+  .lead-wrap h3 { font-size: 19px; color: var(--primary); margin: 22px 0 10px; font-weight: 700; }
+  .lead-wrap h3:first-child { margin-top: 0; }
+  .lead-wrap p { font-size: 14.5px; color: #333d4f; margin-bottom: 12px; }
+  .sidebar {
+    background: #fff; border: 1px solid var(--border); border-radius: 4px; padding: 22px; align-self: start;
+  }
+  .sidebar h4 {
+    font-size: 13px; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase;
+    margin-bottom: 14px; border-bottom: 1px solid var(--border); padding-bottom: 10px;
+  }
+  .sidebar ul { list-style: none; }
+  .sidebar li {
+    font-size: 13px; padding: 9px 0; border-bottom: 1px dashed var(--border); color: #3a4458;
+  }
+  .sidebar li:last-child { border-bottom: none; }
+  .sidebar li b { color: var(--primary); display: block; margin-bottom: 3px; font-size: 13.5px; }
+
+  /* Asset grid */
+  .asset-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .asset-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 4px; padding: 20px;
+    text-align: center;
+  }
+  .asset-card .a-label { font-size: 12px; letter-spacing: 0.1em; color: #7a8294; margin-bottom: 8px; }
+  .asset-card .a-value { font-size: 24px; font-weight: 900; color: var(--primary); }
+  .asset-card .a-change { font-size: 13px; font-weight: 700; margin-top: 6px; }
+  .a-up { color: #2e9e5b; }
+  .a-down { color: var(--accent); }
+
+  /* Finance focus */
+  .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .focus-card { background: #fff; border: 1px solid var(--border); border-radius: 4px; padding: 22px; }
+  .focus-card .f-ticker {
+    font-size: 12px; letter-spacing: 0.12em; color: #7a8294; margin-bottom: 6px; text-transform: uppercase;
+  }
+  .focus-card h3 { font-size: 17px; color: var(--primary); margin-bottom: 8px; font-weight: 700; }
+  .focus-card .f-change { font-size: 18px; font-weight: 900; margin-bottom: 10px; }
+  .focus-card p { font-size: 13px; color: #4a5468; }
+
+  /* Short version */
+  .short-section { background: var(--primary); color: #fff; }
+  .short-section .section-head h2 { color: #fff; }
+  .short-section .section-head .line { background: rgba(255,255,255,0.2); }
+  .short-section .section-head .num { color: #d9a17a; }
+  .short-list { list-style: none; }
+  .short-list li {
+    font-size: 15px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-left: 32px; position: relative;
+  }
+  .short-list li:last-child { border-bottom: none; }
+  .short-list li::before {
+    content: "—"; position: absolute; left: 0; color: #d9a17a; font-weight: 900;
+  }
+
+  /* References */
+  .ref-list { list-style: none; font-size: 13px; }
+  .ref-list li { padding: 8px 0; border-bottom: 1px dashed var(--border); }
+  .ref-list li:last-child { border-bottom: none; }
+
+  /* Footer */
+  .site-footer { background: #ece6d9; border-top: 1px solid var(--border); padding: 36px 0; text-align: center; }
+  .foot-brand { font-size: 16px; font-weight: 900; color: var(--primary); letter-spacing: 0.05em; margin-bottom: 10px; }
+  .site-footer p { font-size: 12px; color: #6b7184; }
+
+  @media (max-width: 860px) {
+    .quick-grid, .asset-grid, .focus-grid { grid-template-columns: 1fr 1fr; }
+    .lead-wrap { grid-template-columns: 1fr; }
+    .brand { font-size: 26px; }
+    .hero h1 { font-size: 24px; }
+  }
+  @media (max-width: 560px) {
+    .quick-grid, .asset-grid, .focus-grid { grid-template-columns: 1fr; }
+    .header-flex { flex-direction: column; align-items: flex-start; }
+    .dateline { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-flex">
+      <div>
+        <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+        <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
+      </div>
+      <div class="dateline">
+        <span class="big">2026年6月14日(日)</span>
+        前営業日 6月12日(金) 終値ベース
+      </div>
+    </div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">+0.50%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">+0.31%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">+0.70%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.09%</span>
+      <span><span class="tick-label">US 10Y</span>4.49%</span>
+      <span><span class="tick-label">US 30Y</span>4.97%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.64%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$84.88</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">17.68</span></span>
+      <span><span class="tick-label">SPACEX</span><span class="tick-up">+19.0%</span></span>
+      <span><span class="tick-label">AAPL</span><span class="tick-down">-1.95%</span></span>
+      <!-- repeat -->
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">+0.50%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">+0.31%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">+0.70%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.09%</span>
+      <span><span class="tick-label">US 10Y</span>4.49%</span>
+      <span><span class="tick-label">US 30Y</span>4.97%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.64%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$84.88</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">17.68</span></span>
+      <span><span class="tick-label">SPACEX</span><span class="tick-up">+19.0%</span></span>
+      <span><span class="tick-label">AAPL</span><span class="tick-down">-1.95%</span></span>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container hero-content">
+    <span class="hero-tag">Top Story</span>
+    <h1>史上最大75億ドル規模のSpaceX上場が始動、初日19%高で取引を終了</h1>
+    <p>米国市場は週末にかけて主要3指数がそろって続伸。SpaceXの新規株式公開が市場の話題を独占し、ハイテク株からの資金シフトが鮮明になった一方、米イラン間の緊張緩和への期待がVIX急落・原油急落を後押しした。</p>
+  </div>
+</div>
+
+<div class="wave-wrap"><canvas id="wave1"></canvas></div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="num">01</span>
+      <h2>Quick Reading</h2>
+      <span class="line"></span>
+    </div>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="qnum">1</div>
+        <h3>SpaceXが史上最大級のIPOで上場</h3>
+        <p>75億ドル規模の新規上場でナスダックに登場。発行価格135ドルに対し150ドルで取引開始、終値は161.11ドル(+19%)と大幅高でデビューした。</p>
+      </div>
+      <div class="quick-card">
+        <div class="qnum">2</div>
+        <h3>米イラン緊張緩和でリスクオン</h3>
+        <p>和平合意への期待からVIXは前日比9.05%下落の17.68、WTI原油は8週間ぶりの安値となる84ドル台まで急落した。</p>
+      </div>
+      <div class="quick-card">
+        <div class="qnum">3</div>
+        <h3>主力ハイテク株から資金シフト</h3>
+        <p>NVIDIA、Apple、Microsoft、Broadcomが軟調。AmazonとAppleはそれぞれ-2.17%、-1.95%と大型ハイテクの一角が下落した。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="num">02</span>
+      <h2>Lead Story</h2>
+      <span class="line"></span>
+    </div>
+    <div class="lead-wrap">
+      <div>
+        <h3>SpaceX上場が市場の主役に、主要3指数は週末にかけ続伸</h3>
+        <p>6月12日(金)の米国株式市場は、S&amp;P500が前日比+0.50%の7,431.46、ダウ工業株30種が+0.70%の51,202.26、ナスダック総合が+0.31%の25,888.84で取引を終えた。市場の最大の注目は、創業者イーロン・マスク氏率いるSpaceXのナスダック上場。総額約75億ドルとなる史上最大規模のIPOで、発行価格135ドルに対し150ドルで取引が始まり、序盤には一時20%超まで上昇。終値は161.11ドルと初値比+19%の好スタートとなった。</p>
+        <p>一方で、このメガIPOへの資金集中が大型ハイテク株から資金を引き寄せる形となり、NVIDIA、Apple、Microsoft、Broadcomなど主力テック株は軟調に推移。AmazonとAppleはそれぞれ-2.17%、-1.95%の下落となった。22V Researchのストラテジストは、メガテック株への確信が薄れ始めている兆候があり、テック株とバリュー株の間でのローテーションが今後さらに激しい値動きを招く可能性があると指摘している。</p>
+        <h3>米イラン緊張緩和への期待でVIX・原油が急落</h3>
+        <p>市場全体を支えたもう一つの要因は、米国とイランの間で緊張緩和に向けた合意が近いとの観測だ。これを受けてCBOEボラティリティ指数(VIX)は前日比9.05%下落して17.68となり、リスク回避ムードが大きく後退した。WTI原油は4%超下落して1バレル=84ドル台まで値を下げ、8週間ぶりの安値を記録した。地政学リスクの後退が、エネルギー価格の下押し要因として働いている。</p>
+        <p>米国債市場では、2年債利回りが4.09%、10年債利回りが4.49%、30年債利回りが4.97%と、利回り曲線は緩やかな上昇カーブを維持した。一方、日本の10年国債利回りは2.64%まで低下し、前営業日から0.05ポイントの下落となった。</p>
+      </div>
+      <div class="sidebar">
+        <h4>Today's Watch</h4>
+        <ul>
+          <li><b>FRBの政策スタンス</b>2026年の利下げペースを巡りFOMC内の見解は割れたまま。インフレと雇用のどちらを優先するかが今後の焦点。</li>
+          <li><b>テック・バリュー ローテーション</b>SpaceX IPOへの資金集中で主力テック株が軟調。資金フローの変化が続くか注視。</li>
+          <li><b>Paramount-WBDの合併承認</b>米司法省がパラマウントとワーナー・ブラザース・ディスカバリーの合併を承認したと報じられ、メディア業界の再編機運が高まる。</li>
+          <li><b>米イラン情勢</b>緊張緩和への期待が原油安・VIX低下を支えており、交渉の進展如何でリスクセンチメントが変動する可能性。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="num">03</span>
+      <h2>Market Snapshot</h2>
+      <span class="line"></span>
+    </div>
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="a-label">S&amp;P 500</div>
+        <div class="a-value">7,431.46</div>
+        <div class="a-change a-up">+0.50%</div>
+      </div>
+      <div class="asset-card">
+        <div class="a-label">NASDAQ Composite</div>
+        <div class="a-value">25,888.84</div>
+        <div class="a-change a-up">+0.31%</div>
+      </div>
+      <div class="asset-card">
+        <div class="a-label">WTI原油 (1バレル)</div>
+        <div class="a-value">$84.88</div>
+        <div class="a-change a-down">-3.2%</div>
+      </div>
+      <div class="asset-card">
+        <div class="a-label">米10年国債利回り</div>
+        <div class="a-value">4.49%</div>
+        <div class="a-change a-up">前日比上昇</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-wrap"><canvas id="wave2"></canvas></div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="num">04</span>
+      <h2>Finance Focus</h2>
+      <span class="line"></span>
+    </div>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="f-ticker">NASDAQ: SPACEX</div>
+        <h3>SpaceX</h3>
+        <div class="f-change a-up">+19.0%</div>
+        <p>発行価格135ドルに対し150ドルで取引開始。史上最大級となる約75億ドル規模のIPOを終え、初日は161.11ドルで終了。市場全体の資金フローを揺るがす存在となった。</p>
+      </div>
+      <div class="focus-card">
+        <div class="f-ticker">NASDAQ: AAPL</div>
+        <h3>Apple</h3>
+        <div class="f-change a-down">-1.95%</div>
+        <p>SpaceXのメガIPOに資金が向かう中、主力ハイテク株の一角として売りが先行。NVIDIA、Microsoft、Broadcomなどとともに軟調な展開となった。</p>
+      </div>
+      <div class="focus-card">
+        <div class="f-ticker">NASDAQ: AMZN</div>
+        <h3>Amazon</h3>
+        <div class="f-change a-down">-2.17%</div>
+        <p>大型ハイテク株の中でも下落率が目立ち、テック株からバリュー株への一時的なローテーションの影響を強く受けた銘柄の一つとなった。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-wrap"><canvas id="wave3"></canvas></div>
+
+<section class="section short-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="num">05</span>
+      <h2>Short Version</h2>
+      <span class="line"></span>
+    </div>
+    <ul class="short-list">
+      <li>S&amp;P500は+0.50%の7,431.46、ダウは+0.70%の51,202.26、ナスダックは+0.31%の25,888.84で続伸。</li>
+      <li>SpaceXが史上最大級75億ドルのIPOでナスダック上場、初日終値は161.11ドル(+19%)。</li>
+      <li>SpaceX IPOへの資金集中でNVIDIA、Apple、Microsoft、Broadcomなど主力テック株が軟調。AmazonとAppleはともに2%前後下落。</li>
+      <li>米イラン緊張緩和への期待からVIXは17.68(-9.05%)に急落、WTI原油は84ドル台へ8週間ぶりの安値。</li>
+      <li>米国債利回りは2年4.09%/10年4.49%/30年4.97%で上昇曲線を維持、日本10年国債は2.64%に低下。</li>
+    </ul>
+  </div>
+</section>
+
+<div class="wave-wrap"><canvas id="wave4"></canvas></div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="num">06</span>
+      <h2>References</h2>
+      <span class="line"></span>
+    </div>
+    <ul class="ref-list">
+      <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-12-2026" target="_blank">TheStreet - Stock Market Today (June 12, 2026): SpaceX jumps nearly 20% in biggest IPO in history</a></li>
+      <li><a href="https://www.fool.com/coverage/stock-market-today/2026/06/12/stock-market-today-june-12-spacex-mega-ipo-soars-testing-tech-stocks-at-midday/" target="_blank">The Motley Fool - Stock Market Today, June 12: SpaceX Mega IPO Soars</a></li>
+      <li><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank">FRED - Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity</a></li>
+      <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank">Trading Economics - Japan 10 Year Government Bond Yield</a></li>
+      <li><a href="https://www.investing.com/commodities/crude-oil" target="_blank">Investing.com - Crude Oil WTI Futures Price</a></li>
+      <li><a href="https://finance.yahoo.com/quote/%5EVIX/" target="_blank">Yahoo Finance - CBOE Volatility Index (VIX)</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-brand">米国市場 モーニングレポート</div>
+    <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
+    <p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+  </div>
+</footer>
+
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() {
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || 80;
+    }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1;
+      ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath();
+      ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp
+                         + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed;
+      rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+
+</body>
+</html>
