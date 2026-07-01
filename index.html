@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>米国市場 モーニングレポート | 2026.07.01</title>
+<title>米国市場 モーニングレポート | 2026.07.02</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -15,19 +15,34 @@
     --accent: #b5472a;
     --border: #d6cfc4;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
+    font-family: 'Noto Sans JP', sans-serif;
     background: var(--bg);
     color: var(--fg);
-    font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.7;
   }
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
 
   /* ===== HEADER ===== */
-  .site-header { background: var(--primary); color: #fff; }
-  .header-top { padding: 28px 0 20px; }
-  .header-flex { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+  .site-header {
+    background: var(--primary);
+    color: #fff;
+  }
+  .header-top {
+    padding: 22px 0 18px;
+  }
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
   .brand {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 900;
@@ -64,19 +79,20 @@
 
   /* ===== HERO ===== */
   .hero {
-    background: linear-gradient(135deg, #1a2230 0%, #21344f 50%, #2d4a6e 100%);
+    background: linear-gradient(135deg, #21344f 0%, #1a2230 60%, #2d1f16 100%);
+    color: #fff;
     min-height: 340px;
     display: flex;
     align-items: center;
-    padding: 60px 0;
+    padding: 50px 0;
     position: relative;
     overflow: hidden;
   }
   .hero::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(ellipse at 70% 50%, rgba(181,71,42,0.15) 0%, transparent 60%);
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(181,71,42,0.18) 0%, transparent 70%);
   }
   .hero-content { position: relative; z-index: 1; }
   .hero-tag {
@@ -85,180 +101,293 @@
     color: #fff;
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
     padding: 4px 12px;
-    text-transform: uppercase;
     margin-bottom: 18px;
+    text-transform: uppercase;
   }
   .hero h1 {
-    font-size: clamp(22px, 3.5vw, 38px);
+    font-size: clamp(22px, 3.5vw, 36px);
     font-weight: 900;
-    color: #fff;
-    line-height: 1.3;
-    max-width: 700px;
-    margin-bottom: 20px;
+    line-height: 1.35;
+    margin-bottom: 16px;
+    max-width: 720px;
   }
   .hero p {
-    color: rgba(255,255,255,0.75);
     font-size: 15px;
-    max-width: 620px;
+    color: rgba(255,255,255,0.78);
+    max-width: 640px;
+    line-height: 1.8;
   }
 
   /* ===== WAVE CANVAS ===== */
-  canvas.wave { display: block; width: 100%; height: 80px; }
-
-  /* ===== SECTION TITLES ===== */
-  .section { padding: 60px 0; }
-  .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
-  .section-title {
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--primary);
-    margin-bottom: 36px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--border);
+  canvas.wave {
+    display: block;
+    width: 100%;
+    height: 80px;
   }
 
   /* ===== QUICK READING ===== */
-  .quick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .quick-reading {
+    background: var(--bg);
+    padding: 52px 0 40px;
+  }
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 32px;
+    letter-spacing: 0.02em;
+  }
+  .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
   @media (max-width: 768px) { .quick-grid { grid-template-columns: 1fr; } }
   .quick-card {
     background: #fff;
     border: 1px solid var(--border);
-    border-top: 3px solid var(--primary);
-    padding: 24px;
-    border-radius: 2px;
+    border-top: 4px solid var(--primary);
+    padding: 24px 22px;
   }
   .quick-card .num {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 900;
     color: var(--primary);
-    opacity: 0.15;
+    opacity: 0.18;
     line-height: 1;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
-  .quick-card h3 { font-size: 15px; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
-  .quick-card p { font-size: 13px; color: #555; line-height: 1.6; }
+  .quick-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  .quick-card p {
+    font-size: 13px;
+    color: #4a5568;
+    line-height: 1.75;
+  }
 
   /* ===== LEAD STORY ===== */
-  .lead-section { background: #fff; }
-  .lead-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; }
-  @media (max-width: 768px) { .lead-layout { grid-template-columns: 1fr; } }
-  .lead-body h2 { font-size: 22px; font-weight: 900; color: var(--primary); margin-bottom: 18px; line-height: 1.4; }
-  .lead-body p { font-size: 14px; color: #444; margin-bottom: 14px; line-height: 1.8; }
-  .sidebar { border-left: 3px solid var(--accent); padding-left: 24px; }
-  .sidebar h4 {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 16px;
+  .lead-story {
+    background: var(--bg);
+    padding: 48px 0;
   }
-  .watch-item { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
-  .watch-item:last-child { border-bottom: none; }
-  .watch-item .ticker { font-size: 11px; font-weight: 700; color: var(--primary); letter-spacing: 0.15em; }
-  .watch-item .name { font-size: 12px; color: #777; margin: 2px 0; }
-  .watch-item .change { font-size: 16px; font-weight: 900; }
-  .change.up { color: #27a85b; }
-  .change.down { color: var(--accent); }
+  .lead-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+  }
+  @media (max-width: 900px) { .lead-layout { grid-template-columns: 1fr; } }
+  .lead-main h2 {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 18px;
+    line-height: 1.4;
+  }
+  .lead-main p {
+    font-size: 14.5px;
+    line-height: 1.9;
+    color: var(--fg);
+    margin-bottom: 14px;
+  }
+  .sidebar {
+    background: var(--primary);
+    color: #fff;
+    padding: 28px 24px;
+  }
+  .sidebar h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #d9a17a;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .watch-item {
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .watch-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .watch-item .ticker { font-size: 11px; letter-spacing: 0.2em; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+  .watch-item .name { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .watch-item .chg { font-size: 13px; }
+  .chg.up { color: #5cd47b; }
+  .chg.down { color: #f27a6c; }
 
   /* ===== ASSET GRID ===== */
-  .dark-section { background: var(--primary); }
-  .asset-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
-  @media (max-width: 768px) { .asset-grid { grid-template-columns: repeat(2, 1fr); } }
-  .asset-card {
-    background: rgba(255,255,255,0.07);
-    padding: 28px 20px;
-    text-align: center;
-    transition: background 0.2s;
+  .asset-section {
+    background: #f0ebe0;
+    padding: 44px 0;
   }
-  .asset-card:hover { background: rgba(255,255,255,0.12); }
-  .asset-label { font-size: 11px; letter-spacing: 0.2em; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-bottom: 8px; }
-  .asset-value { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 4px; }
-  .asset-change { font-size: 13px; font-weight: 700; }
-  .asset-change.up { color: #5cd47b; }
-  .asset-change.down { color: #f27a6c; }
-  .asset-change.neutral { color: rgba(255,255,255,0.6); }
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 900px) { .asset-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .asset-grid { grid-template-columns: 1fr; } }
+  .asset-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 22px 18px;
+    text-align: center;
+  }
+  .asset-card .a-label { font-size: 11px; letter-spacing: 0.2em; color: #888; text-transform: uppercase; margin-bottom: 8px; }
+  .asset-card .a-value { font-size: 28px; font-weight: 900; color: var(--primary); margin-bottom: 6px; }
+  .asset-card .a-chg { font-size: 13px; font-weight: 700; }
+  .asset-card .a-chg.up { color: #2d9a4e; }
+  .asset-card .a-chg.down { color: #c0392b; }
+  .asset-card .a-note { font-size: 11px; color: #aaa; margin-top: 6px; }
 
   /* ===== FINANCE FOCUS ===== */
-  .finance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  @media (max-width: 768px) { .finance-grid { grid-template-columns: 1fr; } }
-  .finance-card {
+  .finance-focus {
+    background: var(--bg);
+    padding: 48px 0;
+  }
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 768px) { .focus-grid { grid-template-columns: 1fr; } }
+  .focus-card {
+    background: #fff;
     border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .finance-card-header {
-    background: var(--primary);
-    padding: 16px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .finance-card-header .fticker { font-size: 14px; font-weight: 900; color: #fff; letter-spacing: 0.1em; }
-  .finance-card-header .fchange { font-size: 16px; font-weight: 900; }
-  .finance-card-header .fchange.up { color: #5cd47b; }
-  .finance-card-header .fchange.down { color: #f27a6c; }
-  .finance-card-body { background: #fff; padding: 20px; }
-  .finance-card-body .company-name { font-size: 13px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
-  .finance-card-body p { font-size: 13px; color: #555; line-height: 1.6; }
-
-  /* ===== SHORT VERSION ===== */
-  .short-section { background: var(--primary); }
-  .short-section .section-title { color: #fff; border-bottom-color: rgba(255,255,255,0.2); }
-  .short-section .section-label { color: #d9a17a; }
-  .bullets { list-style: none; }
-  .bullets li {
-    padding: 14px 0 14px 28px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    font-size: 14px;
-    color: rgba(255,255,255,0.85);
-    line-height: 1.7;
+    padding: 24px 20px;
     position: relative;
   }
-  .bullets li::before {
-    content: '▶';
+  .focus-card::before {
+    content: '';
     position: absolute;
-    left: 0;
-    color: #d9a17a;
-    font-size: 10px;
-    top: 18px;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
   }
-  .bullets li:last-child { border-bottom: none; }
+  .focus-card .f-ticker {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .focus-card .f-name {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+  .focus-card .f-price {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .focus-card .f-chg { font-weight: 700; }
+  .focus-card .f-chg.up { color: #2d9a4e; }
+  .focus-card .f-chg.down { color: #c0392b; }
+  .focus-card p { font-size: 13px; line-height: 1.75; color: #444; }
+
+  /* ===== SHORT VERSION ===== */
+  .short-version {
+    background: var(--primary);
+    color: #fff;
+    padding: 52px 0;
+  }
+  .short-version .section-label { color: #d9a17a; }
+  .short-version .section-title { color: #fff; margin-bottom: 28px; }
+  .short-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .short-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.9);
+  }
+  .short-list li .num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
 
   /* ===== REFERENCES ===== */
-  .refs { padding: 40px 0; }
-  .refs h3 { font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 16px; }
-  .refs ul { list-style: none; }
-  .refs ul li { font-size: 12px; color: #777; padding: 4px 0; }
-  .refs ul li a { color: var(--accent); text-decoration: none; }
-  .refs ul li a:hover { text-decoration: underline; }
+  .references {
+    background: var(--bg);
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+  }
+  .references h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 16px;
+  }
+  .references ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .references ul li a {
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .references ul li a:hover { border-color: var(--accent); }
 
   /* ===== FOOTER ===== */
   .site-footer {
-    background: #111a26;
+    background: #111b27;
     color: rgba(255,255,255,0.6);
     padding: 32px 0;
     text-align: center;
-    font-size: 12px;
-    line-height: 2;
   }
   .foot-brand {
-    font-size: 18px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
     font-weight: 900;
-    color: #fff;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
+    color: #d9a17a;
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
   }
-  .site-footer a { color: #d9a17a; text-decoration: none; }
+  .site-footer p {
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 4px;
+  }
+  .site-footer a { color: rgba(255,255,255,0.6); }
 </style>
 </head>
 <body>
@@ -272,8 +401,8 @@
         <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
       </div>
       <div class="dateline">
-        <span class="big">2026年7月1日(水)</span>
-        前営業日 6月30日(火) 終値ベース
+        <span class="big">2026年7月2日(木)</span>
+        前営業日 7月1日(水) 終値ベース
       </div>
     </div>
   </div>
@@ -281,119 +410,107 @@
   <!-- TICKER BAR -->
   <div class="ticker-bar">
     <div class="ticker-inner">
-      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,499.36 +0.79%</span></span>
-      <span><span class="tick-label">NASDAQ</span><span class="tick-up">26,015.08 +0.75%</span></span>
-      <span><span class="tick-label">DOW</span><span class="tick-up">52,286.04 +0.20%</span></span>
-      <span><span class="tick-label">US 2Y</span>4.10%</span>
-      <span><span class="tick-label">US 10Y</span>4.37%</span>
-      <span><span class="tick-label">US 30Y</span>4.95%</span>
-      <span><span class="tick-label">JGB 10Y</span>2.69%</span>
-      <span><span class="tick-label">WTI</span>$70.70</span>
-      <span><span class="tick-label">VIX</span>17.65</span>
-      <span><span class="tick-label">TSLA</span><span class="tick-up">+8.46%</span></span>
-      <span><span class="tick-label">NVDA</span><span class="tick-up">+1.27%</span></span>
-      <span><span class="tick-label">MSFT</span><span class="tick-down">-1.18%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,483.23 &nbsp;-0.22%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">26,040.03 &nbsp;-0.66%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">52,305.24 &nbsp;-0.03%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.14%</span>
+      <span><span class="tick-label">US 10Y</span>4.44%</span>
+      <span><span class="tick-label">US 30Y</span>4.97%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.70%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$68.16 &nbsp;-1.93%</span></span>
+      <span><span class="tick-label">VIX</span>16.02</span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-2.12%</span></span>
+      <span><span class="tick-label">CNXC</span><span class="tick-down">-22.0%</span></span>
       <!-- 2nd set for seamless loop -->
-      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,499.36 +0.79%</span></span>
-      <span><span class="tick-label">NASDAQ</span><span class="tick-up">26,015.08 +0.75%</span></span>
-      <span><span class="tick-label">DOW</span><span class="tick-up">52,286.04 +0.20%</span></span>
-      <span><span class="tick-label">US 2Y</span>4.10%</span>
-      <span><span class="tick-label">US 10Y</span>4.37%</span>
-      <span><span class="tick-label">US 30Y</span>4.95%</span>
-      <span><span class="tick-label">JGB 10Y</span>2.69%</span>
-      <span><span class="tick-label">WTI</span>$70.70</span>
-      <span><span class="tick-label">VIX</span>17.65</span>
-      <span><span class="tick-label">TSLA</span><span class="tick-up">+8.46%</span></span>
-      <span><span class="tick-label">NVDA</span><span class="tick-up">+1.27%</span></span>
-      <span><span class="tick-label">MSFT</span><span class="tick-down">-1.18%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,483.23 &nbsp;-0.22%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">26,040.03 &nbsp;-0.66%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">52,305.24 &nbsp;-0.03%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.14%</span>
+      <span><span class="tick-label">US 10Y</span>4.44%</span>
+      <span><span class="tick-label">US 30Y</span>4.97%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.70%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$68.16 &nbsp;-1.93%</span></span>
+      <span><span class="tick-label">VIX</span>16.02</span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-2.12%</span></span>
+      <span><span class="tick-label">CNXC</span><span class="tick-down">-22.0%</span></span>
     </div>
   </div>
 </header>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="container hero-content">
-    <div class="hero-tag">Main Story · June 30, 2026</div>
-    <h1>Q2 2026 最終日——S&P500とNASDAQが6年ぶり最高の四半期を締めくくる</h1>
-    <p>テクノロジー株が回復基調を強め、S&P500は7,499台で四半期末を終了。Alphabetのダウ採用でDow初の52,000超えを達成した翌日も相場は堅調を維持。FRBの利下げ期待が後退するなか、好調な雇用環境と企業業績が市場を下支えした。</p>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">Lead Story · July 1, 2026</div>
+      <h1>FRB議長Warshがポルトガルで講演<br>ADP雇用は予想下回り、市場は方向感を模索</h1>
+      <p>Q3初日の米国市場は小幅安。Kevin Warsh新議長がECBシンポジウムで登壇した一方、ADP民間雇用が98,000人増と予想を下回り投資家心理が慎重化。米イラン停戦合意でWTI原油は3月以来の安値となる$68台へ急落した。</p>
+    </div>
   </div>
 </section>
 
-<!-- WAVE 1 -->
+<!-- ===== WAVE 1 ===== -->
 <canvas id="wave1" class="wave"></canvas>
 
 <!-- ===== QUICK READING ===== -->
-<section class="section">
+<section class="quick-reading">
   <div class="container">
     <div class="section-label">Quick Reading</div>
-    <div class="section-title">今日の3大ポイント</div>
+    <div class="section-title">本日の3大ポイント</div>
     <div class="quick-grid">
       <div class="quick-card">
         <div class="num">01</div>
-        <h3>Q2 2026 は6年ぶり最強四半期</h3>
-        <p>S&P500とNASDAQはQ2を強さで締めくくり、6年ぶりの最高パフォーマンスとなる見込み。ダウも2022年以来の最良四半期を記録。AIインフラ銘柄が牽引役。</p>
+        <h3>ADP雇用が大幅ミス ― 98,000人増</h3>
+        <p>6月の民間雇用者数は98,000人増と市場予想を大きく下回った。ソフトな労働市場はFRBの利下げ余地を広げるとの見方が浮上しつつも、金融政策への期待は依然不透明。</p>
       </div>
       <div class="quick-card">
         <div class="num">02</div>
-        <h3>FRB利下げ期待、2026年内はゼヽ</h3>
-        <p>CME FedWatchによると、先物市場は2026年内の利下げを一切織り込んでいない。年初には2回の利下げが予想されていたが、雇用堅調・インフレ高止まりで期待が剥落。</p>
+        <h3>米イラン停戦合意でWTI急落</h3>
+        <p>米国とイランの間で停戦への合意が報じられ、地政学リスクプレミアムが後退。WTI原油は約1.93%下落し$68.16と3月以来の安値を記録した。エネルギーセクターに売り圧力。</p>
       </div>
       <div class="quick-card">
         <div class="num">03</div>
-        <h3>テスラが急騰＋8.46%、個別株に明暗</h3>
-        <p>テスラが大幅高を記録した一方、マイクロソフトは-1.18%と軟調。NVIDIAは+1.27%と堅調維持。個別株の格差が拡大しており、銘柄選別が重要な�管糞>8#�����F�c���F�c���F�c���6V7F���ࠣ���������TB5D�%����������6V7F���6�73�'6V7F����VB�6V7F���#��F�b6�73�&6��F��W"#��F�b6�73�'6V7F�����&V�#��VB7F�'���F�c��F�b6�73�'6V7F����F�F�R#�[�.ZN��>Z�ɥ.8*�8:�8;�8+n8�K���h{X�k��h�~j����F�c��F�b6�73�&�VB����WB#��F�b6�73�&�VB�&�G�#�ƃ#�i����8�Y��Xخi��8�[�^8(��h�8�8(�(	N(	N88n88>8*�8���~yJ�8�K�N[z�x+����#���niȃ3iz^�Ȏx��Ȟ8{>Y��j
-�[��[�.ZN8�##n[�Nz��.Y��Xخi��8�i�{X.X�n[�^iz^8).���8�8�8%2eS8�r�C���3n8~X�n[�^8+�����_�9MG���ذ��ז>Î����+�b��&7�ǎ�����צ��V_�/�
-'���_���
-��;���
-�󚂫�
-K�ⷖ����_����n{����3�no�6+�r�r����.���
-K�*���W�o����������(������������Σ�n��
-K�n�
-�����'�
-��ώW�������ߚ�_����.��3��g��k�_����
-/�O���	9Y%%���ĸ�ܗ����������
-�������ؗ���������+�b����Z���{�
-��
-����
-��W�#���ĸ�����������������z/���
-�����
-�b;�j_�3�"�/�
-3���&7�^�����������ӎ3��
-���ϖv���:��R��W�
-3��B3�2�VÎ��"w�
-���Ȱ��Îw�
-��ώ#�
-K��えた。</p>
-        <p>経済指標面では、5月のJOLTS（雇用動態調査）が注目された。f��人件数は730万件前後と予想されており。d��然として労働市場の底堅さを示す数値が続いている。これにより連邦準備理事会（FRB）の早期利下げ期待はさらに後退。CME FedWatchでは2026年内の利下げ確率がほぼゼロまで低下している。</p>
-        <p>石油市場では、ドーハでの米国・イラン平和協議再開の報道を受けてWTIが70ドル台で推移。地政学的緊張の緩和期待がエネルギー価格を抑制している。コムキゝストは傘下メディア・テック事業を2社に分割すると発表し、同社株は4.4%上昇した。</p>
-        <p>国債市場では、米10年債利回りが4.37%と前日比ほぼ横ばい。30年債は4.95%と若干上昇。日本の10年JGBは2.69%ギ上昇しており、日本銀行の政策正常化への市場の見方が継続している。Nike(NKE)は6月30日の引け後に決算発表を予定。年間売上高は約2.1%減少が見込まれており、市場の注目が集まっている。</p>
+        <h3>テック株は慎重スタート、半導体に重し</h3>
+        <p>NVIDIAが2.12%下落し指数全体を押し下げた。CoreWeaveは12.75%安、Concentrix(CNXC)は第2四半期決算ミスで22%急落と個別銘柄の下落が目立った。</p>
       </div>
-      <div class="sidebar">
-        <h4>Today's Watch</h4>
-        <div class="watch-item">
-          <div class="ticker">TSLA</div>
-          <div class="name">Tesla, Inc.</div>
-          <div class="change up">+8.46%</div>
-        </div>
-        <div class="watch-item">
-          <div class="ticker">NVDA</div>
-          <div class="name">NVIDIA Corp.</div>
-          <div class="change up">+1.27%</div>
-        </div>
-        <div class="watch-item">
-          <div class="ticker">MSFT</div>
-          <div class="name">Microsoft Corp.</div>
-          <div class="change down">-1.18%</div>
-        </div>
-        <div class="watch-item">
-          <div class="ticker">AAPL</div>
-          <div class="name">Apple Inc.</div>
-          <div class="change down">-0.72%</div>
-        </div>
-        <div class="watch-item">
-          <div class="ticker">NKE</div>
-          <div class="name">Nike Inc. (決算発表)</div>
-          <div class="change down">-24% (Q2)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEAD STORY ===== -->
+<section class="lead-story">
+  <div class="container">
+    <div class="lead-layout">
+      <div class="lead-main">
+        <div class="section-label">Lead Story</div>
+        <h2>FRB新議長が利下げ慎重姿勢を示唆 ― 「インフレ目標まで依然距離あり」</h2>
+        <p>Kevin Warsh FRB新議長は7月1日（水）、ポルトガルで開催されたECB年次シンポジウムにて講演を行った。Warsh議長は現行のFF金利レンジ（3.50〜3.75%）を維持している方針を改めて確認しつつも、「インフレ率はまだ2%目標を有意に上回っており、供給サイドのショックも一部続いている」と述べ、早期利下げに対して慎重な姿勢を示唆した。</p>
+        <p>市場では7月のFOMCでの利下げ確率が低下し、次回の政策変更は早くても9月との見方が優勢となっている。一方、ADP雇用統計が98,000人増と予想を大きく下回ったことで、景気鈍化懸念が浮上。JOLTSの求人件数（760万件、予想比プラス）とのギャップが投資家心理を混乱させ、相場は方向感を欠く展開となった。</p>
+        <p>エネルギー市場では、米国とイランの停戦合意に関する報道が伝わりWTI原油先物が急落。$68.16まで値を下げ、3月以来の安値水準に沈んだ。これがエネルギー株の重荷となったほか、インフレ指標の低下という見方からはポジティブに解釈する向きもある。テック・半導体セクターではNVIDIA、CoreWeaveが下落した一方、通信・金融セクターが相場の下支えとなった。</p>
+        <p>日本国債市場では10年JGB利回りが2.70%と引き続き高水準を維持。日米金利差は依然大きく、円安圧力が続いている。米10年債利回りは4.44%で推移しており、日米スプレッドは約174bpと拡大している。</p>
+      </div>
+      <div>
+        <div class="sidebar">
+          <h3>Today's Watch</h3>
+          <div class="watch-item">
+            <div class="ticker">NVDA</div>
+            <div class="name">NVIDIA Corp.</div>
+            <div class="chg down">▼ -2.12%</div>
+          </div>
+          <div class="watch-item">
+            <div class="ticker">CRWV</div>
+            <div class="name">CoreWeave</div>
+            <div class="chg down">▼ -12.75%</div>
+          </div>
+          <div class="watch-item">
+            <div class="ticker">CNXC</div>
+            <div class="name">Concentrix Corp.</div>
+            <div class="chg down">▼ -22.0%</div>
+          </div>
+          <div class="watch-item">
+            <div class="ticker">VIX</div>
+            <div class="name">恐怖指数</div>
+            <div class="chg up">▼ 16.02 (-2.61%)</div>
+          </div>
         </div>
       </div>
     </div>
@@ -401,114 +518,118 @@ K��えた。</p>
 </section>
 
 <!-- ===== ASSET GRID ===== -->
-<section class="dark-section">
+<section class="asset-section">
   <div class="container">
-    <div style="padding-top:40px;">
-      <div class="section-label" style="color:#d9a17a;">Market Snapshot</div>
-      <div class="section-title" style="color:#fff;border-bottom-color:rgba(255,255,255,0.2);">主要アセット終値</div>
-    </div>
-    <div class="asset-grid" style="padding-bottom:40px;">
+    <div class="section-label">Market Snapshot</div>
+    <div class="section-title" style="color:var(--primary);">主要アセット一覧</div>
+    <div class="asset-grid">
       <div class="asset-card">
-        <div class="asset-label">S&P 500</div>
-        <div class="asset-value">7,499</div>
-        <div class="asset-change up">+0.79%</div>
+        <div class="a-label">S&amp;P 500</div>
+        <div class="a-value">7,483</div>
+        <div class="a-chg down">▼ -0.22%</div>
+        <div class="a-note">Q3初日は小幅反落</div>
       </div>
       <div class="asset-card">
-        <div class="asset-label">NASDAQ</div>
-        <div class="asset-value">26,015</div>
-        <div class="asset-change up">+0.75%</div>
+        <div class="a-label">NASDAQ</div>
+        <div class="a-value">26,040</div>
+        <div class="a-chg down">▼ -0.66%</div>
+        <div class="a-note">半導体安が重荷</div>
       </div>
       <div class="asset-card">
-        <div class="asset-label>WTI Crude</div>
-        <div class="asset-value">$70.70</div>
-        <div class="asset-change down">-1.2%</div>
+        <div class="a-label">WTI Oil</div>
+        <div class="a-value">$68.16</div>
+        <div class="a-chg down">▼ -1.93%</div>
+        <div class="a-note">3月以来の安値</div>
       </div>
       <div class="asset-card">
-        <div class="asset-label">US 10Y Yield</div>
-        <div class="asset-value">4.37%</div>
-        <div class="asset-change neutral">-0.01bp</div>
+        <div class="a-label">US 10Y Yield</div>
+        <div class="a-value">4.44%</div>
+        <div class="a-chg">&#8212;</div>
+        <div class="a-note">高止まり継続</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WAVE 2 -->
+<!-- ===== WAVE 2 ===== -->
 <canvas id="wave2" class="wave"></canvas>
 
 <!-- ===== FINANCE FOCUS ===== -->
-<section class="section">
+<section class="finance-focus">
   <div class="container">
     <div class="section-label">Finance Focus</div>
-    <div class="section-title">注目銘柄ハイライト</div>
-    <div class="finance-grid">
-      <div class="finance-card">
-        <div class="finance-card-header">
-          <span class="fticker">TSLA</span>
-          <span class="fchange up">+8.46%</span>
-        </div>
-        <div class="finance-card-body">
-          <div class="company-name">Tesla, Inc.</div>
-          <p>Q2自動車販売台数が予想を上回るとの期待感から急騰。AIロボティクソ事業「Optimus」量産計画の進捗にも市場が反応。時価総額は1.4兆ドル超。</p>
-        </div>
+    <div class="section-title">注目個別株</div>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="f-ticker">NVDA</div>
+        <div class="f-name">NVIDIA Corporation</div>
+        <div class="f-price">変動率: <span class="f-chg down">▼ -2.12%</span></div>
+        <p>半導体・AI関連株の重荷となり指数全体の下落をリード。Q2業績への期待は維持されているが、利益確定売りが先行。ハイパースケーラーのCapEx動向が引き続き注目材料。</p>
       </div>
-      <div class="finance-card">
-        <div class="finance-card-header">
-          <span class="fticker">NVDA</span>
-          <span class="fchange up">+1.27%</span>
-        </div>
-        <div class="finance-card-body">
-          <div class="company-name">NVIDIA Corporation</div>
-          <p>AIデータセンター向けGPU需要が引き続き旺盛。市場シェァ85%超を維持し、時価総額5.2兆ドルで世界最大の企業に。Q2決算への期待も下支え。</p>
-        </div>
+      <div class="focus-card">
+        <div class="f-ticker">CRWV</div>
+        <div class="f-name">CoreWeave</div>
+        <div class="f-price">変動率: <span class="f-chg down">▼ -12.75%</span></div>
+        <p>AIクラウドインフラ企業。大幅下落の詳細は引き続き調査中だが、テックセクター全体のリスクオフムードが影響。成長期待は高いものの、バリュエーション高さへの懸念も。</p>
       </div>
-      <div class="finance-card">
-        <div class="finance-card-header">
-          <span class="fticker">GOOGL</span>
-          <span class="fchange up">+0.50%</span>
-        </div>
-        <div class="finance-card-body">
-          <div class="company-name">Alphabet Inc.</div>
-          <p>6月29日にダウ平均へ正式採用。Dow初の52,000超えに貢献。AI検索とクラウド事業の堅調な成長が評価され、時価総額4.2兆ドルへ拡大。</p>
-        </div>
+      <div class="focus-card">
+        <div class="f-ticker">CNXC</div>
+        <div class="f-name">Concentrix Corp.</div>
+        <div class="f-price">変動率: <span class="f-chg down">▼ -22.0%</span></div>
+        <p>テクノロジーサービス大手が第2四半期の売上・利益ともに予想を下回り、通期ガイダンスも引き下げ。株価は一日で22%急落。アウトソーシング需要の鈍化が示唆される。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WAVE 3 -->
+<!-- ===== WAVE 3 ===== -->
 <canvas id="wave3" class="wave"></canvas>
 
 <!-- ===== SHORT VERSION ===== -->
-<section class="section short-section">
+<section class="short-version">
   <div class="container">
     <div class="section-label">Short Version</div>
-    <div class="section-title">5行でわかる今日の市場</div>
-    <ul class="bullets">
-      <li>S&P500は7,499.36（+0.79%）、NASDAQは26,015（+0.75%）でQ2終了——6年ぶり最強四半期として幕ら閉じ、ダウも52,000台り維持した。</li>
-      <li>CME FedWatchが2026年内の利下げをゼロ織り込みに：年初の2回予想から一転、堅調な雇用市場とインフレ高止まりでFRBの据え置き長期化観測が定着。</li>
-      <li>テスラ+8.46%、NVIDIA+1.27%と個別株のAI・EV関連銘柄が急伸した一方、マイクロソフト-1.18%・アップル-0.72%と大型テックの選別物色が加速。</li>
-      <li>米国・イラン平和協議再開でWTI＋70ドル台まで下落、VIXは17.65と安定圏。地政学リスクの一時的緩和が市場センチメントを下支え。</li>
-      <li>米10年債4.37%、日本JGB10年2.69%と金利は高止まり。Nike決算（EPS予想$0.13）と週末の米雇用統計が次の市場イベントとして注目される。</li>
+    <div class="section-title">5行でわかる本日の市場</div>
+    <ul class="short-list">
+      <li>
+        <div class="num">1</div>
+        <div>S&P500は-0.22%、NASDAQ -0.66%と小幅安でQ3をスタート。ダウは52,305ドルとほぼ横ばい。テック・半導体に売りが集中した。</div>
+      </li>
+      <li>
+        <div class="num">2</div>
+        <div>FRB新議長Kevin Warshがポルトガルで講演。「インフレは目標比なお高い」と発言し、早期利下げ期待を牽制した。FF金利は3.50〜3.75%を維持。</div>
+      </li>
+      <li>
+        <div class="num">3</div>
+        <div>ADP雇用は6月+98,000人と予想大幅未達。一方JOLTS求人は760万件でほぼ横ばい維持。労働市場の二極化を示す結果となった。</div>
+      </li>
+      <li>
+        <div class="num">4</div>
+        <div>米イラン停戦合意の報道でWTI原油が-1.93%の$68.16に急落。地政学リスクプレミアムが後退しエネルギーセクターに売り圧力。</div>
+      </li>
+      <li>
+        <div class="num">5</div>
+        <div>米10年債4.44%、JGB10年2.70%と日米金利差は174bpに拡大。VIX16.02と低水準を維持し市場の恐怖感は限定的だった。</div>
+      </li>
     </ul>
   </div>
 </section>
 
-<!-- WAVE 4 -->
+<!-- ===== WAVE 4 ===== -->
 <canvas id="wave4" class="wave"></canvas>
 
 <!-- ===== REFERENCES ===== -->
-<section class="refs">
+<section class="references">
   <div class="container">
     <h3>References</h3>
     <ul>
-      <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-30-2026" target="_blank">TheStreet — Stock Market Today (June 30, 2026)</a></li>
-      <li><a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Schwab — Stocks Open Flat to End Best Quarter in Years</a></li>
-      <li><a href="https://www.cnbc.com/2026/06/28/stock-futures-today-live-updates.html" target="_blank">CNBC — Dow jumps 300 points for first close above 52,000 (June 29)</a></li>
-      <li><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics — US Treasury Yields</a></li>
-      <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank">Trading Economics — Japan 10Y JGB Yield</a></li>
-      <li><a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics — WTI Crude Oil</a></li>
-      <li><a href="https://www.cboe.com/tradable-products/vix/" target="_blank">Cboe — VIX Index (17.65 close Jun 30)</a></li>
-      <li><a href="https://www.marketbeat.com/earnings/reports/2026-6-30-nike-inc-stock/" target="_blank">MarketBeat — Nike Q4 2026 Earnings</a></li>
+      <li><a href="https://247wallst.com/investing/2026/07/01/stock-market-live-july-1-2026-sp-500-spy-lower-as-investors-wait-on-the-fed-and-fresh-economic-data/" target="_blank">24/7 Wall St. — Stock Market Live July 1, 2026</a></li>
+      <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-july-1-2026-nasdaq-futures-slip-after-strongest-quarter-since-2020" target="_blank">TheStreet — Stock Market Today July 1, 2026</a></li>
+      <li><a href="https://www.kucoin.com/news/flash/u-s-stock-markets-rise-on-july-1-2026-led-by-nasdaq-gains" target="_blank">KuCoin — U.S. Stock Markets July 1, 2026</a></li>
+      <li><a href="https://tradingeconomics.com/united-states/30-year-bond-yield" target="_blank">Trading Economics — US 30Y Bond Yield</a></li>
+      <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank">Trading Economics — Japan 10Y Bond Yield</a></li>
+      <li><a href="https://fxdailyreport.com/wti-crude-oil-price-analysis-for-july-1-2026/" target="_blank">FX Daily Report — WTI Crude Oil July 1, 2026</a></li>
+      <li><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm" target="_blank">Federal Reserve — FOMC Statement June 2026</a></li>
     </ul>
   </div>
 </section>
@@ -516,7 +637,7 @@ K��えた。</p>
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
   <div class="container">
-!   <div class="foot-brand">米国市場 モーニングレポート</div>
+    <div class="foot-brand">米国市場 モーニングレポート</div>
     <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
     <p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
     <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
