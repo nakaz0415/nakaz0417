@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場 モーニングレポート | 2026.07.12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f3ea;
+  --fg:#1a2230;
+  --primary:#21344f;
+  --accent:#b5472a;
+  --border:#d6cfc4;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1080px;margin:0 auto;padding:0 24px;}
+a{color:var(--accent);}
+
+/* ===== Header ===== */
+.site-header{background:var(--primary);color:#fff;}
+.header-top{padding:28px 0 22px;}
+.header-flex{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;}
+.brand{
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:900;
+  font-size:34px;
+  letter-spacing:0.04em;
+  line-height:1.1;
+}
+.brand .accent{color:#d9a17a;font-weight:700;}
+.brand-sub{
+  font-size:11px;
+  letter-spacing:0.35em;
+  margin-top:8px;
+  color:rgba(255,255,255,0.65);
+  text-transform:uppercase;
+}
+.dateline{text-align:right;font-size:12px;letter-spacing:0.18em;color:rgba(255,255,255,0.85);}
+.dateline .big{
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:24px;
+  font-weight:700;
+  display:block;
+  letter-spacing:0.04em;
+  margin-bottom:4px;
+}
+
+/* ===== Ticker ===== */
+.ticker-bar{overflow:hidden;white-space:nowrap;background:rgba(0,0,0,0.25);padding:9px 0;}
+.ticker-inner{display:inline-block;animation:ticker 32s linear infinite;}
+.ticker-inner span{display:inline-block;margin:0 38px;font-size:12px;letter-spacing:0.07em;color:rgba(255,255,255,0.88);}
+.ticker-inner span .tick-label{color:rgba(255,255,255,0.5);margin-right:6px;}
+.tick-up{color:#5cd47b;font-weight:700;}
+.tick-down{color:#f27a6c;font-weight:700;}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* ===== Hero ===== */
+.hero{
+  height:340px;
+  background:linear-gradient(135deg,#21344f 0%,#2f4a6e 55%,#b5472a 130%);
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 78% 22%,rgba(217,161,122,0.35),transparent 45%);
+}
+.hero-inner{position:relative;z-index:2;padding:36px 0;color:#fff;}
+.hero-tag{
+  display:inline-block;background:var(--accent);color:#fff;
+  font-size:11px;letter-spacing:0.2em;padding:5px 14px;margin-bottom:16px;text-transform:uppercase;
+}
+.hero h1{font-size:38px;font-weight:900;line-height:1.25;max-width:820px;text-shadow:0 2px 18px rgba(0,0,0,0.35);}
+.hero p{margin-top:14px;font-size:15px;color:rgba(255,255,255,0.9);max-width:720px;}
+
+/* ===== Waves ===== */
+.wave-wrap{line-height:0;background:var(--bg);}
+canvas.wave{display:block;width:100%;height:80px;}
+
+/* ===== Sections ===== */
+section{padding:52px 0;}
+.sec-label{
+  font-size:12px;letter-spacing:0.28em;color:var(--accent);
+  text-transform:uppercase;font-weight:700;margin-bottom:8px;
+}
+.sec-title{font-size:26px;font-weight:900;color:var(--primary);margin-bottom:28px;letter-spacing:0.02em;}
+
+/* Quick reading */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.qcard{background:#fff;border:1px solid var(--border);border-radius:6px;padding:24px;box-shadow:0 4px 16px rgba(33,52,79,0.05);}
+.qcard .num{font-size:13px;font-weight:900;color:var(--accent);letter-spacing:0.1em;}
+.qcard h3{font-size:17px;font-weight:700;color:var(--primary);margin:8px 0 10px;}
+.qcard p{font-size:14px;color:#3c4655;}
+
+/* Lead story */
+.lead-grid{display:grid;grid-template-columns:2fr 1fr;gap:34px;}
+.lead-body h2{font-size:22px;font-weight:900;color:var(--primary);margin-bottom:16px;line-height:1.4;}
+.lead-body p{margin-bottom:16px;font-size:15px;color:#333c49;}
+.sidebar{background:var(--primary);color:#fff;border-radius:6px;padding:26px;height:fit-content;}
+.sidebar h4{font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:#d9a17a;margin-bottom:16px;}
+.sidebar ul{list-style:none;}
+.sidebar li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.15);font-size:14px;}
+.sidebar li:last-child{border-bottom:none;}
+.sidebar li span{display:block;font-size:11px;letter-spacing:0.12em;color:rgba(255,255,255,0.55);margin-bottom:3px;}
+
+/* Asset grid */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.asset{background:#fff;border:1px solid var(--border);border-radius:6px;padding:20px;text-align:center;}
+.asset .a-name{font-size:12px;letter-spacing:0.14em;color:#6b7280;text-transform:uppercase;}
+.asset .a-val{font-size:26px;font-weight:900;color:var(--primary);margin:8px 0 4px;}
+.asset .a-chg{font-size:14px;font-weight:700;}
+.up{color:#1f9d55;}
+.down{color:var(--accent);}
+
+/* Finance focus */
+.ff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.ff-card{background:#fff;border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:6px;padding:24px;}
+.ff-card .tkr{font-size:12px;letter-spacing:0.1em;color:#6b7280;}
+.ff-card h3{font-size:19px;font-weight:900;color:var(--primary);margin:4px 0 10px;}
+.ff-card .chg{font-size:16px;font-weight:700;margin-bottom:12px;}
+.ff-card p{font-size:13.5px;color:#3c4655;}
+
+/* Short version */
+.short-sec{background:var(--primary);color:#fff;}
+.short-sec .sec-title{color:#fff;}
+.short-sec .sec-label{color:#d9a17a;}
+.short-list{list-style:none;counter-reset:s;}
+.short-list li{
+  position:relative;padding:16px 0 16px 52px;border-bottom:1px solid rgba(255,255,255,0.15);
+  font-size:15.5px;color:rgba(255,255,255,0.92);counter-increment:s;
+}
+.short-list li::before{
+  content:counter(s);position:absolute;left:0;top:14px;
+  width:34px;height:34px;background:var(--accent);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;
+}
+.short-list li:last-child{border-bottom:none;}
+
+/* References */
+.refs ul{list-style:none;}
+.refs li{padding:9px 0;border-bottom:1px dashed var(--border);font-size:14px;}
+.refs a{word-break:break-all;}
+
+/* Footer */
+.site-footer{background:var(--primary);color:rgba(255,255,255,0.8);text-align:center;padding:40px 0;}
+.foot-brand{font-size:20px;font-weight:900;color:#fff;letter-spacing:0.04em;margin-bottom:12px;}
+.site-footer p{font-size:13px;}
+.site-footer a{color:#d9a17a;}
+
+@media(max-width:840px){
+  .grid-3,.grid-4,.ff-grid,.lead-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:28px;}
+  .brand{font-size:26px;}
+  .dateline{text-align:left;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-flex">
+      <div>
+        <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+        <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
+      </div>
+      <div class="dateline">
+        <span class="big">2026年7月12日(日)</span>
+        前営業日 7月10日(金) 終値ベース
+      </div>
+    </div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">+0.80%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">+1.30%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">+0.30%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.19%</span>
+      <span><span class="tick-label">US 10Y</span>4.56%</span>
+      <span><span class="tick-label">US 30Y</span>5.06%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.88%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$72.20</span></span>
+      <span><span class="tick-label">VIX</span>15.76</span>
+      <span><span class="tick-label">SK HYNIX</span><span class="tick-up">+14.1%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">+0.80%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">+1.30%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">+0.30%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.19%</span>
+      <span><span class="tick-label">US 10Y</span>4.56%</span>
+      <span><span class="tick-label">US 30Y</span>5.06%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.88%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$72.20</span></span>
+      <span><span class="tick-label">VIX</span>15.76</span>
+      <span><span class="tick-label">SK HYNIX</span><span class="tick-up">+14.1%</span></span>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container hero-inner">
+    <span class="hero-tag">Top Story</span>
+    <h1>SK Hynix、過去最大の外国企業IPOでナスダック鮮烈デビュー ― 3指数そろって上昇</h1>
+    <p>SKハイニックスがADR価格149ドルで上場、初値は14%高。約265億ドルを調達し、外国企業として史上最大の米国IPOに。AI・半導体需要への楽観が相場を支え、S&amp;P500とナスダックは週を高値で締めくくった。</p>
+  </div>
+</div>
+
+<div class="wave-wrap"><canvas id="wave1" class="wave"></canvas></div>
+
+<section>
+  <div class="container">
+    <div class="sec-label">Quick Reading</div>
+    <div class="sec-title">今日の3大ポイント</div>
+    <div class="grid-3">
+      <div class="qcard">
+        <div class="num">01</div>
+        <h3>3指数そろって上昇</h3>
+        <p>ナスダックが+1.3%と牽引し26,206へ。S&amp;P500は+0.8%の7,543、ダウも+0.3%の52,478で着地。半導体株の反発とAI楽観が相場を押し上げた。</p>
+      </div>
+      <div class="qcard">
+        <div class="num">02</div>
+        <h3>SK Hynix、史上最大の外国IPO</h3>
+        <p>ADR149ドルで上場し約265億ドルを調達、2014年アリババの記録を更新。初値170ドルと14%超のプレミアムで、メモリ市況への強気を示した。</p>
+      </div>
+      <div class="qcard">
+        <div class="num">03</div>
+        <h3>AI需要がFRBの新たな焦点</h3>
+        <p>NY連銀ウィリアムズ総裁がAI主導の需要をインフレ要因として警戒。持続すれば追加利上げの可能性にも言及し、金利観に含みを残した。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="sec-label">Lead Story</div>
+    <div class="sec-title">本日のリード</div>
+    <div class="lead-grid">
+      <div class="lead-body">
+        <h2>半導体楽観と大型IPOが週末ラリーを演出、金利はやや高止まり</h2>
+        <p>7月10日の米国株式市場は主要3指数がそろって上昇して取引を終えた。ナスダック総合が1.3%高の26,206.89ポイントと最も強く、S&amp;P500は0.8%高の7,543.64、ダウ工業株30種平均は0.3%高の52,478.41で引けた。週を通じてボラティリティの高い展開だったが、半導体株の反発とAI関連需要への楽観が相場を最後に押し上げた。</p>
+        <p>最大の話題はSKハイニックスの米国上場だ。ADRは1株149ドルで価格決定され、初値は170ドルと14%を超えるプレミアムを付けた。調達額は約265億ドルに達し、外国企業による米国IPOとしては2014年のアリババ(250億ドル)を上回り史上最大となった。メモリ市況の回復期待を映す象徴的な案件として、半導体セクター全体のセンチメントを支えた。</p>
+        <p>一方、金利面では長期債利回りが高止まりした。米10年債は4.56%、30年債は5.06%と高水準を維持。NY連銀のウィリアムズ総裁がAI主導の需要をインフレ圧力として注視し、持続すれば追加利上げが必要になり得ると発言したことも、利下げ期待をやや後退させた。原油はWTIが72ドル台へ小幅上昇し、地政学リスクを引き続き織り込んでいる。</p>
+      </div>
+      <aside class="sidebar">
+        <h4>Today's Watch</h4>
+        <ul>
+          <li><span>金利</span>米10年債 4.56% ― 高止まり継続</li>
+          <li><span>FRB</span>ウィリアムズ総裁のAIインフレ発言</li>
+          <li><span>IPO</span>SK Hynix 上場後の値動き</li>
+          <li><span>原油</span>WTI $72台、地政学リスク注視</li>
+          <li><span>決算</span>デルタ航空・WD-40 に好反応</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="sec-label">Markets Snapshot</div>
+    <div class="sec-title">主要アセット</div>
+    <div class="grid-4">
+      <div class="asset">
+        <div class="a-name">S&amp;P 500</div>
+        <div class="a-val">7,543.64</div>
+        <div class="a-chg up">+0.80%</div>
+      </div>
+      <div class="asset">
+        <div class="a-name">NASDAQ</div>
+        <div class="a-val">26,206.89</div>
+        <div class="a-chg up">+1.30%</div>
+      </div>
+      <div class="asset">
+        <div class="a-name">WTI 原油</div>
+        <div class="a-val">$72.20</div>
+        <div class="a-chg up">+0.61%</div>
+      </div>
+      <div class="asset">
+        <div class="a-name">米10年債</div>
+        <div class="a-val">4.56%</div>
+        <div class="a-chg down">高止まり</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-wrap"><canvas id="wave2" class="wave"></canvas></div>
+
+<section>
+  <div class="container">
+    <div class="sec-label">Finance Focus</div>
+    <div class="sec-title">注目個別銘柄</div>
+    <div class="ff-grid">
+      <div class="ff-card">
+        <div class="tkr">NASDAQ: SKHY</div>
+        <h3>SK Hynix</h3>
+        <div class="chg up">初値 +14.1%</div>
+        <p>ADR149ドルで上場、初値170ドル。約265億ドル調達で外国企業として史上最大の米国IPO。メモリ市況回復期待を象徴し半導体株全体を支援。</p>
+      </div>
+      <div class="ff-card">
+        <div class="tkr">NYSE: DAL</div>
+        <h3>Delta Air Lines</h3>
+        <div class="chg up">寄付き +4%</div>
+        <p>四半期決算・通期ガイダンスがともに市場予想を上回る。寄付き後は上げ幅を消す場面もあったが、旅客需要の底堅さを確認する内容に。</p>
+      </div>
+      <div class="ff-card">
+        <div class="tkr">NASDAQ: WDFC</div>
+        <h3>WD-40</h3>
+        <div class="chg up">+23.3%</div>
+        <p>会計第3四半期の好決算を受け急伸。堅調な販売とマージン改善が評価され、中小型株の中で際立つ上昇率を記録した。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-wrap"><canvas id="wave3" class="wave"></canvas></div>
+
+<section class="short-sec">
+  <div class="container">
+    <div class="sec-label">Short Version</div>
+    <div class="sec-title">3行超ダイジェスト</div>
+    <ul class="short-list">
+      <li>7月10日の米株は3指数そろって上昇。ナスダック+1.3%、S&amp;P500+0.8%、ダウ+0.3%で週を高値引け。</li>
+      <li>SKハイニックスが史上最大の外国企業IPO(約265億ドル)でナスダック上場、初値14%高。半導体センチメント改善。</li>
+      <li>NY連銀ウィリアムズ総裁がAI主導需要をインフレ要因として警戒、追加利上げの可能性に言及。</li>
+      <li>金利は高止まり ― 米2年債4.19%、10年債4.56%、30年債5.06%。日本10年債は2.88%と約30年ぶり高水準圏。</li>
+      <li>WTI原油は72ドル台へ小幅高、地政学リスク継続。VIXは15.76と低位安定でリスク選好は維持。</li>
+    </ul>
+  </div>
+</section>
+
+<div class="wave-wrap"><canvas id="wave4" class="wave"></canvas></div>
+
+<section class="refs">
+  <div class="container">
+    <div class="sec-label">References</div>
+    <div class="sec-title">ソース</div>
+    <ul>
+      <li><a href="https://finance.yahoo.com/news/live/stock-market-today-friday-july-10-dow-sp-nasdaq-113921604.html">Yahoo Finance ― Stock market today: Dow, S&amp;P 500, Nasdaq rise as SK Hynix pops (Jul 10, 2026)</a></li>
+      <li><a href="https://www.fool.com/coverage/stock-market-today/2026/07/10/stock-market-today-july-10-markets-edge-higher-and-sk-hynix-soars-on-debut/">The Motley Fool ― Markets Edge Higher and SK Hynix Soars on Debut</a></li>
+      <li><a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics ― US Treasury Yields</a></li>
+      <li><a href="https://tradingeconomics.com/japan/government-bond-yield">Trading Economics ― Japan 10Y Government Bond Yield</a></li>
+      <li><a href="https://www.forbes.com/advisor/investing/oil-prices-today/">Forbes Advisor ― Crude Oil Price Today (Jul 10, 2026)</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-brand">米国市場 モーニングレポート</div>
+    <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
+    <p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+  </div>
+</footer>
+
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() {
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || 80;
+    }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1;
+      ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath();
+      ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp
+                         + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed;
+      rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+
+</body>
+</html>
