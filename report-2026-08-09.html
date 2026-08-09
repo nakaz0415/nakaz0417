@@ -11,314 +11,318 @@
 :root{
   --bg:#f7f3ea; --fg:#1a2230; --primary:#21344f; --accent:#b5472a; --border:#d6cfc4;
 }
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;line-height:1.7;}
-.container{max-width:1140px;margin:0 auto;padding:0 24px;}
-a{color:var(--accent);}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--bg); color:var(--fg); font-family:'Noto Sans JP',sans-serif; line-height:1.8; -webkit-font-smoothing:antialiased;}
+.wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
 
-/* Header */
-.site-header{background:var(--primary);color:#fff;}
-.header-top{padding:26px 0 20px;}
-.header-flex{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;}
-.brand{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:34px;letter-spacing:0.04em;line-height:1.1;}
-.brand .accent{color:#d9a17a;font-weight:700;}
-.brand-sub{font-size:11px;letter-spacing:0.35em;margin-top:8px;color:rgba(255,255,255,0.65);text-transform:uppercase;}
-.dateline{text-align:right;font-size:12px;letter-spacing:0.18em;color:rgba(255,255,255,0.85);}
-.dateline .big{font-family:'Noto Sans JP',sans-serif;font-size:24px;font-weight:700;display:block;letter-spacing:0.04em;margin-bottom:4px;}
+/* ===== HEADER ===== */
+header{background:var(--primary); color:#fff;}
+.header-top{display:flex; justify-content:space-between; align-items:flex-end; padding:30px 24px 22px; max-width:1120px; margin:0 auto; flex-wrap:wrap; gap:16px;}
+.brand{font-family:'Noto Sans JP',sans-serif; font-weight:900; font-size:34px; letter-spacing:0.04em; line-height:1.1;}
+.brand .accent{color:#d9a17a; font-weight:700;}
+.brand-sub{font-size:11px; letter-spacing:0.35em; margin-top:8px; color:rgba(255,255,255,0.65); text-transform:uppercase;}
+.dateline{text-align:right; font-size:12px; letter-spacing:0.18em; color:rgba(255,255,255,0.85);}
+.dateline .big{font-family:'Noto Sans JP',sans-serif; font-size:24px; font-weight:700; display:block; letter-spacing:0.04em; margin-bottom:4px;}
 
-/* Ticker */
-.ticker-bar{overflow:hidden;white-space:nowrap;background:rgba(0,0,0,0.25);padding:9px 0;}
-.ticker-inner{display:inline-block;animation:ticker 32s linear infinite;}
-.ticker-inner span{display:inline-block;margin:0 38px;font-size:12px;letter-spacing:0.07em;color:rgba(255,255,255,0.88);}
-.ticker-inner span .tick-label{color:rgba(255,255,255,0.5);margin-right:6px;}
-.tick-up{color:#5cd47b;font-weight:700;}
-.tick-down{color:#f27a6c;font-weight:700;}
+/* ===== TICKER ===== */
+.ticker-bar{overflow:hidden; white-space:nowrap; background:rgba(0,0,0,0.25); padding:9px 0;}
+.ticker-inner{display:inline-block; animation:ticker 32s linear infinite;}
+.ticker-inner span{display:inline-block; margin:0 38px; font-size:12px; letter-spacing:0.07em; color:rgba(255,255,255,0.88);}
+.ticker-inner span .tick-label{color:rgba(255,255,255,0.5); margin-right:6px;}
+.tick-up{color:#5cd47b; font-weight:700;}
+.tick-down{color:#f27a6c; font-weight:700;}
 @keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
-/* Hero */
-.hero{height:340px;position:relative;overflow:hidden;background:linear-gradient(135deg,#21344f 0%,#33506f 55%,#b5472a 140%);display:flex;align-items:flex-end;}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 22%,rgba(217,161,122,0.35),transparent 55%);}
-.hero-inner{position:relative;z-index:2;padding:34px;color:#fff;}
-.hero-tag{display:inline-block;background:var(--accent);color:#fff;font-size:11px;letter-spacing:0.2em;padding:5px 12px;text-transform:uppercase;margin-bottom:14px;}
-.hero h1{font-size:32px;font-weight:900;line-height:1.3;max-width:820px;text-shadow:0 2px 12px rgba(0,0,0,0.35);}
-.hero p{margin-top:12px;font-size:14px;max-width:680px;color:rgba(255,255,255,0.9);}
+/* ===== HERO ===== */
+.hero{height:340px; background:linear-gradient(135deg,#21344f 0%,#33506f 60%,#b5472a 160%); position:relative; overflow:hidden; display:flex; align-items:center;}
+.hero-content{max-width:1120px; margin:0 auto; padding:0 24px; width:100%; color:#fff;}
+.hero .tag{display:inline-block; font-size:11px; letter-spacing:0.3em; text-transform:uppercase; background:rgba(217,161,122,0.2); color:#e7c4a5; padding:6px 14px; border-radius:2px; margin-bottom:18px;}
+.hero h1{font-size:40px; font-weight:900; line-height:1.35; letter-spacing:0.01em; max-width:820px;}
+.hero .hero-meta{margin-top:18px; font-size:13px; color:rgba(255,255,255,0.75); letter-spacing:0.08em;}
 
-/* Waves */
-.wave{display:block;width:100%;height:80px;}
+/* ===== WAVE ===== */
+.wave{width:100%; height:80px; display:block;}
+.wave canvas{width:100%; height:80px; display:block;}
 
-/* Section */
-section{padding:46px 0;}
-.section-label{font-size:12px;letter-spacing:0.28em;color:var(--accent);text-transform:uppercase;font-weight:700;margin-bottom:8px;}
-.section-title{font-size:26px;font-weight:900;color:var(--primary);margin-bottom:26px;letter-spacing:0.02em;}
+/* ===== SECTIONS ===== */
+section{padding:56px 0;}
+.section-label{font-size:12px; letter-spacing:0.28em; text-transform:uppercase; color:var(--accent); font-weight:700; margin-bottom:8px;}
+.section-title{font-size:26px; font-weight:900; color:var(--primary); margin-bottom:28px; letter-spacing:0.02em;}
 
-/* Quick reading */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.qcard{background:#fff;border:1px solid var(--border);padding:24px;border-radius:4px;}
-.qcard .num{font-size:13px;font-weight:900;color:var(--accent);letter-spacing:0.1em;}
-.qcard h3{font-size:17px;font-weight:700;color:var(--primary);margin:8px 0 10px;}
-.qcard p{font-size:13.5px;color:#41505f;}
+/* Quick Reading */
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+.qr-card{background:#fff; border:1px solid var(--border); border-radius:6px; padding:24px; box-shadow:0 1px 3px rgba(26,34,48,0.04);}
+.qr-card h3{font-size:16px; color:var(--primary); margin-bottom:10px; font-weight:700; display:flex; align-items:center; gap:8px;}
+.qr-card h3 .num{background:var(--accent); color:#fff; width:24px; height:24px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0;}
+.qr-card p{font-size:14px; color:#3a4454;}
 
-/* Lead story */
-.lead-wrap{display:grid;grid-template-columns:2fr 1fr;gap:32px;}
-.lead-body h2{font-size:24px;font-weight:900;color:var(--primary);margin-bottom:14px;line-height:1.4;}
-.lead-body p{margin-bottom:14px;font-size:15px;}
-.lead-body .drop{font-size:15px;}
-.sidebar{background:var(--primary);color:#fff;padding:26px;border-radius:4px;height:fit-content;}
-.sidebar h4{font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:#d9a17a;margin-bottom:16px;}
-.sidebar ul{list-style:none;}
-.sidebar li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.15);font-size:13.5px;}
-.sidebar li:last-child{border-bottom:none;}
-.sidebar li b{color:#5cd47b;}
+/* Lead Story */
+.lead-grid{display:grid; grid-template-columns:2fr 1fr; gap:36px;}
+.lead-body p{margin-bottom:18px; font-size:15.5px; color:#2a3444;}
+.lead-body h3{font-size:19px; color:var(--primary); margin:26px 0 12px; font-weight:700;}
+.watch-box{background:var(--primary); color:#fff; border-radius:8px; padding:26px; align-self:start;}
+.watch-box h4{font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:#d9a17a; margin-bottom:16px;}
+.watch-box ul{list-style:none;}
+.watch-box li{padding:11px 0; border-bottom:1px solid rgba(255,255,255,0.14); font-size:14px; display:flex; gap:10px;}
+.watch-box li:last-child{border-bottom:none;}
+.watch-box li .dot{color:#d9a17a; font-weight:700;}
 
 /* Asset grid */
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-.acard{background:#fff;border:1px solid var(--border);padding:20px;border-radius:4px;text-align:center;}
-.acard .name{font-size:12px;letter-spacing:0.14em;color:#6b7885;text-transform:uppercase;}
-.acard .val{font-size:26px;font-weight:900;color:var(--primary);margin:8px 0 4px;}
-.acard .chg{font-size:14px;font-weight:700;}
-.up{color:#1f9d55;}.down{color:#c0392b;}
+.grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+.asset-card{background:#fff; border:1px solid var(--border); border-radius:6px; padding:22px; text-align:left;}
+.asset-card .name{font-size:13px; color:#6a7385; letter-spacing:0.05em; margin-bottom:6px;}
+.asset-card .val{font-size:27px; font-weight:900; color:var(--primary); letter-spacing:-0.01em;}
+.asset-card .chg{font-size:14px; font-weight:700; margin-top:6px;}
+.up{color:#1c8a4a;} .down{color:var(--accent);}
 
-/* Finance focus */
-.grid3b{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.fcard{background:#fff;border:1px solid var(--border);border-top:4px solid var(--accent);padding:24px;border-radius:4px;}
-.fcard .tk{font-size:12px;letter-spacing:0.14em;color:#6b7885;}
-.fcard h3{font-size:19px;font-weight:900;color:var(--primary);margin:4px 0 6px;}
-.fcard .mv{font-size:20px;font-weight:900;margin-bottom:10px;}
-.fcard p{font-size:13.5px;color:#41505f;}
+/* Finance Focus */
+.ff-card{background:#fff; border:1px solid var(--border); border-radius:6px; padding:24px;}
+.ff-card .ticker{font-size:12px; letter-spacing:0.1em; color:#6a7385; margin-bottom:4px;}
+.ff-card .co{font-size:18px; font-weight:700; color:var(--primary); margin-bottom:12px;}
+.ff-card .move{font-size:22px; font-weight:900; margin-bottom:12px;}
+.ff-card p{font-size:14px; color:#3a4454;}
 
 /* Short version */
-.short{background:var(--primary);color:#fff;}
-.short .section-title{color:#fff;}
+.short{background:var(--primary); color:#fff;}
 .short .section-label{color:#d9a17a;}
-.short ul{list-style:none;max-width:880px;}
-.short li{padding:14px 0 14px 40px;position:relative;border-bottom:1px solid rgba(255,255,255,0.14);font-size:15px;}
-.short li:before{content:counter(sv);counter-increment:sv;position:absolute;left:0;top:12px;width:26px;height:26px;background:var(--accent);border-radius:50%;text-align:center;line-height:26px;font-size:13px;font-weight:700;}
-.short ul{counter-reset:sv;}
+.short .section-title{color:#fff;}
+.short ol{list-style:none; counter-reset:s;}
+.short li{counter-increment:s; padding:16px 0 16px 52px; position:relative; border-bottom:1px solid rgba(255,255,255,0.13); font-size:15.5px; color:rgba(255,255,255,0.92);}
+.short li:last-child{border-bottom:none;}
+.short li::before{content:counter(s); position:absolute; left:0; top:14px; width:34px; height:34px; background:var(--accent); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:15px;}
 
 /* References */
 .refs ul{list-style:none;}
-.refs li{padding:8px 0;font-size:13.5px;border-bottom:1px dotted var(--border);}
+.refs li{padding:10px 0; border-bottom:1px solid var(--border); font-size:14px;}
+.refs li:last-child{border-bottom:none;}
 
 /* Footer */
-.site-footer{background:var(--primary);color:rgba(255,255,255,0.8);padding:38px 0;text-align:center;}
-.foot-brand{font-size:20px;font-weight:900;color:#fff;letter-spacing:0.04em;margin-bottom:12px;}
-.site-footer p{font-size:12.5px;}
-.site-footer a{color:#d9a17a;}
+footer{background:var(--primary); color:rgba(255,255,255,0.75); padding:44px 0; text-align:center;}
+.foot-brand{font-size:20px; font-weight:900; color:#fff; margin-bottom:14px; letter-spacing:0.03em;}
+.foot-brand .accent{color:#d9a17a;}
+footer p{font-size:13px; margin:8px 0; line-height:1.7;}
+.foot-badge{margin-top:18px;}
 
-@media(max-width:860px){
-  .grid3,.grid3b{grid-template-columns:1fr;}
-  .grid4{grid-template-columns:repeat(2,1fr);}
-  .lead-wrap{grid-template-columns:1fr;}
-  .brand{font-size:27px;}
-  .hero h1{font-size:23px;}
+@media(max-width:820px){
+  .grid-3,.grid-4,.lead-grid{grid-template-columns:1fr;}
+  .brand{font-size:26px;} .hero h1{font-size:28px;} .hero{height:auto; padding:48px 0;}
+  .header-top{flex-direction:column; align-items:flex-start;} .dateline{text-align:left;}
 }
 </style>
 </head>
 <body>
 
-<header class="site-header">
+<!-- 1. HEADER -->
+<header>
   <div class="header-top">
-    <div class="container header-flex">
-      <div>
-        <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
-        <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
-      </div>
-      <div class="dateline">
-        <span class="big">2026年8月9日(日)</span>
-        前営業日 8月7日(金) 終値ベース
-      </div>
+    <div>
+      <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+      <div class="brand-sub">U.S. Markets Morning Edition · Curated by AI Research</div>
+    </div>
+    <div class="dateline">
+      <span class="big">2026年8月9日(日)</span>
+      前営業日: 8月7日(金)終値ベース
     </div>
   </div>
   <div class="ticker-bar">
     <div class="ticker-inner">
-      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">+0.62%</span></span>
-      <span><span class="tick-label">NASDAQ</span><span class="tick-up">+1.30%</span></span>
-      <span><span class="tick-label">DOW</span><span class="tick-up">+0.28%</span></span>
-      <span><span class="tick-label">US 2Y</span>4.19%</span>
-      <span><span class="tick-label">US 10Y</span>4.64%</span>
-      <span><span class="tick-label">US 30Y</span>5.19%</span>
-      <span><span class="tick-label">JGB 10Y</span>2.78%</span>
-      <span><span class="tick-label">WTI</span><span class="tick-down">$77.18</span></span>
-      <span><span class="tick-label">VIX</span>15.15</span>
-      <span><span class="tick-label">TEAM</span><span class="tick-up">+35%</span></span>
-      <span><span class="tick-label">TTD</span><span class="tick-down">-18.1%</span></span>
-      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">+0.62%</span></span>
-      <span><span class="tick-label">NASDAQ</span><span class="tick-up">+1.30%</span></span>
-      <span><span class="tick-label">DOW</span><span class="tick-up">+0.28%</span></span>
-      <span><span class="tick-label">US 2Y</span>4.19%</span>
-      <span><span class="tick-label">US 10Y</span>4.64%</span>
-      <span><span class="tick-label">US 30Y</span>5.19%</span>
-      <span><span class="tick-label">JGB 10Y</span>2.78%</span>
-      <span><span class="tick-label">WTI</span><span class="tick-down">$77.18</span></span>
-      <span><span class="tick-label">VIX</span>15.15</span>
-      <span><span class="tick-label">TEAM</span><span class="tick-up">+35%</span></span>
-      <span><span class="tick-label">TTD</span><span class="tick-down">-18.1%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,757.64 ▲0.62%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">26,690.62 ▲1.30%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">54,036.93 ▲0.28%</span></span>
+      <span><span class="tick-label">US 2Y</span><span class="tick-down">4.19%</span></span>
+      <span><span class="tick-label">US 10Y</span><span class="tick-down">4.65%</span></span>
+      <span><span class="tick-label">US 30Y</span><span class="tick-down">5.19%</span></span>
+      <span><span class="tick-label">JGB 10Y</span><span class="tick-up">2.80%</span></span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$77.08</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">15.15</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-up">大幅高</span></span>
+      <span><span class="tick-label">TEAM</span><span class="tick-up">▲29%</span></span>
+      <!-- duplicate set -->
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-up">7,757.64 ▲0.62%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-up">26,690.62 ▲1.30%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">54,036.93 ▲0.28%</span></span>
+      <span><span class="tick-label">US 2Y</span><span class="tick-down">4.19%</span></span>
+      <span><span class="tick-label">US 10Y</span><span class="tick-down">4.65%</span></span>
+      <span><span class="tick-label">US 30Y</span><span class="tick-down">5.19%</span></span>
+      <span><span class="tick-label">JGB 10Y</span><span class="tick-up">2.80%</span></span>
+      <span><span class="tick-label">WTI</span><span class="tick-down">$77.08</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">15.15</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-up">大幅高</span></span>
+      <span><span class="tick-label">TEAM</span><span class="tick-up">▲29%</span></span>
     </div>
   </div>
 </header>
 
+<!-- 2. HERO -->
 <div class="hero">
-  <div class="hero-inner container">
-    <span class="hero-tag">Lead Story</span>
-    <h1>7月雇用まさかの減少 — 利上げ観測後退でS&amp;P500は最高値更新、ハイテク再燃</h1>
-    <p>7月の非農業部門雇用者数が予想外の減少。FRBの利上げ観測が後退し金利は低下、株式はリスクオンで最高値を更新した。ソフトウェア決算が相次ぎ好感される。</p>
+  <div class="hero-content">
+    <span class="tag">Lead Story</span>
+    <h1>弱い7月雇用統計でも株高継続——利下げ観測が支え、S&amp;P500は最高値更新</h1>
+    <div class="hero-meta">7月の非農業部門雇用は市場予想に反して2.3万人減。利上げ観測が後退し、テック株主導でハイテクが上昇した。</div>
   </div>
 </div>
 
-<canvas id="wave1" class="wave"></canvas>
+<!-- 3. WAVE 1 -->
+<div class="wave"><canvas id="wave1"></canvas></div>
 
-<!-- Quick Reading -->
+<!-- 4. QUICK READING -->
 <section>
-  <div class="container">
+  <div class="wrap">
     <div class="section-label">Quick Reading</div>
-    <div class="section-title">今日の3大ポイント</div>
-    <div class="grid3">
-      <div class="qcard">
-        <div class="num">01</div>
-        <h3>雇用ショックで利上げ観測後退</h3>
-        <p>7月雇用は2.3万人減と予想外のマイナス。5・6月分も計10.3万人下方修正。9月利上げ確率は約42%へ低下し、金利低下・株高の流れに。</p>
+    <div class="section-title">3分でわかる、今朝の要点</div>
+    <div class="grid-3">
+      <div class="qr-card">
+        <h3><span class="num">1</span>予想外の雇用減</h3>
+        <p>7月の非農業部門雇用者数は2.3万人の減少。市場予想の+8.3万人を大きく下回り、過去2カ月分も合計10万人超が下方修正された。失業率は4.1%で横ばい。</p>
       </div>
-      <div class="qcard">
-        <div class="num">02</div>
-        <h3>S&amp;P500が最高値更新</h3>
-        <p>S&amp;P500は+0.62%で7,757.64の最高値。ナスダックは+1.3%、ダウも5.4万ドル台を維持。VIXは15.15へ低下しリスク選好が鮮明。</p>
+      <div class="qr-card">
+        <h3><span class="num">2</span>利上げ観測が後退</h3>
+        <p>労働市場の弱さを受け、FRBが9月会合で金利を据え置くとの見方が強まった。米国債利回りは低下し、金利敏感なグロース株・ハイテクに迴い風となった。</p>
       </div>
-      <div class="qcard">
-        <div class="num">03</div>
-        <h3>ソフトウェア決算が急騰</h3>
-        <p>アトラシアンが+35%、トゥイリオが+25%と好決算で急伸。AIが収益に寄与との見方が広がり、ハイテク再評価の動きが強まった。</p>
+      <div class="qr-card">
+        <h3><span class="num">3</span>テック主導で最高値</h3>
+        <p>S&amp;P500は0.62%高の7,757.64で最高値を更新。NVIDIAは14カ月ぶりの大幅な週間時価総額増加を記録し、半導体が相場をけん引した。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Lead Story -->
-<section style="background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="container">
-    <div class="section-label">Lead Story</div>
-    <div class="section-title">雇用の急減速が利上げ観測を冷やし、株式は最高値圏へ</div>
-    <div class="lead-wrap">
+<!-- 5. LEAD STORY -->
+<section style="padding-top:12px;">
+  <div class="wrap">
+    <div class="section-label">Feature</div>
+    <div class="section-title">弱含む雇用が、逆に株価を押し上げる構図</div>
+    <div class="lead-grid">
       <div class="lead-body">
-        <p class="drop">8月7日の米国株式市場は主要指数がそろって上昇し、S&amp;P500は最高値を更新した。同指数は7,757.64(+0.62%)、ナスダック総合は26,690.62(+1.3%)、ダウ工業株30種は54,036.93(+151.83ドル、+0.28%)で取引を終えた。</p>
-        <p>相場の起点は同日発表の7月雇用統計。非農業部門雇用者数が2.3万人の予想外の減少となり、さらに5月・6月分が合計10.3万人下方修正された。労働市場の急減速を受けて、市場はFRBの追加利上げ観測を大きく後退させた。9月会合での利上げ確率は約42%まで低下し、金利先安観が株式を押し上げた。</p>
-        <p>債券市場では利回りが全年限で低下。2年債は4.19%、10年債は4.64%、30年債は5.19%へと水準を切り下げた。金利低下はグロース株に追い風となり、ハイテク・ソフトウェアが相場をけん引した。</p>
-        <p>個別ではソフトウェア勢の決算が相次いで好感され、アトラシアンが+35%、トゥイリオが+25%と急伸。マイクロチップ・テクノロジーも好決算で+11.7%となった。一方、広告テクノロジーのザ・トレード・デスクは決算が失望を誘い-18.1%と急落した。原油(WTI)は77ドル台へ軟化し、インフレ懸念の後退も相場を支えた。</p>
+        <p>8月7日(金)の米国株式市場は主要3指数がそろって上昇した。S&amp;P500は前日比0.62%高の7,757.64と最高値を更新。ナスダック総合は1.3%高の26,690.62、ダウ工業株30種は151.83ドル(0.28%)高の54,036.93で取引を終えた。</p>
+        <p>相場を動かしたのは、朝方発表された7月の雇用統計だった。非農業部門雇用者数は前月比2.3万人の減少と、市場予想の+8.3万人に反してマイナスに転じた。加えて過去2カ月分に合計10万人超の下方修正が加わり、労働市場の減速が一段と鮮明になった。失業率は4.1%で横ばいだった。</p>
+        <h3>「悪いニュースは良いニュース」</h3>
+        <p>労働市場の弱さは、FRBが追加利上げに動きにくくなることを意味する。市場は9月会合での金利据え置き観測を強め、米国債利回りは全般に低下。金利低下の恩恵を受けやすいテクノロジー株を中心に、グロース株買いが加速した。</p>
+        <p>個別では、決算が明暗を分けた。Atlassianが売上・利益ともに市場予想を上回り一時29%超高。一方、The Trade Deskは冴えない第2四半期決算を受けて18.1%安と急落した。NVIDIAは14カ月ぶりの大きな週間時価総額増加を記録し、AI・半導体への資金集中が続いていることを示した。</p>
+        <p>原油(WTI)は1バレル77.08ドル前後で小幅安。ホルムズ海峡を巡るイランとオマーンの協議進展への期待と地政学リスクが綱引きとなり、方向感の乏しい展開だった。</p>
       </div>
-      <aside class="sidebar">
+      <div class="watch-box">
         <h4>Today's Watch</h4>
         <ul>
-          <li>7月雇用 <b>-2.3万人</b> — 予想外の減少、9月利上げ観測後退</li>
-          <li>S&amp;P500 <b>最高値</b> — 7,757.64、リスクオン継続</li>
-          <li>TEAM <b>+35%</b> — ソフトウェア決算が急騰</li>
-          <li>米10年債 <b>4.64%</b> — 利回り低下、グロース追い風</li>
-          <li>VIX <b>15.15</b> — 低ボラティリティ環境</li>
+          <li><span class="dot">◆</span>9月FOMCに向けた金利据え置き観測の織り込み度</li>
+          <li><span class="dot">◆</span>雇用下方修正が示す労働市場の基調的な弱さ</li>
+          <li><span class="dot">◆</span>米10年債4.65%——さらなる利回り低下余地</li>
+          <li><span class="dot">◆</span>半導体・AI関連への資金集中の持続性</li>
+          <li><span class="dot">◆</span>ホルムズ海峡情勢と原油の地政学プレミアム</li>
         </ul>
-      </aside>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Asset grid -->
-<section>
-  <div class="container">
-    <div class="section-label">Markets Snapshot</div>
-    <div class="section-title">主要アセット終値</div>
-    <div class="grid4">
-      <div class="acard">
+<!-- 6. ASSET GRID -->
+<section style="padding-top:12px;">
+  <div class="wrap">
+    <div class="section-label">Market Snapshot</div>
+    <div class="section-title">主要アセット(8月7日終値)</div>
+    <div class="grid-4">
+      <div class="asset-card">
         <div class="name">S&amp;P 500</div>
         <div class="val">7,757.64</div>
-        <div class="chg up">+0.62%</div>
+        <div class="chg up">▲0.62% (最高値)</div>
       </div>
-      <div class="acard">
-        <div class="name">NASDAQ</div>
+      <div class="asset-card">
+        <div class="name">NASDAQ 総合</div>
         <div class="val">26,690.62</div>
-        <div class="chg up">+1.30%</div>
+        <div class="chg up">▲1.30%</div>
       </div>
-      <div class="acard">
-        <div class="name">WTI原油</div>
-        <div class="val">$77.18</div>
-        <div class="chg down">-0.1%</div>
+      <div class="asset-card">
+        <div class="name">WTI 原油</div>
+        <div class="val">$77.08</div>
+        <div class="chg down">▼0.27%</div>
       </div>
-      <div class="acard">
-        <div class="name">米10年債</div>
-        <div class="val">4.64%</div>
-        <div class="chg up">-3bp</div>
+      <div class="asset-card">
+        <div class="name">米国債 10年</div>
+        <div class="val">4.65%</div>
+        <div class="chg down">利回り低下</div>
       </div>
     </div>
   </div>
 </section>
 
-<canvas id="wave2" class="wave"></canvas>
+<!-- 7. WAVE 2 -->
+<div class="wave"><canvas id="wave2"></canvas></div>
 
-<!-- Finance Focus -->
-<section style="background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-  <div class="container">
+<!-- 8. FINANCE FOCUS -->
+<section>
+  <div class="wrap">
     <div class="section-label">Finance Focus</div>
     <div class="section-title">注目個別株</div>
-    <div class="grid3b">
-      <div class="fcard">
-        <div class="tk">NASDAQ : TEAM</div>
-        <h3>アトラシアン</h3>
-        <div class="mv up">+35%</div>
-        <p>四半期決算とガイダンスが市場予想を大きく上回り急騰。AIが同社事業の逆風ではなく追い風になっているとの評価が広がった。</p>
+    <div class="grid-3">
+      <div class="ff-card">
+        <div class="ticker">NVDA · NASDAQ</div>
+        <div class="co">NVIDIA</div>
+        <div class="move up">週間で大幅高</div>
+        <p>14カ月ぶりとなる週間ドルベースでの時価総額増加を記録。押し目では旺盛な買いが入り、AI・半導体への資金集中が続いていることを裏付けた。世界最大の時価総額を維持。</p>
       </div>
-      <div class="fcard">
-        <div class="tk">NYSE : TWLO</div>
-        <h3>トゥイリオ</h3>
-        <div class="mv up">+25%</div>
-        <p>堅調な決算を背景に大幅高。クラウド通信基盤へのAI需要取り込みが好感され、ソフトウェア再評価の象徴的な動きとなった。</p>
+      <div class="ff-card">
+        <div class="ticker">TEAM · NASDAQ</div>
+        <div class="co">Atlassian</div>
+        <div class="move up">▲29%超</div>
+        <p>第4四半期決算で売上・利益ともにFactSetコンセンサスを上回り、時間外・寄り付きで急騰。エンタープライズ向けソフトウェア需要の底堅さを示した。</p>
       </div>
-      <div class="fcard">
-        <div class="tk">NASDAQ : TTD</div>
-        <h3>ザ・トレード・デスク</h3>
-        <div class="mv down">-18.1%</div>
-        <p>広告テクノロジー大手。決算が市場の期待に届かず急落。ハイテク全般が買われる中でも、決算の明暗が鮮明に分かれた。</p>
+      <div class="ff-card">
+        <div class="ticker">TTD · NASDAQ</div>
+        <div class="co">The Trade Desk</div>
+        <div class="move down">▼18.1%</div>
+        <p>広告テクノロジー大手。冴えない第2四半期決算を受けて急落。デジタル広告市場の減速懸念が意識され、テック内でも明暗が分かれた。</p>
       </div>
     </div>
   </div>
 </section>
 
-<canvas id="wave3" class="wave"></canvas>
+<!-- 9. WAVE 3 -->
+<div class="wave"><canvas id="wave3"></canvas></div>
 
-<!-- Short Version -->
+<!-- 10. SHORT VERSION -->
 <section class="short">
-  <div class="container">
+  <div class="wrap">
     <div class="section-label">Short Version</div>
-    <div class="section-title">3分でわかる今日の米国市場</div>
-    <ul>
-      <li>7月雇用が2.3万人の予想外減少、5・6月分も計10.3万人下方修正。労働市場の急減速が鮮明に。</li>
-      <li>FRBの利上げ観測が後退（9月利上げ確率は約42%へ低下）。金利は全年限で低下し株式を押し上げ。</li>
-      <li>S&amp;P500は+0.62%(7,757.64)で最高値更新。ナスダック +1.3%(26,690.62)、ダウ +0.28%(54,036.93)。</li>
-      <li>ソフトウェア決算が急騰。アトラシアン+35%、トゥイリオ+25%、マイクロチップ+11.7%。トレード・デスクは-18.1%。</li>
-      <li>米10年債4.64%へ低下、VIXは15.15と低水準。WTIは77ドル台へ軟化しリスクオン継続。</li>
-    </ul>
+    <div class="section-title">3行より短く、5つの箇条書きで</div>
+    <ol>
+      <li>7月雇用統計は2.3万人減と予想外のマイナス。過去分も10万人超の下方修正で労働市場の減速が鮮明に。</li>
+      <li>利上げ観測が後退し9月FOMCの据え置き観測が強まる。米国債利回りは全般に低下(10年4.65%)。</li>
+      <li>金利低下を追い風にテック株が上昇。S&amp;P500は7,757.64で最高値、ナスダックは1.3%高。</li>
+      <li>決算は明暗。Atlassianが29%超高、The Trade Deskは18.1%安。NVIDIAは週間時価総額が大幅増。</li>
+      <li>WTI原油は77ドル前後で小動き。ホルムズ海峡情勢が引き続き相場の下支え要因。</li>
+    </ol>
   </div>
 </section>
 
-<canvas id="wave4" class="wave"></canvas>
+<!-- 11. WAVE 4 -->
+<div class="wave"><canvas id="wave4"></canvas></div>
 
-<!-- References -->
+<!-- 12. REFERENCES -->
 <section class="refs">
-  <div class="container">
+  <div class="wrap">
     <div class="section-label">References</div>
     <div class="section-title">参照ソース</div>
     <ul>
       <li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-7-2026" target="_blank" rel="noopener">TheStreet — Stock Market Today (Aug. 7, 2026)</a></li>
-      <li><a href="https://www.cnbc.com/2026/08/07/treasury-yields-steady-ahead-of-key-nonfarm-payrolls-jobless-data.html" target="_blank" rel="noopener">CNBC — Treasury Yields Drop After Surprise Jobs Loss</a></li>
-      <li><a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-aug-7-213800176.html" target="_blank" rel="noopener">Yahoo Finance — Markets Rally on Jobs Shock, Atlassian Surges 35%</a></li>
-      <li><a href="https://www.bloomberg.com/news/articles/2026-08-07/big-tech-stocks-storm-back-as-ai-fears-fade-and-euphoria-resumes" target="_blank" rel="noopener">Bloomberg — Big Tech Stocks Storm Back as AI Fears Fade</a></li>
+      <li><a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-august-7-nasdaq-dow-sp-500-july-jobs-report-surprises-100009572.html" target="_blank" rel="noopener">Yahoo Finance — Stock market today: July jobs report surprises</a></li>
+      <li><a href="https://www.forbes.com/advisor/investing/treasury-rates/" target="_blank" rel="noopener">Forbes Advisor — Treasury Rates Today: August 7, 2026</a></li>
       <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">Trading Economics — Japan 10Y Government Bond Yield</a></li>
-      <li><a href="https://www.forbes.com/advisor/investing/oil-prices-today/" target="_blank" rel="noopener">Forbes Advisor — Crude Oil Price Today</a></li>
+      <li><a href="https://www.forbes.com/advisor/investing/oil-prices-today/" target="_blank" rel="noopener">Forbes Advisor — Crude Oil Price Today: August 7, 2026</a></li>
     </ul>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="foot-brand">米国市場 モーニングレポート</div>
+<!-- 13. FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">米国市場 <span class="accent">モーニングレポート</span></div>
     <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
-    <p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
-    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+    <p>Powered by Cowork · <a href="https://nakaz0415.github.io/nakaz0417/archive.html" target="_blank" rel="noopener" style="color:#d9a17a;">Past Reports</a></p>
+    <div class="foot-badge">
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="Total Visitors">
+    </div>
   </div>
 </footer>
 
@@ -335,28 +339,21 @@ section{padding:46px 0;}
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let t = 0, rafId = null, active = false;
-    function resize() {
-      canvas.width = canvas.offsetWidth || window.innerWidth;
-      canvas.height = canvas.offsetHeight || 80;
-    }
+    function resize() { canvas.width = canvas.offsetWidth || window.innerWidth; canvas.height = canvas.offsetHeight || 80; }
     function draw() {
       if (!active) return;
       resize();
       const w = canvas.width, h = canvas.height;
       ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = cfg.color1;
-      ctx.fillRect(0, 0, w, h / 2);
-      ctx.beginPath();
-      ctx.moveTo(0, h / 2);
+      ctx.fillStyle = cfg.color1; ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath(); ctx.moveTo(0, h / 2);
       for (let x = 0; x <= w; x++) {
-        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp
-                         + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
         ctx.lineTo(x, y);
       }
       ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
       ctx.fillStyle = cfg.color2; ctx.fill();
-      t += cfg.speed;
-      rafId = requestAnimationFrame(draw);
+      t += cfg.speed; rafId = requestAnimationFrame(draw);
     }
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
