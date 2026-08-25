@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場 モーニングレポート | 2026.08.26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f3ea; --fg:#1a2230; --primary:#21344f; --accent:#b5472a; --border:#d6cfc4;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;line-height:1.75;font-weight:400;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+a{color:var(--accent);}
+
+/* Header */
+header{background:var(--primary);color:#fff;padding-top:34px;}
+.header-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px;padding-bottom:26px;}
+.brand{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:34px;letter-spacing:0.04em;line-height:1.1;}
+.brand .accent{color:#d9a17a;font-weight:700;}
+.brand-sub{font-size:11px;letter-spacing:0.35em;margin-top:8px;color:rgba(255,255,255,0.65);text-transform:uppercase;}
+.dateline{text-align:right;font-size:12px;letter-spacing:0.18em;color:rgba(255,255,255,0.85);}
+.dateline .big{font-family:'Noto Sans JP',sans-serif;font-size:24px;font-weight:700;display:block;letter-spacing:0.04em;margin-bottom:4px;}
+
+/* Ticker */
+.ticker-bar{overflow:hidden;white-space:nowrap;background:rgba(0,0,0,0.25);padding:9px 0;}
+.ticker-inner{display:inline-block;animation:ticker 32s linear infinite;}
+.ticker-inner span{display:inline-block;margin:0 38px;font-size:12px;letter-spacing:0.07em;color:rgba(255,255,255,0.88);}
+.ticker-inner span .tick-label{color:rgba(255,255,255,0.5);margin-right:6px;}
+.tick-up{color:#5cd47b;font-weight:700;}
+.tick-down{color:#f27a6c;font-weight:700;}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* Hero */
+.hero{height:340px;background:linear-gradient(135deg,#21344f 0%,#2f4a6e 55%,#3a5578 100%);color:#fff;display:flex;align-items:center;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 30%,rgba(217,161,122,0.28),transparent 55%);}
+.hero .wrap{position:relative;z-index:2;}
+.hero .eyebrow{font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:#d9a17a;margin-bottom:16px;}
+.hero h1{font-size:38px;font-weight:900;line-height:1.35;letter-spacing:0.02em;max-width:820px;}
+.hero p{margin-top:18px;font-size:15px;color:rgba(255,255,255,0.82);max-width:640px;}
+
+/* Wave */
+.wave{display:block;width:100%;height:80px;}
+canvas.wave{width:100%;height:80px;}
+
+/* Sections */
+section{padding:56px 0;}
+.section-title{font-size:13px;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px;}
+.section-head{font-size:26px;font-weight:900;color:var(--primary);margin-bottom:28px;letter-spacing:0.02em;}
+
+/* Quick reading */
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.quick-card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:24px;}
+.quick-card .num{font-size:12px;letter-spacing:0.2em;color:var(--accent);font-weight:700;}
+.quick-card h3{font-size:17px;font-weight:700;color:var(--primary);margin:10px 0 8px;}
+.quick-card p{font-size:14px;color:#41505f;}
+
+/* Lead story */
+.lead-grid{display:grid;grid-template-columns:2fr 1fr;gap:36px;}
+.lead-body h2{font-size:24px;font-weight:900;color:var(--primary);margin-bottom:18px;line-height:1.45;}
+.lead-body p{margin-bottom:16px;font-size:15px;color:#38434f;}
+.watch{background:var(--primary);color:#fff;border-radius:6px;padding:26px;height:fit-content;}
+.watch h4{font-size:12px;letter-spacing:0.24em;text-transform:uppercase;color:#d9a17a;margin-bottom:18px;}
+.watch ul{list-style:none;}
+.watch li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.15);font-size:14px;color:rgba(255,255,255,0.9);}
+.watch li:last-child{border-bottom:none;}
+
+/* Asset grid */
+.asset-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.asset-card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:22px;}
+.asset-card .label{font-size:12px;letter-spacing:0.12em;color:#6b7684;text-transform:uppercase;}
+.asset-card .value{font-size:26px;font-weight:900;color:var(--primary);margin:8px 0 4px;}
+.asset-card .chg{font-size:14px;font-weight:700;}
+.up{color:#1f9e4d;}
+.down{color:var(--accent);}
+
+/* Finance focus */
+.finance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.stock-card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:24px;}
+.stock-card .ticker{font-size:12px;letter-spacing:0.16em;color:var(--accent);font-weight:700;}
+.stock-card h3{font-size:19px;font-weight:900;color:var(--primary);margin:6px 0 4px;}
+.stock-card .price{font-size:15px;font-weight:700;margin-bottom:12px;}
+.stock-card p{font-size:14px;color:#41505f;}
+
+/* Short version */
+.short{background:var(--primary);color:#fff;}
+.short .section-title{color:#d9a17a;}
+.short .section-head{color:#fff;}
+.short ol{list-style:none;counter-reset:s;}
+.short li{counter-increment:s;padding:16px 0 16px 52px;position:relative;border-bottom:1px solid rgba(255,255,255,0.14);font-size:15px;color:rgba(255,255,255,0.92);}
+.short li:last-child{border-bottom:none;}
+.short li::before{content:counter(s);position:absolute;left:0;top:14px;width:34px;height:34px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;}
+
+/* References */
+.refs ul{list-style:none;}
+.refs li{padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;}
+.refs a{text-decoration:none;}
+.refs a:hover{text-decoration:underline;}
+
+/* Footer */
+footer{background:#16232f;color:rgba(255,255,255,0.7);padding:44px 0;text-align:center;}
+.foot-brand{font-size:20px;font-weight:900;color:#fff;letter-spacing:0.04em;margin-bottom:14px;}
+footer p{font-size:13px;margin-bottom:8px;}
+footer a{color:#d9a17a;}
+.badge{margin-top:16px;}
+
+@media(max-width:820px){
+  .quick-grid,.asset-grid,.finance-grid{grid-template-columns:1fr;}
+  .lead-grid{grid-template-columns:1fr;}
+  .hero h1{font-size:28px;}
+  .brand{font-size:28px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-top">
+    <div>
+      <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+      <div class="brand-sub">U.S. Markets Morning Edition · Curated by AI Research</div>
+    </div>
+    <div class="dateline">
+      <span class="big">2026年8月26日(水)</span>
+      前営業日：2026年8月25日(火) 終値ベース
+    </div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span>7,677.25 <span class="tick-up">+0.32%</span></span>
+      <span><span class="tick-label">NASDAQ</span>26,151.30 <span class="tick-up">+0.57%</span></span>
+      <span><span class="tick-label">DOW</span>53,577.40 <span class="tick-up">+0.30%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.24% <span class="tick-down">-</span></span>
+      <span><span class="tick-label">US 10Y</span>4.66% <span class="tick-down">▼</span></span>
+      <span><span class="tick-label">US 30Y</span>5.27% <span class="tick-up">▲</span></span>
+      <span><span class="tick-label">JGB 10Y</span>2.89% <span class="tick-up">+0.01</span></span>
+      <span><span class="tick-label">WTI</span>$81.15 <span class="tick-down">-4.54%</span></span>
+      <span><span class="tick-label">VIX</span>15.85 <span class="tick-down">+4.76%</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-up">+2.0%</span></span>
+      <span><span class="tick-label">MRNA</span><span class="tick-up">+12%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span>7,677.25 <span class="tick-up">+0.32%</span></span>
+      <span><span class="tick-label">NASDAQ</span>26,151.30 <span class="tick-up">+0.57%</span></span>
+      <span><span class="tick-label">DOW</span>53,577.40 <span class="tick-up">+0.30%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.24% <span class="tick-down">-</span></span>
+      <span><span class="tick-label">US 10Y</span>4.66% <span class="tick-down">▼</span></span>
+      <span><span class="tick-label">US 30Y</span>5.27% <span class="tick-up">▲</span></span>
+      <span><span class="tick-label">JGB 10Y</span>2.89% <span class="tick-up">+0.01</span></span>
+      <span><span class="tick-label">WTI</span>$81.15 <span class="tick-down">-4.54%</span></span>
+      <span><span class="tick-label">VIX</span>15.85 <span class="tick-down">+4.76%</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-up">+2.0%</span></span>
+      <span><span class="tick-label">MRNA</span><span class="tick-up">+12%</span></span>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Today's Headline</div>
+    <h1>イラン制裁「Dデー」の警戒後退、テック主導で3指数そろって続伸</h1>
+    <p>ベッセント財務長官のイラン経済制裁が想定より穏当と受け止められ、原油は3%超下落。半導体株の反発でNASDAQが上昇を牽引し、市場の焦点は本日引け後のエヌビディア決算とジャクソンホールへ移る。</p>
+  </div>
+</div>
+
+<canvas id="wave1" class="wave"></canvas>
+
+<section>
+  <div class="wrap">
+    <div class="section-title">Quick Reading</div>
+    <div class="section-head">3分でわかる今朝のポイント</div>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="num">01</div>
+        <h3>3指数そろって続伸</h3>
+        <p>S&amp;P500は7,677.25(+0.32%)、ダウは53,577.40(+0.30%)、NASDAQは26,151.30(+0.57%)。半導体株の反発が相場を押し上げた。</p>
+      </div>
+      <div class="quick-card">
+        <div class="num">02</div>
+        <h3>原油急落・利回り低下</h3>
+        <p>イラン情勢の緊張緩和観測でWTIは81ドル台へ3%超下落。米10年債利回りは4.66%に低下し、株式の追い風となった。</p>
+      </div>
+      <div class="quick-card">
+        <div class="num">03</div>
+        <h3>焦点はエヌビディア決算</h3>
+        <p>本日引け後にエヌビディアが決算発表。半導体セクター全体の方向感を左右する最大の注目イベント。金曜はジャクソンホール講演。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#efe9dc;">
+  <div class="wrap">
+    <div class="section-title">Lead Story</div>
+    <div class="lead-grid">
+      <div class="lead-body">
+        <h2>「経済的圧力」への転換で戦争懸念が後退、リスク選好が回復</h2>
+        <p>25日の米国株式市場は主要3指数がそろって続伸した。ベッセント財務長官が表明したイランへの制裁が、当初警戒された軍事衝突ではなく「協調的な経済的孤立」を軸とする内容だったことで、ペルシャ湾での供給途絶リスクへの過度な警戒が和らいだ。</p>
+        <p>これを受けて原油価格は大幅に反落。WTIは前日比3%超安の81ドル台まで下落し、前日の2.4%安に続く軟調地合いとなった。エネルギー価格の低下はインフレ懸念の後退を通じて債券にも買いを呼び込み、米10年債利回りは4.66%へ低下した。</p>
+        <p>セクター別では、前日まで7営業日続落していたエヌビディアが約2%反発し、AMD(+4.9%)やマイクロン(+2.5%)など半導体株が総じて上昇。NASDAQを押し上げた。公益・金融も堅調で、出遅れた資本財・エネルギーを上回った。個別では、がんワクチンの好結果を材料にモデルナが12%超急騰した一方、ディックス・スポーティング・グッズは決算失望で約30%と過去最大の下落を記録した。</p>
+        <p>市場の関心は本日引け後に予定されるエヌビディアの四半期決算と、金曜にカンザスシティ連銀ジャクソンホール会合で予定されるFRB議長講演へと移っている。</p>
+      </div>
+      <div class="watch">
+        <h4>Today's Watch</h4>
+        <ul>
+          <li>エヌビディア決算(本日引け後)— 半導体・AI関連の方向感を左右</li>
+          <li>ジャクソンホール(金)— FRB議長講演で金融政策の手掛かり</li>
+          <li>イラン制裁の続報 — 原油とリスク選好への影響</li>
+          <li>米インフレ指標 — 利回りとFRB利下げ観測</li>
+          <li>日銀・JGB動向 — 10年債2.89%と円相場</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave2" class="wave"></canvas>
+
+<section>
+  <div class="wrap">
+    <div class="section-title">Market Snapshot</div>
+    <div class="section-head">主要アセット終値(8月25日)</div>
+    <div class="asset-grid">
+      <div class="asset-card">
+        <div class="label">S&amp;P 500</div>
+        <div class="value">7,677.25</div>
+        <div class="chg up">+24.39 (+0.32%)</div>
+      </div>
+      <div class="asset-card">
+        <div class="label">NASDAQ 総合</div>
+        <div class="value">26,151.30</div>
+        <div class="chg up">+0.57%</div>
+      </div>
+      <div class="asset-card">
+        <div class="label">WTI 原油</div>
+        <div class="value">$81.15</div>
+        <div class="chg down">-4.54%</div>
+      </div>
+      <div class="asset-card">
+        <div class="label">米10年債利回り</div>
+        <div class="value">4.66%</div>
+        <div class="chg up">低下(価格上昇)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave2b" class="wave" style="display:none;"></canvas>
+
+<section class="short" style="padding:0;">
+  <canvas id="wave3" class="wave"></canvas>
+</section>
+
+<section style="background:#efe9dc;">
+  <div class="wrap">
+    <div class="section-title">Finance Focus</div>
+    <div class="section-head">注目個別株</div>
+    <div class="finance-grid">
+      <div class="stock-card">
+        <div class="ticker">NVDA</div>
+        <h3>エヌビディア</h3>
+        <div class="price up">約 +2.0%</div>
+        <p>7営業日続落から反発。本日引け後の決算が最大の注目材料で、半導体セクター全体の地合いを左右する。</p>
+      </div>
+      <div class="stock-card">
+        <div class="ticker">AMD</div>
+        <h3>アドバンスト・マイクロ・デバイセズ</h3>
+        <div class="price up">+4.9%</div>
+        <p>半導体株反発の中心。マイクロン(+2.5%)とともにNASDAQ上昇を牽引した。</p>
+      </div>
+      <div class="stock-card">
+        <div class="ticker">MRNA</div>
+        <h3>モデルナ</h3>
+        <div class="price up">+12%超</div>
+        <p>個別化がんワクチンの良好な治験結果を材料に急騰。ヘルスケアセクターで際立つ動きとなった。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave4" class="wave"></canvas>
+
+<section class="short">
+  <div class="wrap">
+    <div class="section-title">Short Version</div>
+    <div class="section-head">要点だけ5行で</div>
+    <ol>
+      <li>米国株はイラン制裁の警戒後退で3指数そろって続伸(S&amp;P500 +0.32%、ダウ +0.30%、NASDAQ +0.57%)。</li>
+      <li>「経済的圧力」への転換で戦争懸念が和らぎ、WTI原油は81ドル台へ3%超下落。</li>
+      <li>米10年債利回りは4.66%へ低下、2年4.24%・30年5.27%。JGB10年は2.89%。</li>
+      <li>半導体株が反発しNASDAQを牽引(NVDA +2%、AMD +4.9%、MRNA +12%超)。</li>
+      <li>焦点は本日引け後のエヌビディア決算と金曜のジャクソンホールFRB講演。</li>
+    </ol>
+  </div>
+</section>
+
+<section class="refs">
+  <div class="wrap">
+    <div class="section-title">References</div>
+    <div class="section-head">参照ソース</div>
+    <ul>
+      <li><a href="https://www.cnbc.com/2026/08/24/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC — Stock market news for Aug. 25, 2026</a></li>
+      <li><a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-25-132700491.html" target="_blank" rel="noopener">Yahoo Finance — Stock Market News for Aug 25, 2026</a></li>
+      <li><a href="https://www.fool.com/coverage/stock-market-today/2026/08/25/stock-market-midday-aug-25-tech-stocks-rebound-and-dick-s-sporting-goods-plummets-27/" target="_blank" rel="noopener">The Motley Fool — Stock Market Midday, Aug. 25</a></li>
+      <li><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank" rel="noopener">Trading Economics — US Treasury Yields</a></li>
+      <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">Trading Economics — Japan 10Y Government Bond Yield</a></li>
+      <li><a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener">Trading Economics — Crude Oil (WTI)</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">米国市場 モーニングレポート</div>
+    <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
+    <p>Powered by Cowork · <a href="https://nakaz0415.github.io/nakaz0417/archive.html" target="_blank" rel="noopener">Past Reports</a></p>
+    <div class="badge"><img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitors"></div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() { canvas.width = canvas.offsetWidth || window.innerWidth; canvas.height = canvas.offsetHeight || 80; }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1; ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath(); ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed; rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+
+</body>
+</html>
