@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場 モーニングレポート | 2026.09.26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f3ea;--fg:#1a2230;--primary:#21344f;--accent:#b5472a;--border:#d6cfc4;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;line-height:1.8}
+a{color:var(--accent)}
+header{background:var(--primary);color:#fff}
+.head-inner{max-width:1180px;margin:0 auto;padding:28px 32px 22px;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.brand{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:34px;letter-spacing:0.04em;line-height:1.1}
+.brand .accent{color:#d9a17a;font-weight:700}
+.brand-sub{font-size:11px;letter-spacing:0.35em;margin-top:8px;color:rgba(255,255,255,0.65);text-transform:uppercase}
+.dateline{text-align:right;font-size:12px;letter-spacing:0.18em;color:rgba(255,255,255,0.85)}
+.dateline .big{font-family:'Noto Sans JP',sans-serif;font-size:24px;font-weight:700;display:block;letter-spacing:0.04em;margin-bottom:4px}
+.ticker-bar{overflow:hidden;white-space:nowrap;background:rgba(0,0,0,0.25);padding:9px 0}
+.ticker-inner{display:inline-block;animation:ticker 32s linear infinite}
+.ticker-inner span{display:inline-block;margin:0 38px;font-size:12px;letter-spacing:0.07em;color:rgba(255,255,255,0.88)}
+.ticker-inner span .tick-label{color:rgba(255,255,255,0.5);margin-right:6px}
+.tick-up{color:#5cd47b;font-weight:700}
+.tick-down{color:#f27a6c;font-weight:700}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero{height:340px;background:linear-gradient(135deg,#21344f 0%,#2e4a6e 55%,#b5472a 130%);color:#fff;display:flex;align-items:center}
+.hero-inner{max-width:1180px;margin:0 auto;padding:0 32px;width:100%}
+.kicker{font-size:12px;letter-spacing:0.3em;color:#d9a17a;font-weight:700}
+.hero h1{font-size:38px;font-weight:900;line-height:1.35;margin:12px 0 14px;max-width:880px}
+.hero p{font-size:15px;color:rgba(255,255,255,0.85);max-width:760px}
+canvas.wave{display:block;width:100%;height:80px}
+section{max-width:1180px;margin:0 auto;padding:48px 32px}
+.sec-title{font-size:13px;letter-spacing:0.3em;color:var(--accent);font-weight:700;margin-bottom:6px}
+.sec-h{font-size:26px;font-weight:900;color:var(--primary);margin-bottom:24px;border-bottom:2px solid var(--border);padding-bottom:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:22px}
+.card h3{font-size:17px;color:var(--primary);margin-bottom:8px;font-weight:700}
+.card .tag{font-size:11px;letter-spacing:0.2em;color:var(--accent);font-weight:700}
+.card p{font-size:14px}
+.lead{display:grid;grid-template-columns:2fr 1fr;gap:32px}
+.lead-body p{margin-bottom:16px;font-size:15.5px}
+.lead-body h2{font-size:24px;color:var(--primary);margin-bottom:14px;line-height:1.5}
+.watch{background:var(--primary);color:#fff;border-radius:6px;padding:24px}
+.watch h4{color:#d9a17a;letter-spacing:0.2em;font-size:13px;margin-bottom:12px}
+.watch li{margin:0 0 12px 18px;font-size:14px}
+.asset .label{font-size:12px;letter-spacing:0.18em;color:#6b6b6b}
+.asset .val{font-size:28px;font-weight:900;color:var(--primary)}
+.up{color:#1f8a4c;font-weight:700}.down{color:#c0392b;font-weight:700}
+.asset p{font-size:13px;margin-top:6px}
+.navy{background:var(--primary);color:#fff;max-width:none}
+.navy .inner{max-width:1180px;margin:0 auto}
+.navy .sec-h{color:#fff;border-color:rgba(255,255,255,0.2)}
+.navy ol{margin-left:22px}.navy li{margin-bottom:12px;font-size:15px}
+.refs li{font-size:13px;margin:0 0 8px 18px}
+footer{background:var(--primary);color:rgba(255,255,255,0.8);text-align:center;padding:36px 20px;font-size:13px}
+.foot-brand{font-size:20px;font-weight:900;color:#fff;margin-bottom:10px;letter-spacing:0.04em}
+footer a{color:#d9a17a}
+@media(max-width:860px){.grid3,.grid4,.lead{grid-template-columns:1fr}.hero h1{font-size:26px}.brand{font-size:26px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="head-inner">
+    <div>
+      <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+      <div class="brand-sub">U.S. Markets Morning Edition · Curated by AI Research</div>
+    </div>
+    <div class="dateline"><span class="big">2026年9月26日(土)</span>前営業日：2026年9月25日(金) 終値ベース</div>
+  </div>
+  <div class="ticker-bar"><div class="ticker-inner">
+    <span><span class="tick-label">S&amp;P 500</span>7,743.41 <span class="tick-up">+0.51%</span></span>
+    <span><span class="tick-label">NASDAQ</span>27,068.72 <span class="tick-up">+0.50%</span></span>
+    <span><span class="tick-label">DOW</span>51,828.62 <span class="tick-up">+0.93%</span></span>
+    <span><span class="tick-label">US 2Y</span>4.86% <span class="tick-down">-3bp</span></span>
+    <span><span class="tick-label">US 10Y</span>5.17% <span class="tick-down">低下</span></span>
+    <span><span class="tick-label">US 30Y</span>5.49% <span class="tick-up">+2bp</span></span>
+    <span><span class="tick-label">JGB 10Y</span>3.07% <span class="tick-down">小幅低下</span></span>
+    <span><span class="tick-label">WTI</span>$92.55 <span class="tick-down">-2.18%</span></span>
+    <span><span class="tick-label">VIX</span>14.87 <span class="tick-down">-5.11%</span></span>
+    <span><span class="tick-label">META</span>9月 +36% <span class="tick-up">Muse効果</span></span>
+    <span><span class="tick-label">COST</span>EPS $6.75 <span class="tick-up">予想超え</span></span>
+    <span><span class="tick-label">S&amp;P 500</span>7,743.41 <span class="tick-up">+0.51%</span></span>
+    <span><span class="tick-label">NASDAQ</span>27,068.72 <span class="tick-up">+0.50%</span></span>
+    <span><span class="tick-label">DOW</span>51,828.62 <span class="tick-up">+0.93%</span></span>
+    <span><span class="tick-label">US 2Y</span>4.86% <span class="tick-down">-3bp</span></span>
+    <span><span class="tick-label">US 10Y</span>5.17% <span class="tick-down">低下</span></span>
+    <span><span class="tick-label">US 30Y</span>5.49% <span class="tick-up">+2bp</span></span>
+    <span><span class="tick-label">JGB 10Y</span>3.07% <span class="tick-down">小幅低下</span></span>
+    <span><span class="tick-label">WTI</span>$92.55 <span class="tick-down">-2.18%</span></span>
+    <span><span class="tick-label">VIX</span>14.87 <span class="tick-down">-5.11%</span></span>
+    <span><span class="tick-label">META</span>9月 +36% <span class="tick-up">Muse効果</span></span>
+    <span><span class="tick-label">COST</span>EPS $6.75 <span class="tick-up">予想超え</span></span>
+  </div></div>
+</header>
+
+<div class="hero"><div class="hero-inner">
+  <div class="kicker">WEEKEND EDITION · 9/25 CLOSE</div>
+  <h1>債券売りを振り切り主要3指数が週間プラス<br>原油安とイラン協議報道が追い風に</h1>
+  <p>米10年債利回りは一時5.2%と金融危機後の最高水準を更新したものの、ホルムズ海峡再開に向けた米・イラン協議の報道で原油が下落。ダウは3週続落を止め、VIXは14台へ低下しました。</p>
+</div></div>
+
+<canvas id="wave1" class="wave"></canvas>
+
+<section>
+  <div class="sec-title">QUICK READING</div>
+  <div class="sec-h">3分でわかる金曜の米国市場</div>
+  <div class="grid3">
+    <div class="card"><div class="tag">EQUITIES</div><h3>ダウ +0.93%、3週続落に終止符</h3><p>S&amp;P500は7,743、ナスダックは27,068でともに約0.5%高。週間でも3指数そろってプラスで取引を終えました。</p></div>
+    <div class="card"><div class="tag">BONDS</div><h3>10年債 5.17%、高止まり</h3><p>一時5.2%と2008年以来の水準を記録後、小幅低下。2年債は4.86%へ低下する一方、30年債は5.49%へ上昇しスティープ化。</p></div>
+    <div class="card"><div class="tag">COMMODITIES</div><h3>WTI $92台、週間で下落</h3><p>米・イランが「段階的合意」でホルムズ海峡再開を協議との報道で原油が約2%安。ただ米ガソリン価格は平均$4.50近辺と高水準。</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">LEAD STORY</div>
+  <div class="lead">
+    <div class="lead-body">
+      <h2>「危機ではないが警鐘」——世界的な債券売りと株式市場の綱引き</h2>
+      <p>今週の米国市場は、長期金利の急騰と原油価格の乱高下に振り回される展開となりました。米10年債利回りは木曜に金融危機後の高値を更新し、金曜朝には一時5.2%に到達。日本の10年国債利回りも3%超と1996年以来の高水準をつけるなど、グローバルな債券売りが続いています。背景には、8月PCEが前年比3.5%と2カ月連続で加速したインフレ懸念と、FRBの追加利上げ観測があります。</p>
+      <p>それでも金曜の株式市場は底堅さを見せました。米・イラン間でホルムズ海峡の封鎖解除と制裁緩和を含む「段階的合意」が協議されているとの報道を受け、WTIは$92台まで下落。エネルギーコスト低下期待がインフレ懸念をやや和らげ、VIXは14.87へ低下しました。BlackRockのリック・リーダー氏は債券売りを「危機ではないが警鐘」と評しています。</p>
+      <p>一方、ミシガン大学消費者信頼感指数（9月確報）は4カ月ぶりの低水準に沈み、ガソリン高と関税への懸念が家計心理を圧迫。訪米した習近平国家主席とトランプ大統領の首脳会談は、貿易関係の現状維持で合意した程度で具体的な成果は乏しい結果となりました。</p>
+    </div>
+    <aside class="watch">
+      <h4>TODAY'S WATCH</h4>
+      <ul>
+        <li>米10年債 5.2%の節目を再び試すか</li>
+        <li>米・イラン協議の進展とホルムズ海峡再開の行方</li>
+        <li>来週の9月雇用統計・ISM製造業景況指数</li>
+        <li>日銀の政策スタンスとJGB 3%台定着の影響</li>
+        <li>メタ時価総額2兆ドル到達なるか</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section>
+  <div class="sec-title">ASSETS</div>
+  <div class="sec-h">主要アセット（9/25終値）</div>
+  <div class="grid4">
+    <div class="card asset"><div class="label">S&amp;P 500</div><div class="val">7,743.41</div><div class="up">+0.51%</div><p>週間でプラス、テック主導で底堅い</p></div>
+    <div class="card asset"><div class="label">NASDAQ</div><div class="val">27,068.72</div><div class="up">+0.50%</div><p>メタなどAI関連が指数を牽引</p></div>
+    <div class="card asset"><div class="label">WTI 原油</div><div class="val">$92.55</div><div class="down">-2.18%</div><p>米・イラン協議報道で供給懸念が後退</p></div>
+    <div class="card asset"><div class="label">米10年債利回り</div><div class="val">5.17%</div><div class="down">小幅低下</div><p>一時5.2%、金融危機後の最高水準</p></div>
+  </div>
+</section>
+
+<canvas id="wave2" class="wave"></canvas>
+
+<section>
+  <div class="sec-title">FINANCE FOCUS</div>
+  <div class="sec-h">注目銘柄</div>
+  <div class="grid3">
+    <div class="card"><div class="tag">META</div><h3>メタ・プラットフォームズ</h3><p>AIエージェント「Muse」が大ヒットし、9月の株価上昇率は約36%と2013年以来の好月に。今週だけで約16%上昇し、時価総額2兆ドルが視野に。KeyBancは目標株価を$900へ引き上げ。</p></div>
+    <div class="card"><div class="tag">COST</div><h3>コストコ</h3><p>第4四半期決算は売上高957.2億ドル、EPS $6.75で市場予想を上回る。経営陣は会員の消費は「非常に底堅い」と説明。一方でメモリ価格上昇による家電のインフレに言及。</p></div>
+    <div class="card"><div class="tag">GOOGL</div><h3>アルファベット</h3><p>宇宙データセンター構想「Project Suncatcher」を発表。AIチップ搭載の実験衛星をSpaceXで打ち上げ予定で、AI計算資源確保の新たなフロンティアとして注目。</p></div>
+  </div>
+</section>
+
+<canvas id="wave3" class="wave"></canvas>
+
+<section class="navy"><div class="inner">
+  <div class="sec-title" style="color:#d9a17a">SHORT VERSION</div>
+  <div class="sec-h">要点5つ</div>
+  <ol>
+    <li>主要3指数が上昇し週間でもプラス。ダウは+0.93%で3週続落を止めた。</li>
+    <li>米10年債は一時5.2%と金融危機後の高水準、終盤は5.17%。JGB10年も3%台と約30年ぶり高水準。</li>
+    <li>米・イラン「段階的合意」協議報道でWTIは$92台へ下落、VIXは14.87に低下。</li>
+    <li>8月PCEは3.5%に加速、FRBの年内追加利上げ観測がくすぶる。消費者信頼感は4カ月ぶり低水準。</li>
+    <li>メタが「Muse」効果で9月+36%、コストコは決算で予想超え。</li>
+  </ol>
+</div></section>
+
+<canvas id="wave4" class="wave"></canvas>
+
+<section>
+  <div class="sec-title">REFERENCES</div>
+  <div class="sec-h">参考情報</div>
+  <ul class="refs">
+    <li><a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-september-25-dow-sp-500-nasdaq-081738529.html">Yahoo Finance – Stock market today (Sept. 25, 2026)</a></li>
+    <li><a href="https://www.cnbc.com/2026/09/25/treasury-yields-bonds-debt.html">CNBC – 10-year Treasury yield little changed to end a volatile week</a></li>
+    <li><a href="https://www.cnbc.com/2026/09/24/japan-jgb-bond-yield-treasurys.html">CNBC – Treasury and JGB yields hit highest in decades</a></li>
+    <li><a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics – Crude Oil</a></li>
+    <li><a href="https://tradingeconomics.com/japan/government-bond-yield">Trading Economics – Japan 10Y Bond Yield</a></li>
+    <li><a href="https://benzinga.com/z/35000886">Benzinga – August PCE Inflation Report</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-09-24/meta-s-best-month-since-2013-has-it-on-cusp-of-2-trillion-level">Bloomberg – Meta's best month since 2013</a></li>
+  </ul>
+</section>
+
+<footer>
+  <div class="foot-brand">米国市場 モーニングレポート</div>
+  <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
+  <p style="margin-top:8px">Powered by Cowork · <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
+  <p style="margin-top:14px"><img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitors"></p>
+</footer>
+
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() { canvas.width = canvas.offsetWidth || window.innerWidth; canvas.height = canvas.offsetHeight || 80; }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1; ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath(); ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed; rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+</body>
+</html>
