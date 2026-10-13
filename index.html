@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>米国市場 モーニングレポート | 2026.10.11</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<title>米国市場 モーニングレポート | 2026.10.14</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f7f3ea;--fg:#1a2230;--primary:#21344f;--accent:#b5472a;--border:#d6cfc4}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;line-height:1.8}
-header{background:var(--primary);color:#fff}
-.head-top{max-width:1100px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;line-height:1.8}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.site-header{background:var(--primary);color:#fff}.header-top{padding:22px 0 16px}
+.header-flex{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px}
 .brand{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:34px;letter-spacing:0.04em;line-height:1.1}
 .brand .accent{color:#d9a17a;font-weight:700}
 .brand-sub{font-size:11px;letter-spacing:0.35em;margin-top:8px;color:rgba(255,255,255,0.65);text-transform:uppercase}
@@ -17,85 +17,77 @@ header{background:var(--primary);color:#fff}
 .ticker-inner{display:inline-block;animation:ticker 32s linear infinite}
 .ticker-inner span{display:inline-block;margin:0 38px;font-size:12px;letter-spacing:0.07em;color:rgba(255,255,255,0.88)}
 .ticker-inner span .tick-label{color:rgba(255,255,255,0.5);margin-right:6px}
-.tick-up{color:#5cd47b;font-weight:700}
-.tick-down{color:#f27a6c;font-weight:700}
+.tick-up{color:#5cd47b;font-weight:700}.tick-down{color:#f27a6c;font-weight:700}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.hero{height:340px;background:linear-gradient(135deg,#21344f 0%,#2f4a6e 60%,#b5472a 140%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 24px}
-.hero h1{font-size:34px;font-weight:900;line-height:1.5;max-width:900px}
-.hero p{margin-top:12px;font-size:14px;opacity:.8}
-canvas.wave{display:block;width:100%;height:80px}
-.wrap{max-width:1100px;margin:0 auto;padding:40px 24px}
-.label{font-size:11px;letter-spacing:.3em;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:8px}
-h2{font-size:26px;font-weight:900;color:var(--primary);margin-bottom:20px}
-.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.card{background:#fff;border:1px solid var(--border);padding:20px}
-.card h3{font-size:16px;color:var(--primary);margin-bottom:8px}
-.card p{font-size:14px}
-.lead{display:grid;grid-template-columns:2fr 1fr;gap:28px}
-.lead p{margin-bottom:14px;font-size:15px}
-.watch{background:var(--primary);color:#fff;padding:22px}
-.watch h3{margin-bottom:10px}
-.watch li{margin:0 0 8px 18px;font-size:14px}
-.asset .n{font-size:12px;color:#6b6558;letter-spacing:.1em}
-.asset .v{font-size:24px;font-weight:900;color:var(--primary)}
-.asset .c{font-weight:700}
-.up{color:#1f8a46}.down{color:var(--accent)}
-.short{background:var(--primary);color:#fff}
-.short h2{color:#fff}
-.short li{margin:0 0 12px 20px;font-size:15px}
-.refs li{font-size:13px;margin-left:18px}
-footer{background:var(--primary);color:rgba(255,255,255,.8);text-align:center;padding:30px 24px;font-size:12px}
-footer a{color:#d9a17a}
-.foot-brand{font-weight:900;font-size:20px;color:#fff;margin-bottom:8px}
-@media(max-width:800px){.cols3,.cols4,.lead{grid-template-columns:1fr}.brand{font-size:26px}.hero h1{font-size:24px}}
+.hero{height:340px;background:linear-gradient(135deg,#21344f 0%,#3a2b30 100%);color:#fff;display:flex;align-items:center}
+.hero h1{font-size:34px;font-weight:900;margin:8px 0;line-height:1.35}.hero .kicker{color:#d9a17a;letter-spacing:.2em;font-size:12px}
+.hero p{max-width:760px;color:rgba(255,255,255,.85);margin:0}
+h2{font-size:13px;letter-spacing:.25em;color:var(--accent);text-transform:uppercase;border-bottom:2px solid var(--border);padding-bottom:6px;margin:34px 0 18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:#fffdf8;border:1px solid var(--border);padding:18px}.card h3{margin:0 0 6px;font-size:16px;color:var(--primary)}.card p{margin:0;font-size:14px}
+.lead{display:grid;grid-template-columns:2fr 1fr;gap:28px}.lead p{font-size:15px}
+.watch{background:var(--primary);color:#fff;padding:18px}.watch h3{margin:0 0 8px;color:#d9a17a;font-size:14px}.watch li{font-size:13px;margin-bottom:6px}
+.asset .lbl{font-size:12px;color:#6b7280;letter-spacing:.1em}.asset .val{font-size:24px;font-weight:700;color:var(--primary)}.asset .chg{font-size:14px;font-weight:700}
+.up{color:#1f8a3b}.down{color:var(--accent)}
+.short{background:var(--primary);color:#fff;padding:34px 0}.short h2{color:#d9a17a;border-color:rgba(255,255,255,.25);margin-top:0}.short li{margin-bottom:8px}
+.refs li,.refs a{font-size:12px;color:#4b5563;word-break:break-all}
+.site-footer{background:#161f2e;color:rgba(255,255,255,.75);text-align:center;padding:30px 0;font-size:12px}
+.foot-brand{font-weight:900;font-size:20px;color:#fff;margin-bottom:6px}.site-footer a{color:#d9a17a}
+@media(max-width:760px){.grid3,.grid4,.lead{grid-template-columns:1fr}.brand{font-size:26px}.hero h1{font-size:24px}}
 </style></head><body>
-<header>
-<div class="head-top"><div><div class="brand">米国市場 <span class="accent">モーニングレポート</span></div><div class="brand-sub">U.S. Markets Morning Edition · Curated by AI Research</div></div>
-<div class="dateline"><span class="big">2026年10月11日(日)</span>前営業日: 10/9(金)終値ベース</div></div>
-<div class="ticker-bar"><div class="ticker-inner"><span><span class="tick-label">S&P500</span>7,811.54 <span class="tick-up">+0.6%</span></span><span><span class="tick-label">NASDAQ</span>27,366.17 <span class="tick-up">+0.6%</span></span><span><span class="tick-label">DOW</span>51,654.95 <span class="tick-up">+0.8%</span></span><span><span class="tick-label">US 2Y</span>4.789% <span class="tick-up">+3.8bp</span></span><span><span class="tick-label">US 10Y</span>5.243% <span class="tick-up">+1.2bp</span></span><span><span class="tick-label">US 30Y</span>5.599% <span class="tick-down">-0.7bp</span></span><span><span class="tick-label">JGB 10Y</span>3.09% <span class="tick-down">-2bp</span></span><span><span class="tick-label">WTI</span>$91.20 <span class="tick-down">-0.4%</span></span><span><span class="tick-label">VIX</span>14.84 <span class="tick-down">-3.7%</span></span><span><span class="tick-label">HUM</span>+12% <span class="tick-up"></span></span><span><span class="tick-label">DAL</span>±0% <span class="tick-up"></span></span><span><span class="tick-label">S&P500</span>7,811.54 <span class="tick-up">+0.6%</span></span><span><span class="tick-label">NASDAQ</span>27,366.17 <span class="tick-up">+0.6%</span></span><span><span class="tick-label">DOW</span>51,654.95 <span class="tick-up">+0.8%</span></span><span><span class="tick-label">US 2Y</span>4.789% <span class="tick-up">+3.8bp</span></span><span><span class="tick-label">US 10Y</span>5.243% <span class="tick-up">+1.2bp</span></span><span><span class="tick-label">US 30Y</span>5.599% <span class="tick-down">-0.7bp</span></span><span><span class="tick-label">JGB 10Y</span>3.09% <span class="tick-down">-2bp</span></span><span><span class="tick-label">WTI</span>$91.20 <span class="tick-down">-0.4%</span></span><span><span class="tick-label">VIX</span>14.84 <span class="tick-down">-3.7%</span></span><span><span class="tick-label">HUM</span>+12% <span class="tick-up"></span></span><span><span class="tick-label">DAL</span>±0% <span class="tick-up"></span></span></div></div>
-</header>
-<section class="hero"><div><h1>記録更新の週を3指数そろって上昇で締め<br>長期金利は5.2%台の高止まり</h1><p>週末のため10月9日(金)の終値ベースで作成</p></div></section>
-<canvas class="wave" id="wave1"></canvas>
-<section class="wrap"><div class="label">Quick Reading</div><h2>3つの要点</h2>
-<div class="cols3">
-<div class="card"><h3>株式：3指数が上昇</h3><p>S&amp;P500は7,811.54(+0.6%)、ナスダックは27,366.17(+0.6%)、ダウは51,654.95(+0.8%)。史上最高値圏で週を終えた。小型株のラッセル2000は週間で0.9%下落。</p></div>
-<div class="card"><h3>金利：10年債5.24%</h3><p>10年債利回りは5.243%で小幅上昇。水曜には約5.37%と24年ぶり高水準をつけた。2年債は4.789%、30年債は5.599%。</p></div>
-<div class="card"><h3>商品：原油は小幅安</h3><p>WTIは91.20ドル前後(-0.4%)、ブレントは約104ドル。トランプ大統領がロシアによるディーゼル供給で合意と発表し、上値を抑えた。</p></div>
-</div></section>
-<section class="wrap" style="padding-top:0"><div class="lead"><div>
-<div class="label">Lead Story</div><h2>通信株が急落、SpaceXが周波数免許取得へ</h2>
-<p>SpaceXが全米規模の低周波数帯ライセンスを取得することで合意したと伝わり、T-Mobile、AT&amp;T、Verizonが8.5〜13%下落した。同社のモバイル向けStarlink構想が現実味を帯びたとの見方が広がった。一方、クラウンキャッスルなどの鉄塔運営3社は7〜16%上昇した。</p>
-<p>ハイテク大型株はMagnificent Sevenが反発し、関連ETFは約1%高。前日の下落分を取り戻した。VIXは14.84(-3.7%)と低位で、リスク選好は維持されている。</p>
-<p>債券市場は月曜がコロンバス・デーで休場、株式市場は開場する。火曜からは大手銀行を皮切りに決算シーズンが本格化する。</p></div>
-<div class="watch"><div class="label" style="color:#d9a17a">Today's Watch</div><h3>今週の注目</h3><ul><li>月曜：債券市場休場(株式は通常営業)</li><li>火曜：大手銀行の決算発表</li><li>長期金利の5.2%台定着の可否</li><li>原油とロシア産ディーゼル供給の行方</li><li>日本10年債利回り(3.09%)の動向</li></ul></div></div></section>
-<section class="wrap" style="padding-top:0"><div class="cols4">
-<div class="card asset"><div class="n">S&amp;P500</div><div class="v">7,811.54</div><div class="c up">+46.18 (+0.6%)</div></div>
-<div class="card asset"><div class="n">NASDAQ</div><div class="v">27,366.17</div><div class="c up">+172.83 (+0.6%)</div></div>
-<div class="card asset"><div class="n">WTI原油</div><div class="v">$91.20</div><div class="c down">-0.4%</div></div>
-<div class="card asset"><div class="n">米10年債利回り</div><div class="v">5.243%</div><div class="c up">+1.2bp</div></div>
-</div></section>
-<canvas class="wave" id="wave2"></canvas>
-<section class="wrap"><div class="label">Finance Focus</div><h2>注目銘柄</h2>
-<div class="cols3">
-<div class="card"><h3>ヒューマナ(HUM)</h3><p>2027年のメディケア・アドバンテージ星評価が改善したことを受け、約12%上昇した。</p></div>
-<div class="card"><h3>デルタ航空(DAL)</h3><p>決算は市場予想を下回り、燃料高を背景に通期利益見通しを引き下げたが、株価はほぼ横ばいで終えた。</p></div>
-<div class="card"><h3>米通信大手3社</h3><p>SpaceXの周波数取得報道でT-Mobile、AT&amp;T、Verizonが8.5〜13%下落。SpaceX株は1%超上昇した。</p></div>
-</div></section>
-<canvas class="wave" id="wave3"></canvas>
-<section class="short"><div class="wrap"><div class="label" style="color:#d9a17a">Short Version</div><h2>3分でわかる要約</h2><ul>
-<li>10/9の米株はS&amp;P500 +0.6%、ナスダック +0.6%、ダウ +0.8%で、記録更新の週を締めくくった。</li>
-<li>米10年債利回りは5.243%、2年債は4.789%、30年債は5.599%。日本10年債は3.09%(10/8時点)。</li>
-<li>WTIは91.20ドル前後、VIXは14.84と低位で推移した。</li>
-<li>SpaceXの周波数取得報道で米通信大手3社が急落、鉄塔運営会社は大幅高。</li>
-<li>来週は火曜から大手銀行決算が始まり、月曜は債券市場が休場となる。</li></ul></div></section>
-<canvas class="wave" id="wave4"></canvas>
-<section class="wrap refs"><div class="label">References</div><h2>参照情報</h2><ul>
-<li>Yahoo Finance「Markets News, Oct. 9, 2026」</li><li>AP通信 配信「How major US stock indexes fared Friday 10/9/2026」</li><li>Mortgage News Daily「Treasury」</li><li>財務省(日本) / Japan 10-year yield データ</li></ul></section>
-<footer><div class="foot-brand">米国市場 モーニングレポート</div>
+<header class="site-header"><div class="header-top"><div class="container header-flex">
+<div><div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+<div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div></div>
+<div class="dateline"><span class="big">2026年10月14日(水)</span>前営業日 10月13日(火) 終値ベース</div></div></div>
+<div class="ticker-bar"><div class="ticker-inner"><span><span class="tick-label">S&amp;P 500</span><span class="tick-down">-0.02%</span></span><span><span class="tick-label">NASDAQ</span><span class="tick-down">-0.15%</span></span><span><span class="tick-label">DOW</span><span class="tick-down">-0.35%</span></span><span><span class="tick-label">US 2Y</span>4.80%</span><span><span class="tick-label">US 10Y</span>5.22%</span><span><span class="tick-label">US 30Y</span>5.60%</span><span><span class="tick-label">JGB 10Y</span>3.00%</span><span><span class="tick-label">WTI</span><span class="tick-down">$91.78</span></span><span><span class="tick-label">VIX</span>15.28</span><span><span class="tick-label">GS</span><span class="tick-up">EPS $17.01</span></span><span><span class="tick-label">JPM</span><span class="tick-down">EPS $5.57</span></span><span><span class="tick-label">MU</span><span class="tick-down">-5%</span></span><span><span class="tick-label">S&amp;P 500</span><span class="tick-down">-0.02%</span></span><span><span class="tick-label">NASDAQ</span><span class="tick-down">-0.15%</span></span><span><span class="tick-label">DOW</span><span class="tick-down">-0.35%</span></span><span><span class="tick-label">US 2Y</span>4.80%</span><span><span class="tick-label">US 10Y</span>5.22%</span><span><span class="tick-label">US 30Y</span>5.60%</span><span><span class="tick-label">JGB 10Y</span>3.00%</span><span><span class="tick-label">WTI</span><span class="tick-down">$91.78</span></span><span><span class="tick-label">VIX</span>15.28</span><span><span class="tick-label">GS</span><span class="tick-up">EPS $17.01</span></span><span><span class="tick-label">JPM</span><span class="tick-down">EPS $5.57</span></span><span><span class="tick-label">MU</span><span class="tick-down">-5%</span></span></div></div></header>
+<section class="hero"><div class="container"><div class="kicker">TODAY'S HEADLINE</div>
+<h1>決算シーズン開幕、半導体売りで米株は小幅安</h1>
+<p>13日の米株はダウが0.35%安、S&amp;P500は0.02%安のほぼ横ばい。中国CXMTのメモリ技術進展報道でマイクロンなど半導体株が下げ、GSは好決算、JPMは予想未達と大手銀の明暗が分かれた。市場の関心は14日発表の9月CPIへ。</p></div></section>
+<canvas id="wave1" style="display:block;width:100%;height:80px"></canvas>
+<main class="container">
+<h2>Quick Reading</h2><div class="grid3">
+<div class="card"><h3>① 指数は小動き</h3><p>S&amp;P500 7,805.45(-0.02%)、NASDAQ 27,204.38(-0.15%)、ダウ 51,670.10(-0.35%)。S&amp;P500は最高値圏を維持。</p></div>
+<div class="card"><h3>② 半導体に売り</h3><p>中国CXMTの新メモリ設計報道で韓国KOSPIは-5.46%、米ではマイクロン約-5%、WDCやシーゲイトは約-7%。</p></div>
+<div class="card"><h3>③ 大手銀は明暗</h3><p>GSはEPS $17.01で大幅上振れ。JPMは$5.57と予想$5.90を下回った。</p></div></div>
+<h2>Lead Story</h2><div class="lead"><div>
+<p>13日の米国株式市場は決算発表の本格化を受けて方向感に欠ける展開となった。ダウは前日の上昇から反落し180ポイント安、S&amp;P500は前日比ほぼ変わらず、NASDAQは0.15%下落した。セクター別ではエネルギーと公益が堅調、ヘルスケアとテクノロジーが軟調だった。</p>
+<p>半導体株は、中国メモリ大手CXMTが高密度のメモリセル設計とサーバー向け製品の年内投入計画を示したことで、競争激化への警戒から売られた。ブロードコムCEOがAI投資の過熱に言及したことも重荷となった。一方、ゴールドマン・サックスは株式トレーディング収入が前年比72%増となり、市場予想を大きく上回った。JPモルガンは純利益153億ドルと増益だが、EPSは予想を下回った。</p>
+<p>中東情勢ではフーシ派によるサウジ攻撃で死傷者が出ており、トランプ大統領が対応への参加を検討と報じられた。ただロシア産ディーゼルの供給制限緩和を受け、WTI原油は$91.78と約2%下落した。米10年債利回りは5.22%と高水準で推移し、FRBは9月に利上げ済みで12月の追加利上げ観測も残る。</p></div>
+<aside class="watch"><h3>TODAY'S WATCH</h3><ul>
+<li>9月CPI(14日):総合 前年比3.6%、コア2.5%の予想</li><li>モルガン・スタンレー決算(14日)</li><li>PPI(15日):前年比5.5%の予想</li><li>FOMC(10/28-29)</li><li>CXMT報道を受けた半導体株の反応</li></ul></aside></div>
+<h2>Asset Grid</h2><div class="grid4">
+<div class="card asset"><div class="lbl">S&amp;P 500</div><div class="val">7,805.45</div><div class="chg down">-0.02%</div></div>
+<div class="card asset"><div class="lbl">NASDAQ</div><div class="val">27,204.38</div><div class="chg down">-0.15%</div></div>
+<div class="card asset"><div class="lbl">WTI 原油</div><div class="val">$91.78</div><div class="chg down">-2.09%</div></div>
+<div class="card asset"><div class="lbl">米10年債利回り</div><div class="val">5.22%</div><div class="chg">VIX 15.28</div></div></div>
+</main>
+<canvas id="wave2" style="display:block;width:100%;height:80px"></canvas>
+<main class="container">
+<h2>Finance Focus</h2><div class="grid3">
+<div class="card"><h3>ゴールドマン・サックス(GS)</h3><p>EPS $17.01(予想 $13.02)、売上高$186.8億ドルと予想超え。株式収入は前年比72%増。</p></div>
+<div class="card"><h3>JPモルガン(JPM)</h3><p>純利益153億ドル(+6%)もEPS $5.57は予想 $5.90に届かず。年間NII見通しは1,062億ドルへ引き上げ。</p></div>
+<div class="card"><h3>マイクロン(MU)ほか半導体</h3><p>CXMT報道で約5%安。WDCは約-7.7%、シーゲイトは約-7.3%。NVIDIAは$228前後で底堅い。</p></div></div>
+</main>
+<canvas id="wave3" style="display:block;width:100%;height:80px"></canvas>
+<section class="short"><div class="container"><h2>Short Version</h2><ul>
+<li>米株は小幅安。S&amp;P500は7,805.45でほぼ横ばい、ダウは-0.35%。</li>
+<li>半導体が中国メモリ報道で急落。KOSPIは-5.46%。</li>
+<li>GSは大幅上振れ、JPMは予想未達と銀行決算は明暗。</li>
+<li>WTIは$91.78へ下落、米10年債は5.22%の高水準。</li>
+<li>14日の9月CPI(予想3.6%)が最大の焦点。</li></ul></div></section>
+<canvas id="wave4" style="display:block;width:100%;height:80px"></canvas>
+<main class="container refs"><h2>References</h2><ul>
+<li>TheStreet: Stock Market Today (Oct. 13, 2026) &mdash; <a href="https://thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-13-2026">thestreet.com</a></li>
+<li>Vista P Global: Stock Market Today, October 13, 2026 &mdash; <a href="https://vistapglobal.com/stock-market-today-october-13-2026-dow-falls-180-points-as-chip-selloff-and-inflation-risks-weigh-aapl-bmbl-eprx-gs-modd-nvda-ser-unh/">vistapglobal.com</a></li>
+<li>Econcurrents: 13 October 2026 Market Close &mdash; <a href="https://econcurrents.substack.com/p/13-october-2026-market-close-and">econcurrents.substack.com</a></li>
+<li>Forbes Advisor Treasury Rates (2Y 4.80% / 30Y 5.60%は10/9時点の直近確認値) &mdash; <a href="https://www.forbes.com/advisor/investing/treasury-rates/">forbes.com</a></li>
+<li>Trading Economics: Japan 10Y &mdash; <a href="https://jp.tradingeconomics.com/japan/government-bond-yield">tradingeconomics.com</a></li></ul></main>
+<footer class="site-footer"><div class="container">
+<div class="foot-brand">米国市場 モーニングレポート</div>
 <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
-<p style="margin-top:6px">Powered by Cowork · <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
-<p style="margin-top:12px"><img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&amp;left_color=%2321344f&amp;right_color=%23b5472a&amp;left_text=Total%20Visitors" alt="Total Visitors"></p></footer>
+<p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
+<img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+</div></footer>
 <script>
 (function() {
   const configs = [
