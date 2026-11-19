@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場 モーニングレポート | 2026.11.20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f3ea;--fg:#1a2230;--primary:#21344f;--accent:#b5472a;--border:#d6cfc4;--muted:#5d6675;--up:#2f8a4c;--down:#b5472a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;line-height:1.8;font-size:15px}
+a{color:var(--accent)}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+.site-header{background:var(--primary);color:#fff}
+.header-top{padding:26px 0 20px}
+.header-flex{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.brand{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:34px;letter-spacing:0.04em;line-height:1.1}
+.brand .accent{color:#d9a17a;font-weight:700}
+.brand-sub{font-size:11px;letter-spacing:0.35em;margin-top:8px;color:rgba(255,255,255,0.65);text-transform:uppercase}
+.dateline{text-align:right;font-size:12px;letter-spacing:0.18em;color:rgba(255,255,255,0.85)}
+.dateline .big{font-family:'Noto Sans JP',sans-serif;font-size:24px;font-weight:700;display:block;letter-spacing:0.04em;margin-bottom:4px}
+.ticker-bar{overflow:hidden;white-space:nowrap;background:rgba(0,0,0,0.25);padding:9px 0}
+.ticker-inner{display:inline-block;animation:ticker 32s linear infinite}
+.ticker-inner span{display:inline-block;margin:0 38px;font-size:12px;letter-spacing:0.07em;color:rgba(255,255,255,0.88)}
+.ticker-inner span .tick-label{color:rgba(255,255,255,0.5);margin-right:6px}
+.tick-up{color:#5cd47b;font-weight:700}
+.tick-down{color:#f27a6c;font-weight:700}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero{height:340px;background:linear-gradient(135deg,rgba(33,52,79,.92),rgba(33,52,79,.72)),repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 60px);color:#fff;display:flex;align-items:center}
+.hero .kicker{font-size:12px;letter-spacing:.3em;color:#d9a17a;font-weight:700;margin-bottom:12px}
+.hero h1{font-size:34px;font-weight:900;line-height:1.35;max-width:860px}
+.hero p{margin-top:14px;max-width:760px;color:rgba(255,255,255,.82)}
+canvas.wave{display:block;width:100%;height:80px}
+section{padding:46px 0}
+.sec-title{font-size:13px;letter-spacing:.3em;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:6px}
+.sec-head{font-size:26px;font-weight:900;margin-bottom:24px;color:var(--primary)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:22px}
+.card .num{font-size:30px;font-weight:900;color:var(--accent);line-height:1}
+.card h3{font-size:17px;margin:10px 0 8px;color:var(--primary)}
+.card p{font-size:14px;color:var(--muted)}
+.lead{display:grid;grid-template-columns:2fr 1fr;gap:32px}
+.lead article p{margin-bottom:16px}
+.lead article h3{font-size:22px;color:var(--primary);margin-bottom:14px;line-height:1.5}
+.watch{background:#fff;border-top:4px solid var(--accent);border:1px solid var(--border);border-top:4px solid var(--accent);padding:22px;border-radius:4px}
+.watch h4{font-size:14px;letter-spacing:.2em;color:var(--accent);margin-bottom:12px}
+.watch li{list-style:none;padding:9px 0;border-bottom:1px dashed var(--border);font-size:14px}
+.watch li b{color:var(--primary)}
+.asset{background:#fff;border:1px solid var(--border);border-radius:6px;padding:20px}
+.asset .lbl{font-size:12px;letter-spacing:.2em;color:var(--muted)}
+.asset .val{font-size:26px;font-weight:900;color:var(--primary);margin:6px 0}
+.asset .chg{font-weight:700}
+.up{color:var(--up)}.down{color:var(--down)}
+.focus-sec{background:var(--primary);color:#fff}
+.focus-sec .sec-head{color:#fff}
+.focus-sec .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}
+.focus-sec .card h3{color:#fff}
+.focus-sec .card p{color:rgba(255,255,255,.78)}
+.tkr{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:12px;padding:2px 10px;border-radius:3px;letter-spacing:.1em}
+.focus-sec .chgline{font-size:22px;font-weight:900;margin-top:8px}
+.short{background:var(--bg)}
+.short-box{background:var(--primary);color:#fff;border-radius:8px;padding:34px 38px}
+.short-box .sec-head{color:#fff}
+.short-box ol{padding-left:22px}
+.short-box li{margin-bottom:12px;color:rgba(255,255,255,.9)}
+.refs-sec{background:var(--primary);color:#fff}
+.refs-sec .sec-head{color:#fff}
+.refs li{list-style:none;margin-bottom:8px;font-size:14px}
+.refs a{color:#d9a17a}
+.site-footer{background:#152338;color:rgba(255,255,255,.7);padding:34px 0;text-align:center;font-size:13px}
+.foot-brand{font-weight:900;font-size:20px;color:#fff;margin-bottom:10px;letter-spacing:.04em}
+.site-footer a{color:#d9a17a}
+.note{font-size:12px;color:var(--muted);margin-top:12px}
+@media(max-width:860px){.grid3,.lead{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}.hero h1{font-size:24px}.brand{font-size:26px}.dateline{text-align:left}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-flex">
+      <div>
+        <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+        <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
+      </div>
+      <div class="dateline">
+        <span class="big">2026年11月20日(金)</span>
+        前営業日 11月19日(木) 終値ベース
+      </div>
+    </div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,175.83 -2.02%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">23,879.20 -2.25%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">49,097.06 -2.19%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.78%</span>
+      <span><span class="tick-label">US 10Y</span>5.05%</span>
+      <span><span class="tick-label">US 30Y</span>5.41%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.83%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$83.08 +0.9%</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">27.98</span></span>
+      <span><span class="tick-label">ANT</span><span class="tick-up">$97.17 +17.1%</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-3.30%</span></span>
+      <span><span class="tick-label">PANW</span><span class="tick-up">+6.44%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,175.83 -2.02%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">23,879.20 -2.25%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">49,097.06 -2.19%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.78%</span>
+      <span><span class="tick-label">US 10Y</span>5.05%</span>
+      <span><span class="tick-label">US 30Y</span>5.41%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.83%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$83.08 +0.9%</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">27.98</span></span>
+      <span><span class="tick-label">ANT</span><span class="tick-up">$97.17 +17.1%</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-3.30%</span></span>
+      <span><span class="tick-label">PANW</span><span class="tick-up">+6.44%</span></span>
+      </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <div class="kicker">TODAY'S HEADLINE</div>
+    <h1>Anthropic上場で初値+34%も、市場全体は急落 ― ダウ1,101ドル安で5万ドル割れ、ナスダック-2.25%</h1>
+    <p>Anthropic（ANT）は公開価格83ドルに対し111.50ドルで初値をつけ、終値97.17ドル（+17.1%）。しかし取引開始後にAI関連株で利益確定と資金シフトが進み、主要3指数はそろって2%超下落。VIXは3月以来の高水準に上昇した。</p>
+  </div>
+</div>
+
+<canvas id="wave1" class="wave"></canvas>
+
+<section>
+  <div class="container">
+    <div class="sec-title">Quick Reading</div>
+    <div class="sec-head">今日の3大ポイント</div>
+    <div class="grid3">
+      <div class="card"><div class="num">01</div><h3>Anthropic、記録的IPO</h3><p>公開価格83ドル（仮条件70〜78ドルを上回る）、9.8億株・約813億ドルを調達。初値111.50ドル、高値114.99ドル、終値97.17ドル（公開価格比+17.1%）。</p></div>
+      <div class="card"><div class="num">02</div><h3>AI株から資金流出、主要指数2%超安</h3><p>S&amp;P500 -2.02%、ナスダック -2.25%、ダウ -2.19%。ANT購入のための資金シフト、AMDへの空売りレポート、AI割高感が重なり、半導体・大型テックが軒並み下落。</p></div>
+      <div class="card"><div class="num">03</div><h3>利上げ観測とVIX上昇</h3><p>ウォラー理事は12月の0.5%利上げも選択肢と発言。FedWatchでは12月の0.25%利上げ確率90%。VIXは28前後と3月以来の高水準。米10年債は5.05%。</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:10px">
+  <div class="container lead">
+    <article>
+      <div class="sec-title">Lead Story</div>
+      <h3>「Anthropic祭り」の裏で売りが加速 ― ダウは5万ドルを割り込む</h3>
+      <p>19日の米国株式市場は大幅安。ダウ平均は前日比1,101.11ドル安（-2.19%）の49,097.06ドルと5万ドルの大台を割り込み、S&amp;P500は147.80ポイント安（-2.02%）の7,175.83で6日続落。ナスダック総合も550.69ポイント安（-2.25%）の23,879.20と反落した。</p>
+      <p>注目のAnthropic（ティッカー：ANT）はナスダックに上場し、正午前に公開価格を約34%上回る111.50ドルで初値をつけた。一時114.99ドルまで上昇した後は92.72ドルまで売られ、終値は97.17ドル（公開価格比+17.07%）。朝方はIPOへの期待からハイテク株が買われたが、取引開始後は利益確定売りが広がった。ANT購入のために既存AI銘柄を売る資金シフトも指摘され、AMDは中国エクスポージャーを巡る空売りレポートを受けて約8%安。エヌビディア（-3.30%）、アルファベット（-3.46%）、アマゾン（-3.87%）、メタ（-3.27%）も下落した。</p>
+      <p>経済指標では、新規失業保険申請件数が20.3万件（予想19.7万件）、継続受給者数は176万人に増加。11月フィラデルフィア連銀景況指数は6.3と10月の20.9から大きく低下した一方、支払価格指数は58.2に上昇し、景気減速とインフレ圧力の併存を示した。ウォラー理事は12月会合での0.5%利上げの可能性に言及しており、市場の利上げ警戒は続く。</p>
+      <p>決算ではウォルマートが売上高1,888億ドル（+5.2%）と予想を上回り通期見通しを引き上げたが、株価は小幅安。パロアルトネットワークスは見通し引き上げを好感して+6.44%と続伸した。引け後はイントゥイット（-14.55%）、ロス・ストアーズ（-9.04%）が時間外で急落している。</p>
+    </article>
+    <aside class="watch">
+      <h4>TODAY'S WATCH</h4>
+      <ul>
+        <li><b>ANT 上場2日目</b><br>初日の上昇分を維持できるか（時間外 $95.69）</li>
+        <li><b>S&amp;P500 7日続落の有無</b><br>VIX 28台からの落ち着きどころ</li>
+        <li><b>イントゥイット・ロス</b><br>時間外急落の波及</li>
+        <li><b>FRB高官発言</b><br>12月0.25% or 0.5%利上げの織り込み</li>
+        <li><b>米10年債 5%台</b><br>長期金利と株式バリュエーション</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="sec-title">Asset Overview</div>
+    <div class="sec-head">主要アセット</div>
+    <div class="grid4">
+      <div class="asset"><div class="lbl">S&amp;P 500</div><div class="val">7,175.83</div><div class="chg down">-147.80 (-2.02%)</div></div>
+      <div class="asset"><div class="lbl">NASDAQ</div><div class="val">23,879.20</div><div class="chg down">-550.69 (-2.25%)</div></div>
+      <div class="asset"><div class="lbl">WTI原油</div><div class="val">$83.08</div><div class="chg up">+0.77 (+0.94%)</div></div>
+      <div class="asset"><div class="lbl">米10年債利回り</div><div class="val">5.05%</div><div class="chg up">約 -3bp</div></div>
+    </div>
+    <p class="note">その他：ダウ 49,097.06（-1,101.11 / -2.19%）／VIX 27.98（+13.8%）／米2年債 4.78%・米30年債 5.41%／日本10年債 約2.83%。VIX・原油・ラッセル2000は情報源により若干の差があります。</p>
+  </div>
+</section>
+
+<canvas id="wave2" class="wave"></canvas>
+
+<section class="focus-sec">
+  <div class="container">
+    <div class="sec-title" style="color:#d9a17a">Finance Focus</div>
+    <div class="sec-head">注目銘柄</div>
+    <div class="grid3">
+      <div class="card"><span class="tkr">ANT</span><h3>Anthropic</h3><div class="chgline" style="color:#5cd47b">$97.17 +17.07%</div><p>公開価格83ドル、初値111.50ドル。高値114.99ドル・安値92.72ドルと値幅の大きい初日に。約813億ドルの調達は過去最大級。時間外は95.69ドル（-1.52%）。</p></div>
+      <div class="card"><span class="tkr">AMD</span><h3>AMD</h3><div class="chgline" style="color:#f27a6c">約 -8%</div><p>Hunterbrookが中国関連エクスポージャーを問題視する空売りレポートを公表。ANT購入のための資金シフトも重なり、半導体株の下げを主導した。エヌビディアも-3.30%。</p></div>
+      <div class="card"><span class="tkr">PANW</span><h3>パロアルトネットワークス</h3><div class="chgline" style="color:#5cd47b">+6.44%</div><p>第1四半期売上高は34.4億ドル（+39%）。通期売上見通しを145.2〜145.7億ドルに引き上げ。45億ドルのApplied Compute買収も発表し、軟調地合いの中で2日続伸。</p></div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave3" class="wave"></canvas>
+
+<section class="short">
+  <div class="container">
+    <div class="short-box">
+      <div class="sec-title" style="color:#d9a17a">Short Version</div>
+      <div class="sec-head">3分で読む要約</div>
+      <ol>
+        <li>主要3指数が2%超の下落。ダウは1,101ドル安で5万ドル割れ、S&amp;P500は6日続落。</li>
+        <li>Anthropic（ANT）が上場、初値111.50ドル、終値97.17ドルで公開価格比+17%。</li>
+        <li>AI株から資金流出、AMDは空売りレポートで約8%安、エヌビディア-3.3%。VIXは28前後に上昇。</li>
+        <li>失業保険申請20.3万件、フィリー連銀指数6.3に急低下、価格指数は上昇。12月利上げ観測は継続。</li>
+        <li>米10年債5.05%、2年4.78%、30年5.41%。日本10年債約2.83%、WTIは83ドル台で小反発。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave4" class="wave"></canvas>
+
+<section class="refs-sec">
+  <div class="container">
+    <div class="sec-title" style="color:#d9a17a">References</div>
+    <div class="sec-head">参考ソース</div>
+    <ul class="refs">
+      <li><a href="https://vistapglobal.com/stock-market-today-november-19-2026-anthropic-ipo-pops-wall-street-loses-its-appetite-amd-ant-eprx-insm-jpm-ma-modd-panw-ser-sls-v-wmt/" target="_blank" rel="noopener">Vista Partners – Stock Market Today, November 19, 2026</a></li>
+      <li><a href="https://www.stocktitan.net/articles/stock-market-today-live-november-19-2026" target="_blank" rel="noopener">StockTitan – Stock Market Today Live, November 19, 2026</a></li>
+      <li><a href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html" target="_blank" rel="noopener">Yahoo Finance – Stock market today (Nov 19)</a></li>
+      <li><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank" rel="noopener">Trading Economics – US 10-Year Treasury Yield</a></li>
+      <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">Trading Economics – Japan 10-Year Government Bond Yield</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-brand">米国市場 モーニングレポート</div>
+    <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
+    <p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+  </div>
+</footer>
+
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() { canvas.width = canvas.offsetWidth || window.innerWidth; canvas.height = canvas.offsetHeight || 80; }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1; ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath(); ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed; rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+</body>
+</html>
