@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>米国市場 モーニングレポート | 2026.11.20</title>
+<title>米国市場 モーニングレポート | 2026.11.21</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f3ea;--fg:#1a2230;--primary:#21344f;--accent:#b5472a;--border:#d6cfc4;--muted:#5d6675;--up:#2f8a4c;--down:#b5472a}
+:root{--bg:#f7f3ea;--fg:#1a2230;--primary:#21344f;--accent:#b5472a;--border:#d6cfc4;--muted:#5d6675;--card:#fffdf8;}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;line-height:1.8;font-size:15px}
 a{color:var(--accent)}
 .container{max-width:1120px;margin:0 auto;padding:0 20px}
 .site-header{background:var(--primary);color:#fff}
 .header-top{padding:26px 0 20px}
-.header-flex{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.header-flex{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
 .brand{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:34px;letter-spacing:0.04em;line-height:1.1}
 .brand .accent{color:#d9a17a;font-weight:700}
 .brand-sub{font-size:11px;letter-spacing:0.35em;margin-top:8px;color:rgba(255,255,255,0.65);text-transform:uppercase}
@@ -27,53 +27,46 @@ a{color:var(--accent)}
 .tick-up{color:#5cd47b;font-weight:700}
 .tick-down{color:#f27a6c;font-weight:700}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.hero{height:340px;background:linear-gradient(135deg,rgba(33,52,79,.92),rgba(33,52,79,.72)),repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 60px),repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 60px);color:#fff;display:flex;align-items:center}
-.hero .kicker{font-size:12px;letter-spacing:.3em;color:#d9a17a;font-weight:700;margin-bottom:12px}
-.hero h1{font-size:34px;font-weight:900;line-height:1.35;max-width:860px}
-.hero p{margin-top:14px;max-width:760px;color:rgba(255,255,255,.82)}
+.hero{height:340px;background:linear-gradient(135deg,#21344f 0%,#3a1f1a 60%,#b5472a 100%);color:#fff;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,0.04) 0 1px,transparent 1px 60px)}
+.hero .container{position:relative;z-index:1}
+.hero .kicker{font-size:12px;letter-spacing:0.3em;color:#d9a17a;font-weight:700}
+.hero h1{font-size:34px;font-weight:900;line-height:1.35;margin:10px 0 12px;max-width:820px}
+.hero p{max-width:760px;color:rgba(255,255,255,0.85);font-size:15px}
 canvas.wave{display:block;width:100%;height:80px}
-section{padding:46px 0}
-.sec-title{font-size:13px;letter-spacing:.3em;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:6px}
-.sec-head{font-size:26px;font-weight:900;margin-bottom:24px;color:var(--primary)}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--border);border-radius:6px;padding:22px}
+section{padding:44px 0}
+.sec-title{font-size:13px;letter-spacing:0.3em;color:var(--accent);font-weight:700;margin-bottom:6px}
+.sec-head{font-size:24px;font-weight:900;color:var(--primary);margin-bottom:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:22px}
 .card .num{font-size:30px;font-weight:900;color:var(--accent);line-height:1}
-.card h3{font-size:17px;margin:10px 0 8px;color:var(--primary)}
+.card h3{font-size:17px;color:var(--primary);margin:10px 0 8px;line-height:1.5}
 .card p{font-size:14px;color:var(--muted)}
-.lead{display:grid;grid-template-columns:2fr 1fr;gap:32px}
-.lead article p{margin-bottom:16px}
-.lead article h3{font-size:22px;color:var(--primary);margin-bottom:14px;line-height:1.5}
-.watch{background:#fff;border-top:4px solid var(--accent);border:1px solid var(--border);border-top:4px solid var(--accent);padding:22px;border-radius:4px}
-.watch h4{font-size:14px;letter-spacing:.2em;color:var(--accent);margin-bottom:12px}
-.watch li{list-style:none;padding:9px 0;border-bottom:1px dashed var(--border);font-size:14px}
-.watch li b{color:var(--primary)}
-.asset{background:#fff;border:1px solid var(--border);border-radius:6px;padding:20px}
-.asset .lbl{font-size:12px;letter-spacing:.2em;color:var(--muted)}
-.asset .val{font-size:26px;font-weight:900;color:var(--primary);margin:6px 0}
+.lead{display:grid;grid-template-columns:2fr 1fr;gap:28px}
+.lead-body p{margin-bottom:14px}
+.lead-body h2{font-size:22px;color:var(--primary);font-weight:900;margin-bottom:14px;line-height:1.5}
+.watch{background:var(--primary);color:#fff;border-radius:6px;padding:22px}
+.watch h4{font-size:13px;letter-spacing:0.25em;color:#d9a17a;margin-bottom:12px}
+.watch li{list-style:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.15);font-size:14px}
+.watch li b{color:#d9a17a}
+.asset{background:var(--card);border:1px solid var(--border);border-top:4px solid var(--primary);border-radius:6px;padding:18px}
+.asset .label{font-size:12px;letter-spacing:0.15em;color:var(--muted)}
+.asset .val{font-size:26px;font-weight:900;color:var(--primary)}
 .asset .chg{font-weight:700}
-.up{color:var(--up)}.down{color:var(--down)}
-.focus-sec{background:var(--primary);color:#fff}
-.focus-sec .sec-head{color:#fff}
-.focus-sec .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}
-.focus-sec .card h3{color:#fff}
-.focus-sec .card p{color:rgba(255,255,255,.78)}
-.tkr{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:12px;padding:2px 10px;border-radius:3px;letter-spacing:.1em}
-.focus-sec .chgline{font-size:22px;font-weight:900;margin-top:8px}
-.short{background:var(--bg)}
-.short-box{background:var(--primary);color:#fff;border-radius:8px;padding:34px 38px}
-.short-box .sec-head{color:#fff}
-.short-box ol{padding-left:22px}
-.short-box li{margin-bottom:12px;color:rgba(255,255,255,.9)}
-.refs-sec{background:var(--primary);color:#fff}
-.refs-sec .sec-head{color:#fff}
-.refs li{list-style:none;margin-bottom:8px;font-size:14px}
-.refs a{color:#d9a17a}
-.site-footer{background:#152338;color:rgba(255,255,255,.7);padding:34px 0;text-align:center;font-size:13px}
-.foot-brand{font-weight:900;font-size:20px;color:#fff;margin-bottom:10px;letter-spacing:.04em}
+.down{color:#c0392b}.up{color:#1f8a4c}
+.stock .tk{display:inline-block;background:var(--primary);color:#fff;font-weight:700;font-size:12px;padding:2px 10px;border-radius:3px;letter-spacing:0.1em}
+.stock .mv{font-size:26px;font-weight:900;margin:8px 0}
+.short{background:var(--primary);color:#fff}
+.short .sec-head{color:#fff}
+.short ol{padding-left:22px}
+.short li{margin-bottom:12px;font-size:15px}
+.refs li{font-size:13px;margin-bottom:6px;list-style:none}
+.note{font-size:12px;color:var(--muted);margin-top:14px}
+.site-footer{background:var(--primary);color:rgba(255,255,255,0.8);text-align:center;padding:30px 0;font-size:12px}
 .site-footer a{color:#d9a17a}
-.note{font-size:12px;color:var(--muted);margin-top:12px}
-@media(max-width:860px){.grid3,.lead{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}.hero h1{font-size:24px}.brand{font-size:26px}.dateline{text-align:left}}
+.foot-brand{font-size:18px;font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:0.04em}
+@media(max-width:860px){.grid3,.grid4,.lead{grid-template-columns:1fr}.hero h1{font-size:24px}.brand{font-size:26px}.dateline{text-align:left}}
 </style>
 </head>
 <body>
@@ -85,46 +78,46 @@ section{padding:46px 0}
         <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
       </div>
       <div class="dateline">
-        <span class="big">2026年11月20日(金)</span>
-        前営業日 11月19日(木) 終値ベース
+        <span class="big">2026年11月21日(土)</span>
+        前営業日 11月20日(金) 終値ベース
       </div>
     </div>
   </div>
   <div class="ticker-bar">
     <div class="ticker-inner">
-      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,175.83 -2.02%</span></span>
-      <span><span class="tick-label">NASDAQ</span><span class="tick-down">23,879.20 -2.25%</span></span>
-      <span><span class="tick-label">DOW</span><span class="tick-down">49,097.06 -2.19%</span></span>
-      <span><span class="tick-label">US 2Y</span>4.78%</span>
-      <span><span class="tick-label">US 10Y</span>5.05%</span>
-      <span><span class="tick-label">US 30Y</span>5.41%</span>
-      <span><span class="tick-label">JGB 10Y</span>2.83%</span>
-      <span><span class="tick-label">WTI</span><span class="tick-up">$83.08 +0.9%</span></span>
-      <span><span class="tick-label">VIX</span><span class="tick-down">27.98</span></span>
-      <span><span class="tick-label">ANT</span><span class="tick-up">$97.17 +17.1%</span></span>
-      <span><span class="tick-label">NVDA</span><span class="tick-down">-3.30%</span></span>
-      <span><span class="tick-label">PANW</span><span class="tick-up">+6.44%</span></span>
-      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,175.83 -2.02%</span></span>
-      <span><span class="tick-label">NASDAQ</span><span class="tick-down">23,879.20 -2.25%</span></span>
-      <span><span class="tick-label">DOW</span><span class="tick-down">49,097.06 -2.19%</span></span>
-      <span><span class="tick-label">US 2Y</span>4.78%</span>
-      <span><span class="tick-label">US 10Y</span>5.05%</span>
-      <span><span class="tick-label">US 30Y</span>5.41%</span>
-      <span><span class="tick-label">JGB 10Y</span>2.83%</span>
-      <span><span class="tick-label">WTI</span><span class="tick-up">$83.08 +0.9%</span></span>
-      <span><span class="tick-label">VIX</span><span class="tick-down">27.98</span></span>
-      <span><span class="tick-label">ANT</span><span class="tick-up">$97.17 +17.1%</span></span>
-      <span><span class="tick-label">NVDA</span><span class="tick-down">-3.30%</span></span>
-      <span><span class="tick-label">PANW</span><span class="tick-up">+6.44%</span></span>
-      </div>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">-3.70%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">-5.28%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">-1.93%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.65%</span>
+      <span><span class="tick-label">US 10Y</span>4.92%</span>
+      <span><span class="tick-label">US 30Y</span>5.33%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.77%</span>
+      <span><span class="tick-label">WTI</span>$83.98</span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">≈37</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-14%</span></span>
+      <span><span class="tick-label">AMD</span><span class="tick-down">-13.26%</span></span>
+      <span><span class="tick-label">MU</span><span class="tick-down">-13.86%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">-3.70%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">-5.28%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-down">-1.93%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.65%</span>
+      <span><span class="tick-label">US 10Y</span>4.92%</span>
+      <span><span class="tick-label">US 30Y</span>5.33%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.77%</span>
+      <span><span class="tick-label">WTI</span>$83.98</span>
+      <span><span class="tick-label">VIX</span><span class="tick-down">≈37</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-14%</span></span>
+      <span><span class="tick-label">AMD</span><span class="tick-down">-13.26%</span></span>
+      <span><span class="tick-label">MU</span><span class="tick-down">-13.86%</span></span>
+    </div>
   </div>
 </header>
 
 <div class="hero">
   <div class="container">
     <div class="kicker">TODAY'S HEADLINE</div>
-    <h1>Anthropic上場で初値+34%も、市場全体は急落 ― ダウ1,101ドル安で5万ドル割れ、ナスダック-2.25%</h1>
-    <p>Anthropic（ANT）は公開価格83ドルに対し111.50ドルで初値をつけ、終値97.17ドル（+17.1%）。しかし取引開始後にAI関連株で利益確定と資金シフトが進み、主要3指数はそろって2%超下落。VIXは3月以来の高水準に上昇した。</p>
+    <h1>AI相場が崩落、ナスダック5.3%急落で年初来上昇分を消失 — エヌビディアにSEC会計調査報道</h1>
+    <p>半導体指数SOXは10%超の下落、全30銘柄が値下がり。安全資産への逃避で米10年債利回りは4.92%へ低下し、VIXは今年最高水準に跳ね上がった。</p>
   </div>
 </div>
 
@@ -132,34 +125,34 @@ section{padding:46px 0}
 
 <section>
   <div class="container">
-    <div class="sec-title">Quick Reading</div>
+    <div class="sec-title">QUICK READING</div>
     <div class="sec-head">今日の3大ポイント</div>
     <div class="grid3">
-      <div class="card"><div class="num">01</div><h3>Anthropic、記録的IPO</h3><p>公開価格83ドル（仮条件70〜78ドルを上回る）、9.8億株・約813億ドルを調達。初値111.50ドル、高値114.99ドル、終値97.17ドル（公開価格比+17.1%）。</p></div>
-      <div class="card"><div class="num">02</div><h3>AI株から資金流出、主要指数2%超安</h3><p>S&amp;P500 -2.02%、ナスダック -2.25%、ダウ -2.19%。ANT購入のための資金シフト、AMDへの空売りレポート、AI割高感が重なり、半導体・大型テックが軒並み下落。</p></div>
-      <div class="card"><div class="num">03</div><h3>利上げ観測とVIX上昇</h3><p>ウォラー理事は12月の0.5%利上げも選択肢と発言。FedWatchでは12月の0.25%利上げ確率90%。VIXは28前後と3月以来の高水準。米10年債は5.05%。</p></div>
+      <div class="card"><div class="num">01</div><h3>ナスダック -5.28%、2026年の上昇分が消滅</h3><p>S&amp;P500は-3.70%で6,910と6,900をかろうじて維持。ダウは-1.93%。前日に続く2日連続の大幅安で、S&amp;P500とダウは調整局面入り。</p></div>
+      <div class="card"><div class="num">02</div><h3>エヌビディア約14%安、SEC会計調査報道</h3><p>ロイターがSEC執行部門によるエヌビディアの会計問題調査を報道。不正認定ではないが、AI投資の収益性への疑念に火を注いだ。</p></div>
+      <div class="card"><div class="num">03</div><h3>債券に逃避マネー、利回り急低下</h3><p>米2年債は4.65%、10年債は4.92%と5%台から急低下。12月の25bp利上げ確率は約92%に低下し、据え置き観測も一部浮上。</p></div>
     </div>
   </div>
 </section>
 
-<section style="padding-top:10px">
+<section style="padding-top:0">
   <div class="container lead">
-    <article>
-      <div class="sec-title">Lead Story</div>
-      <h3>「Anthropic祭り」の裏で売りが加速 ― ダウは5万ドルを割り込む</h3>
-      <p>19日の米国株式市場は大幅安。ダウ平均は前日比1,101.11ドル安（-2.19%）の49,097.06ドルと5万ドルの大台を割り込み、S&amp;P500は147.80ポイント安（-2.02%）の7,175.83で6日続落。ナスダック総合も550.69ポイント安（-2.25%）の23,879.20と反落した。</p>
-      <p>注目のAnthropic（ティッカー：ANT）はナスダックに上場し、正午前に公開価格を約34%上回る111.50ドルで初値をつけた。一時114.99ドルまで上昇した後は92.72ドルまで売られ、終値は97.17ドル（公開価格比+17.07%）。朝方はIPOへの期待からハイテク株が買われたが、取引開始後は利益確定売りが広がった。ANT購入のために既存AI銘柄を売る資金シフトも指摘され、AMDは中国エクスポージャーを巡る空売りレポートを受けて約8%安。エヌビディア（-3.30%）、アルファベット（-3.46%）、アマゾン（-3.87%）、メタ（-3.27%）も下落した。</p>
-      <p>経済指標では、新規失業保険申請件数が20.3万件（予想19.7万件）、継続受給者数は176万人に増加。11月フィラデルフィア連銀景況指数は6.3と10月の20.9から大きく低下した一方、支払価格指数は58.2に上昇し、景気減速とインフレ圧力の併存を示した。ウォラー理事は12月会合での0.5%利上げの可能性に言及しており、市場の利上げ警戒は続く。</p>
-      <p>決算ではウォルマートが売上高1,888億ドル（+5.2%）と予想を上回り通期見通しを引き上げたが、株価は小幅安。パロアルトネットワークスは見通し引き上げを好感して+6.44%と続伸した。引け後はイントゥイット（-14.55%）、ロス・ストアーズ（-9.04%）が時間外で急落している。</p>
-    </article>
+    <div class="lead-body">
+      <div class="sec-title">LEAD STORY</div>
+      <h2>「AIトレードの巻き戻し」がパニック段階へ — 半導体株が軒並み2桁安</h2>
+      <p>20日(金)の米国株式市場は、前日に始まったAI関連株の売りが一段と加速した。ナスダック総合指数は5.28%安の22,617.73で引け、2026年の年初来上昇分をすべて失った。S&amp;P500は3.70%安の6,910.39、ダウ平均は1.93%安の48,147.33。フィラデルフィア半導体指数(SOX)は10.73%下落し、構成30銘柄すべてが値下がりする全面安となった。</p>
+      <p>引き金となったのは、米証券取引委員会(SEC)の執行部門がエヌビディアの潜在的な会計問題を調べているとのロイター報道だ。WSJが17日に調査の存在を報じていたが、焦点が会計であることが明らかになり、同社株は日中13%超下落した。今月初めのジェンスン・フアンCEO辞任、中国向け販売への監視強化、商務省によるAI半導体輸出規制強化のシグナルと悪材料が重なっている。</p>
+      <p>AMD(-13.26%)、マイクロン(-13.86%)、アプライド・マテリアルズ(-10.75%)、ラムリサーチ(-9.82%)など半導体装置・メモリー株も総崩れ。ビットコインマイナーやAIデータセンター関連(MARA、IREN、Applied Digitalなど)も大幅安となった。一方、ユナイテッドヘルスやAT&amp;T、T-モバイルなどディフェンシブ銘柄には買いが入り、ローテーションの色彩も強い。</p>
+      <p>リスク回避で米国債には買いが集中し、10年債利回りは一時5.1%台から4.9%台前半まで低下した。ただしFRBのクック理事は「利上げの実施を待ちすぎれば後手に回るリスクがある」と発言しており、イラン情勢を背景とするエネルギー高によるインフレ懸念は根強い。金融引き締め継続とAIバブル懸念が同時に重くのしかかる構図だ。</p>
+    </div>
     <aside class="watch">
       <h4>TODAY'S WATCH</h4>
       <ul>
-        <li><b>ANT 上場2日目</b><br>初日の上昇分を維持できるか（時間外 $95.69）</li>
-        <li><b>S&amp;P500 7日続落の有無</b><br>VIX 28台からの落ち着きどころ</li>
-        <li><b>イントゥイット・ロス</b><br>時間外急落の波及</li>
-        <li><b>FRB高官発言</b><br>12月0.25% or 0.5%利上げの織り込み</li>
-        <li><b>米10年債 5%台</b><br>長期金利と株式バリュエーション</li>
+        <li><b>エヌビディア</b><br>SEC調査の範囲・時期に関する続報。週明けの値動きがAI相場全体の方向を決める。</li>
+        <li><b>12月FOMC(8〜9日)</b><br>25bp利上げ織り込みは約92%。株安が利上げ観測を後退させるか。</li>
+        <li><b>アンソロピック</b><br>18日IPO($83)後、20日は約$89まで反落。新規上場AI株の需給に注目。</li>
+        <li><b>中東・財政</b><br>米・イスラエルのイラン攻撃懸念、12月の政府閉鎖リスク。</li>
+        <li><b>感謝祭週</b><br>26日(木)休場、27日(金)は13時短縮取引。薄商いで値動き拡大に注意。</li>
       </ul>
     </aside>
   </div>
@@ -167,28 +160,28 @@ section{padding:46px 0}
 
 <section style="padding-top:0">
   <div class="container">
-    <div class="sec-title">Asset Overview</div>
+    <div class="sec-title">ASSETS</div>
     <div class="sec-head">主要アセット</div>
     <div class="grid4">
-      <div class="asset"><div class="lbl">S&amp;P 500</div><div class="val">7,175.83</div><div class="chg down">-147.80 (-2.02%)</div></div>
-      <div class="asset"><div class="lbl">NASDAQ</div><div class="val">23,879.20</div><div class="chg down">-550.69 (-2.25%)</div></div>
-      <div class="asset"><div class="lbl">WTI原油</div><div class="val">$83.08</div><div class="chg up">+0.77 (+0.94%)</div></div>
-      <div class="asset"><div class="lbl">米10年債利回り</div><div class="val">5.05%</div><div class="chg up">約 -3bp</div></div>
+      <div class="asset"><div class="label">S&amp;P 500</div><div class="val">6,910.39</div><div class="chg down">▼ 3.70%</div></div>
+      <div class="asset"><div class="label">NASDAQ総合</div><div class="val">22,617.73</div><div class="chg down">▼ 5.28%</div></div>
+      <div class="asset"><div class="label">WTI原油</div><div class="val">$83.98</div><div class="chg up">金曜は反発・3週連続安</div></div>
+      <div class="asset"><div class="label">米10年債利回り</div><div class="val">4.92%</div><div class="chg down">▼ 約10bp</div></div>
     </div>
-    <p class="note">その他：ダウ 49,097.06（-1,101.11 / -2.19%）／VIX 27.98（+13.8%）／米2年債 4.78%・米30年債 5.41%／日本10年債 約2.83%。VIX・原油・ラッセル2000は情報源により若干の差があります。</p>
+    <p class="note">※ダウ 48,147.33(-1.93%)。VIXは約37〜40と今年最高水準(引け値は未確認)。米2年4.65%(-11bp)・30年5.33%(-7bp)は金曜午後時点。WTIは報道見出しベース。JGB10年2.767%(20日東京市場)。</p>
   </div>
 </section>
 
 <canvas id="wave2" class="wave"></canvas>
 
-<section class="focus-sec">
+<section style="background:var(--primary);color:#fff;padding-top:20px">
   <div class="container">
-    <div class="sec-title" style="color:#d9a17a">Finance Focus</div>
-    <div class="sec-head">注目銘柄</div>
+    <div class="sec-title" style="color:#d9a17a">FINANCE FOCUS</div>
+    <div class="sec-head" style="color:#fff">注目株3銘柄</div>
     <div class="grid3">
-      <div class="card"><span class="tkr">ANT</span><h3>Anthropic</h3><div class="chgline" style="color:#5cd47b">$97.17 +17.07%</div><p>公開価格83ドル、初値111.50ドル。高値114.99ドル・安値92.72ドルと値幅の大きい初日に。約813億ドルの調達は過去最大級。時間外は95.69ドル（-1.52%）。</p></div>
-      <div class="card"><span class="tkr">AMD</span><h3>AMD</h3><div class="chgline" style="color:#f27a6c">約 -8%</div><p>Hunterbrookが中国関連エクスポージャーを問題視する空売りレポートを公表。ANT購入のための資金シフトも重なり、半導体株の下げを主導した。エヌビディアも-3.30%。</p></div>
-      <div class="card"><span class="tkr">PANW</span><h3>パロアルトネットワークス</h3><div class="chgline" style="color:#5cd47b">+6.44%</div><p>第1四半期売上高は34.4億ドル（+39%）。通期売上見通しを145.2〜145.7億ドルに引き上げ。45億ドルのApplied Compute買収も発表し、軟調地合いの中で2日続伸。</p></div>
+      <div class="card stock"><span class="tk">NVDA</span><div class="mv down">約 -14%</div><h3>エヌビディア</h3><p>SEC執行部門が会計問題を調査中との報道で急落。SECはコメントを拒否。調査は不正認定を意味しないが、AI相場の象徴銘柄だけに影響は甚大。</p></div>
+      <div class="card stock"><span class="tk">AMD</span><div class="mv down">-13.26%</div><h3>AMD</h3><p>中国向け販売を巡る懸念と半導体セクター全面安が重なり2桁安。SOX指数は-10.73%と歴史的な下げ幅に。</p></div>
+      <div class="card stock"><span class="tk">MU</span><div class="mv down">-13.86%</div><h3>マイクロン</h3><p>前日は一時7.8%高から反落、金曜は一段安。AIメモリー需要の持続性に疑問符がつき、SKハイニックスも10%安。</p></div>
     </div>
   </div>
 </section>
@@ -197,32 +190,34 @@ section{padding:46px 0}
 
 <section class="short">
   <div class="container">
-    <div class="short-box">
-      <div class="sec-title" style="color:#d9a17a">Short Version</div>
-      <div class="sec-head">3分で読む要約</div>
-      <ol>
-        <li>主要3指数が2%超の下落。ダウは1,101ドル安で5万ドル割れ、S&amp;P500は6日続落。</li>
-        <li>Anthropic（ANT）が上場、初値111.50ドル、終値97.17ドルで公開価格比+17%。</li>
-        <li>AI株から資金流出、AMDは空売りレポートで約8%安、エヌビディア-3.3%。VIXは28前後に上昇。</li>
-        <li>失業保険申請20.3万件、フィリー連銀指数6.3に急低下、価格指数は上昇。12月利上げ観測は継続。</li>
-        <li>米10年債5.05%、2年4.78%、30年5.41%。日本10年債約2.83%、WTIは83ドル台で小反発。</li>
-      </ol>
-    </div>
+    <div class="sec-title" style="color:#d9a17a">SHORT VERSION</div>
+    <div class="sec-head">3分でわかる要約</div>
+    <ol>
+      <li>ナスダック-5.28%、S&amp;P500-3.70%、ダウ-1.93%。ナスダックは年初来上昇分を消失。</li>
+      <li>エヌビディアにSECの会計調査報道、株価は約14%安。SOX指数は-10.73%で全30銘柄が下落。</li>
+      <li>安全資産への逃避で米10年債は4.92%、2年債4.65%へ低下。VIXは今年最高水準。</li>
+      <li>12月FOMCの25bp利上げ確率は約92%に低下。クック理事は利上げの遅れに警鐘。</li>
+      <li>来週は感謝祭で26日休場・27日短縮取引。薄商いの中でAI株の底入れを探る展開。</li>
+    </ol>
   </div>
 </section>
 
 <canvas id="wave4" class="wave"></canvas>
 
-<section class="refs-sec">
+<section>
   <div class="container">
-    <div class="sec-title" style="color:#d9a17a">References</div>
-    <div class="sec-head">参考ソース</div>
+    <div class="sec-title">REFERENCES</div>
+    <div class="sec-head">参照ソース</div>
     <ul class="refs">
-      <li><a href="https://vistapglobal.com/stock-market-today-november-19-2026-anthropic-ipo-pops-wall-street-loses-its-appetite-amd-ant-eprx-insm-jpm-ma-modd-panw-ser-sls-v-wmt/" target="_blank" rel="noopener">Vista Partners – Stock Market Today, November 19, 2026</a></li>
-      <li><a href="https://www.stocktitan.net/articles/stock-market-today-live-november-19-2026" target="_blank" rel="noopener">StockTitan – Stock Market Today Live, November 19, 2026</a></li>
-      <li><a href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html" target="_blank" rel="noopener">Yahoo Finance – Stock market today (Nov 19)</a></li>
-      <li><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank" rel="noopener">Trading Economics – US 10-Year Treasury Yield</a></li>
-      <li><a href="https://tradingeconomics.com/japan/government-bond-yield" target="_blank" rel="noopener">Trading Economics – Japan 10-Year Government Bond Yield</a></li>
+      <li>・<a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262316111-nasdaq-falls-ai-stock-selloff-nvidia-sec-probe-tradingkey" target="_blank">TradingKey: Nasdaq Plunges 5%, Nvidia Tumbles as AI Selloff Deepens</a></li>
+      <li>・<a href="https://riskreversal.substack.com/p/sell-off-reaches-panic-stage-erases" target="_blank">RiskReversal: An Ugly Friday Erases 2026 Gains</a></li>
+      <li>・<a href="https://www.cbsnews.com/news/dow-tumbles-wall-street-ai-fears/" target="_blank">CBS News: Stocks plunge as investors take cover</a></li>
+      <li>・<a href="https://businessupturn.com/usa/money/us-markets/us-stocks-plunge-on-friday-as-tech-selloff-hammers-nasdaq-and-s-p-500/" target="_blank">Business Upturn: US Stocks Plunge on Friday</a></li>
+      <li>・<a href="https://www.tradingview.com/news/seekingalpha:9cc967fe4094b:0-flight-to-safety-drives-treasury-yields-lower-as-tech-tumbles/" target="_blank">TradingView/Seeking Alpha: Flight to safety drives Treasury yields lower</a></li>
+      <li>・<a href="https://rallies.ai/news/treasury-yields-fall-for-day-and-week-as-ai-trade-concerns-spur-safe-haven-bid-ba86e7c888e22750" target="_blank">Treasury yields fall for day and week as AI trade concerns spur safe-haven bid</a></li>
+      <li>・<a href="https://energynow.com/2026/11/oil-prices-rebound-friday-on-middle-east-tensions-but-fall-for-third-straight-week-wti-closes-at-83-98-brent-at-92-57/" target="_blank">EnergyNow: Oil Prices Rebound Friday — WTI Closes at $83.98</a></li>
+      <li>・<a href="https://www.zaikei.co.jp/article/20261120/878620.html" target="_blank">財経新聞: 11月20日日本国債市場</a></li>
+      <li>・<a href="https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026" target="_blank">StockTitan: Stock Market Today Live, November 20, 2026</a></li>
     </ul>
   </div>
 </section>
