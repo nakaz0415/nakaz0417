@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米国市場 モーニングレポート | 2026.11.27</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f3ea;--fg:#1a2230;--primary:#21344f;--accent:#b5472a;--border:#d6cfc4;--muted:#5d6675;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--fg);font-family:'Noto Sans JP',sans-serif;line-height:1.8;font-size:15px;}
+a{color:var(--accent);}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+.site-header{background:var(--primary);color:#fff;}
+.header-top{padding:28px 0 22px;}
+.header-flex{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;}
+.brand{font-family:'Noto Sans JP',sans-serif;font-weight:900;font-size:34px;letter-spacing:0.04em;line-height:1.1;}
+.brand .accent{color:#d9a17a;font-weight:700;}
+.brand-sub{font-size:11px;letter-spacing:0.35em;margin-top:8px;color:rgba(255,255,255,0.65);text-transform:uppercase;}
+.dateline{text-align:right;font-size:12px;letter-spacing:0.18em;color:rgba(255,255,255,0.85);}
+.dateline .big{font-family:'Noto Sans JP',sans-serif;font-size:24px;font-weight:700;display:block;letter-spacing:0.04em;margin-bottom:4px;}
+.ticker-bar{overflow:hidden;white-space:nowrap;background:rgba(0,0,0,0.25);padding:9px 0;}
+.ticker-inner{display:inline-block;animation:ticker 32s linear infinite;}
+.ticker-inner span{display:inline-block;margin:0 38px;font-size:12px;letter-spacing:0.07em;color:rgba(255,255,255,0.88);}
+.ticker-inner span .tick-label{color:rgba(255,255,255,0.5);margin-right:6px;}
+.ticker-inner span span{margin:0;}
+.tick-up{color:#5cd47b;font-weight:700;}
+.tick-down{color:#f27a6c;font-weight:700;}
+@keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.hero{height:340px;background:linear-gradient(135deg,rgba(33,52,79,0.96),rgba(33,52,79,0.82)),repeating-linear-gradient(90deg,transparent 0 60px,rgba(255,255,255,0.04) 60px 61px);color:#fff;display:flex;align-items:center;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-80px;bottom:-80px;width:420px;height:420px;border-radius:50%;border:2px solid rgba(217,161,122,0.25);}
+.hero-kicker{display:inline-block;background:var(--accent);color:#fff;font-size:11px;letter-spacing:0.2em;padding:4px 12px;margin-bottom:16px;font-weight:700;}
+.hero h1{font-size:34px;font-weight:900;line-height:1.35;max-width:820px;}
+.hero p{margin-top:14px;max-width:760px;color:rgba(255,255,255,0.82);font-size:15px;}
+canvas.wave{display:block;width:100%;height:80px;}
+section{padding:48px 0;}
+.sec-title{font-size:13px;letter-spacing:0.3em;color:var(--accent);font-weight:700;text-transform:uppercase;margin-bottom:6px;}
+.sec-h{font-size:26px;font-weight:900;color:var(--primary);margin-bottom:26px;border-bottom:2px solid var(--border);padding-bottom:10px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.card{background:#fffdf8;border:1px solid var(--border);padding:22px;border-top:4px solid var(--primary);}
+.card .num{font-size:34px;font-weight:900;color:var(--accent);line-height:1;}
+.card h3{font-size:17px;color:var(--primary);margin:10px 0 8px;font-weight:700;}
+.card p{font-size:14px;color:var(--muted);}
+.lead{display:grid;grid-template-columns:2fr 1fr;gap:34px;}
+.lead-body p{margin-bottom:16px;}
+.lead-body h3{font-size:22px;color:var(--primary);margin-bottom:14px;font-weight:900;line-height:1.4;}
+.watch{background:var(--primary);color:#fff;padding:24px;}
+.watch h4{font-size:13px;letter-spacing:0.25em;color:#d9a17a;margin-bottom:12px;}
+.watch ul{list-style:none;}
+.watch li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.15);font-size:14px;}
+.watch li b{color:#d9a17a;display:block;font-size:12px;letter-spacing:0.1em;}
+.asset{background:#fffdf8;border:1px solid var(--border);padding:20px;text-align:center;}
+.asset .lbl{font-size:12px;letter-spacing:0.2em;color:var(--muted);}
+.asset .val{font-size:28px;font-weight:900;color:var(--primary);margin:6px 0;}
+.asset .chg{font-weight:700;}
+.up{color:#1e8a45;}.down{color:#c0392b;}
+.asset .note{font-size:12px;color:var(--muted);margin-top:6px;}
+.dark{background:var(--primary);color:#fff;}
+.stock .tkr{font-size:13px;letter-spacing:0.2em;color:var(--accent);font-weight:700;}
+.stock .px{font-size:24px;font-weight:900;color:var(--primary);}
+.short ul{list-style:none;counter-reset:s;}
+.short li{counter-increment:s;padding:14px 0 14px 52px;position:relative;border-bottom:1px solid rgba(255,255,255,0.15);}
+.short li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:12px;font-size:24px;font-weight:900;color:#d9a17a;}
+.short .sec-h{color:#fff;border-color:rgba(255,255,255,0.2);}
+.refs li{margin:0 0 8px 20px;font-size:13px;word-break:break-all;}
+.site-footer{background:var(--primary);color:rgba(255,255,255,0.75);text-align:center;padding:34px 0;font-size:13px;}
+.site-footer a{color:#d9a17a;}
+.foot-brand{font-size:20px;font-weight:900;color:#fff;margin-bottom:8px;}
+@media(max-width:860px){.grid3,.grid4,.lead{grid-template-columns:1fr;}.hero h1{font-size:24px;}.brand{font-size:26px;}.dateline{text-align:left;}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-flex">
+      <div>
+        <div class="brand">米国市場 <span class="accent">モーニングレポート</span></div>
+        <div class="brand-sub">U.S. Markets Morning Edition &middot; Curated by AI Research</div>
+      </div>
+      <div class="dateline">
+        <span class="big">2026年11月27日(金)</span>
+        前営業日 11月25日(水) 終値ベース
+      </div>
+    </div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker-inner">
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,182.78 -0.25%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">23,585.80 -0.62%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">50,182.95 +0.33%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.61%</span>
+      <span><span class="tick-label">US 10Y</span>4.85%</span>
+      <span><span class="tick-label">US 30Y</span>5.24%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.660%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$85.66</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-up">28.29</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-3.91%</span></span>
+      <span><span class="tick-label">HPQ</span><span class="tick-up">+11.49%</span></span>
+      <span><span class="tick-label">META</span><span class="tick-up">+3.40%</span></span>
+      <span><span class="tick-label">S&amp;P 500</span><span class="tick-down">7,182.78 -0.25%</span></span>
+      <span><span class="tick-label">NASDAQ</span><span class="tick-down">23,585.80 -0.62%</span></span>
+      <span><span class="tick-label">DOW</span><span class="tick-up">50,182.95 +0.33%</span></span>
+      <span><span class="tick-label">US 2Y</span>4.61%</span>
+      <span><span class="tick-label">US 10Y</span>4.85%</span>
+      <span><span class="tick-label">US 30Y</span>5.24%</span>
+      <span><span class="tick-label">JGB 10Y</span>2.660%</span>
+      <span><span class="tick-label">WTI</span><span class="tick-up">$85.66</span></span>
+      <span><span class="tick-label">VIX</span><span class="tick-up">28.29</span></span>
+      <span><span class="tick-label">NVDA</span><span class="tick-down">-3.91%</span></span>
+      <span><span class="tick-label">HPQ</span><span class="tick-up">+11.49%</span></span>
+      <span><span class="tick-label">META</span><span class="tick-up">+3.40%</span></span>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <span class="hero-kicker">TODAY'S HEADLINE</span>
+    <h1>ダウ、一時1,100ドル安から劇的な切り返し──AI株売りと関税・インフレ懸念の中、感謝祭前に乱高下</h1>
+    <p>11月25日(水)、ナスダックは一時4.6%安、S&amp;P500は3.2%安まで売り込まれたが引けにかけて大半を回復。ダウは+0.33%でプラス引け。26日(木)は感謝祭で休場、27日(金)は午後1時(ET)までの短縮取引。</p>
+  </div>
+</div>
+
+<canvas id="wave1" class="wave"></canvas>
+
+<section>
+  <div class="container">
+    <div class="sec-title">Quick Reading</div>
+    <h2 class="sec-h">今日の3大ポイント</h2>
+    <div class="grid3">
+      <div class="card"><div class="num">-4.6%</div><h3>ナスダック、日中に急落後回復</h3><p>AI関連株が2日続落。エヌビディアは-3.91%で11月の下落率は約27%に。一方ダウは引けにかけ買い戻され1,100ドル超の下げを帳消しにした。</p></div>
+      <div class="card"><div class="num">3.3%</div><h3>コアPCEが3年ぶり高水準</h3><p>10月のコアPCEは前年比+3.3%(予想3.2%)、総合PCEは+3.8%。7–9月期GDP改定値は年率4.3%へ上方修正。12月FOMCでの利上げ観測が残る。</p></div>
+      <div class="card"><div class="num">14ヵ国</div><h3>USTRが新たな301条関税案</h3><p>中国に最大20%、EU・日本に15%など14の貿易相手国を対象とする追加関税案が浮上。リスク回避で米国債は買われ、10年債利回りは4.85%へ低下。</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:10px;">
+  <div class="container lead">
+    <div class="lead-body">
+      <div class="sec-title">Lead Story</div>
+      <h3>「インフレ×関税×AI」の三重苦、それでも引けは底堅く</h3>
+      <p>感謝祭前の25日、米国株は朝方から大きく売られた。10月PCE物価指数でコア指数が前年比3.3%と予想を上回り、3年ぶりの高い伸びとなったことに加え、米通商代表部(USTR)が14の貿易相手国を対象に新たな301条関税を提案したと伝わり、ハイテク株を中心にリスク回避の売りが広がった。さらにイエメンのフーシ派がサウジアラビアのラス・タヌラ製油所を攻撃したとの報道が原油相場を押し上げ、インフレ再燃への警戒を強めた。</p>
+      <p>ナスダック総合指数は一時4.6%、S&amp;P500は一時3.2%下落し、VIX指数は朝方に30を突破した。しかし午後にかけて中小型株やエネルギー、素材株に買いが入り、ダウは一時1,100ドル超安から+164ドル(+0.33%)の50,182.95ドルで取引を終えた。S&amp;P500は-0.25%の7,182.78、ナスダックは-0.62%の23,585.80と下げ幅を大きく縮小。ラッセル2000は+0.71%と小型株が相対的に強く、週初来では主要指数がそろって約4%高となっている。</p>
+      <p>個別ではエヌビディアが-3.91%と2日続落。11月23日に取締役会がジェンスン・フアン氏のCEO復帰を全会一致で決定し週初は安堵の買いが入ったが、外国情報機関に関する独立調査は継続中で、S&amp;Pグローバルが同社格付けを「クレジットウォッチ・ネガティブ」に指定したことも重荷となった。オラクル(-5.13%)、マイクロン、ラムリサーチなど半導体・AIインフラ銘柄も軟調だった。</p>
+      <p>債券市場では安全資産需要から利回りが低下。10年債は4.85%(-6bp)、2年債4.61%、30年債5.24%。原油はWTIが83.68ドル(+1.99%)で清算、26日の時間外では85ドル台へ上昇した。金は3,534.70ドル(-0.71%)と2025年8月以来となる3,500ドル割れを日中に記録した。</p>
+    </div>
+    <aside class="watch">
+      <h4>TODAY'S WATCH</h4>
+      <ul>
+        <li><b>11/27(金) 取引時間</b>米国株は午後1時(ET)までの短縮取引。債券市場も早期終了</li>
+        <li><b>ブラックフライデー</b>年末商戦の初動。小売・EC株(AMZN等)の反応に注目</li>
+        <li><b>関税案の続報</b>USTRの301条関税案に対する各国の反応、日本への15%案</li>
+        <li><b>中東情勢</b>フーシ派によるサウジ製油所攻撃後の原油動向</li>
+        <li><b>エヌビディア</b>独立調査の進展と格付け動向、AI株の下げ止まり</li>
+        <li><b>12月FOMC</b>コアPCE上振れを受けた利上げ観測の変化</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section style="padding-top:10px;">
+  <div class="container">
+    <div class="sec-title">Assets</div>
+    <h2 class="sec-h">主要アセット</h2>
+    <div class="grid4">
+      <div class="asset"><div class="lbl">S&amp;P 500</div><div class="val">7,182.78</div><div class="chg down">-18.31 (-0.25%)</div><div class="note">日中安値 6,970.11 / 週間 +3.94%</div></div>
+      <div class="asset"><div class="lbl">NASDAQ</div><div class="val">23,585.80</div><div class="chg down">-147.73 (-0.62%)</div><div class="note">日中最大 -4.6% / 週間 +4.28%</div></div>
+      <div class="asset"><div class="lbl">WTI 原油</div><div class="val">$85.66</div><div class="chg up">+0.76% (11/26時間外)</div><div class="note">25日清算値 $83.68 (+1.99%)</div></div>
+      <div class="asset"><div class="lbl">米10年債利回り</div><div class="val">4.85%</div><div class="chg up">-6bp (価格上昇)</div><div class="note">2Y 4.61% / 30Y 5.24% / JGB10Y 2.660%</div></div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave2" class="wave"></canvas>
+
+<section class="dark" style="background:var(--primary);">
+  <div class="container">
+    <div class="sec-title" style="color:#d9a17a;">Finance Focus</div>
+    <h2 class="sec-h" style="color:#fff;border-color:rgba(255,255,255,0.2);">注目銘柄</h2>
+    <div class="grid3">
+      <div class="card stock"><div class="tkr">NVDA · エヌビディア</div><div class="px down">-3.91%</div><h3>CEO復帰後も売り止まらず</h3><p>フアン氏のCEO復帰(11/23)で週初は反発したが2日続落、11月は約27%下落。S&amp;Pグローバルが格付けAAをウォッチ・ネガティブに。調査の行方が焦点。</p></div>
+      <div class="card stock"><div class="tkr">HPQ · HP Inc.</div><div class="px up">+11.49%</div><h3>決算と来期見通しを好感</h3><p>四半期決算と2027年度見通しが評価され急騰。デル(記録的な売上高549億ドル)と並びPC・ハード関連の底堅さが目立った。</p></div>
+      <div class="card stock"><div class="tkr">META · メタ</div><div class="px up">+3.40%</div><h3>メガテックで逆行高</h3><p>アルファベット(-2.13%)、アマゾン(-3.12%)、マイクロソフトなどが下げる中で上昇。AI関連の中でも銘柄選別が進んでいる。</p></div>
+    </div>
+  </div>
+</section>
+
+<canvas id="wave3" class="wave"></canvas>
+
+<section class="short dark">
+  <div class="container">
+    <div class="sec-title" style="color:#d9a17a;">Short Version</div>
+    <h2 class="sec-h">3分でわかる要約</h2>
+    <ul>
+      <li>25日の米国株は大荒れ。ナスダック一時-4.6%もS&amp;P500は-0.25%、ダウは+0.33%で引け、1,100ドル安から切り返した。</li>
+      <li>10月コアPCEは前年比+3.3%と3年ぶり高水準。GDPは4.3%に上方修正され、12月FOMCの利上げ観測がくすぶる。</li>
+      <li>USTRが14ヵ国対象の新301条関税案(中国最大20%、EU・日本15%)。貿易摩擦再燃がハイテク株の重荷に。</li>
+      <li>米国債は買われ10年債4.85%、2年債4.61%、30年債5.24%。日本10年債は2.660%に上昇。VIXは28.29。</li>
+      <li>26日は感謝祭で休場、27日は短縮取引。中東情勢で原油はWTI 85ドル台、ブラックフライデー商戦にも注目。</li>
+    </ul>
+  </div>
+</section>
+
+<canvas id="wave4" class="wave"></canvas>
+
+<section>
+  <div class="container refs">
+    <div class="sec-title">References</div>
+    <h2 class="sec-h">参考ソース</h2>
+    <ul>
+      <li><a href="https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-wednesday-11252026-138453529">ABC News (AP): How major US stock indexes fared Wednesday 11/25/2026</a></li>
+      <li><a href="https://www.fool.com/coverage/stock-market-today/2026/11/25/stock-market-today-nov-25-dow-erases-1-100-point-loss-as-wall-street-stages-dramatic-late-day-comeback/">Motley Fool: Dow Erases 1,100-Point Loss</a></li>
+      <li><a href="https://cappnotes.substack.com/p/closing-look-wednesday-november-25">CappNotes: Closing Look — November 25, 2026</a></li>
+      <li><a href="https://theweekendspread.substack.com/p/the-close-wednesday-november-25-2026">The Weekend Spread: The Close — November 25, 2026</a></li>
+      <li><a href="https://journalarta.com/en/2026/11/25/10-year-treasury-yield-falls-inflation-october/">JournalArta: 10-Year Treasury Yield Falls</a></li>
+      <li><a href="https://tradingeconomics.com/united-states/2-year-note-yield">Trading Economics: US 2-Year / 30-Year Yields</a></li>
+      <li><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm">NVIDIA Form 8-K (Nov 23, 2026)</a></li>
+      <li><a href="https://www.tokenpost.com/news/investing/62892">TokenPost: WTI Crude Oil Gains 0.76% on Nov. 26</a></li>
+      <li><a href="https://web.matrixnews.in/news/ffrwbquizpjgm/japans-10-year-bond-yield-rises-to-2-660-percent-as-selling-continues">Matrix News: Japan's 10-year bond yield rises to 2.660%</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-brand">米国市場 モーニングレポート</div>
+    <p>本レポートは公開情報をもとにしたAI生成レポートであり、投資助言ではありません。</p>
+    <p style="margin-top:6px;">Powered by Cowork &middot; <a href="https://nakaz0415.github.io/nakaz0417/archive.html">Past Reports</a></p>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=nakaz0415.nakaz0417&left_color=%2321344f&right_color=%23b5472a&left_text=Total%20Visitors" alt="visitor count" style="height:22px; vertical-align:middle; margin-top:8px;">
+  </div>
+</footer>
+
+<script>
+(function() {
+  const configs = [
+    { id: 'wave1', color1: '#21344f', color2: '#f7f3ea', freq: 0.018, amp: 28, speed: 0.012, phase: 0 },
+    { id: 'wave2', color1: '#f7f3ea', color2: '#21344f', freq: 0.022, amp: 24, speed: 0.009, phase: 1.5 },
+    { id: 'wave3', color1: '#21344f', color2: '#f7f3ea', freq: 0.016, amp: 30, speed: 0.014, phase: 3.0 },
+    { id: 'wave4', color1: '#f7f3ea', color2: '#21344f', freq: 0.020, amp: 26, speed: 0.011, phase: 4.5 },
+  ];
+  configs.forEach(cfg => {
+    const canvas = document.getElementById(cfg.id);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let t = 0, rafId = null, active = false;
+    function resize() { canvas.width = canvas.offsetWidth || window.innerWidth; canvas.height = canvas.offsetHeight || 80; }
+    function draw() {
+      if (!active) return;
+      resize();
+      const w = canvas.width, h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = cfg.color1; ctx.fillRect(0, 0, w, h / 2);
+      ctx.beginPath(); ctx.moveTo(0, h / 2);
+      for (let x = 0; x <= w; x++) {
+        const y = h / 2 + Math.sin(x * cfg.freq + t + cfg.phase) * cfg.amp + Math.sin(x * cfg.freq * 1.7 + t * 0.8 + cfg.phase) * (cfg.amp * 0.4);
+        ctx.lineTo(x, y);
+      }
+      ctx.lineTo(w, h); ctx.lineTo(0, h); ctx.closePath();
+      ctx.fillStyle = cfg.color2; ctx.fill();
+      t += cfg.speed; rafId = requestAnimationFrame(draw);
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !active) { active = true; draw(); }
+        else if (!e.isIntersecting) { active = false; if (rafId) cancelAnimationFrame(rafId); }
+      });
+    }, { threshold: 0.01 });
+    obs.observe(canvas);
+    window.addEventListener('resize', resize);
+    resize();
+  });
+})();
+</script>
+</body>
+</html>
